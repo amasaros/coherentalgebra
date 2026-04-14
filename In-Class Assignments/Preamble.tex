@@ -1,0 +1,902 @@
+\DocumentMetadata{
+  lang        = en,
+	pdfversion  = 1.7,
+  pdfstandard = ua-1,
+%  pdfstandard = a-4f, %or a-4
+  tagging=on,
+	tagging-setup={math/mathml/luamml/load=false}
+%  tagging-setup={math/setup=mathml-SE}
+}
+%\tagpdfsetup{role/map-tags=pdf}
+%\tagpdfsetup{math/mathml/luamml/load=false}
+\tagpdfsetup{table/header-rows={1}}
+
+\documentclass[10pt]{article}
+
+\usepackage[margin=1in]{geometry}
+
+\author{Math 103: College Algebra}
+\date{}
+%\author{Dr. Masaros}
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+\usepackage{xparse}
+%\usepackage{enumerate}
+%\usepackage{mdwlist}
+%\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\usepackage{tabto}
+
+%\usepackage{amsmath,amssymb,amsthm}
+%\usepackage{amsmath}
+%\usepackage{unicode-math}
+\usepackage{amsmath,amssymb,amsthm}
+%\usepackage{amsmath}
+
+\usepackage{textcomp}
+\newcommand{\cent}{{\textcent}}
+
+%Tagging is incompatible with titlesec
+%\usepackage[compact,tiny]{titlesec}
+%\usepackage{minipage}
+\makeatletter
+\renewcommand\section{%
+  \@startsection{section}% name
+    {1}% level
+    {0pt}% indent
+    {-1ex plus -.3ex minus -.06ex}% beforeskip
+    {1ex plus .1ex}% afterskip
+    {\bfseries}% style
+  }%
+\makeatother
+
+\usepackage{titling}
+\setlength{\droptitle}{-.5in}
+\pretitle{\centering\noindent\LARGE}
+\posttitle{\par}
+\preauthor{\centering\noindent\large}
+\postauthor{\par}
+\predate{\centering\noindent\large}
+\postdate{\par}
+
+\newcommand{\NameLine}{\noindent Full Name: \rule{\linewidth-\widthof{Full Name: }}{.4pt}}
+
+\newcommand{\MakeLine}[1][1in]{\rule{#1}{.4pt}}
+\newcommand{\MakeLineFull}[1]{\noindent #1: \rule{\linewidth-\widthof{#1: }}{.4pt}}
+\newcommand{\MakeLineSpace}[1][1in]{\rule{0pt}{0.34375in}\rule{#1}{.4pt}}
+\newcommand{\MakeLineFullSpace}[1]{\noindent #1: \rule{0pt}{0.34375in}\rule{\linewidth-\widthof{#1: }}{.4pt}}
+
+\usepackage{calc}
+\newlength{\WorkSpace}
+\setlength{\WorkSpace}{.25\textheight}
+\newcommand{\MakeSpace}[1][\WorkSpace]{\rule{0pt}{#1}}
+\newcommand{\itemS}[1][\WorkSpace]{\item\MakeSpace[#1]}
+\newcommand{\itemCB}{\vfill{ }\columnbreak\item}
+\newcommand{\itemC}[1][]{\clearpage\item}
+
+\newcommand{\Hspace}[1]{\rule{#1}{0pt}}
+
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\hfill\arraybackslash}X}
+
+\newcommand{\ph}{\phantom{1}}
+\newcommand{\phc}{\phantom{1,}}
+\newcommand{\phm}{\phantom{-}}
+
+\usepackage{xparse}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usepgflibrary{arrows}
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc}
+
+\tikzset{>=angle 90}
+\tikzset{x=.5in,y=.5in}
+\tikzset{every picture/.append style={artifact}}
+
+\newcommand{\MakeBlank}[1][10em]{\rule{#1}{.4pt}}
+\newcommand{\FullLine}{\\[3ex]\MakeBlank[\linewidth-1pt]}
+
+\newenvironment{cpic}[1][]{%
+\begin{center}
+\begin{tikzpicture}[#1]
+}{%
+\end{tikzpicture}
+\end{center}
+}
+
+\newenvironment{ilpic}[1][x=0.2in,y=0.2in]{%
+\begin{tikzpicture}[#1,baseline={([yshift=-2ex]current bounding box.north)}]
+}{%
+\end{tikzpicture}
+}
+
+%\usepackage[scr=boondoxo]{mathalfa}
+%\usepackage[margin=1in]{geometry}
+
+
+\usepackage{multienum}
+
+\newcommand{\Line}[1]{\ensuremath{\overleftrightarrow{\;#1\;}}}
+\newcommand{\Ray}[1]{\ensuremath{\overrightarrow{#1\;}}}
+\newcommand{\Segment}[1]{\ensuremath{\overline{#1}}}
+
+\renewcommand{\ell}{\ensuremath{\mathscr{l}}}
+\newcommand{\emm}{\ensuremath{\mathscr{m}}}
+\newcommand{\enn}{\ensuremath{\mathscr{n}}}
+\newcommand{\pee}{\ensuremath{\mathscr{p}}}
+
+\newcommand{\Angle}{\angle}
+
+\newcommand{\Mathscr}[1]{\ensuremath{\mathscr{#1}}}
+
+\usepackage{multicol}
+
+\usepackage{setspace}
+
+\newcounter{enumSave}
+\newcommand{\saveenum}{\setcounter{enumSave}{\value{enumi}}}
+\newcommand{\loadenum}{\setcounter{enumi}{\value{enumSave}}}
+
+\newcommand{\savemenum}{\setcounter{enumSave}{\value{multienumi}}}
+\newcommand{\loadmenum}{\setcounter{multienumi}{\value{enumSave}}}
+
+\newcommand{\Norm}[1]{\left|#1\right|}
+
+\newenvironment{senum}{\begin{enumerate}\loadenum}{\saveenum\end{enumerate}}
+\newenvironment{smenum}{\begin{multienumerate}\loadmenum}{\savemenum\end{multienumerate}}
+
+\newenvironment{nmenum}{\setlength\hsize{\linewidth}\begin{multienumerate}\renewcommand{\labelenumi}{\addtocounter{multienumi}{1}\alph{multienumi}.}}{\end{multienumerate}}
+\newenvironment{Nmenum}{\setlength\hsize{\linewidth}\begin{multienumerate}\renewcommand{\labelenumi}{\addtocounter{multienumi}{1}\Alph{multienumi}.}}{\end{multienumerate}}
+
+\newcommand{\pentagon}{%
+\begin{tikzpicture}[x=1ex,y=1ex]%
+\draw (90:1) -- (90+72:1) -- (90+72+72:1) -- (90-72-72:1) -- (90-72:1) -- cycle;%
+\end{tikzpicture}%
+}
+
+\usepackage{environ}
+
+\usepackage{forloop}
+\newcounter{ThisVersion}
+\newcounter{SavePage}
+\newcounter{SaveSection}
+
+\NewEnviron{MultiVersion}[1]{
+\forLoop{1}{#1}{ThisVersion}{%
+\setcounter{SavePage}{\value{page}}%
+\setcounter{SaveSection}{\value{section}}
+\BODY%
+\clearpage
+\setcounter{page}{\value{SavePage}}%
+\setcounter{section}{\value{SaveSection}}
+}
+}
+
+\usepackage{ifthen}
+\newcommand{\vitem}[2]{%
+\ifthenelse{\value{ThisVersion}=#1}{\item #2}{}%
+}
+
+\newcommand{\QuadrilateralChoices}{%
+\begin{nmenum}
+\mitemxxxx
+{Parallelogram}
+{Rectangle}
+{Rhombus}
+{Square}
+\end{nmenum}
+}
+
+\newcommand{\MultiLines}[1][3in]{%
+\\\noindent\begin{tikzpicture}[y=.25in, ultra thin]
+\draw[xstep=2\textwidth,ystep=1] (.25\textwidth,0) grid (1.25\textwidth,#1);
+\end{tikzpicture}
+}
+
+\newcommand{\DrawProtractor}[1][blue!10!white]{
+\filldraw[fill=#1] (20:4) ++(110:-.5) -- ++(110:.5) arc (20:200:4) -- ++(110:-.5) -- cycle;
+\draw (20:3) -- (200:3);
+\filldraw[fill=white] (30:3) arc (30:190:3) -- cycle;
+\foreach \t in {0,10,...,180}
+    {
+		\draw (\t+20:4) -- (\t+20:3.75);
+		\draw (\t+20:3.625) node[rotate=-70+\t]{$\t$};
+		\draw (\t+20:3) -- (\t+20:3.25);
+		\draw (200-\t:3.375) node[rotate=110-\t]{$\t$};
+    }
+\foreach \t in {0,10,...,170}
+		\foreach \d in {1,2,...,9}
+		    \draw (\t+\d+20:3.825) -- (\t+\d+20:4);
+}
+
+\newcounter{EqNum}
+\setcounter{EqNum}{0}
+\newcommand{\EqLbl}{\addtocounter{EqNum}{1}(\Alph{EqNum})}
+
+\newenvironment{esys}{
+\setcounter{EqNum}{0}
+\displaystyle
+\left\{\begin{array}{r@{\;}r@{\;}r@{\;}r@{\;}r@{\quad\EqLbl}}
+}{
+\end{array}\right.}
+
+\newenvironment{fsys}{
+\setcounter{EqNum}{0}
+\displaystyle
+\left\{\begin{array}{l@{\quad\EqLbl}}
+}{
+\end{array}\right.}
+
+\NewDocumentCommand{\DrawGridSquare}{O{5} D(){1}}{
+\draw[step=#2,black!50!white] (-#1-.9,-#1-.9) grid (#1+.9,#1+.9);
+\draw[<->,very thick] (-#1-1,0) -- (#1+1,0) node[anchor=south]{$x$};
+\draw[<->,very thick] (0,-#1-1) -- (0,#1+1) node[anchor=east]{$y$};
+\foreach \x in {1,...,#1}
+    {
+    \draw[thick] (\x,.2) -- (\x,-.2) node[anchor=north,font=\scriptsize]{$\x$};
+    \draw[thick] (-\x,.2) -- (-\x,-.2) node[anchor=north,font=\scriptsize]{$-\x\phm$};
+    \draw[thick] (.2,\x) -- (-.2,\x) node[anchor=east,font=\scriptsize]{$\x$};
+    \draw[thick] (.2,-\x) -- (-.2,-\x) node[anchor=east,font=\scriptsize]{$-\x$};
+    }
+}
+
+\newcommand{\DrawGridSquareEO}[1][5]{
+\draw[step=1,black!50!white] (-#1-.9,-#1-.9) grid (#1+.9,#1+.9);
+\draw[<->,very thick] (-#1-1,0) -- (#1+1,0) node[anchor=south]{$x$};
+\draw[<->,very thick] (0,-#1-1) -- (0,#1+1) node[anchor=east]{$y$};
+\foreach \x in {2,4,...,#1}
+    {
+    \draw[thick] (\x,.2) -- (\x,-.2) node[anchor=north,font=\scriptsize]{$\x$};
+    \draw[thick] (-\x,.2) -- (-\x,-.2) node[anchor=north,font=\scriptsize]{$-\x\phm$};
+    \draw[thick] (.2,\x) -- (-.2,\x) node[anchor=east,font=\scriptsize]{$\x$};
+    \draw[thick] (.2,-\x) -- (-.2,-\x) node[anchor=east,font=\scriptsize]{$-\x$};
+    }
+}
+
+\newcounter{t1}
+\newcounter{t2}
+
+\newcommand{\DrawGrid}[5][1]{
+\draw[step=1,black!50!white] (-#2-.9,-#4-.9) grid (#3+.9,#5+.9);
+\draw[<->,very thick] (-#2-1,0) -- (#3+1,0) node[anchor=south]{$x$};
+\draw[<->,very thick] (0,-#4-1) -- (0,#5+1) node[anchor=east]{$y$};
+\setcounter{t1}{#1}
+\setcounter{t2}{2*\value{t1}}
+\ifthenelse{#3<\value{t1}}{}{%
+\ifthenelse{#3<\value{t2}}{\draw[thick] (\arabic{t1},0.05in) -- (\arabic{t1},-0.05in) node[anchor=north,font=\scriptsize]{$\arabic{t1}$};}{
+\foreach \x in {\arabic{t1},\arabic{t2},...,#3}
+    \draw[thick] (\x,0.05in) -- (\x,-0.05in) node[anchor=north,font=\scriptsize]{$\x$};
+}}
+\ifthenelse{#2<\value{t1}}{}{%
+\ifthenelse{#2<\value{t2}}{\draw[thick] (-\arabic{t1},0.05in) -- (-\arabic{t1},-0.05in) node[anchor=north,font=\scriptsize]{$-\arabic{t1}\phm$};}{
+\foreach \x in {\arabic{t1},\arabic{t2},...,#2}
+    \draw[thick] (-\x,0.05in) -- (-\x,-0.05in) node[anchor=north,font=\scriptsize]{$-\x\phm$};
+}}
+\ifthenelse{#5<\value{t1}}{}{%
+\ifthenelse{#5<\value{t2}}{\draw[thick] (0.05in,\arabic{t1}) -- (-0.05in,\arabic{t1}) node[anchor=east,font=\scriptsize]{$\arabic{t1}$};}{
+\foreach \x in {\arabic{t1},\arabic{t2},...,#5}
+    \draw[thick] (0.05in,\x) -- (-0.05in,\x) node[anchor=east,font=\scriptsize]{$\x$};
+}}
+\ifthenelse{#5<\value{t1}}{}{%
+\ifthenelse{#5<\value{t2}}{\draw[thick] (0.05in,-\arabic{t1}) -- (-0.05in,-\arabic{t1}) node[anchor=east,font=\scriptsize]{$-\arabic{t1}$};}{
+\foreach \x in {\arabic{t1},\arabic{t2},...,#4}
+    \draw[thick] (0.05in,-\x) -- (-0.05in,-\x) node[anchor=east,font=\scriptsize]{$-\x$};
+}}
+}
+
+\NewDocumentCommand{\GridSquareFit}{O{5} D(){2.75in}}{%
+\begin{ilpic}[x={#2/(2*#1+2)},y={#2/(2*#1+2)}]
+\useasboundingbox (-#1-1,-#1-1) rectangle (#1+1,#1+1);
+\DrawGridSquare[#1]
+\end{ilpic}
+}
+
+\NewDocumentCommand{\GridSquareFitHalf}{O{5} D(){2.75in}}{%
+\begin{ilpic}[x={#2/(2*#1+2)},y={#2/(2*#1+2)}]
+\useasboundingbox (-#1-1,-#1-1) rectangle (#1+1,#1+1);
+\DrawGridSquare[#1](0.5)
+\end{ilpic}
+}
+
+\NewDocumentCommand{\GridSquareFitEO}{O{5} D(){2.75in}}{%
+\begin{ilpic}[x={#2/(2*#1+2)},y={#2/(2*#1+2)}]
+\useasboundingbox (-#1-1,-#1-1) rectangle (#1+1,#1+1);
+\DrawGridSquareEO[#1]
+\end{ilpic}
+}
+
+\NewDocumentEnvironment{GridSquareFitEOFilled}{O{5} D(){2.75in} +b}{%
+\begin{ilpic}[x={#2/(2*#1+2)},y={#2/(2*#1+2)}]
+\useasboundingbox (-#1-1,-#1-1) rectangle (#1+1,#1+1.5);
+\DrawGridSquareEO[#1]
+#3
+\end{ilpic}
+}{}
+
+\NewDocumentEnvironment{GridFitFilledEO}{m m m m D(){2.75in} +b}{%
+\begin{ilpic}[x={#5/(#2+#1+2)},y={#5/(#4+#3+2)}]
+\useasboundingbox (-#1-1,-#3-1) rectangle (#2+1,#4+1.5);
+\DrawGrid[2]{#1}{#2}{#3}{#4}
+#6
+\end{ilpic}
+}{}
+
+\NewDocumentEnvironment{GridFitFilled}{O{1} m m m m D(){2.75in} +b}{%
+\begin{ilpic}[x={#6/(#3+#2+2)},y={#6/(#5+#4+2)}]
+\useasboundingbox (-#2-1,-#4-1) rectangle (#3+1,#5+1.5);
+\DrawGrid[#1]{#2}{#3}{#4}{#5}
+#7
+\end{ilpic}
+}{}
+
+\NewDocumentEnvironment{GridSquareFitFilled}{O{5} D(){2.75in} +b}{%
+\begin{ilpic}[x={#2/(2*#1+2)},y={#2/(2*#1+2)}]
+\useasboundingbox (-#1-1,-#1-1) rectangle (#1+1,#1+1.5);
+\DrawGrid[1]{#1}{#1}{#1}{#1}
+#3
+\end{ilpic}%
+}{}
+
+\NewDocumentEnvironment{GridFilled}{O{0.2in} m m m m O{1} +b}{%
+\begin{ilpic}[x=#1,y=#1]%
+\useasboundingbox(-#2-1,-#4-1) rectangle (#3+1,#5+1);
+\DrawGrid[#6]{#2}{#3}{#4}{#5}
+#7
+\end{ilpic}%
+}
+
+\NewDocumentEnvironment{GridSquareFilled}{O{0.2in} m O{1} +b}{%
+\begin{GridFilled}[#1]{#2}{#2}{#2}{#2}[#3]%
+#4
+\end{GridFilled}%
+}
+
+\newcommand{\DrawGridSquareBlank}[1][5]{
+\draw[step=1,ultra thin] (-#1-.9,-#1-.9) grid (#1+.9,#1+.9);
+\draw[<->,very thick] (-#1-1,0) -- (#1+1,0) node[anchor=south]{$x$};
+\draw[<->,very thick] (0,-#1-1) -- (0,#1+1) node[anchor=east]{$y$};
+\foreach \x in {2,4,...,#1}
+    {
+    \draw[thick] (\x,.2) -- (\x,-.2) node[anchor=north,font=\scriptsize]{$\x$};
+    \draw[thick] (-\x,.2) -- (-\x,-.2) node[anchor=north,font=\scriptsize]{$-\x\phm$};
+    \draw[thick] (.2,\x) -- (-.2,\x) node[anchor=east,font=\scriptsize]{$\x$};
+    \draw[thick] (.2,-\x) -- (-.2,-\x) node[anchor=east,font=\scriptsize]{$-\x$};
+    }
+}
+
+\newlength{\storea}
+\newlength{\storeb}
+\newlength{\storec}
+\newlength{\storeh}
+\newlength{\storek}
+\newlength{\storexi}
+\newlength{\storexii}
+\newlength{\pgwid}
+\newlength{\pghit}
+\newlength{\pgx}
+\newlength{\pgy}
+
+\newcommand{\parabolapoints}[6][2in]{%
+\setlength{\storea}{1pt*\real{#2}}
+\setlength{\storeb}{1pt*\real{#3}}
+\setlength{\storec}{1pt*\real{#4}}
+\setlength{\storeh}{1pt*\ratio{\storeb*\real{-1}}{\storea*2}}
+\setlength{\storek}{1pt*\ratio{\storeb*\ratio{\storeb}{-1pt}+\storea*\ratio{\storec}{1pt}*4}{\storea*4}}
+\setlength{\storexi}{1pt*\real{#5}}
+\setlength{\storexii}{1pt*\real{#6}}
+\setlength{\pgwid}{\maxof{\maxof{\storexi}{0pt}}{\storexii}-\minof{\minof{\storexi}{0pt}}{\storexii}}
+\setlength{\pgwid}{\pgwid*\real{1.2}}
+\setlength{\pghit}{\maxof{\maxof{\storec}{0pt}}{\storeh}-\minof{\minof{\storec}{0pt}}{\storeh}}
+\setlength{\pghit}{\pghit*\real{1.2}}
+\setlength{\pgx}{#1*\ratio{1pt}{\pgwid}}
+\setlength{\pgy}{#1*\ratio{1pt}{\pghit}}
+\begin{ilpic}[x=\pgx,y=\pgy]
+
+\end{ilpic}
+}
+
+%first two arguments are top left and bottom right of graph
+%remaining arguments are two points on the graph
+\NewDocumentCommand{\linepoints}{>{\SplitArgument{1}{,}}r() >{\SplitArgument{1}{,}}r() >{\SplitArgument{1}{,}}r() >{\SplitArgument{1}{,}}r()} {
+	\linepointsSUB #3 #4 #1 #2
+}
+
+%first two arguments are top left and bottom right of graph
+%third argument is a point on the graph
+%fourth argument is the slope
+\NewDocumentCommand{\linepointslope}{>{\SplitArgument{1}{,}}r() >{\SplitArgument{1}{,}}r() >{\SplitArgument{1}{,}}r() m}{
+	\lineslopeSUB #1 #2 #3{#4}
+}
+
+%first two arguments are top left and bottom right of graph
+%third argument is the slope
+%fourth argument is the y-coordinate of the y-intercept
+\NewDocumentCommand{\lineslopeintercept}{>{\SplitArgument{1}{,}}r() >{\SplitArgument{1}{,}}r() m m}{
+	\lineslopeSUB #1 #2{0}{#3}{#4}
+}
+
+\NewDocumentCommand{\linepointsSUB}{m m m m m m m m} {%
+	\lineslopeSUB{#5}{#6}{#7}{#8}{#1}{#2}{(#4-#2)/(#3-#1)}
+}
+
+%#1 is x-coordinate of bottom left
+%#2 is y-coordinate of bottom left
+%#3 is x-coordinate of top right
+%#4 is y-coordinate of top right
+%#5 is x-coordinate of point
+%#6 is y-coordinate of point
+%%7 is slope
+\NewDocumentCommand{\lineslopeSUB}{m m m m m m m} {%
+	\path[name path=grbound]
+		(#1-0.9,#2-0.9) rectangle ({#3+0.9},#4+0.9);
+	\path[name path=myline]
+		(#1-1,{(#7)*(#1-1-#5)+#6}) -- (#3+1,{(#7)*(#3+1-#5)+#6});
+	\draw[name intersections = {of = grbound and myline, name = pt},
+				thick,<->] (pt-1) -- (pt-2);
+}
+
+\newcommand{\GraphFit}[6] {%
+	%argument 1 is the dimension of the graph
+	%arguments 2 and 3 are the minimum and maximum x-values
+	%arguments 4 and 5 are the minimum and maximum y-values
+	%argument 6 is the function to graph
+	\begin{ilpic}[x={#1/(#3-#2+2)},y={#1/(#5-#4+2)}]
+		\draw[step=1,ultra thin] (#2-.5,#4-.5) grid (#3+.5,#5+.5);
+		\draw[<->,very thick] (#2-1,0) -- (#3+1,0) node[anchor=south]{$x$};
+		\draw[<->,very thick] (0,#4-1) -- (0,#5+1) node[anchor=east]{$y$};
+		\foreach \x in {1,...,#3} \draw[thick] (\x,.2) -- (\x,-.2) node[anchor=north,font=\scriptsize]{$\x$};
+		\foreach \x in {#2,...,-1} \draw[thick] (\x,.2) -- (\x,-.2) node[anchor=north,font=\scriptsize]{$\x\phm$};
+		\foreach \y in {1,...,#5} \draw[thick] (.2,\y) -- (-.2,\y) node[anchor=east,font=\scriptsize] {$\y$};
+		\foreach \y in {#4,...,-1} \draw[thick] (.2,\y) -- (-.2,\y) node[anchor=east,font=\scriptsize] {$\y$};
+		\clip (#2-.5,#4-.5) rectangle (#3+.5,#5+.5);
+		\draw[domain={#2-.5}:{#3+.5}, samples=100,thick] plot (\x,{#6});
+	\end{ilpic}
+}
+
+
+
+\usepackage{calc}
+\usepackage{ifthen}
+\newcounter{grleft}
+\newcounter{grright}
+\newcounter{grbot}
+\newcounter{grtop}
+\newcounter{grwidth}
+\newcounter{grheight}
+\newcounter{grdiv}
+\newcounter{grdif}
+\newcommand{\CircleFit}[4][0.4\textwidth] {%
+	%argument 1 is the dimension of the graph
+	%arguments 2 and 3 are the coordinates of the center
+	%argument 4 is the radius
+	\setcounter{grleft}{1*\real{#4}-#2}%
+	\ifthenelse{\value{grleft}<0}%
+	          {\setcounter{grleft}{0}}%
+						{\addtocounter{grleft}{1}}%
+	\setcounter{grright}{#2+1*\real{#4}}%
+	\ifthenelse{\value{grright}<0}%
+	          {\setcounter{grright}{0}}%
+						{\addtocounter{grright}{1}}%
+	\setcounter{grbot}{1*\real{#4}-#3}%
+	\ifthenelse{\value{grbot}<1}%
+	          {\setcounter{grbot}{0}}%
+						{\addtocounter{grbot}{1}}%
+	\setcounter{grtop}{#3+1*\real{#4}}%
+	\ifthenelse{\value{grtop}<1}%
+	          {\setcounter{grtop}{0}}%
+						{\addtocounter{grtop}{1}}%
+	\setcounter{grwidth}{\value{grleft}+\value{grright}}%
+	\setcounter{grheight}{\value{grtop}+\value{grbot}}%
+	\ifthenelse{\value{grwidth}<\value{grheight}}{%
+		\setcounter{grdif}{\value{grheight}-\value{grwidth}}%
+		\ifthenelse{\isodd{\value{grdif}}}{%Set it up so we'll be able to do symmetric stuff
+			\addtocounter{grdif}{1}%
+			\ifthenelse{\value{grbot}<\value{grtop}}{%
+				\addtocounter{grbot}{1}%
+			}{%
+				\addtocounter{grtop}{1}%
+			}%
+		}{}%
+		\setcounter{grdif}{\value{grdif}*\real{0.5}}%
+		\addtocounter{grleft}{\value{grdif}}%
+		\addtocounter{grright}{\value{grdif}}%
+	}{%
+		\setcounter{grdif}{\value{grwidth}-\value{grheight}}%
+		\ifthenelse{\isodd{\value{grdif}}}{%Set it up so we'll be able to do symmetric stuff
+			\addtocounter{grdif}{1}%
+			\ifthenelse{\value{grleft}<\value{grright}}{%
+				\addtocounter{grleft}{1}%
+			}{%
+				\addtocounter{grright}{1}%
+			}%
+		}{}%
+		\setcounter{grdif}{\value{grdif}*\real{0.5}}%
+		\addtocounter{grtop}{\value{grdif}}%
+		\addtocounter{grbot}{\value{grdif}}%
+	}%
+	\setcounter{grdiv}{\value{grleft}+\value{grright}+2}%
+%	Left: \arabic{grleft}, Right: \arabic{grright}, Bottom: \arabic{grbot}, Top: \arabic{grtop}\\
+%	Dif: \arabic{grdif}, Width: \arabic{grwidth}, Height: \arabic{grheight}\\
+	\begin{ilpic}[x=#1/\value{grdiv},y=#1/\value{grdiv}]
+		\draw[step=1,ultra thin] (-\value{grleft}-.5,-\value{grbot}-.5) grid 
+		                         (\value{grright}+.5,\value{grtop}+.5);
+		\draw[<->,very thick] (-\value{grleft}-1,0) -- (\value{grright}+1,0) node[anchor=south]{$x$};
+		\draw[<->,very thick] (0,-\value{grbot}-1) -- (0,\value{grtop}+1) node[anchor=east]{$y$};
+%What the heck--we'll do fussy things where we have dimensions less than one.
+		\ifthenelse{\value{grright}>0}{%
+			\foreach \x in {1,...,\value{grright}}
+				\draw[thick] (\x,.2) -- (\x,-.2) node[anchor=north,font=\scriptsize]{$\x$};
+		}{}%If grright=0 do nothing
+		\ifthenelse{\value{grleft}>0}{%
+			\foreach \x in {1,...,\value{grleft}}
+				\draw[thick] (-\x,.2) -- (-\x,-.2) node[anchor=north,font=\scriptsize]{$-\x\phm$};
+		}{}%If grleft=0 do nothing
+		\ifthenelse{\value{grtop}>0}{%
+			\foreach \y in {1,...,\value{grtop}}
+				\draw[thick] (.2,\y) -- (-.2,\y) node[anchor=east,font=\scriptsize]{$\y$};
+		}{}%If grtop=0 do nothing
+		\ifthenelse{\value{grbot}>1}{%
+			\foreach \y in {2,...,\value{grbot}}
+				\draw[thick] (.2,-\y) -- (-.2,-\y) node[anchor=east,font=\scriptsize]{$-\y$};
+		}{}%If grbot=0 do nothing
+		\draw[thick] (#2,#3) circle (#4);
+		\fill (#2,#3) circle (0.025in);
+	\end{ilpic}
+}
+
+\newcommand{\LittleGraph}[1]{%
+\begin{ilpic}[x=.1in,y=.1in]
+\useasboundingbox(-5.9,-6.1) rectangle (5.9,6.1);
+\DrawGridSquareBlank 
+\clip (-5.9,-5.9) rectangle (5.9,5.9);
+#1
+\end{ilpic}}
+
+\NewDocumentCommand{\LittleGraphBlank}{O{5} m O{1in}}{%
+\begin{ilpic}[x={0.5/(#1+0.9)*#3},y={0.5/(#1+0.9)*#3}]
+\draw[<->,thick] (-#1-0.9,0) -- (#1+0.9,0) node[anchor=south]{$x$};
+\draw[<->,thick] (0,-#1-0.9) -- (0,#1+0.9) node[anchor=west]{$y$};
+#2
+\end{ilpic}
+}
+
+\NewDocumentCommand{\LittleGraphBlankCompressed}{O{5} m O{1in}}{%
+\begin{ilpic}[x={0.5/(#1+0.9)*#3},y={0.5/(#1+0.9)*#3}]
+\useasboundingbox(-#1-0.9,-0.5*#3+1ex) rectangle (#1+0.9,0.5*#3-1ex);
+\draw[<->,thick] (-#1-0.9,0) -- (#1+0.9,0) node[anchor=south]{$x$};
+\draw[<->,thick] (0,-#1-0.9) -- (0,#1+0.9) node[anchor=west]{$y$};
+#2
+\end{ilpic}
+}
+
+\newcommand{\powgraph}[3][1]{%
+\draw[<->,very thick,domain={-#2^(1/#3)}:{#2^(1/#3)}] plot (\x,{#1*pow(\x,#3)});
+}
+
+\newcommand{\WorkGridSquare}[1][5]{
+\begin{ilpic}[x=.2in,y=.2in]\DrawGridSquare[#1]\end{ilpic}
+}
+
+\newcommand{\LittleGraphEO}[2][.1in]{%
+\begin{ilpic}[x=#1,y=#1]
+\useasboundingbox(-5.9,-5.9) rectangle (5.9,5.9);
+\DrawGridSquareEO
+\clip (-5.9,-5.9) rectangle (5.9,5.9);
+#2
+\end{ilpic}}
+
+\newcommand{\DrawGridSquareHalf}[1][2]{
+\draw[step=1,ultra thin] (-#1-.9,-#1-.9) grid (#1+.9,#1+.9);
+\draw[<->,very thick] (-#1-1,0) -- (#1+1,0) node[anchor=south]{$x$};
+\draw[<->,very thick] (0,-#1-1) -- (0,#1+1) node[anchor=east]{$y$};
+\foreach \x in {1,...,#1}
+    {
+    \draw[thick] (2*\x,.2) -- (2*\x,-.2) node[anchor=north,font=\scriptsize]{$\x$};
+    \draw[thick] (-2*\x,.2) -- (-2*\x,-.2) node[anchor=north,font=\scriptsize]{$-\x\phm$};
+    \draw[thick] (.2,2*\x) -- (-.2,2*\x) node[anchor=east,font=\scriptsize]{$\x$};
+    \draw[thick] (.2,-2*\x) -- (-.2,-2*\x) node[anchor=east,font=\scriptsize]{$-\x$};
+    }
+}
+
+
+
+
+
+\newcommand{\Set}[1]{\bigl\{#1\bigr\}}
+\newcommand{\Relat}[1]{\Set{(x,y)\mid#1}}
+\newcommand{\SetBuild}[2][x]{\Set{#1\mid #2}}
+\newcommand{\Abs}[1]{\left|#1\right|}
+
+\newenvironment{clist}{
+\begin{enumerate}
+\setlength{\topsep}{0pt}
+\setlength{\itemsep}{1pt}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi.}
+}{
+\end{enumerate}
+}
+
+\newenvironment{Clist}{
+\begin{enumerate}
+\setlength{\topsep}{0pt}%
+\setlength{\itemsep}{1pt}%
+\renewcommand{\theenumi}{\Alph{enumi}}
+\renewcommand{\labelenumi}{\theenumi.}
+}{
+\end{enumerate}
+}
+
+\newenvironment{Choices}{%
+\begin{enumerate}%
+\renewcommand{\labelenumii}{\Alph{enumii}.}%
+\setlength{\topsep}{0pt}%
+\setlength{\itemsep}{1pt}%
+}{%
+\end{enumerate}%
+}
+
+\newcommand{\inv}{^{-1}}
+\newcommand{\wordand}{\mbox{ and }}
+\newcommand{\wordor}{\mbox{ or }}
+\newcommand{\Gp}[1]{\left(#1\right)}
+
+\newcommand{\makerefable}{
+\addtocounter{multienum\romannumeral\themultienumdepth}{-1}%
+\refstepcounter{multienum\romannumeral\themultienumdepth}}
+
+\newcommand{\mlbl}[1]{\makerefable\label{#1}}
+
+\newcommand{\nref}[1]{\#\ref{#1}}
+\newcommand{\nnref}[2]{\#\ref{#1} -- \ref{#2}}
+
+\newcommand{\lrint}[2]{\left(#1,#2\right)}
+\newcommand{\Lrint}[2]{\left[#1,#2\right)}
+\newcommand{\lRint}[2]{\left(#1,#2\right]}
+\newcommand{\LRint}[2]{\left[#1,#2\right]}
+\newcommand{\lint}[1]{\left(#1,\infty\right)}
+\newcommand{\Lint}[1]{\left[#1,\infty\right)}
+\newcommand{\rint}[1]{\left(-\infty,#1\right)}
+\newcommand{\Rint}[1]{\left(-\infty,#1\right]}
+\newcommand{\eint}{\left(-\infty,\infty\right)}
+\newcommand{\neint}[1]{\left(-\infty,#1\right)\cup\left(#1,\infty\right)}
+
+\DeclareMathOperator{\dom}{Dom}
+\DeclareMathOperator{\rng}{Rng}
+
+%\newenvironment{amath}{\begin{math}\begin{aligned}}{\end{aligned}\end{math}}
+\NewDocumentEnvironment{amath}{b}{$\begin{aligned}#1\end{aligned}$}{}
+
+\NewDocumentCommand{\CS}{m o o}{%
+$x^2 #1x+{\IfValueTF{#2}{#2}{\qquad}}%
+=%
+\IfValueTF{#3}{\Bigl(x+#3\Bigr)^2}{\Bigl(x+\qquad\Bigr)^2}$%
+}
+
+\NewDocumentCommand{\CSsquare}{o o}{%
+\\\begin{ilpic}[x=1.5em,y=1.5em]
+\useasboundingbox(-1,1) rectangle (5,-5);
+\draw (0,0) rectangle (5,-5);
+\draw (3,0) -- (3,-5);
+\draw (0,-3) -- (5,-3);
+\draw (1.5,-1.5) node[anchor=mid]{$x^2$};
+\IfValueT{#1}{
+	\draw (4,-1.5) node[anchor=mid]{$#1 x$};
+	\draw (1.5,-4) node[anchor=mid]{$#1 x$};
+}
+\IfValueT{#2}{
+	\draw (4,-4) node[anchor=mid]{$#2$};
+}
+\end{ilpic}
+}
+
+\newenvironment{pw}{\displaystyle\left\{\begin{array}{l@{\quad\mathrm{if}\quad}l}}{\end{array}\right.}
+
+
+\newlength{\dotsize}
+\setlength{\dotsize}{0.025in}
+
+\newcommand{\Cdot}[1]{\filldraw (#1) circle (\dotsize)}
+\newcommand{\Odot}[1]{\filldraw[thick,fill=white] (#1) circle (\dotsize)}
+
+\newcommand{\maitemxx}[2]{\mitemxx{$#1$}{$#2$}}
+\newcommand{\maitemxxx}[3]{\mitemxxx{$#1$}{$#2$}{$#3$}}
+\newcommand{\maitemxxxx}[4]{\mitemxxxx{$#1$}{$#2$}{$#3$}{$#4$}}
+
+
+\newenvironment{System}{%
+	\displaystyle\left\{\begin{array}{l}%
+}{%
+	\end{array}\right.%
+}
+
+\usepackage{array}
+\newcolumntype{o}{@{}>{{}}c<{{}}@{}}
+
+\newenvironment{SystemA}{%
+	\displaystyle\left\{\begin{array}{rororor}%
+}{%
+	\end{array}\right.%
+}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\remainder}{\;\textsc{r}}
+
+\newcommand{\nlgraph}[2][6]{%
+\begin{tikzpicture}[x=0.2in,y=0.2in,baseline=-0.2*0.2in]
+\draw[<->,semithick] (-#1-1,0) -- (#1+1,0);
+\foreach \x in {0,...,#1} {
+	\draw (\x,0.2) -- (\x,-0.2);
+	\draw (\x,-0.7) node[anchor=base]{\footnotesize{$\x$}};
+}
+\foreach \x in {1,...,#1} {
+	\draw (-\x,0.2) -- (-\x,-0.2);
+	\draw (-\x,-0.7) node[anchor=base,xshift=-0.75ex]{\footnotesize{$-\x$}};
+}
+#2
+\end{tikzpicture}
+}
+
+\usepackage{ifthen}
+
+
+\NewDocumentCommand{\nlgraphgen}{O{-} m m m m O{0}}{%
+	\draw[ultra thick,#1] (#2,#6) -- (#3,#6);
+	\ifthenelse{\equal{#1}{<-}}{}{\filldraw[thick,black,fill=#4] (#2,#6) circle (0.125*0.2in);}
+	\ifthenelse{\equal{#1}{->}}{}{\filldraw[thick,black,fill=#5] (#3,#6) circle (0.125*0.2in);}
+}
+\NewDocumentCommand{\nlgraphoo}{m m O{0}}{%
+	\nlgraphgen{#1}{#2}{white}{white}[#3]
+}
+\NewDocumentCommand{\nlgraphoc}{m m O{0}}{%
+	\nlgraphgen{#1}{#2}{white}{black}[#3]
+}
+\NewDocumentCommand{\nlgraphco}{m m O{0}}{%
+	\nlgraphgen{#1}{#2}{black}{white}[#3]
+}
+\NewDocumentCommand{\nlgraphcc}{m m O{0}}{%
+	\nlgraphgen{#1}{#2}{black}{black}[#3]
+}
+\NewDocumentCommand{\nlgraphao}{O{6} m O{0}}{%
+	\nlgraphgen[<-]{-#1-1}{#2}{white}{white}[#3]
+}
+\NewDocumentCommand{\nlgraphac}{O{6} m O{0}}{%
+	\nlgraphgen[<-]{-#1-1}{#2}{black}{black}[#3]
+}
+\NewDocumentCommand{\nlgraphoa}{O{6} m O{0}}{%
+	\nlgraphgen[->]{#2}{#1+1}{white}{white}[#3]
+}
+\NewDocumentCommand{\nlgraphca}{O{6} m O{0}}{%
+	\nlgraphgen[->]{#2}{#1+1}{black}{black}[#3]
+}
+
+\newcounter{argcount}
+\NewDocumentCommand{\nlrough}{O{2in} >{\SplitArgument{3}{,}} m m}{%
+\countargs#2
+\nlroughpro[#1]#2{#3}
+}
+
+\NewDocumentCommand{\nlroughpro}{O{2in} m m m m m}{%
+%\setcounter{argcount}{0}%
+%\IfValueT{#2}{\addtocounter{argcount}{1}}%
+%\IfValueT{#3}{\addtocounter{argcount}{1}}%
+%\IfValueT{#4}{\addtocounter{argcount}{1}}%
+%\IfValueT{#5}{\addtocounter{argcount}{1}}%
+\begin{tikzpicture}[x={#1/(\value{argcount}+1)},y=0.2in,baseline=-0.2*0.2in]
+\draw[semithick,<->] (0,0) -- (\value{argcount}+1,0);
+\foreach \x in {1,...,\value{argcount}} \draw (\x,0.2) -- (\x,-0.2);
+\IfValueT{#2}{\draw (1,-0.8) node[anchor=base]{\footnotesize$#2$};}
+\IfValueT{#3}{\draw (2,-0.8) node[anchor=base]{\footnotesize$#3$};}
+\IfValueT{#4}{\draw (3,-0.8) node[anchor=base]{\footnotesize$#4$};}
+\IfValueT{#5}{\draw (4,-0.8) node[anchor=base]{\footnotesize$#5$};}
+#6
+\end{tikzpicture}%
+}
+
+\newcommand{\atype}{}
+\newcommand{\lend}{}
+\newcommand{\rend}{}
+\newcommand{\lendv}{}
+\newcommand{\rendv}{}
+\newcommand{\nla}{}
+\newcommand{\nlb}{}
+
+%#1 is the size of the number line
+%#2 is the values to show (up to 3 of them)
+%#3 is the types of endpoints for the first graph:
+%  a,o, or c; exactly 2
+%#4 is the endpoints for the first graph:
+%  one if there is an arrow, two otherwise
+%#5 is as #3
+%#6 is as #4
+\NewDocumentCommand{\twonlgraph}{O{2in} >{\SplitArgument{3}{,}}m >{\SplitArgument{1}{,}}m >{\SplitArgument{1}{,}}m >{\SplitArgument{1}{,}}m >{\SplitArgument{1}{,}}m}%
+{%
+	\countargs#2%
+	\nlroughpro[#1]#2{
+		\parsetype#3#4%
+		\nlgraphgen[\atype]{\lendv}{\rendv}{\lend}{\rend}[0.5]%
+		\parsetype#5#6%
+		\nlgraphgen[\atype]{\lendv}{\rendv}{\lend}{\rend}[0.25]%
+	}
+}
+\NewDocumentCommand{\countargs}{m m m m}{%
+	\setcounter{argcount}{0}%
+	\IfValueT{#1}{\addtocounter{argcount}{1}}%
+	\IfValueT{#2}{\addtocounter{argcount}{1}}%
+	\IfValueT{#3}{\addtocounter{argcount}{1}}%
+	\IfValueT{#4}{\addtocounter{argcount}{1}}%
+}
+\NewDocumentCommand{\parsetype}{m m m m}{%
+	\ifthenelse{\equal{#1}{a}}{%
+		\renewcommand{\atype}{<-}%
+		\renewcommand{\lendv}{0}%
+		\renewcommand{\rendv}{#3}%
+	}{%
+		\renewcommand{\atype}{-}%
+		\renewcommand{\lendv}{#3}%
+	}
+	\ifthenelse{\equal{#1}{o}}{%
+		\renewcommand{\lend}{white}%
+	}{%
+		\renewcommand{\lend}{black}%
+	}%
+	\ifthenelse{\equal{#2}{a}}{%
+		\renewcommand{\atype}{->}%
+		\renewcommand{\rendv}{\value{argcount}+1}%
+	}{%
+		\IfValueT{#4}{\renewcommand{\rendv}{#4}}%
+	}%
+	\ifthenelse{\equal{#2}{o}}{%
+		\renewcommand{\rend}{white}%
+	}{%
+		\renewcommand{\rend}{black}%
+	}%
+}
+
+\newcommand{\twopartans}[2]{%
+\begin{nmenum}%
+\mitemxx{#1}{#2}%
+\end{nmenum}%
+}
+\newcommand{\threepartans}[3]{%
+\begin{nmenum}%
+\mitemxxx{#1}{#2}{#3}%
+\end{nmenum}%
+}
+\newcommand{\threepartansb}[3]{%
+\begin{nmenum}%
+\mitemxxox{#1}{#2}{#3}%
+\end{nmenum}%
+}
+
+\newcommand{\withsketch}[2]{%
+Sketch: #1\qquad #2
+}
+
+\newcommand{\fourpairs}[2]{\tab$(#1,#2)$\tab$(-#1,#2)$\tab$(#1,-#2)$\tab$(-#1,-#2)$}
+\newcommand{\fourpairsb}[4]{\tab$(#1)$\tab$(#2)$\tab$(#3)$\tab$(#4)$}
+
+\newcommand{\mg}[1]{#1\;\mathrm{mg}}
+
+\newcommand{\graphpage}{\clearpage%
+\noindent\begin{tikzpicture}[x=0.25in,y=0.25in]
+\useasboundingbox (-0.5\textwidth,-0.5\textheight) rectangle (0.5\textwidth,0.5\textheight);
+\draw[step=1,black!50!white] (-0.5\textwidth,-0.5\textheight) grid (0.5\textwidth,0.5\textheight);
+\end{tikzpicture}}
+
+
+\NewDocumentCommand{\threesln}{>{\SplitArgument{2}{,}} O{x,y,z} >{\SplitArgument{2}{,}} m}{%
+	\threeslnSUB #1 #2%
+}
+
+\NewDocumentCommand{\threeslnSUB}{m m m m m m}{%
+	\ensuremath{#1=#4,\ #2=#5,\ #3=#6}%
+}

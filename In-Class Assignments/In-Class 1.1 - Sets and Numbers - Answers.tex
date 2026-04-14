@@ -1,0 +1,129 @@
+\input{preamble}
+
+\title{Section 1.1 --- Sets and Numbers --- Answer Key}
+
+\newlength{\lwid}
+\newlength{\lht}
+
+\newcommand{\Lcirc}[1]{%
+\setlength{\lwid}{\widthof{$\mathbb{#1}$}}
+\setlength{\lht}{\heightof{$\mathbb{#1}$}}
+\begin{tikzpicture}[baseline=0]
+\useasboundingbox (-0.5\lwid,0) rectangle (0.5\lwid,\lht);
+\draw (0,0) node[anchor=base]{$\mathbb{#1}$};
+\draw (0,0.5\lht) circle (1.75ex);
+\end{tikzpicture}%
+}
+
+\newcommand{\sets}{\ensuremath{\mathbb{N}\quad\mathbb{Z}\quad\mathbb{Q}\quad\mathbb{R}}}
+\newcommand{\setsN}{\ensuremath{\Lcirc{N}\quad\Lcirc{Z}\quad\Lcirc{Q}\quad\Lcirc{R}}}
+\newcommand{\setsZ}{\ensuremath{\N\quad\Lcirc{Z}\quad\Lcirc{Q}\quad\Lcirc{R}}}
+\newcommand{\setsQ}{\ensuremath{\N\quad\Z\quad\Lcirc{Q}\quad\Lcirc{R}}}
+\newcommand{\setsR}{\ensuremath{\N\quad\Z\quad\Q\quad\Lcirc{R}}}
+
+\newcommand{\picksets}[2][\sets]{$#2\hfill#1\qquad$}
+
+\begin{document}
+\maketitle
+
+\section{Standard Number Sets}
+For each number below, circle the symbol for each set the number belongs to.
+\begin{smenum}
+\mitemxxx
+    {\picksets[\setsR]{-\sqrt{7}}}
+    {\picksets[\setsZ]{-\frac{75}{5}}}
+    {\picksets[\setsQ]{\frac{1}{5}}}
+\mitemxxx
+    {\picksets[\setsZ]{-6}}
+    {\picksets[\setsN]{5}}
+    {\picksets[\setsN]{2}}
+\mitemxxx
+    {\picksets[\setsQ]{\frac{7}{3}}}
+    {\picksets[\setsN]{\frac{21}{3}}}
+    {\picksets[\setsQ]{3.61}}
+\mitemxxx
+    {\picksets[\setsR]{\pi}}
+    {\picksets[\setsZ]{-4.0}}
+    {\picksets[\setsZ]{-4}}
+\mitemxxx
+    {\picksets[\setsR]{\sqrt{8}}}
+    {\picksets[\setsN]{\sqrt{9}}}
+    {\picksets[\setsQ]{-4.\overline{54}}}
+\mitemxxx
+    {\picksets[\setsQ]{-0.2}}
+    {\picksets[\setsZ]{-3215}}
+    {\picksets[\setsN]{9.0}}
+\mitemxxx
+    {\picksets[\setsN]{816}}
+    {\picksets[\setsQ]{-\frac{10}{7}}}
+    {\picksets[\setsQ]{0.\overline{123}}}
+\mitemxxo
+    {\picksets[\setsQ]{-\frac{3}{4}}}
+    {$0.1001110000...\qquad\setsR$}
+\end{smenum}
+\emph{Note: Answers here will vary. Those given are just some possible examples.}
+\begin{senum}
+\item $-5$
+\item $\frac{1}{2}$
+\item $\sqrt{2}$
+\end{senum}
+
+\section{Set Builder Notation}
+For each set $A$ given below, list three elements of the set. Then, write the given number $x$ in a form that shows that $x\in A$.
+\emph{Note: Answers here will vary. Those given are just some possible examples.}
+\begin{senum}
+\item Elements: $\frac{1}{8}$, $\frac{2}{8}$, $\frac{3}{8}$. $x=\frac{4}{8}\in A$
+\item Elements: $\frac{1}{2}$, $\frac{3}{8}$, $\frac{5}{6}$. $x=\frac{3}{4}\in A$
+\item Elements: $1=3-2$, $2=4-2$, $3=5-2$. $x=1-2\in A$
+\item Elements: $\frac{1}{2}$, $\frac{1}{7}$, $\frac{2}{3}=\frac{1}{\frac{3}{2}}$. $x=\frac{1}{\frac{1}{3}}\in A$
+\end{senum}
+
+\section{Properties of Real Numbers/Simplifying Expressions}
+Simplify each expression below. Clearly show your work on a separate sheet of paper.
+\begin{smenum}
+\mitemxxx
+{$5x$}
+{$-6a$}
+{$5t-1$}
+\mitemxxxx
+{$2x-8$}
+{$2t+12$}
+{$4t+10$}
+{$\frac{1}{2}x+\frac{5}{2}$}
+\mitemxxxx
+{$-x+30$}
+{$\frac{5}{6}x+\frac{3}{2}$}
+{$-3.5x + 8.5$}
+{$2.3x-1.5$}
+\mitemxx
+{$x+y+14$}
+{$25.5x-73.8$}
+\end{smenum}
+
+\section{Properties of Equality/Solving Equations}
+Solve each equation below. Clearly show your work on a separate sheet of paper.
+\begin{smenum}
+\mitemxx
+{$x=5$}
+{$x=-\frac{4}{11}$}
+\mitemxx
+{$y=\frac{20}{3}$}
+{$y=16$}
+\mitemxx
+{No solution}
+{$a=2$}
+\mitemxx
+{All real numbers are solutions}
+{$a=-9$}
+\mitemxx
+{No solution}
+{$x=-8$}
+\mitemxx
+{All real numbers are solutions}
+{$a=-9$}
+\mitemxx
+{$v=4.1$}
+{No solution}
+\end{smenum}
+
+\end{document}

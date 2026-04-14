@@ -1,0 +1,86 @@
+\input{preamble}
+
+\title{Section 1.6 --- Composition of Functions --- Answer Key}
+
+\begin{document}
+\maketitle
+
+\section{Composing Functions}
+Let $f=\{(1,5),(2,3),(3,1),(4,4),(5,2)\}$ and $g(x)=\{(1,1),(2,4),(3,2),(4,5),(5,3)\}$. Find each of the following.
+\begin{smenum}
+\mitemxxxxx
+{$(f\circ g)(4)=2$}{$(g\circ f)(2)=2$}{$(f\circ g)(1)=5$}{$(f\circ g\circ f)(3)=5$}{$(f\circ f)(5)=3$}
+\mitemx{$f\circ g=\Set{(1,5),(2,4),(3,3),(5,2)}$}
+\end{smenum}
+Let $f(x)$ and $g(x)$ be the functions graphed below.\\
+\begin{ilpic}[x=0.2in,y=0.2in]
+\DrawGridSquare
+\draw[<->,thick] (-5.9,4.9) -- (2,-3) -- node[anchor=east]{$y=f(x)$} (5.9,4.8);
+\end{ilpic}
+\qquad
+\begin{ilpic}[x=0.2in,y=0.2in]
+\DrawGridSquare
+\draw[thick] (-5,5) -- (0,-5);
+\draw[thick] (0,5) -- node[anchor=south west]{$y=g(x)$} (5,-5);
+\filldraw[fill=white](0,5) circle (0.2);
+\filldraw (0,-5) circle (0.2);
+\filldraw (-5,5) circle (0.2);
+\filldraw (5,-5) circle (0.2);
+\end{ilpic}\\
+Find each of the following.
+\begin{smenum}
+\mitemxxxx
+{$(f\circ g)(-1)=2$}{$(g\circ f)(-1)=-5$}{$(g\circ f)(3)-3$}{$(f\circ f)(-2)-2$}
+\end{smenum}
+Let $f(x)=2x-4$, $g(x)=-\frac{2}{3}x+1$, and $h(x)=\Abs{x+2}$. Find each of the following.
+\begin{smenum}
+\mitemxxxxx
+{$(f\circ g)(12)=18$}{$(h\circ g)(0)=3$}{$(h\circ f)(-1)=4$}{$(f\circ f)(1)=8$}{$(g\circ h)(1)=-1$}
+\mitemx{$(f\circ g)(x)=-\frac{4}{3}x-2$}
+\mitemx{$(g\circ h\circ f)(x)=-\frac{2}{3}\Abs{2x-4+2}+1$}
+\end{smenum}
+
+\section{Inverses}
+Let $f(x)=\frac{1}{2}x-4$, $g(x)=-2x+4$, $h(x)=-\frac{1}{2}x+2$, $k(x)=2x+2$. Give expressions for each of the following:
+\begin{smenum}
+\mitemxxx
+{$(f\circ g)(x)=-x-2$}
+{$(f\circ h)(x)-\frac{1}{4}x-3$}
+{$(f\circ k)(x)=x-3$}
+\mitemxxx
+{$(g\circ h)(x)=x$}
+{$(g\circ k)(x)=-4x$}
+{$(h\circ k)(x)=-x+1$}
+\mitemx{$g$ and $h$ are inverses of one another.}
+\end{smenum}
+
+\section{Undoing composition}
+Give functions so that the given function is the given composition. Each function should only do one thing.
+\begin{smenum}
+\mitemxxx
+{$f(x)=x-4$, $g(x)=2x$}
+{$f(x)=\Abs{x}$, $g(x)=x+1$}
+{$f(x)=x+4$, $g(x)=x^2$}
+\mitemxxx
+{$f(x)=x^4$, $g(x)=x-3$}
+{$f(x)=3x$, $g(x)=\Abs{x}$}
+{$f(x)=\sqrt{x}$, $g(x)=x-5$}
+\end{smenum}
+
+\section{Domain and Range}
+For each pair of functions $f$ and $g$, find the domain and range of $f\circ g$.
+\begin{smenum}
+\mitemxx
+{$\dom f\circ g=\Set{3,9}$\\$\rng f\circ g=\Set{4}$}
+{$\dom f\circ g=\Set{-7,3,9}$\\$\rng f\circ g=\Set{1}$}
+\mitemxx
+{$\dom f\circ g=\varnothing$\\$\rng f\circ g=\varnothing$}
+{$\dom f\circ g=\Set{-7,-2}$\\$\rng f\circ g=\Set{-7,8}$}
+\end{smenum}
+For each pair of functions $f$ and $g$, find the domain of $f\circ g$.
+\begin{smenum}
+\mitemxx
+{$\dom f\circ g=(0,\infty)$}
+{$\dom f\circ g=\LRint{0}{\frac{5}{2}}$}
+\end{smenum}
+\end{document}

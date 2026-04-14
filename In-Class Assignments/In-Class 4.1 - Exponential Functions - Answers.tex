@@ -1,0 +1,143 @@
+\input{preamble}
+
+\title{Section 4.1 --- Exponential Functions --- Answer Key}
+
+\NewDocumentCommand{\DomRng}{m d(] d[)}{%
+$\dom #1=\eint$\\$\rng #1=%
+\IfNoValueTF{#2}{%
+\IfNoValueTF{#3}{%
+\eint
+}{
+\lint{#3}
+}}{
+\rint{#2}
+}$}
+
+\begin{document}
+\maketitle
+
+\section{Identifying Exponential Expressions}
+Determine whether or not each expression is exponential.
+\begin{smenum}
+\mitemxxxxx
+{Yes}
+{No}
+{Yes}
+{Yes}
+{No}
+\end{smenum}
+
+\section{Graphing Exponential Functions}
+For each exponential function, find the points on the graph for each input (not $x$-value) in $\{-2,-1,0,1,2\}$, and find the equation of the horizontal aysmptote. Then, sketch a graph of the function in the space provided. (If the point can't be plotted in this space, leave it off. Do your best to approximate fractions.)
+\begin{smenum}
+\mitemxx
+{%$f(x)=2^x$\\
+\begin{GridSquareFitEOFilled}[10](1.5in)
+\foreach \x in {-2,-1,0,1,2} \fill (\x,2^\x) circle (0.25);
+\draw[thick,<->,domain=-10.9:{ln(10.9)/ln(2)}] plot (\x,{exp(\x*ln(2))});
+\begin{scope}[xshift=0.75in+0.5em,yshift=0.75in,x=1em,y=4ex]
+	\draw (0,-1) -- (7,-1);
+	\foreach \x in {2,5} \draw (\x,0) -- (\x,-6);
+	\foreach \x/\lbl in {1/$x$,3.5/input,6/$y$} \draw (\x,-0.75) node[anchor=base]{\lbl};
+	\foreach \y/\xv/\inp/\yv in {-2/-2/-2/\frac{1}{4},
+															-3/-1/-1/\frac{1}{2},
+															-4/\phm0/\phm0/1,
+															-5/\phm1/\phm1/2,
+															-6/\phm2/\phm2/4}
+		\foreach \x/\lbl in {1/\xv,3.5/\inp,6/\yv} \draw (\x,\y+0.25) node[anchor=base]{$\lbl$};
+\end{scope}
+\end{GridSquareFitEOFilled}
+}
+{%$f(x)=3\left(\frac{1}{3}\right)^x-2$\\
+\begin{GridSquareFitEOFilled}[10](1.5in)
+\draw[thick,dashed] (-10.9,-2) -- (10.9,-2);
+\foreach \x in {-1,0,1,2} \fill (\x,3/3^\x-2) circle (0.25);
+\draw[thick,<->,domain={-ln(12.9/3)/ln(3)}:10.9] plot (\x,{3*exp(\x*ln(1/3))-2});
+\begin{scope}[xshift=0.75in+0.5em,yshift=0.75in,x=1em,y=4ex]
+	\draw (0,-1) -- (7,-1);
+	\foreach \x in {2,5} \draw (\x,0) -- (\x,-6);
+	\foreach \x/\lbl in {1/$x$,3.5/input,6/$y$} \draw (\x,-0.75) node[anchor=base]{\lbl};
+	\foreach \y/\xv/\inp/\yv in {-2/-2/-2/25,
+															-3/-1/-1/\phm7,
+															-4/\phm0/\phm0/\phm1,
+															-5/\phm1/\phm1/-1,
+															-6/\phm2/\phm2/-\frac{5}{3}}
+		\foreach \x/\lbl in {1/\xv,3.5/\inp,6/\yv} \draw (\x,\y+0.25) node[anchor=base]{$\lbl$};
+\end{scope}
+\end{GridSquareFitEOFilled}
+}
+\mitemxx
+{%$f(x)=-2\left(\frac{3}{2}\right)^{x-1}$\\
+\begin{GridSquareFitEOFilled}[10](1.5in)
+\foreach \x in {-2,-1,0,1,2} \fill (\x+1,{-2*exp(\x*ln(3/2))}) circle (0.25);
+\draw[thick,<->,domain=-11.9:{ln(10.9/2)/ln(3/2)}] plot (\x+1,{-2*exp(\x*ln(3/2))});
+\begin{scope}[xshift=0.75in+0.5em,yshift=0.75in,x=1em,y=4ex]
+	\draw (0,-1) -- (7,-1);
+	\foreach \x in {2,5} \draw (\x,0) -- (\x,-6);
+	\foreach \x/\lbl in {1/$x$,3.5/input,6/$y$} \draw (\x,-0.75) node[anchor=base]{\lbl};
+	\foreach \y/\xv/\inp/\yv in {-2/-1/-2/-\frac{8}{27},
+															-3/\phm0/-1/-\frac{4}{9},
+															-4/\phm1/\phm0/-2,
+															-5/\phm2/\phm1/-3,
+															-6/\phm3/\phm2/-\frac{9}{2}}
+		\foreach \x/\lbl in {1/\xv,3.5/\inp,6/\yv} \draw (\x,\y+0.25) node[anchor=base]{$\lbl$};
+\end{scope}
+
+\end{GridSquareFitEOFilled}
+}
+{%$f(x)=-\left(\frac{1}{2}\right)^{x+1}$+3\\
+\begin{GridSquareFitEOFilled}[10](1.5in)
+\draw[thick,dashed] (-10.9,3) -- (10.9,3);
+\foreach \x in {-2,-1,0,1,2} \fill (\x-1,{-1*exp(\x*ln(1/2))+3}) circle (0.25);
+\draw[thick,<->,domain={-ln(13.9)/ln(2)}:10.9] plot (\x-1,{-1*exp(\x*ln(1/2))+3});
+\begin{scope}[xshift=0.75in+0.5em,yshift=0.75in,x=1em,y=4ex]
+	\draw (0,-1) -- (7,-1);
+	\foreach \x in {2,5} \draw (\x,0) -- (\x,-6);
+	\foreach \x/\lbl in {1/$x$,3.5/input,6/$y$} \draw (\x,-0.75) node[anchor=base]{\lbl};
+	\foreach \y/\xv/\inp/\yv in {-2/-3/-2/-1,
+															-3/-2/-1/\phm1,
+															-4/-1/\phm0/\phm3,
+															-5/\phm0/\phm1/\phm\frac{5}{2},
+															-6/\phm1/\phm2/\frac{11}{4}}
+		\foreach \x/\lbl in {1/\xv,3.5/\inp,6/\yv} \draw (\x,\y+0.25) node[anchor=base]{$\lbl$};
+\end{scope}
+\end{GridSquareFitEOFilled}
+}\end{smenum}
+
+%\clearpage
+\section{Identifying Graphs of Exponential Functions}
+Match each function to its graph, and give the equation of its horizontal asymptote.
+\begin{smenum}
+\mitemxxxx
+{c; $y=-\frac{1}{3}$}
+{a; $y=1$}
+{d; $y=-\frac{3}{2}$}
+{b; $y=-1$}
+\end{smenum}
+
+\section{Domain and Range of an Exponential Function}
+Find the domain and range of each exponential function.
+\begin{smenum}
+\mitemxxxx
+{\DomRng{f}[-1)}
+{\DomRng{g}(-11]}
+{\DomRng{h}(1]}
+{\DomRng{k}[623)}
+\end{smenum}
+
+\section{Exponential Equations}
+Solve each equation.
+\begin{smenum}
+\mitemxxxx
+{$x=4$}
+{$x=\frac{5}{3}$}
+{$x=-\frac{3}{2}$}
+{$x=-1,3$}
+\mitemxxxx
+{$x=-12$}
+{$x=-4$}
+{$x=1,3$}
+{$x=2,4$}
+\end{smenum}
+
+\end{document}

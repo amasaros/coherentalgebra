@@ -1,0 +1,5 @@
+# Within the in-class assignments folder, only track the actual in-class assignments
+In-Class Assignments/*.*
+!In-Class Assignments/In-Class*.pdf
+!In-Class Assignments/In-Class*.tex
+!In-Class Assignments/Preamble.tex

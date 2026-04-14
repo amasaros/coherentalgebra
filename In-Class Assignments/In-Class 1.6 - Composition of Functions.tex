@@ -1,0 +1,86 @@
+\input{preamble}
+
+\title{Section 1.6 --- Composition of Functions}
+
+\begin{document}
+\maketitle
+
+\section{Composing Functions}
+Let $f=\{(1,5),(2,3),(3,1),(4,4),(5,2)\}$ and $g(x)=\{(1,1),(2,4),(3,2),(4,5),(5,3)\}$. Find each of the following.
+\begin{smenum}
+\mitemxxxxx
+{$(f\circ g)(4)$}{$(g\circ f)(2)$}{$(f\circ g)(1)$}{$(f\circ g\circ f)(3)$}{$(f\circ f)(5)$}
+\mitemx{Write $f\circ g$ as a set of ordered pairs}
+\end{smenum}
+Let $f(x)$ and $g(x)$ be the functions graphed below.\\
+\begin{ilpic}[x=0.2in,y=0.2in]
+\DrawGridSquare
+\draw[<->,thick] (-5.9,4.9) -- (2,-3) -- node[anchor=east]{$y=f(x)$} (5.9,4.8);
+\end{ilpic}
+\qquad
+\begin{ilpic}[x=0.2in,y=0.2in]
+\DrawGridSquare
+\draw[thick] (-5,5) -- (0,-5);
+\draw[thick] (0,5) -- node[anchor=south west]{$y=g(x)$} (5,-5);
+\filldraw[fill=white](0,5) circle (0.2);
+\filldraw (0,-5) circle (0.2);
+\filldraw (-5,5) circle (0.2);
+\filldraw (5,-5) circle (0.2);
+\end{ilpic}\\
+Find each of the following.
+\begin{smenum}
+\mitemxxxx
+{$(f\circ g)(-1)$}{$(g\circ f)(-1)$}{$(g\circ f)(3)$}{$(f\circ f)(-2)$}
+\end{smenum}
+Let $f(x)=2x-4$, $g(x)=-\frac{2}{3}x+1$, and $h(x)=\Abs{x+2}$. Find each of the following.
+\begin{smenum}
+\mitemxxxxx
+{$(f\circ g)(12)$}{$(h\circ g)(0)$}{$(h\circ f)(-1)$}{$(f\circ f)(1)$}{$(g\circ h)(1)$}
+\mitemx{Write an expression for $(f\circ g)(x)$. Simplify your answer as much as possible.}
+\mitemx{Write an expression for $(g\circ h\circ f)(x)$. Do not simplify your answer.}
+\end{smenum}
+
+\section{Inverses}
+Let $f(x)=\frac{1}{2}x-4$, $g(x)=-2x+4$, $h(x)=-\frac{1}{2}x+2$, $k(x)=2x+2$. Give expressions for each of the following:
+\begin{smenum}
+\mitemxxx
+{$(f\circ g)(x)$}
+{$(f\circ h)(x)$}
+{$(f\circ k)(x)$}
+\mitemxxx
+{$(g\circ h)(x)$}
+{$(g\circ k)(x)$}
+{$(h\circ k)(x)$}
+\mitemx{Which pair of functions are inverses of one another?}
+\end{smenum}
+
+\section{Undoing composition}
+Give functions so that the given function is the given composition. Each function should only do one thing.
+\begin{smenum}
+\mitemxxx
+{$(f\circ g)(x)=2x-4$}
+{$(f\circ g)(x)=|x+1|$}
+{$(f\circ g)(x)=x^2+4$}
+\mitemxxx
+{$(f\circ g)(x)=(x-3)^4$}
+{$(f\circ g)(x)=3|x|$}
+{$(f\circ g)(x)=\sqrt{x-5}$}
+\end{smenum}
+
+\section{Domain and Range}
+For each pair of functions $f$ and $g$, find the domain and range of $f\circ g$.
+\begin{smenum}
+\mitemxx
+{$f=\Set{(-3,5),(0,4),(2,9),(5,4)}$\\$g=\Set{(3,5),(5,1),(7,-1),(9,5)}$}
+{$f=\Set{(-9,-7),(-7,7),(-1,1),(7,1)}$\\$g=\Set{(-7,-1),(1,5),(3,-1),(9,7)}$}
+\mitemxx
+{$f=\Set{(-9,-8),(-4,3),(5,-3),(6,6)}$\\$g=\Set{(-8,7),(-3,-5),(0,-5),(3,7)}$}
+{$f=\Set{(-7,-7),(-6,0),(-5,-2),(5,8)}$\\$g=\Set{(-7,5),(-2,-7),(0,3),(8,1)}$}
+\end{smenum}
+For each pair of functions $f$ and $g$, find the domain of $f\circ g$.
+\begin{smenum}
+\mitemxx
+{$f(x)=\frac{1}{x},\ x>0$\\$g(x)=x+4,\ x>0$}
+{$f(x)=\sqrt x$ (given $\dom f=\Lrint{0}{\infty}$)\\$g(x)=-4x+10,\ x\geq 0$}
+\end{smenum}
+\end{document}

@@ -1,0 +1,136 @@
+\input{preamble}
+
+\title{Section 6.1 --- Coordinate Geometry --- Answer Key}
+
+\begin{document}
+\maketitle
+
+\section*{Practice With Points}
+\begin{senum}
+\item On a separate sheet of graph paper (or the other side of this sheet), draw appropriate axes and:
+\begin{nmenum}
+\mitemxx
+{\begin{GridFilled}[0.15in]{4}{2}{5}{3}
+\foreach \x/\y/\lbl in {-4/3/A,2/-5/B} {
+	\node[inner sep=0pt] (\lbl) at (\x,\y){};
+	\filldraw[black] (\lbl) circle (\dotsize);
+	\draw (\lbl) node[anchor=south west]{$\lbl$};
+}
+\draw[thick] (A) -- (B);
+\end{GridFilled}}
+{There are two possible diagrams you could use here.\\
+\begin{ilpic}[x=0.15in,y=0.15in]
+\begin{scope}[xshift=-4*0.15in]
+\DrawGrid{4}{2}{5}{3}
+\foreach \x/\y/\lbl in {-4/3/A,2/-5/B,-4/-5/C} {
+	\node[inner sep=0pt] (\lbl) at (\x,\y){};
+	\filldraw[black] (\lbl) circle (\dotsize);
+	\draw (\lbl) node[anchor=south west]{$\lbl$};
+}
+\draw[thick] (A) -- (B);
+\draw[thick,dashed] (A) -- (C);
+\draw[thick,dashed] (B) -- (C);
+\draw (-4.9,-7.4) node[anchor=south west]{Diagram I};
+\end{scope}
+\begin{scope}[xshift=5*0.15in]
+\DrawGrid{4}{2}{5}{3}
+\foreach \x/\y/\lbl in {-4/3/A,2/-5/B,2/3/C} {
+	\node[inner sep=0pt] (\lbl) at (\x,\y){};
+	\filldraw[black] (\lbl) circle (\dotsize);
+	\draw (\lbl) node[anchor=south west]{$\lbl$};
+}
+\draw[thick] (A) -- (B);
+\draw[thick,dashed] (A) -- (C);
+\draw[thick,dashed] (B) -- (C);
+\draw (-4.9,-7.4) node[anchor=south west]{Diagram II};
+\end{scope}
+\end{ilpic}
+}
+\mitemx
+{With Diagram I: $C=(-4,-5)$\\With Diagram II: $C=(2,3)$}
+\mitemx
+{With Diagram I: $AC=8$\\With Diagram II: $AC=6$}
+\mitemx
+{With Diagram I: $BC=6$\\With Diagram II: $BC=8$}
+\mitemxx
+{$AB=10$}
+{$M=(-1,1)$%
+\begin{ilpic}[x=0.15in,y=0.15in]
+\useasboundingbox(-5,-6) rectangle (3,-2);
+\DrawGrid{4}{2}{5}{3}
+\foreach \x/\y/\lbl/\dir in {-4/3/A/{south west},2/-5/B/{south west},-1/-1/M/{north east}} {
+	\node[inner sep=0pt] (\lbl) at (\x,\y){};
+	\filldraw[black] (\lbl) circle (\dotsize);
+	\draw (\lbl) node[anchor=\dir]{$\lbl$};
+}
+\draw[thick] (A) -- (B);
+\end{ilpic}}
+\end{nmenum}
+\end{senum}
+
+\section*{Distance Formula}
+Using the distance formula (without plotting on a graph) find the distance between the two points given. If necessary, give your answer as a simplified radical and as a decimal approximation.
+\begin{smenum}
+\mitemxxx
+{$13$}
+{$5$}
+{$\sqrt{5}\approx 2.236$}
+\mitemxxx
+{$2.9$}
+{$1$}
+{$\frac{2\sqrt{298}}{9}\approx 3.836$}
+\end{smenum}
+
+\section*{Midpoint Formula}
+For each pair of points $A$ and $B$ given below, find the midpoint of $\overline{AB}$.
+\begin{smenum}
+\mitemxxx
+{$M=(2,2)$}
+{$M=(8,4.5)$}
+{$M=(-8.5,-4)$}
+\mitemxxx
+{$M=\left(\frac{5}{2},3\right)$}
+{$M=(1.3,3.7)$}
+{$M=(-38.5,60.5)$}
+\end{smenum}
+
+\section*{Triangles and Inequalities}
+For each list of three values, classify them as one of the following.
+\begin{Clist}
+\item Not possible as the distances between three points.
+\item Distances between three collinear points.
+\item Side lengths of an obtuse triangle.
+\item Side lengths of a right triangle.
+\item Side lengths of an acute triangle.
+\end{Clist}
+\begin{smenum}
+\mitemxxxxx
+{C}
+{B}
+{E}
+{A}
+{D}
+\mitemxxxxx
+{B}
+{E}
+{C}
+{A}
+{D}
+\end{smenum}
+
+\section*{Classifying Triangles}
+Use the distance formula to classify each set of three points as:
+\begin{Clist}
+\item Three collinear points
+\item Corners of an obtuse triangle
+\item Corners of a right triangle
+\item Corners of an acute triangle
+\end{Clist}
+\begin{smenum}
+\mitemxxxx
+{A}
+{C}
+{B}
+{B}
+\end{smenum}
+\end{document}

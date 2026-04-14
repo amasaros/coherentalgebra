@@ -1,0 +1,166 @@
+\input{preamble}
+
+\title{Section 2.7 --- Function Algebra --- Answer Key}
+
+\begin{document}
+\maketitle
+\section{Combined functions}
+Define the following functions:
+\[
+\begin{array}{r@{\;=\big\{(}r@{,}r@{),(}r@{,}r@{),(}r@{,}r@{),(}r@{,}r@{),(}r@{,}r@{)\big\}}}
+f&-7&-9&-1&-3&1&3&5&0&9&-8\\
+g&-7&-4&1&-8&5&1&7&0&9&-7\\
+h&-7&0&-1&-5&1&-7&7&-1&9&-5
+\end{array}
+\]
+Find each of the following.  If the given value is not in the domain of the given function, write ``undefined.''
+\begin{smenum}
+\mitemxxxx
+{$56$}
+{undefined}
+{$-1$}
+{$0$}
+\mitemxxxx
+{$-13$}
+{$-11$}
+{undefined}
+{$0$}
+\mitemxxxx
+{undefined}
+{$-1$}
+{$\frac{5}{3}$}
+{$-8$}
+\end{smenum}
+Find each domain.
+\begin{smenum}
+\mitemxx
+{$\dom f=\Set{-7,-1,1,5,9}$}
+{$\dom g=\Set{-7,1,5,7,9}$}
+\mitemxx
+{$\dom h=\Set{-7,-1,1,7,9}$}
+{$\dom\Gp{g+h}=\Set{-7,1,7,9}$}
+\mitemxx
+{$\dom\Gp{h-f}=\Set{-7,-1,1,9}$}
+{$\dom\Gp{f\cdot g}=\Set{-7,1,5,9}$}
+\mitemx
+{$\dom\Gp{\dfrac{h}{g}}=\Set{-7,1,9}$}
+\end{smenum}
+
+\section{Combined Functions from Graphs}
+Consider the functions graphed below.\\
+\begin{tabular}{cccc}
+\begin{ilpic}[x=0.1in,y=0.1in]
+\DrawGridSquareEO
+\draw (-6,-6) node[anchor=south west, fill=white] {$f$};
+\draw[thick,domain=0:2.429,->] plot (\x*\x,\x);
+%\begin{scope}[rotate=90]
+%\draw[thick,->] (0,0) parabola (2.429,5.9);
+%\end{scope}
+\filldraw (0,0) circle (.3);
+\end{ilpic}
+&
+\begin{ilpic}[x=0.1in,y=0.1in]
+\DrawGridSquareEO
+\draw (-6,-6) node[anchor=south west, fill=white] {$g$};
+\draw[thick] (-4,-3) -- (4,5);
+\filldraw (-4,-3) circle (0.3);
+\filldraw[thick, fill=white] (4,5) circle (0.3);
+\end{ilpic}
+&
+\begin{ilpic}[x=0.1in,y=0.1in]
+\DrawGridSquareEO
+\draw (-6,-6) node[anchor=south west, fill=white] {$h$};
+\draw[thick,<->] (-5.9,2.9) -- (-1,-2) -- (5.9,4.9);
+\end{ilpic}
+&
+\begin{ilpic}[x=0.1in,y=0.1in]
+\DrawGridSquareEO
+\draw (-6,-6) node[anchor=south west, fill=white] {$k$};
+\draw[thick,domain=-3.883:3.883,<->] plot (\x, -.25*\x*\x*\x+2.25*\x);
+\end{ilpic}
+\end{tabular}\\
+Find each of the following.  If the given value is not in the domain of the given function, write ``undefined.''
+\begin{smenum}
+\mitemxxxx
+{$-3$}
+{$2$}
+{$0$}
+{$0$}
+\mitemxxxx
+{undefined}
+{undefined}
+{$0$}
+{undefined}
+\end{smenum}
+Find each domain.
+\begin{smenum}
+\mitemxx
+{$\dom f=\Lint{1}$}
+{$\dom g=\Lrint{-4}{4}$}
+\mitemxx
+{$\dom h=\R=\eint$}
+{$\dom k=\R=\eint$}
+\mitemxx
+{$\dom\Gp{f-g}=\Lrint{0}{4}$}
+{$\dom\Gp{k+f}=\Lint{0}$}
+\mitemxx
+{$\dom\Gp{h\cdot k}=\R=\eint$}
+{$\dom\Gp{\dfrac{g}{k}}=\Lrint{-4}{-3}\cup\lrint{-3}{0}\cup\lrint{0}{3}\cup\lrint{3}{4}$}
+\end{smenum}
+
+\clearpage
+\section{Combined Functions}
+\[
+f(x)=3x^2-8x+4
+\qquad
+g(x)=x^3+7x^2-4x-28
+\qquad
+h(x)=x-2
+\qquad
+k(x)=3x^2-19x-14
+\]
+Use the functions above to find the following.
+\begin{smenum}
+\mitemxxxx
+{$-40$}
+{$0$}
+{$0$}
+{undefined}
+\end{smenum}
+Write expressions for each of the following. Simplify your answer as much as possible.
+\begin{smenum}
+\mitemxx
+{$\Gp{f-k}(x)=11x+18$}
+{$\Gp{g+f}(x)=x^3+10x^2-12x-24$}
+\mitemxx
+{$\Gp{f\cdot h}(x)=3x^3-14x^2+20x-8$}
+{$\Gp{h-g}(x)=x^3+7x^2-5x-26$}
+\mitemxx
+{$\Gp{h+k}(x)=3x^2-18x-12$}
+{$\Gp{f\cdot k}(x)=9x^4-81x^3+122x^2+36x-56$}
+\end{smenum}
+Write expressions for each of the following. Do not simplify your answer.
+\begin{smenum}
+\mitemxx
+{$\Gp{\dfrac{f}{h}}(x)=\dfrac{3x^2-8x+4}{x-2}$}
+{$\Gp{\dfrac{g}{h}}(x)=\dfrac{x^3+7x^2-4x-28}{x-2}$}
+\end{smenum}
+Find each domain.
+\begin{smenum}
+\mitemxx
+{$\dom f=\R=\eint$}
+{$\dom g=\R=\eint$}
+\mitemxx
+{$\dom h=\R=\eint$}
+{$\dom k=\R=\eint$}
+\mitemxx
+{$\dom\Gp{f+g}=\R=\eint$}
+{$\dom\Gp{h-k}=\R=\eint$}
+\mitemx
+{$\dom\Gp{f\cdot h}=\R=\eint$}
+\mitemx
+{$\dom\Gp{\dfrac{g}{k}}=\Set{x\mid x\neq -\frac{2}{3},7}=\rint{-\frac{2}{3}}\cup\lrint{-\frac{2}{3}}{7}\cup\lint{7}$}
+\end{smenum}
+
+
+\end{document}

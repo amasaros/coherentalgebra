@@ -1,0 +1,102 @@
+\input{preamble}
+
+\title{Section 1.5 --- Linear Functions}
+
+\begin{document}
+\maketitle
+
+\section{Identifying Linear Expressions, Equations, and Functions}
+Identify each expression as linear or not linear. If the expression is not linear, mark any parts of the expression that make it not linear.
+\begin{smenum}
+\mitemxxxx
+{$5x-7$}
+{$\dfrac{3x-2}{4x+1}$}
+{$x^2+2x+5$}
+{$4(x+8)-3(x-2)=5$}
+\end{smenum}
+Identify each equation as linear or not linear. If the equation is not linear, mark any parts of the equation that make it not linear.
+\begin{smenum}
+\mitemxxxx
+{$(5x+2)(3x-1)=14$}
+{$\sqrt{x+2}=x-4$}
+{$3x+8=4x-1$}
+{$\dfrac{4x+1}{3}=\dfrac{5x-3}{2}$}
+\end{smenum}
+Identify each function as linear or not linear. If the function is not linear, mark any parts of the function that make it not linear.
+\begin{smenum}
+\mitemxxxx
+{$f(x)=4(x-3)+1$}
+{$f(x)=3x+x^3$}
+{$f(x)=\Abs{4x-3}$}
+{$f(x)=\frac{2}{3}x-7$}
+\end{smenum}
+
+\section{Writing Linear Functions from Graphs}
+For each function graphed below:
+\begin{clist}%[a.]
+\item Write an equation for the function in point-slope form, using a point other than the y-intercept. Use $f$ as the name of the function.
+\item Simplify your answer to give the function in slope-intercept form.
+\item Give the coordinates of the line's $y$-intercept. Use your equation from part (b) if it is not clear on the graph.
+\end{clist}
+\begin{smenum}
+\mitemxx
+{%
+\begin{ilpic}[x=0.2in,y=0.2in]
+\useasboundingbox(-5.9,-5.9) rectangle (5.9,5.9);
+\DrawGridSquare
+\linepoints(-5,-5)(5,5)(0,2)(3,-2)
+\end{ilpic}
+}{%
+\begin{ilpic}[x=0.2in,y=0.2in]
+\useasboundingbox(-5.9,-5.9) rectangle (5.9,5.9);
+\DrawGridSquare
+\linepoints(-5,-5)(5,5)(2,4)(-3,1)
+\end{ilpic}
+}
+\end{smenum}
+
+\clearpage
+\section{Graphing Linear Functions}
+For each function below:
+\begin{clist}%[a.]
+\item Fill in the table to show three points on the graph with integer coordinates.
+\item Use two of your points to graph the function.
+\item Confirm that the graph passes through the third point.
+\end{clist}
+\begin{senum}
+\item \begin{ilpic}[x=0.2in,y=0.2in]
+\draw (0,5) node[anchor=south west]{$f(x)=\frac{3}{4}x-1$};
+\draw (0,4) rectangle (10,0);
+\draw (3,4) -- (3,0);
+\foreach \y in {3,2,1} \draw (0,\y) -- (10,\y);
+\foreach \x/\lbl in {1.5/x,6.5/y=f(x)} \draw (\x,3.2) node[anchor=base]{$\lbl$};
+\begin{scope}[xshift=6*0.2in+0.5\linewidth,yshift=3*0.2in]
+	\DrawGridSquare
+\end{scope}
+\end{ilpic}
+\end{senum}
+\begin{senum}
+\item \begin{ilpic}[x=0.2in,y=0.2in]
+\draw (0,5) node[anchor=south west]{$f(x)=-\frac{3}{2}(x-1)+3$};
+\draw (0,4) rectangle (10,0);
+\draw (3,4) -- (3,0);
+\foreach \y in {3,2,1} \draw (0,\y) -- (10,\y);
+\foreach \x/\lbl in {1.5/x,6.5/y=f(x)} \draw (\x,3.2) node[anchor=base]{$\lbl$};
+\begin{scope}[xshift=6*0.2in+0.5\linewidth,yshift=3*0.2in]
+	\DrawGridSquare
+\end{scope}
+\end{ilpic}
+\end{senum}
+\section{Inverses of Linear Functions}
+Find the inverse of each linear function below. Show your work carefully on a separate sheet of paper.
+\begin{smenum}
+\mitemxxx
+{$f(x)=2x-8$}
+{$g(x)=\frac{2}{7}x+6$}
+{$h(x)=-\frac{4}{3}x-2$}
+\mitemxxx
+{$k(x)=-3x-5$}
+{$p(x)=\frac{1}{2}x+3$}
+{$q(x)=\frac{7}{9}x+18$}
+\end{smenum}
+\end{document}

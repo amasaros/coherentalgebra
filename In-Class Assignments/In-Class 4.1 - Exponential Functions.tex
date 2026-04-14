@@ -1,0 +1,107 @@
+\input{preamble}
+
+\title{Section 4.1 --- Exponential Functions}
+
+\begin{document}
+\maketitle
+
+\section{Identifying Exponential Expressions}
+Determine whether or not each expression is exponential.
+\begin{smenum}
+\mitemxxxxx
+{$8^x$}
+{$x^{3/2}$}
+{$\left(\frac{2}{3}\right)^{3x-4}$}
+{$3\cdot 4^x-3^{x^2}$}
+{$x^2-4x+3$}
+\end{smenum}
+
+\section{Graphing Exponential Functions}
+For each exponential function, find the points on the graph for each input (not $x$-value) in $\{-2,-1,0,1,2\}$, and find the equation of the horizontal aysmptote. Then, sketch a graph of the function in the space provided. (If the point can't be plotted in this space, leave it off. Do your best to approximate fractions.)
+\begin{smenum}
+\mitemxx
+{$f(x)=2^x$\\
+\GridSquareFitEO[10]
+}
+{$f(x)=3\left(\frac{1}{3}\right)^x-2$\\
+\GridSquareFitEO[10]
+}
+\mitemxx
+{$f(x)=-2\left(\frac{3}{2}\right)^{x-1}$\\
+\GridSquareFitEO[10]
+}
+{$f(x)=-\left(\frac{1}{2}\right)^{x+1}$+3\\
+\GridSquareFitEO[10]
+}\end{smenum}
+
+\clearpage
+\section{Identifying Graphs of Exponential Functions}
+Match each function to its graph, and give the equation of its horizontal asymptote.
+\begin{smenum}
+\mitemxxxx
+{$f(x)=-\left(\frac{2}{3}\right)^{x+1}-\frac{1}{3}$}
+{$g(x)=\left(\frac{1}{2}\right)^{x+4}+1$}
+{$h(x)=\left(\frac{11}{4}\right)^{x-1}-\frac{3}{2}$}
+{$k(x)=-2^x-1$}
+\end{smenum}
+\begin{nmenum}
+\mitemxxxx
+{\begin{ilpic}[x=.15in,y=.15in]
+\draw[<->,thick] (-4,0) -- (4,0);
+\draw[<->,thick] (0,-4) -- (0,4);
+\clip (-3.9,-3.9) rectangle (3.9,3.9);
+\draw[domain=-3.9:3.9] plot (\x,{1/pow(2,\x+4)+1});
+\draw[dashed] (-3.9,1) -- (3.9,1);
+\end{ilpic}}
+{\begin{ilpic}[x=.15in,y=.15in]
+\draw[<->,thick] (-4,0) -- (4,0);
+\draw[<->,thick] (0,-4) -- (0,4);
+\clip (-3.9,-3.9) rectangle (3.9,3.9);
+\draw[domain=-3.9:-.01] plot (\x,{-1/pow(1/2,\x)-1});
+\draw[domain=0.01:3.9] plot (\x,{-pow(2,\x)-1});
+\draw[dashed] (-3.9,-1) -- (3.9,-1);
+\end{ilpic}}
+{\begin{ilpic}[x=.15in,y=.15in]
+\draw[<->,thick] (-4,0) -- (4,0);
+\draw[<->,thick] (0,-4) -- (0,4);
+\clip (-3.9,-3.9) rectangle (3.9,3.9);
+\draw[domain=-3.9:-1.01] plot (\x,{-pow(2/3,\x+1)-1/3});
+\draw[domain=-.99:3.9] plot (\x,{-1/pow(2/3,-\x-1)-1/3});
+\draw[dashed] (-3.9,-1/3) -- (3.9,-1/3);
+\end{ilpic}}
+{\begin{ilpic}[x=.15in,y=.15in]
+\draw[<->,thick] (-4,0) -- (4,0);
+\draw[<->,thick] (0,-4) -- (0,4);
+\clip (-3.9,-3.9) rectangle (3.9,3.9);
+\draw[domain=-3.9:.99] plot (\x,{1/pow(11/4,-\x+1)-3/2});
+\draw[domain=1.01:3.9] plot (\x,{pow(11/4,\x-1)-3/2});
+\draw[dashed] (-3.9,-1.5) -- (3.9,-1.5);
+\end{ilpic}}
+\end{nmenum}
+
+\section{Domain and Range of an Exponential Function}
+Find the domain and range of each exponential function.
+\begin{smenum}
+\mitemxxxx
+{$f(x)=2^{x+3}-1$}
+{$g(x)=-\left(\frac{1}{2}\right)^{x-5}-11$}
+{$h(x)=-10^{x+1}+1$}
+{$k(x)=\left(0.23\right)^x+623$}
+\end{smenum}
+
+\section{Exponential Equations}
+Solve each equation.
+\begin{smenum}
+\mitemxxxx
+{$3^x=81$}
+{$27^x=243$}
+{$25^{x+1}=\frac{1}{5}$}
+{$3^{x^2-2x-4}=\frac{1}{3}$}
+\mitemxxxx
+{$4^{2x-1}=32^{x+2}$}
+{$\left(\frac{1}{2}\right)^x=16$}
+{$8^{2x^2}=4^{12x-9}$}
+{$\left(\frac{1}{3}\right)^{x^2}=9^{4-3x}$}
+\end{smenum}
+
+\end{document}

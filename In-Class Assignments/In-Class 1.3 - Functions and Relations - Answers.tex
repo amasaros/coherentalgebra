@@ -1,0 +1,125 @@
+\input{preamble}
+
+\title{Section 1.3 --- Functions and Relations --- Answer Key}
+
+\begin{document}
+\maketitle
+
+\section{Understanding Relations}
+Let $R=\{(2,5),(3,7),(-8,-2),(9,1)\}$.  Decide whether each statement below is true.
+\begin{smenum}
+\mitemxxxx
+{$2R5$ -- true}
+{$-7R8$ -- false}
+{$7R3$ -- false}
+{$-8R-2$ -- true}
+\end{smenum}
+Let $S$ be the relation graphed below.  Decide whether each statement below is true.
+\begin{cpic}[x=.15in,y=.15in]
+\DrawGridSquare
+\draw[thick] (-5.9,-.2) -- (-4,-4) -- (0,4) -- (4,-4) -- (5.9,-.2);
+\end{cpic}
+\begin{smenum}
+\mitemxxxx
+{$0S4$ -- true}
+{$-4S4$ -- false}
+{$3S-2$ -- true}
+{$4S-4$ -- true}
+\end{smenum}
+Let $T=\bigl\{(x,y)|x^2+y^2=1\bigr\}$.  Decide whether each statement below is true.
+\begin{smenum}
+\mitemxxxx
+{$0T1$ -- true}
+{$-1T0$ -- true}
+{$-1T-1$ -- false}
+{$0.6T-0.8$ -- true}
+\end{smenum}
+
+\section{Domain and Range of a Relation}
+For each relation below, describe the domain and range.
+\begin{smenum}
+\mitemxx
+{$\dom Q = \Set{-1,1,\frac{11}{8},2}$\\$\rng Q = \Set{\frac{5}{3},2,3,35}$}
+{$\dom R=\Set{1}$\\$\rng R = \Set{2,3,4,5}$}
+\mitemxx
+{$\dom S=\Set{2,3}$\\$\rng S=\Set{-1,7,9}$}
+{$\dom T=\Set{-2,2.2,\pi,11}$\\$\rng T=\Set{1}$}
+\mitemxx
+{$\dom Q=[-4,2]$\\$\rng Q=[-4,2]$}
+{$\dom V=[-2,1]$\\$\rng V=[-2,2]$}
+\mitemxx
+{$\dom W=[-3,-2]\cup [-1,4]$\\$\rng{W}=[-3,2]$}
+{$\dom Z=[-3,3]$\\$\rng Z=[-3,1]\cup {2}$}
+\end{smenum}
+
+\section{Identifying Functions}
+State whether each relation is a function.  If not, give two pairs that show why not.
+\begin{smenum}
+\mitemxxo
+{Function}
+{Not a function: $(2,3)$ and $(2,4)$ have $x=2$.}
+\mitemxxo
+{Function}
+{Not a function: $(-1,-1)$ and $(-1,1)$ have $x=-1$.}
+\mitemx
+{Not a function: $(0,4)$ and $(0,-4)$ have $x=0$. (Other pairs are possible.)}
+\mitemxx
+{Function}
+{Function}
+\mitemx
+{Not a function: $(2,1)$ and $(2,-1)$ have $x=2$. (Other pairs are possible.)}
+\end{smenum}
+For each relation below, give two pairs $(x,y)$ that show that the relation is \emph{not} a function. As a hint, remember that $x^2$ and $(-x)^2$ always give the same (positive) result.
+\begin{smenum}
+\mitemx
+{$(2,2)$ and $(2,-2)$ have $x=2$. (Other pairs are possible.)}
+\mitemx
+{$(1,-1)$ and $(1,1)$ have $x=1$. (Other pairs are possible.)}
+\end{smenum}
+
+\section{Function Notation}
+Let $f=\Set{(-2,5),(3,-2),(4,7),(8,9)}$. Find each of the following.
+\begin{smenum}
+\mitemxxxx
+{$f(4)=7$}
+{$f(-2)=5$}
+{$f(9)$ is undefined}
+{$f(3)=-2$}
+\end{smenum}
+The function $g$ is graphed below. Find each of the following.
+\begin{cpic}[x=.2in,y=.2in]
+\DrawGridSquare
+\draw[thick,domain=-2.9:2,smooth,<-] plot (\x-3,\x*\x/2-3);
+\draw[thick] (-1,1) -- (2,-5);
+\draw[thick, ->] (4,1) -- (5.9,1);
+\foreach \x/\y/\fill in {-1/-1/white,-1/1/white,2/-5/black,4/1/white}
+		\filldraw[thick,fill=\fill] (\x,\y) circle (0.2);
+\end{cpic}
+\begin{smenum}
+\mitemxxxx
+{$g(-3)=-3$}{$g(-1)$ is undefined}{$g(1)=-3$}{$g(3)$ is undefined}
+\end{smenum}
+
+\section{Equations of Functions}
+Write each function in relation notation.
+\begin{smenum}
+\mitemxxx
+{$f=\Relat{y=2x-5}$}
+{$g=\Relat{y=x^2-7x+12}$}
+{$h=\Relat{y=\dfrac{3x-5}{2x+1}}$}
+\end{smenum}
+Each relation below is a function. Rewrite in function notation. You may need to first solve for $y$.
+\begin{smenum}
+\mitemxxx
+{$R(x)=x^3-x$}
+{$S(x)=\frac{2}{5}x-2$}
+{$T(x)=x^2-3$}
+\end{smenum}
+Let $k(x)=\dfrac{4x^2+2}{x-7}$. Find each of the following. Give your answer as a fraction.
+\begin{smenum}
+\mitemxxxx
+{$k(2)=-\frac{18}{5}$}{$k(-3)=-\frac{18}{5}$}{$k(7)$ is undefined}{$k(0)=\frac{2}{7}$}
+\mitemx
+{$\dom k=\Set{x\mid x\neq 7}$}
+\end{smenum}
+\end{document}

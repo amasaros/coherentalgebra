@@ -1,0 +1,129 @@
+\input{preamble}
+
+\title{Section 6.3 --- Circles --- Answer Key}
+
+\newcommand{\crans}[2]{%
+Center: $(#1)$; Radius: $#2$%
+}
+
+\newcommand{\ceq}[3]{%
+$\left(x #1\right)^2+\left(y #2\right)^2 = #3$%
+}
+
+\begin{document}
+\maketitle
+
+\section*{Basic Equation of a Circle}
+On a separate sheet of paper, sketch each circles described below.
+\begin{smenum}
+\mitemxx
+{\begin{GridFilled}{6}{2}{3}{5}
+\filldraw(-2,1) circle (\dotsize);
+\draw[thick](-2,1) circle (4);
+\end{GridFilled}}
+{\begin{GridFilled}{0}{3}{0}{4}
+\filldraw(2,3) circle (\dotsize);
+\draw[thick](2,3) circle (1);
+\end{GridFilled}}\end{smenum}
+Give an equation of each circles described below.
+\begin{smenum}
+\mitemxx
+{$(x-3)^2+(y-5)^2=4$}
+{$(x+5)^2+(y+2)^2=36$}
+\end{smenum}
+Give an equation of the circle shown in each graph below.
+\begin{smenum}
+\mitemxx
+{$(x-5)^2+(y+4)^2=9$}
+{$(x+3)^2+(y-2)^2=25$}
+\end{smenum}
+Give the center and radius of the circle described by each equation below.
+\begin{smenum}
+\mitemxx
+{\crans{5,-2}{7}}
+{\crans{-6,-1}{2\sqrt{10}}}
+\end{smenum}
+On a separate sheet of graph paper, sketch the graph of each equation below.
+\begin{smenum}
+\mitemxx
+{\begin{GridFilled}{7}{3}{2}{8}
+\filldraw(-2,3) circle (\dotsize);
+\draw[thick](-2,3) circle (5);
+\end{GridFilled}}
+{\begin{GridFilled}{6}{0}{4}{0}
+\filldraw(-4,-2) circle (\dotsize);
+\draw[thick](-4,-2) circle ({sqrt(3)});
+\end{GridFilled}
+Note: do your best to estimate the radius $\sqrt{3}\approx 1.732$}
+\end{smenum}
+
+\section*{Writing Equations of Circles}
+Give the equation of each circle described below.
+\begin{smenum}
+\mitemxx
+{\ceq{-4}{-1}{41}}
+{\ceq{-2}{+1}{50}}
+\mitemxx
+{\ceq{+7}{-5}{13}}
+{\ceq{+4}{+2}{20}}
+\mitemxx
+{\ceq{+2}{-4}{49}}
+{\ceq{-3}{+5}{9}}
+\mitemxx
+{\ceq{+5}{-1}{1}}
+{\ceq{+4}{+3}{34}}
+\end{smenum}
+Give an equation of the circles graphed below.
+\begin{smenum}
+\mitemxx
+{\ceq{-2}{+1}{5}}
+{\ceq{-2}{-2}{2}}
+\end{smenum}
+
+\section*{Working with Standard Form}
+Give an equation of each circle below in standard form.
+\begin{smenum}
+\mitemxx
+{$x^2+y^2-8x+4y+11=0$}
+{$x^2+y^2+4x+10y+19=0$}
+\mitemxx
+{$x^2+y^2-3x-2y-13=0$}
+{$x^2+y^2-4x-2y-4=0$}
+\end{smenum}
+Rewrite each equation below in center-radius form. If the equation describes a true circle, give its center and radius. If it doesn't, state whether it is the equation of a degenerate circle (single point), or if the equation has no solution.
+\begin{smenum}
+\mitemxx
+{\crans{2,3}{2}}
+{\crans{1,-3}{5}}
+\mitemxx
+{\crans{1,-2}{\frac{3}{2}}}
+{\crans{0,-5}{4}}
+\mitemxx
+{Degenerate circle (single point $(3,5)$)}
+{\crans{-2,4}{3}}
+\mitemxx
+{No solution}
+{Degenerate circle (single point $(1,-5)$)}
+\end{smenum}
+Rewrite each equation below in center-radius form. Then, graph the circle on a separate sheet of graph paper.
+\begin{smenum}
+\mitemxx
+{$x^2+(y-2)^2=4^2$\\
+\begin{GridFilled}{4}{4}{2}{6}
+\filldraw(0,2) circle (\dotsize);
+\draw[thick](0,2) circle (4);
+\end{GridFilled}}
+{\ceq{+5}{+1}{3^2}\\
+\begin{GridFilled}{8}{0}{4}{2}
+\filldraw(-5,-1) circle (\dotsize);
+\draw[thick](-5,-1) circle (3);
+\end{GridFilled}}
+\mitemx
+{\ceq{-1}{+\frac{7}{2}}{3^2}\\
+\begin{GridFilled}{2}{4}{7}{0}
+\filldraw(1,-3.5) circle (\dotsize);
+\draw[thick](1,-3.5) circle (3);
+\end{GridFilled}}
+\end{smenum}
+
+\end{document}

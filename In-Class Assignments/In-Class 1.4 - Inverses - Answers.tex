@@ -1,0 +1,145 @@
+\input{preamble}
+
+\title{Section 1.4 --- Inverse Relations --- Answer Key}
+
+\begin{document}
+\maketitle
+
+\section{Writing Inverses}
+Write the inverse of each relation.
+\begin{smenum}
+\mitemx
+{$P\inv=\Set{(-6,4),(-2,-10),(-9,-1),(-7,0),(-9,3)}$}
+\mitemx
+{$Q\inv=\Set{(5,-7),(3,-2),(9,-2),(-5,10)}$}
+\mitemx
+{$R\inv=\Set{(11,-2),(-8,-1),(3,-9),(5,6),(-2,-8)}$}
+\mitemx
+{$S\inv=\Set{(-10,-10),(1,5),(-3,3),(9,9),(-6,3)}$}
+\mitemxx
+{$T\inv=\Relat{x=3y-4}$}
+{$U\inv=\Relat{y^2=x^3}$}
+\mitemxx
+{$V\inv=\Relat{y=x^5+y^2x+x^3}$}
+{$W\inv=\Relat{y^2+x^2=25}$}
+\end{smenum}
+
+\section{Graphing Inverses}
+Several relations are graphed below.  Sketch the graphs of their inverses.  \emph{Hint: Used the points marked to guide your sketch.}
+
+(Note: the original graph is shown grayed out for comparison.)
+\begin{smenum}
+\mitemxx
+{\LittleGraphEO[.15in]{
+	\draw[thick,domain=-4:4,smooth,black!25!white] plot (1/3*\x*\x*\x-4/3*\x,-2*\x);
+	\foreach \x in {-2.5,-2,-1,0,1,2,2.5}
+			\fill[black!25!white] (1/3*\x*\x*\x-4/3*\x,-2*\x) circle (.2);
+	\draw[thick,domain=-4:4,smooth] plot (-2*\x,1/3*\x*\x*\x-4/3*\x);
+	\foreach \x in {-2.5,-2,-1,0,1,2,2.5}
+			\fill (-2*\x,1/3*\x*\x*\x-4/3*\x) circle (.2);
+}}
+{\LittleGraphEO[.15in]{
+	\draw[thick,domain=-5.9:5.9,black!25!white] plot (\x,.5*\x*\x-3);
+	\foreach \x in {-4,-2,...,4}
+		\fill[black!25!white] (\x,.5*\x*\x-3) circle (.2);
+	\draw[thick,domain=-5.9:5.9] plot (.5*\x*\x-3,\x);
+	\foreach \x in {-4,-2,...,4}
+		\fill (.5*\x*\x-3,\x) circle (.2);
+}}
+\mitemxx
+{\LittleGraphEO[.15in]{
+    \draw[thick,black!25!white] (-5.9,3/4*5.9+2) -- (5.9,-3/4*5.9+2);
+		\foreach \x in {-4,0,4}
+		    \fill[black!25!white] (\x,-3/4*\x+2) circle (.2);
+    \draw[thick] (3/4*5.9+2,-5.9) -- (-3/4*5.9+2,5.9);
+		\foreach \x in {-4,0,4}
+		    \fill (-3/4*\x+2,\x) circle (.2);
+}}
+{\LittleGraphEO[.15in]{
+	\draw[thick,xscale=.75,black!25!white] (4/3,1) circle (4);
+	\foreach \x/\y in {1/5,1/-3,4/1,-2/1}
+		\fill[black!25!white] (\x,\y) circle (.2);
+	\draw[thick,yscale=.75] (1,4/3) circle (4);
+	\foreach \x/\y in {1/5,1/-3,4/1,-2/1}
+		\fill (\y,\x) circle (.2);
+}}
+\end{smenum}
+\section{Domain and Range of the Inverse}
+\begin{senum}
+\item $\dom R=\Set{-2,3}$, $\rng R=\Set{4,5,6}$, $\dom R\inv=\Set{4,5,6}$, $\rng R\inv=\Set{-2,3}$
+\item $\dom S\inv=\rng S=\Rint{11}$, $\rng S\inv=\dom S=\Lrint{-5}{2}$
+\item $\rng T=\dom T\inv=\SetBuild{x\neq -1}$, $\rng T\inv=\dom T=\SetBuild{x\neq 5}$
+\end{senum}
+
+\clearpage
+\section{Identifying One-to-One}
+For each relation below, decide which of the following applies to the relation. (This is multiple choice.)
+\begin{clist}
+\item A function (but not one-to-one)
+\item One-to-one but not a function
+\item A one-to-one function
+\item Not one-to one or a function
+\end{clist}
+\begin{smenum}
+\mitemxx
+{a - a function (but not one-to-one)}
+{d - not one-to-one or a function}
+\mitemxx
+{a - a function (but not one-to-one)}
+{b - one-to-one but not a function}
+\mitemxx
+{d - not one-to-one or a function}
+{a - a function (but not one-to-one)}
+\mitemxx
+{c - a one-to-one function}
+{b - one-to-one but not a function}
+\end{smenum}
+For each relation below, determine which of the four ordered pairs given are in the relation. Use this to decide what kind of relation this is. (This is multiple choice.)
+\begin{clist}
+\item A function (but not one-to-one)
+\item One-to-one but not a function
+\item A one-to-one function
+\item Not one-to one or a function
+\end{clist}
+The pairs are chosen so that, if the relation is \emph{not} one-to-one, the given ordered pairs will demonstrate this.
+\begin{smenum}
+\mitemxx
+{c - a one-to-one function}
+{d - not one-to-one or a function}
+\mitemxx
+{a - a function (but not one-to-one)}
+{b - one-to-one but not a function}
+\end{smenum}
+\section{Inverse Functions}
+The function $h=\Set{(-4,-7),(2,2),(4,8),(8,-9)}$ is one-to-one. Find each of the following, or write ``undefined.''
+\begin{smenum}
+\mitemxxxx
+{$h\inv(-7)=-4$}
+{$h\inv(8)$ is undefined}
+{$h\inv(4)$ is undefined}
+{$h\inv(2)=2$}
+\end{smenum}
+For each function given below, write the inverse function. Answer in function notation.
+\begin{smenum}
+\mitemxx
+{$f\inv(x)=\frac{1}{2}x+4$}
+{$g\inv(x)=\frac{1}{5}x-3$}
+\end{smenum}
+The function $k(x)=\dfrac{x-3}{2x+1}$ is one-to-one. Evaluate each of the following.
+\begin{smenum}
+\mitemxxxx
+{$k(-4)=1$}
+{$k(-1)=4$}
+{$k(0)=-3$}
+{$k(3)=0$}
+\end{smenum}
+Based on the values of $k(x)$ you found, evaluate each of the following.
+\begin{smenum}
+\mitemxxxx
+{$k\inv(-3)=0$}
+{$k\inv(0)=3$}
+{$k\inv(1)=-4$}
+{$k\inv(4)=-1$}
+\end{smenum}
+
+\end{document}

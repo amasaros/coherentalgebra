@@ -1,0 +1,127 @@
+\input{preamble}
+
+\title{Section 1.3 --- Functions and Relations}
+
+\begin{document}
+\maketitle
+
+\section{Understanding Relations}
+Let $R=\{(2,5),(3,7),(-8,-2),(9,1)\}$.  Decide whether each statement below is true.
+\begin{smenum}
+\mitemxxxx
+{$2R5$}
+{$-7R8$}
+{$7R3$}
+{$-8R-2$}
+\end{smenum}
+Let $S$ be the relation graphed below.  Decide whether each statement below is true.
+\begin{cpic}[x=.15in,y=.15in]
+\DrawGridSquare
+\draw[thick] (-5.9,-.2) -- (-4,-4) -- (0,4) -- (4,-4) -- (5.9,-.2);
+\end{cpic}
+\begin{smenum}
+\mitemxxxx
+{$0S4$}
+{$-4S4$}
+{$3S-2$}
+{$4S-4$}
+\end{smenum}
+Let $T=\bigl\{(x,y)|x^2+y^2=1\bigr\}$.  Decide whether each statement below is true.
+\begin{smenum}
+\mitemxxxx
+{$0T1$}
+{$-1T0$}
+{$-1T-1$}
+{$0.6T-0.8$}
+\end{smenum}
+
+\section{Domain and Range of a Relation}
+For each relation below, describe the domain and range.
+\begin{smenum}
+\mitemxx
+{$Q=\Set{(2,3),(1,\frac{5}{3}),(-1,{3}{5}),(\frac{11}{8},2)}$}
+{$R=\Set{(1,2),(1,3),(1,4),(1,5)}$}
+\mitemxx
+{$S=\Set{(2,-1),(3,-1),(2,7),(3,9)}$}
+{$T=\Set{(11,1),(-2,1),(\pi,1),(2.2,1)}$}
+\mitemxxxx
+{$U$ is graphed below\\\LittleGraph{\draw[thick] (-1,-1) circle (3);}}
+{$V$ is graphed below\\\LittleGraph{\draw [thick,domain=-1:2] plot (\x-1,\x*\x-2);\fill (-2,-1) circle (.2);\fill (1,2) circle (.2);}}
+{$W$ is graphed below\\\LittleGraph{\fill (-1,-3) circle (.2); \fill (4,-1) circle (.2); \fill (-2,-2) circle (.2); \fill (-3,2) circle (.2); \draw[thick] (-1,-3) -- (4,-1);\draw[thick] (-2,-2) -- (-3,2);}}
+{$Z$ is graphed below\\\LittleGraph{\fill (-3,2) circle (.2); \fill (1,2) circle (.2); \draw[thick] (-3,2) -- (1,2); \draw[thick] (-2,-1) parabola bend (0,-3) (3,1); \fill (-2,-1) circle (.2); \fill (3,1) circle (.2);}}
+\end{smenum}
+
+\section{Identifying Functions}
+State whether each relation is a function.  If not, give two pairs that show why not.
+\begin{smenum}
+\mitemxx
+{$Q=\Set{(1,5),(-3,2),(-1,5),(4,4)}$}
+{$R=\Set{(2,3),(2,4)(4,4)}$}
+\mitemxx
+{$S=\Set{(1,1),(2,1),(3,1),(4,1)}$}
+{$T=\Set{(-1,-1),(-2,-2),(-1,1),(-2,2)}$}
+\mitemxxxx
+{$U$ is graphed below\\\LittleGraph{\draw[thick] (0,0) circle (4);}}
+{$V$ is graphed below\\\LittleGraph{\draw [thick,domain=-3:3] plot (\x-1,\x*\x-2);}}
+{$W$ is graphed below\\\LittleGraph{\draw[thick,domain=-3:3] plot (\x,.25*\x*\x*\x+\x);}}
+{$Z$ is graphed below\\\LittleGraph{
+\foreach \u in {-1,1} 
+    {
+		\foreach \v in {-1,1}
+		    \draw[thick,domain=2/5.9:5.9] plot (\u*\x,\v*2/\x);
+    }
+}}
+\end{smenum}
+For each relation below, give two pairs $(x,y)$ that show that the relation is \emph{not} a function. As a hint, remember that $x^2$ and $(-x)^2$ always give the same (positive) result.
+\begin{smenum}
+\mitemxx
+{$J=\Relat{x^2+y^2=8}$}
+{$L=\Relat{x=y^2}$}
+\end{smenum}
+
+\section{Function Notation}
+Let $f=\Set{(-2,5),(3,-2),(4,7),(8,9)}$. Find each of the following.
+\begin{smenum}
+\mitemxxxx
+{$f(4)$}
+{$f(-2)$}
+{$f(9)$}
+{$f(3)$}
+\end{smenum}
+The function $g$ is graphed below. Find each of the following.
+\begin{cpic}[x=.2in,y=.2in]
+\DrawGridSquare
+\draw[thick,domain=-2.9:2,smooth,<-] plot (\x-3,\x*\x/2-3);
+\draw[thick] (-1,1) -- (2,-5);
+\draw[thick, ->] (4,1) -- (5.9,1);
+\foreach \x/\y/\fill in {-1/-1/white,-1/1/white,2/-5/black,4/1/white}
+		\filldraw[thick,fill=\fill] (\x,\y) circle (0.2);
+\end{cpic}
+\begin{smenum}
+\mitemxxxx
+{$g(-3)$}{$g(-1)$}{$g(1)$}{$g(3)$}
+\end{smenum}
+
+\section{Equations of Functions}
+Write each function in relation notation.
+\begin{smenum}
+\mitemxxx
+{$f(x)=2x-5$}
+{$g(x)=x^2-7x+12$}
+{$h(x)=\dfrac{3x-5}{2x+1}$}
+\end{smenum}
+Each relation below is a function. Rewrite in function notation. You may need to first solve for $y$.
+\begin{smenum}
+\mitemxxx
+{$R=\Relat{y=x^3-x}$}
+{$S=\Relat{2x-5y=10}$}
+{$T=\Relat{x^2-y=3}$}
+\end{smenum}
+Let $k(x)=\dfrac{4x^2+2}{x-7}$. Find each of the following. Give your answer as a fraction.
+\begin{smenum}
+\mitemxxxx
+{$k(2)$}{$k(-3)$}{$k(7)$}{$k(0)$}
+\mitemx
+{There is one real number not in the implicit domain of $k$. Based on your work above, what is $\dom k$?}
+\end{smenum}
+\end{document}

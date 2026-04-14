@@ -1,0 +1,158 @@
+\input{preamble}
+
+\title{Section 2.7 --- Function Algebra}
+
+\begin{document}
+\maketitle
+\section{Combined functions}
+Define the following functions:
+\[
+\begin{array}{r@{\;=\big\{(}r@{,}r@{),(}r@{,}r@{),(}r@{,}r@{),(}r@{,}r@{),(}r@{,}r@{)\big\}}}
+f&-7&-9&-1&-3&1&3&5&0&9&-8\\
+g&-7&-4&1&-8&5&1&7&0&9&-7\\
+h&-7&0&-1&-5&1&-7&7&-1&9&-5
+\end{array}
+\]
+Find each of the following.  If the given value is not in the domain of the given function, write ``undefined.''
+\begin{smenum}
+\mitemxxxx
+{$\Gp{f\cdot g}(9)$}
+{$\Gp{f-h}(5)$}
+{$\Gp{h-g}(7)$}
+{$\Gp{g\cdot h}(-7)$}
+\mitemxxxx
+{$\Gp{f+g}(-7)$}
+{$\Gp{g-f}(1)$}
+{$\Gp{\dfrac{g}{h}}(-7)$}
+{$\Gp{\dfrac{f}{g}}(5)$}
+\mitemxxxx
+{$\Gp{h\cdot f}(7)$}
+{$\Gp{g+h}(7)$}
+{$\Gp{\dfrac{h}{f}}(-1)$}
+{$\Gp{h+f}(-1)$}
+\end{smenum}
+Find each domain.
+\begin{smenum}
+\mitemxxxo
+{$\dom f$}
+{$\dom g$}
+{$\dom h$}
+\mitemxxxx
+{$\dom\Gp{g+h}$}
+{$\dom\Gp{h-f}$}
+{$\dom\Gp{f\cdot g}$}
+{$\dom\Gp{\dfrac{h}{g}}$}
+\end{smenum}
+
+\section{Combined Functions from Graphs}
+Consider the functions graphed below.\\
+\begin{tabular}{cccc}
+\begin{ilpic}[x=0.1in,y=0.1in]
+\DrawGridSquareEO
+\draw (-6,6) node[anchor=south west] {$f$};
+\draw[thick,domain=0:2.429,->] plot (\x*\x,\x);
+%\begin{scope}[rotate=90]
+%\draw[thick,->] (0,0) parabola (2.429,5.9);
+%\end{scope}
+\filldraw (0,0) circle (.3);
+\end{ilpic}
+&
+\begin{ilpic}[x=0.1in,y=0.1in]
+\DrawGridSquareEO
+\draw (-6,6) node[anchor=south west] {$g$};
+\draw[thick] (-4,-3) -- (4,5);
+\filldraw (-4,-3) circle (0.3);
+\filldraw[thick, fill=white] (4,5) circle (0.3);
+\end{ilpic}
+&
+\begin{ilpic}[x=0.1in,y=0.1in]
+\DrawGridSquareEO
+\draw (-6,6) node[anchor=south west] {$h$};
+\draw[thick,<->] (-5.9,2.9) -- (-1,-2) -- (5.9,4.9);
+\end{ilpic}
+&
+\begin{ilpic}[x=0.1in,y=0.1in]
+\DrawGridSquareEO
+\draw (-6,6) node[anchor=south west] {$k$};
+\draw[thick,domain=-3.883:3.883,<->] plot (\x, -.25*\x*\x*\x+2.25*\x);
+\end{ilpic}
+\end{tabular}\\
+Find each of the following.  If the given value is not in the domain of the given function, write ``undefined.''
+\begin{smenum}
+\mitemxxxx
+{$\Gp{f+g}(1)$}
+{$\Gp{h-k}(3)$}
+{$\Gp{g\cdot h}(-1)$}
+{$\Gp{\dfrac{f}{h}}(0)$}
+\mitemxxxx
+{$\Gp{h-g}(4)$}
+{$\Gp{k+f}(-3)$}
+{$\Gp{g\cdot k}(3)$}
+{$\Gp{\dfrac{k}{h}}(-3)$}
+\end{smenum}
+Find each domain.
+\begin{smenum}
+\mitemxxxx
+{$\dom f$}
+{$\dom g$}
+{$\dom h$}
+{$\dom k$}
+\mitemxxxx
+{$\dom\Gp{f-g}$}
+{$\dom\Gp{k+f}$}
+{$\dom\Gp{h\cdot k}$}
+{$\dom\Gp{\dfrac{g}{k}}$}
+\end{smenum}
+
+\clearpage
+\section{Combined Functions}
+\[
+f(x)=3x^2-8x+4
+\qquad
+g(x)=x^3+7x^2-4x-28
+\qquad
+h(x)=x-2
+\qquad
+k(x)=3x^2-19x-14
+\]
+Use the functions above to find the following.
+\begin{smenum}
+\mitemxxxx
+{$\Gp{f+k}(2)$}
+{$\Gp{g-h}(2)$}
+{$\Gp{k\cdot g}(2)$}
+{$\Gp{\dfrac{h}{f}}(2)$}
+\end{smenum}
+Write expressions for each of the following. Simplify your answer as much as possible.
+\begin{smenum}
+\mitemxxx
+{$\Gp{f-k}(x)$}
+{$\Gp{g+f}(x)$}
+{$\Gp{f\cdot h}(x)$}
+\mitemxxx
+{$\Gp{h-g}(x)$}
+{$\Gp{h+k}(x)$}
+{$\Gp{f\cdot k}(x)$}
+\end{smenum}
+Write expressions for each of the following. Do not simplify your answer.
+\begin{smenum}
+\mitemxx
+{$\Gp{\dfrac{f}{h}}(x)$}
+{$\Gp{\dfrac{g}{h}}(x)$}
+\end{smenum}
+Find each domain.
+\begin{smenum}
+\mitemxxxx
+{$\dom f$}
+{$\dom g$}
+{$\dom h$}
+{$\dom k$}
+\mitemxxxx
+{$\dom\Gp{f+g}$}
+{$\dom\Gp{h-k}$}
+{$\dom\Gp{f\cdot h}$}
+{$\dom\Gp{\dfrac{g}{k}}$}
+\end{smenum}
+
+
+\end{document}

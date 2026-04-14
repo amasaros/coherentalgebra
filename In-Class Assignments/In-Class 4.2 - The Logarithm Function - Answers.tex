@@ -1,0 +1,158 @@
+\input{preamble}
+
+\title{Section 4.2 --- The Logarithm Function --- Answer Key}
+
+\NewDocumentCommand{\DomRng}{m d(] d[)}{%
+$\dom #1=%
+\IfNoValueTF{#2}{%
+\IfNoValueTF{#3}{%
+\eint
+}{
+\lint{#3}
+}}{
+\rint{#2}
+}$\\$\rng #1=\eint$}
+
+\begin{document}
+\maketitle
+
+\section{Translating Between Exponentials and Logs}
+Write each equation in logarithmic form.
+\begin{smenum}
+\mitemxxxx
+{$\log_5(625)=4$}
+{$\log_7\Gp{\frac{1}{2401}}=-4$}
+{$\log_{3/4}\Gp{\frac{27}{64}}=3$}
+{$\log_13\Gp{\sqrt{13}}=\frac{1}{2}$}
+\end{smenum}
+Write each equation in exponential form.  Use your calculator to check that the new equation you have written is true.
+\begin{smenum}
+\mitemxxxx
+{$4^3=64$}
+{$3^{-5}=\frac{1}{243}$}
+{$\Gp{\frac{1}{5}}^{-2}=25$}
+{$25^{1/2}=5$}
+\end{smenum}
+
+\section{Graphs of Logarithms}
+Identify each graph below as that of an exponential function, a logarithmic function, or neither.
+\begin{smenum}
+\mitemxxxx
+{Exponential}
+{Logarithmic}
+{Neither}
+{Logarithmic}
+\end{smenum}
+Of the two graphs above which are graphs of logarithm functions, choose the graph of each function below:
+\begin{smenum}
+\mitemxx
+{\#10}
+{\#12}
+\end{smenum}
+
+\section{Graph a Logarithm}
+Sketch the graph of each logarithm function below in the space provided. Your graph should show the three points corresponding to outputs (not $y$ values) $-1$, $0$, and $1$, as well as the asymptote. Do your best to estimate fractions.
+\begin{smenum}
+\mitemxx
+{\begin{GridSquareFitEOFilled}[10](1.5in)
+\foreach \x in {-1,0,1} \fill ({exp(\x*ln(3)},\x) circle (0.25);
+\draw[thick,<->,domain=-10.9:{ln(10.9)/ln(3)}] plot ({exp(\x*ln(3))},\x);
+\begin{scope}[xshift=0.75in+0.5em,yshift=0.75in,x=1em,y=4ex]
+	\draw (0,-1) -- (8,-1);
+	\foreach \x in {2,4,6} \draw (\x,0) -- (\x,-4);
+	\foreach \x/\lbl in {1/$x$,3/in,5/out,7/$y$} \draw (\x,-0.75) node[anchor=base]{\lbl};
+	\foreach \y/\xv/\inp/\outp/\yv in {-2/\frac{1}{3}/\frac{1}{3}/-1/-1,
+															-3/1/1/\phm0/\phm0,
+															-4/3/3/\phm1/\phm1}
+		\foreach \x/\lbl in {1/\xv,3/\inp,5/\outp,7/\yv} \draw (\x,\y+0.25) node[anchor=base]{$\lbl$};
+\end{scope}
+\end{GridSquareFitEOFilled}}
+{\begin{GridSquareFitEOFilled}[10](1.5in)
+\draw[dashed,thick] (2,-10.9) -- (2,10.9);
+\foreach \x in {-1,0,1} \fill ({2-exp(\x*ln(4))},\x+2) circle (0.25);
+\draw[thick,<->,domain=-12.9:{ln(12.9)/ln(4)}] plot ({2-exp(\x*ln(4))},\x+2);
+\begin{scope}[xshift=0.75in+0.5em,yshift=0.75in,x=1em,y=4ex]
+	\draw (0,-1) -- (8,-1);
+	\foreach \x in {2,4,6} \draw (\x,0) -- (\x,-4);
+	\foreach \x/\lbl in {1/$x$,3/in,5/out,7/$y$} \draw (\x,-0.75) node[anchor=base]{\lbl};
+	\foreach \y/\xv/\inp/\outp/\yv in {-2/\phm\frac{7}{4}/\frac{1}{4}/-1/1,
+															-3/\phm1/1/\phm0/2,
+															-4/-2/4/\phm1/3}
+		\foreach \x/\lbl in {1/\xv,3/\inp,5/\outp,7/\yv} \draw (\x,\y+0.25) node[anchor=base]{$\lbl$};
+\end{scope}
+\end{GridSquareFitEOFilled}}
+\mitemxx
+{\begin{GridSquareFitEOFilled}[10](1.5in)
+\draw[dashed,thick] (-3,-10.9) -- (-3,10.9);
+\foreach \x in {-1,0,1} \fill ({exp(ln(1/2)*\x)-3},2*\x-1) circle (0.25);
+\draw[thick,<->,domain={-ln(13.9)/ln(2)}:5.95] plot ({exp(ln(1/2)*\x)-3},2*\x-1);
+\begin{scope}[xshift=0.75in+0.5em,yshift=0.75in,x=1em,y=4ex]
+	\draw (0,-1) -- (8,-1);
+	\foreach \x in {2,4,6} \draw (\x,0) -- (\x,-4);
+	\foreach \x/\lbl in {1/$x$,3/in,5/out,7/$y$} \draw (\x,-0.75) node[anchor=base]{\lbl};
+	\foreach \y/\xv/\inp/\outp/\yv in {-2/-1/2/-1/-3,
+															-3/-2/1/\phm0/-1,
+															-4/-\frac{5}{2}/\frac{1}{2}/\phm1/\phm1}
+		\foreach \x/\lbl in {1/\xv,3/\inp,5/\outp,7/\yv} \draw (\x,\y+0.25) node[anchor=base]{$\lbl$};
+\end{scope}
+\end{GridSquareFitEOFilled}}
+{\begin{GridSquareFitEOFilled}[10](1.5in)
+\draw[dashed,thick] (3,-10.9) -- (3,10.9);
+\foreach \x in {-1,0,1} \fill ({3-exp(\x*ln(2))},1-\x) circle (0.25);
+\draw[thick,<->,domain=-9.9:{ln(13.9)/ln(2)}] plot ({3-exp(\x*ln(2))},1-\x);
+\begin{scope}[xshift=0.75in+0.5em,yshift=0.75in,x=1em,y=4ex]
+	\draw (0,-1) -- (8,-1);
+	\foreach \x in {2,4,6} \draw (\x,0) -- (\x,-4);
+	\foreach \x/\lbl in {1/$x$,3/in,5/out,7/$y$} \draw (\x,-0.75) node[anchor=base]{\lbl};
+	\foreach \y/\xv/\inp/\outp/\yv in {-2/\frac{5}{2}/\frac{1}{2}/-1/2,
+															-3/2/1/\phm0/1,
+															-4/-\frac{5}{2}/\frac{1}{2}/\phm1/\phm1}
+		\foreach \x/\lbl in {1/\xv,3/\inp,5/\outp,7/\yv} \draw (\x,\y+0.25) node[anchor=base]{$\lbl$};
+\end{scope}
+\end{GridSquareFitEOFilled}}
+\end{smenum}
+
+\section{Domain and Range of a Logarithm Function}
+For each function below, give the domain and range.
+\begin{smenum}
+\mitemxxx
+{\DomRng{h}[3)}
+{\DomRng{k}(5]}
+{\DomRng{u}[3)}
+\end{smenum}
+
+\clearpage
+\section{Common Logarithm}
+For each log below, rewrite in exponential form, then determine whether the sentence is true.
+\begin{smenum}
+\mitemxxxx
+{$10^2=100$; true}
+{$10^{-2}=0.001$; false}
+{$10^6=10000$; false}
+{$10^{-5}=0.00001$; true}
+\end{smenum}
+Calculate each log on your calculator. Round your answer to two decimal places if necessary. Check by rewriting in exponential form.
+\begin{smenum}
+\mitemxxxx
+{$\log 12\approx 1.08$\\$10^{1.08}\approx 12.02\approx 12$}
+{$\log 13,225\approx 4.12$\\\begin{amath}10^{4.12}&\approx 13182.57\\&\approx 13225\end{amath}}
+{$\log 0.03\approx -1.52$\\$10^{-1.52}\approx 0.03$}
+{$\log 1000=3$\\$10^3=1000$}
+\end{smenum}
+
+\section{Solving Equations Involving Logarithms --- Basic}
+Solve each equation by rewriting in exponential notation.  Round your answer to two decimal places, if necessary.
+\begin{smenum}
+\mitemxxxx
+{$x=9$}
+{$x=16$}
+{$x=5$}
+{$x=20$}
+\mitemxxxx
+{$x=3$}
+{$p=1000$}
+{$x=1$}
+{$x=10^{1.1}\approx 12.59$}
+\end{smenum}
+
+\end{document}

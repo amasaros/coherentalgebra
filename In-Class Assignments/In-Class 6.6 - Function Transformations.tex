@@ -1,0 +1,188 @@
+\input{preamble}
+
+\title{Section 6.6 --- Function Transformations}
+
+\begin{document}
+\maketitle
+
+\section{Single-Step Transformations}
+In each figure below, the given graph is the graph of $y=f(x)$. Graph the function in the question on the same axes. You may find it helpful to use the marked points as reference points.
+\begin{smenum}
+\mitemxx
+{$g(x)=2f(x)$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-2,-1) -- (2,2) -- (4,-2);
+\Cdot{-2,-1};
+\Cdot{2,2};
+\Cdot{4,-2};
+\end{GridSquareFitFilled}}
+{$g(x)=f(-x)$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-4,3) -- (3,-4);
+\Cdot{-4,3};
+\Cdot{3,-4};
+\end{GridSquareFitFilled}}
+\mitemxx
+{$g(x)=f(x)-3$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-3,0) arc (180:0:3);
+\Cdot{-3,0};
+\Cdot{0,3};
+\Cdot{3,0};
+\end{GridSquareFitFilled}}
+{$g(x)=-f(x)$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (4,4) -- (0,0) -- (-3,3);
+\Cdot{-3,3};
+\Cdot{0,0};
+\Cdot{4,4};
+\end{GridSquareFitFilled}}
+\mitemxx
+{$g(x)=f(x)+2$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-3,3) parabola bend (1,-1) (3,0);
+\Cdot{-3,3};
+\Cdot{1,-1};
+\Cdot{3,0};
+\end{GridSquareFitFilled}}
+{$g(x)=f(x+1)$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-3,-3) -- (-1,1) -- (3,1) -- (4,2);
+\Cdot{-3,-3};
+\Cdot{-1,1};
+\Cdot{3,1};
+\Cdot{4,2};
+\end{GridSquareFitFilled}}
+\mitemxx
+{$g(x)=\frac{2}{3}f(x)$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-1,-3) -- (4,3);
+\Cdot{-1,-3};
+\Cdot{4,3};
+\end{GridSquareFitFilled}}
+{$g(x)=f(\frac{1}{3}x)$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-1,-2) parabola bend (0,3) (1,-2);
+\Cdot{-1,-2};
+\Cdot{0,3};
+\Cdot{1,-2};
+\end{GridSquareFitFilled}}
+\mitemxx
+{$g(x)=f(2x)$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-4,1) arc (-180:0:4);
+\Cdot{-4,1};
+\Cdot{0,-3};
+\Cdot{4,1};
+\end{GridSquareFitFilled}}
+{$g(x)=f(x-3)$\\
+\begin{GridSquareFitFilled}(2in)
+\draw[thick] (-3,-2) -- (1,4);
+\Cdot{-3,-2};
+\Cdot{1,4};
+\end{GridSquareFitFilled}}
+\end{smenum}
+
+\section{Multiple Transformations}
+In each figure below, the given graph is the graph of $y=f(x)$. Graph the function in the question on the same axes. You may find it helpful to use the marked points as reference points. \emph{You will want to write out your work on a separate sheet of paper.}
+\begin{smenum}
+\mitemxx
+{$g(x)=-2f(\frac{2}{3}x+2)+3$\\
+\begin{GridSquareFitFilled}[11]
+\draw[thick] (-4,-4) -- (2,3) -- (6,-2);
+\Cdot{-4,-4};
+\Cdot{2,3};
+\Cdot{6,-2};
+\end{GridSquareFitFilled}}
+%\mitemx
+{$g(x)=\frac{2}{3}f(-2x-5)-1$\\
+\begin{GridSquareFitFilled}[11]
+\draw[thick] (-9,-3) arc (180:0:6);
+\Cdot{-9,-3};
+\Cdot{-3,3};
+\Cdot{3,-3};
+\end{GridSquareFitFilled}}
+\end{smenum}
+\clearpage
+\section{Domain and Range}
+\begin{senum}
+\item If $g(x)=3 f(-2x-3)+4$ and $\dom f=(-5,\infty)$, what is $\dom g$?
+\item If $h(x)=\frac{1}{3} g(x+1)-7$ and $\rng g=(-\infty,3]\cup[5,\infty)$, what is $\rng h$?
+\item If $k(x)=2 f\left(7-\frac{2}{5}x\right) - 6$, $\dom f=(0,1)$, and $\rng f=(-\infty,\infty)$, what are $\dom k$ and $\rng k$?
+\end{senum}
+\section{Symmetry}
+Classify each function as even, odd, or neither.
+\begin{smenum}
+\maitemxxxx
+{f(x)=x^2\mlbl{firstpoly}}
+{f(x)=(x-7)^2}
+{f(x)=x^5}
+{f(x)=2x}
+\maitemxxxx
+{f(x)=x^6-3x^2+9}
+{f(x)=x^3+x^2}
+{f(x)=x^3+6}
+{f(x)=x^9-x^3+8x\mlbl{lastpoly}}
+\maitemxxxx
+{f(x)=\sqrt{x}}
+{f(x)=\sqrt[5]{x}}
+{f(x)=3|2x|-5}
+{f(x)=|x-5|}
+\mitemx
+{Based on your answers to \nnref{firstpoly}{lastpoly}, how can we decide if a polynomial is an even function, an odd function, or neither? (Try to answer this question on your own before looking at the answer key.)}
+\end{smenum}
+\section{Using the Library}
+For each function below:
+\begin{clist}
+\item Identify the base function (call it $f(x)$) and the family of functions it belongs to.
+\item Rewrite the function in terms of $f(x)$. (We usually won't do this explicitly in practice.)
+\item Sketch a graph of the function, including any asymptotes and clearly marking any special points, using a separate sheet of graph paper or the other side of this page.
+\item Give the domain and range of the function.
+\end{clist}
+\begin{smenum}
+\maitemxx
+{g(x)=-3x+5}
+{g(x)=\dfrac{5}{x^2-6x+9}}
+\maitemxx
+{g(x)=\dfrac{3}{x-2}}
+{g(x)=|x-5|+2}
+\maitemxx
+{g(x)=4}
+{g(x)=2(x-1)^3+1}
+\maitemxx
+{g(x)=\log_{1/3}(2x+3)+1}
+{g(x)=-\left(\frac{1}{2}\right)^{x+2}+1}
+\maitemxx
+{g(x)=2(x-2)+1}
+{g(x)=-3(x+4)^2+2}
+\maitemxx
+{g(x)=\dfrac{3}{2x^2}-1}
+{g(x)=3\sqrt[3]{4-x}-1}
+\maitemxx
+{g(x)=\dfrac{6x-7}{2x-3}}
+{g(x)=2\sqrt{-\frac{1}{2}x+3}}
+\maitemxx
+{g(x)=2x^2-8x+5}
+{g(x)=3^{\frac{1}{3}x}-5}
+\maitemxx
+{g(x)=\log_2(x-3)+4}
+{g(x)=-\left|4-\frac{1}{3}x\right|+2}
+\end{smenum}
+%\section*{Messing with Scaling}
+%For the functions below:
+%\begin{clist}
+%\item Identify the base function (call it $f(x)$) and the family of functions it belongs to.
+%\item Use algebra rewrite the function as $a\cdot f\left(\frac{1}{b} x+c\right)+d$ where $a$ and $b$ are both integers. This will cause your key points to end up as integers.
+%\item Sketch a graph of the function, including any asymptotes and clearly marking any special points.
+%\item Give the domain and range of the function.
+%\end{clist}
+%\begin{smenum}
+%\maitemxx
+%{g(x)=3^{2x-4}-2}
+%{g(x)=-\frac{3}{2}\sqrt{x+1}}
+%\maitemxx
+%{g(x)=\frac{1}{3} x^2}
+%{g(x)=\frac{2}{3}(x-2)+5}
+%\end{smenum}
+\graphpage
+\end{document}
