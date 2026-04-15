@@ -12,18 +12,26 @@
 MTH 083-103\\%
 Lecture Guides}
 
-\usepackage{cmbright}
+%\usepackage{cmbright}
 %\usepackage[OT1]{fontenc}
 
-%\usepackage{fontspec}          % lualatex font engine
+\usepackage{fontspec}          % lualatex font engine
+\usepackage{cmbright}
+%
+%
+\setmainfont[Numbers = Uppercase,
+             NFSSFamily = cmbr,
+             Ligatures = TeX,
+             BoldFont  = CMU Bright SemiBold,
+             ItalicFont = CMU Bright Oblique,
+            ]{CMU Bright Roman}
 
-
-%\setmainfont[Numbers = Uppercase,
-             %Ligatures = TeX,
-             %BoldFont  = CMU Bright SemiBold,
-             %ItalicFont = CMU Bright Oblique,
-            %]{CMU Bright Roman}
-
+\setsansfont[Numbers = Uppercase,
+             NFSSFamily = cmbr,
+             Ligatures = TeX,
+             BoldFont  = CMU Bright SemiBold,
+             ItalicFont = CMU Bright Oblique,
+            ]{CMU Bright Roman}
 
 \input{page_setup}
 \input{tikz_setup}
@@ -34,6 +42,7 @@ Lecture Guides}
 %\tikzset{every picture/.append style={artifact}}
 
 \begin{document}
+%\usefont{OT1}{cmbr}{m}{n}
 \input{U1_Functions}
 \input{U2_Polys}
 \input{U3_Power}
