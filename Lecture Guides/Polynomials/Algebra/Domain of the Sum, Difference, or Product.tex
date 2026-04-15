@@ -1,0 +1,31 @@
+\subsection{Domains of New Functions} 
+For $x$ to be in the domain of the sum, difference, product, or quotient of two functions $f$ and $g$, we need to be able to do three things:
+\begin{itemize*}
+\item Evaluate $f(x)$
+\item Evaluate $g(x)$
+\item Perform the appropriate operation (addition, subtraction, multiplication, or division).
+\end{itemize*}
+We can add, subtract, or multiply \makeblank[0.75in] two numbers, but we can't divide by \makeblanksmall.
+\begin{fact}[Domain of Sum, Difference, Product, and Quotient]
+For any two functions $f$ and $g$,
+\[
+\begin{array}{r@{\;=\;}l}
+\dom(f+g)&(\dom f)\cap(\dom g)\\
+\dom(f-g)&(\dom f)\cap(\dom g)\\
+\dom(f\cdot g)&(\dom f)\cap(\dom g)\\
+\rule{0pt}{6ex}\dom\left(\frac{f}{g}\right)&(\dom f)\cap(\dom g)\cap\Set{x|g(x)\neq 0}
+\end{array}
+\]
+\end{fact}
+
+\begin{example}
+Suppose $\dom f=(-\infty,3]$ and $\dom g=(-6,15)$. Find each domain:
+\begin{lpic}{}{3}
+\foreach \y/\fn in {-1/f+g,-2/f-g,-3/f\cdot g}
+	\regtextleft{0}{\y}{$\dom\left(\fn\right)=$};
+\end{lpic}
+Suppose also the solution set of $g(x)=0$ is $\Set{-2,1}$. Find the domain:
+\begin{lpic}{}{2}
+	\regtextleft{0}{-1}{$\dom\left(\frac{f}{g}\right)=$};
+\end{lpic}
+\end{example}

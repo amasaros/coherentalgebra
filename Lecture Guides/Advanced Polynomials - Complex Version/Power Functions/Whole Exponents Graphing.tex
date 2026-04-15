@@ -1,0 +1,36 @@
+\subsection{Graphs of Whole Number Powers} 
+Consider these example graphs.
+\begin{center}
+\begin{tikzpicture}[x=0.5\linespace,y=0.5\linespace]
+\setgraphsmall
+\useasboundingbox (.75\textwidth,-\value{graphsize}) rectangle (1.0\textwidth,\value{graphsize});
+\foreach \sh in {2,...,5}
+	{
+	\begin{scope}[xshift=\sh*0.25*\textwidth]
+		\GraphSmall
+		\draw[domain={-\value{graphsize}^(1/\sh)}:{\value{graphsize}^(1/\sh)},samples=100,style=graph] 
+		      plot (\x,{(\x)^(\sh)});
+		\draw (\value{graphsize}+.5,-\value{graphsize}-.5) node[anchor=south east]{\small$y=x^\sh$};
+	\end{scope}
+	}
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+\item If $n$ is \makeblank[1in], the graph is a \makeblanksmall-shaped curve that passes through \blankpair, \blankpair, and \blankpair.
+\item If $n$ is \makeblank[1in], the graph is a \makeblanksmall-shaped curve that passes through \blankpair, \blankpair, and \blankpair.
+\item The \makeblank[1in] the value of $n$, the \makeblank[1.5in] the way the graph turns.
+\end{itemize}
+To graph $f(x)=a(x-h)^n+k$, we keep the general shape with a turn at \blankpair\linebreak and use two points on either side. If $a$ is a \makeblank[1in] number, the graph is\linebreak \makeblank.
+\begin{example}
+Graph 
+\[
+f(x)=-\frac{1}{2}\left(x-2\right)^3+1
+\]
+\begin{lpic}{}{10}
+	\regtext{2}{-2}{$x$};
+	\regtext{4}{-2}{$y$};
+	\draw (3,-1) -- (3,-7);
+	\draw (1,-2) -- (5,-2);
+	\draw[dashed] (1,-4) rectangle (5,-5);
+\end{lpic}
+\end{example}

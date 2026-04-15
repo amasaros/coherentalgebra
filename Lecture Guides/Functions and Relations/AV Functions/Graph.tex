@@ -1,0 +1,38 @@
+\subsection{Graph of an Absolute Value Function} 
+We begin with the graph of the base absolute value function.
+\begin{lpic}{}{8}
+\setgraph{5}{5}{1}{5}
+\setspace{1}
+\begin{scope}[xshift=\value{cols}*2\linespace-6\linespace,yshift=-6\linespace]
+\AxesLarge
+\end{scope}
+\regtext{1.5}{-1}{$x$};
+\regtext{5.5}{-1}{$y=f(x)=\Abs{x}$};
+\draw (0,-1) -- (8,-1);
+\draw (3,0) -- (3,-8);
+\foreach \x in {-3,-2,-1}
+	\regtext{1.5}{-5-\x}{$\x$};
+\foreach \x in {0,1,...,3}
+	\regtext{1.5}{-5-\x}{\figdash$\x$};
+\end{lpic}
+Every absolute value function will have a similar ``V'' shape (or upside down ``V'' shape).
+\begin{procedure}{Graphing an Absolute Value}
+\begin{enumerate}[1.]
+\item Determine the point of the ``V''---where the input of the absolute value is 0.
+\item Find one point with integer coordinates to each side of the point.
+\item Fill in the sides of the ``V'' shape.
+\end{enumerate}
+\end{procedure}
+\begin{example}Graph $f(x)=-\frac{3}{2}\Abs{x-1}+4$.
+\begin{lpic}{}{10}
+\begin{scope}[xshift=\value{cols}*2\linespace-6\linespace,yshift=-6\linespace]
+\setgraph{5}{5}{3}{5}
+\setspace{1}
+\AxesLarge
+\end{scope}
+\regtext{1.5}{-4}{$x$};
+\regtext{5.5}{-4}{$y=f(x)$};
+\draw (0,-4) -- (8,-4);
+\draw (3,-3) -- (3,-7);
+\end{lpic}
+\end{example}

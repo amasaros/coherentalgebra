@@ -1,0 +1,59 @@
+\subsection{Graphs of Quadratic Functions} 
+Let's look at the graphs of some quadratic functions.
+\begin{center}\begin{tikzpicture}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox(-0.3\linewidth,-2.25\linespace-2ex) rectangle (0.3\linewidth,2.25\linespace);
+\begin{scope}[xshift=-0.3\linewidth,yshift=-1.5\linespace]
+\setgraph{4}{4}{1}{7}
+\GraphSmall
+\draw[graph] ({-sqrt(7)},7) parabola bend(0,0) ({sqrt(7)},7);
+\draw (0,-1.5) node[yshift=-2ex,anchor=base]{$f(x)=x^2$};
+\end{scope}
+\begin{scope}[xshift=-\linespace,yshift=-1\linespace]
+\setgraph{2}{6}{2}{6}
+\GraphSmall
+\draw[graph] ({2-sqrt(14)},6) parabola bend(2,-1) ({2+sqrt(14)},6);
+\draw (2,-2.5) node[yshift=-2ex,anchor=base]{$g(x)=\frac{1}{2}x^2-2x+1$};
+\end{scope}
+\begin{scope}[xshift=0.3\linewidth+0.5\linespace,yshift=0.5\linespace]
+\setgraph{5}{3}{5}{3}
+\GraphSmall
+\draw[graph] ({-1-sqrt(3.5)},-5) parabola bend(-1,2) ({-1+sqrt(3.5)},-5);
+\draw (-1,-5.5) node[yshift=-2ex,anchor=base]{$h(x)=-2x^2-4x$};
+\end{scope}
+\end{tikzpicture}\end{center}
+We see that these graphs all have the same \makeblank[1in].
+\begin{definition}[Parabola]
+A \term{parabola} is the geometric shape of the curve formed by the graph of a quadratic function. The shape has the following features.
+\begin{itemize*}
+\item A highest or lowest point, called the \term{vertex}.
+\item Reflective \term{symmetry} across a vertical line through the vertex, the \term{axis of symmetry}.
+\end{itemize*}
+The symmetry means that points at the same distance to either side of the axis of symmetry will have the same \makeblanksmall coordinate.
+\end{definition}
+\begin{example}
+For each of the following parabolas, identify the vertex and axis of symmetry. Label the vertex with a dot and the axis of symmetry with a dashed line.
+\begin{center}\begin{tikzpicture}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox(-0.3\linewidth,-2.25\linespace-2ex) rectangle (0.3\linewidth,2.25\linespace);
+\begin{scope}[xshift=-0.3\linewidth,yshift=-1.5\linespace]
+\setgraph{4}{4}{1}{7}
+\GraphSmall
+\draw[graph] ({-sqrt(7)},7) parabola bend(0,0) ({sqrt(7)},7);
+\draw (0,-1.5) node[yshift=-3ex,anchor=base]{Vertex: $\blankpair$};
+\draw (0,-1.5) node[yshift=-7ex,anchor=base]{AoS: $\makeblank[1in]$};
+\end{scope}
+\begin{scope}[xshift=-\linespace,yshift=-1\linespace]
+\setgraph{2}{6}{2}{6}
+\GraphSmall
+\draw[graph] ({2-sqrt(14)},6) parabola bend(2,-1) ({2+sqrt(14)},6);
+\draw (2,-2.5) node[yshift=-3ex,anchor=base]{Vertex: $\blankpair$};
+\draw (2,-2.5) node[yshift=-7ex,anchor=base]{AoS: $\makeblank[1in]$};
+\end{scope}
+\begin{scope}[xshift=0.3\linewidth+0.5\linespace,yshift=0.5\linespace]
+\setgraph{5}{3}{5}{3}
+\GraphSmall
+\draw[graph] ({-1-sqrt(3.5)},-5) parabola bend(-1,2) ({-1+sqrt(3.5)},-5);
+\draw (-1,-5.5) node[yshift=-3ex,anchor=base]{Vertex: $\blankpair$};
+\draw (-1,-5.5) node[yshift=-7ex,anchor=base]{AoS: $\makeblank[1in]$};
+\end{scope}
+\end{tikzpicture}\end{center}
+\end{example}

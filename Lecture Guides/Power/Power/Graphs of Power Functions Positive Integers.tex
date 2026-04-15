@@ -1,0 +1,41 @@
+\subsection{Graphs of Power Functions} 
+Let's consider the graphs of some power functions. (Note the unlabeled axes: we're most interested in the general shape here.)
+\begin{center}\begin{tikzpicture}
+	%\begin{scope}[xshift=-0.25\linewidth]
+		%\draw[axis] (-5,0) -- (5,0) node[anchor=south]{$x$};
+		%\draw[axis] (0,-5) -- (0,5) node[anchor=east]{$y$};
+		%\foreach \p/\s/\col in {2/1/blue,
+														%4/1/red,
+														%8/1/green,
+														%2/-1/cyan,
+														%4/-1/magenta,
+														%8/-1/yellow} {
+			%\draw[graph,\col,domain={-2.5^(1/\p)}:{2.5^(1/\p)}] plot (2*\x,{2*\s*pow(\x,\p)});
+		%}
+	%\end{scope}
+	%\begin{scope}[xshift=0.25\linewidth]
+		%\draw[axis] (-5,0) -- (5,0) node[anchor=south]{$x$};
+		%\draw[axis] (0,-5) -- (0,5) node[anchor=east]{$y$};
+	%\end{scope}
+\foreach \x/\p/\q in {-1/2/3,0/4/5,1/6/7} {
+	\foreach \y/\s/\fn/\e in {0/1/y=x^\p/\p,
+														1/1/y=x^\q/\q,
+														0/-1/y=-x^\p/\p,
+														1/-1/y=-x^\q/\q} {
+		\begin{scope}[xshift=\x*3\linespace-\y*10\linespace,yshift=\s*2\linespace]
+			\draw[axis] (-1,0) -- (1,0) node[anchor=south]{$x$};
+			\draw[axis] (0,-1) -- (0,1) node[anchor=west]{$y$};
+			\draw[yshift=-2ex] (0,-1) node[anchor=base]{$\fn$};
+			\draw[graph,domain={-2^(1/\e}:{2^(1/\e}] plot (0.5*\x,{0.5*\s*pow(\x,\e)});
+		\end{scope}
+	}
+}
+\end{tikzpicture}\end{center}
+We observe the following:
+\begin{itemize}
+\item \makeblank[.75in] exponents give an \makeblanksmall or \makeblanksmall shaped graph.
+\item \makeblank[.75in] exponents give a \makeblanksmall or \makeblanksmall shaped graph.
+\item Each graph is flat near \blankpair. A \makeblank[1in] exponent is flatter.
+\item When $x$ is far away from \makeblanksmall, the graph \makeblank. This is stronger for \makeblank[1in] exponents.
+\item If we add a negative sign, the effect is to \makeblank.
+\end{itemize}

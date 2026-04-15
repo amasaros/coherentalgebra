@@ -1,0 +1,22 @@
+\subsection{Identifying Points on Graphs} 
+Often, we will have a computer-generated graph, especially for a function with unpleasant numbers, and we still want to identify the key points on the graph. The quadratic formula and vertex formula can be useful for this purpose.
+\begin{example}
+The graph shows the function $P(x)=-0.03x^2+13.7x-219$. Find the coordinates of the points shown. Give the coordinates rounded to the nearest integer.
+\begin{lpic}{}{13}
+\begin{scope}[xshift=2*\value{cols}*\linespace-6*\linespace,yshift=-6*\linespace]
+\draw[axis,name path=xaxis] (-1.5,0) -- (5.5,0) node[anchor=south]{$x$};
+\draw[axis,name path=yaxis] (0,-2.5) -- (0,5.5) node[anchor=west]{$y$};
+\draw[graph,domain=-0.2629:4.8296,samples=30,smooth,name path=curve]
+		plot (\x,-300/300*\x*\x+1370/300*\x-219/300);
+\fill[red,name intersections={of=yaxis and curve}] 
+	(intersection-1) circle (\dotsize) node[anchor=mid east]{A};
+\fill[red,name intersections={of=xaxis and curve}] 
+	(intersection-1) circle (\dotsize) node[anchor=base west,yshift=0.5ex]{B};
+\fill[red,name intersections={of=xaxis and curve}] 
+	(intersection-2) circle (\dotsize) node[anchor=base east,yshift=0.5ex]{D};
+\foreach \x/\lbl in {{137/60}/C}
+\fill[red] (\x,-300/300*\x*\x+1370/300*\x-219/300) circle (\dotsize) node[anchor=south]{C};
+
+\end{scope}
+\end{lpic}
+\end{example}

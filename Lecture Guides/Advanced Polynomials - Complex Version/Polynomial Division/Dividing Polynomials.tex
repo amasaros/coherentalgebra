@@ -1,0 +1,25 @@
+\subsection{Dividing Polynomials}
+Polynomials are like numbers, with the terms taking the place of digits. So if we want to divide
+\[
+\left(4x^4 - 4x^3 - x^2 + 13x - 12\right)\div \left(2x^2 + x - 3\right)
+\]
+we follow the same steps as for long division.
+\begin{lpic}{5}{19}
+\foreach \y/\l in {0/D,1/M,2/S,3/B} {
+  \bigtext{1.5}{-2*\y-1}{\l};
+}
+\writethink[14]{-10}{10}
+%\regtext{7}{-10}{Write:};
+%\regtext{7+\value{cols}}{-10}{Think:};
+%\draw (13,-11) -- (3.5,-11) arc (20:-20:{.5/sin(20)});
+\divbracket{3}{5}{-11};
+%\draw[dashed] (14,-9) -- (14,-19);
+\regtextright{3.25}{-12}{$2x^2+x-3$};
+\foreach \x/\lbl in {0/4x^4,2/{}-4x^3,4/{}-x^2,6/{}+13x,8/{}-12}
+{
+  \regtextright{5+\x}{-12}{$\lbl$};
+}
+\end{lpic}
+Like with numbers, we can check this result by multiplying:
+\begin{cpic}{}{6}
+\end{cpic}

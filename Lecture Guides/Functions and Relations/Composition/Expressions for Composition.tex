@@ -1,0 +1,31 @@
+\subsection{Expressions for Composed Functions} 
+We can compose functions given as equations.
+\begin{example}
+Let $f(x)=-\frac{1}{2}x+3$ and $g(t)=t^2+t$. Find each of the following.
+\begin{lpicvsplit}{3}{5}
+\foreach \x/\lbl in {0/(f\circ g)(1),1/(f\circ g)(-3),2/(g\circ f)(4)}
+	\regtextleft{\x*\value{fcols}+\x+1}{-1}{$\lbl={}$};
+\end{lpicvsplit}
+Write an expression for each of the following. Do not simplify.
+\begin{itemize}
+\item \makeblankfill{$(f\circ g)(t)={}$}
+\item \makeblankfill{$(g\circ f)(x)={}$}
+\end{itemize}
+\end{example}
+In the previous example, the functions were written with different input variables to make the work easier to read. We won't always do this.
+\begin{example}
+Let $h(x)=\frac{1}{x}$ and $k(x)=3x+1$. Find each of the following. Do not simplify.
+\begin{itemize}
+\item \makeblankfill{$(h\circ k)(x)={}$}
+\item \makeblankfill{$(k\circ h)(x)={}$}
+\end{itemize}
+\end{example}
+We can also ``decompose'' a function to think of its simpler parts.
+\begin{example}
+Let $F(x)=\sqrt{x^2-5}$. Write two functions $f$ and $g$ such that $F=f\circ g$.
+\[
+g(x)=\makeblank
+\qquad
+f(t)=\makeblank
+\]
+\end{example}

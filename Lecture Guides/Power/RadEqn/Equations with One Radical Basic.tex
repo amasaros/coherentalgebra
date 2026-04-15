@@ -1,0 +1,24 @@
+\subsection{Equations with One Radical: Basic} 
+Radical functions are all one-to-one, with power functions as their inverses. So if we want to solve an equation with one radical, we have a simple process.
+\begin{procedure}{Solving Equations with One Radical}
+\begin{enumerate*}
+\item Isolate the radical.
+\item Rewrite in terms of the corresponding power function.
+\item Finish solving.
+\end{enumerate*}
+\end{procedure}
+\begin{example}
+Solve each radical equation.
+\begin{lpicvsplit}{2}{8}
+\foreach \x/\eqn in {0/{\sqrt{x}=5},1/{2\sqrt[4]{x}-3=1}} {
+	\regtext{\value{fcols}*\x+\x+0.5*\value{fcols}}{-1}{$\eqn$};
+	\regtextleft{\value{fcols}*\x+\x}{-6}{Check:};
+}
+\end{lpicvsplit}
+\begin{lpicvsplit}{2}{9}
+\foreach \x/\eqn in {0/{\sqrt[3]{3x-1}=-4},1/{2\sqrt{x+7}-4=8}} {
+	\regtext{\value{fcols}*\x+\x+0.5*\value{fcols}}{-1}{$\eqn$};
+	\regtextleft{\value{fcols}*\x+\x}{-7}{Check:};
+}
+\end{lpicvsplit}
+\end{example}

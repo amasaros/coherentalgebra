@@ -1,0 +1,72 @@
+\subsection{Interval Notation Basics} 
+The solution sets of inequalities are especially nice subsets of the number line, called \term{intervals}. We have special notation to describe these sets, 
+\term{interval notation}. We should think of interval notation as representing the \term{graph} of an inequality on the number line. Below are some examples.
+\begin{colparts}{2}
+\foreach \x/\y/\lef/\rig/\ls/\rs/\arr/\intval in {-0.5/0/-3/0/dotempty/dotempty/{}/{(-3,0)},
+									-0.5/-1/0/2/dotempty/dotfull/{}/{(0,2]},
+									0.5/0/-3/-1/dotfull/dotempty/{}/{[-3,-1)},
+									0.5/-1/2/4/dotfull/dotfull/{}/{[2,4]},
+									-0.5/-2/-5/2/hidden/dotempty/<-/{(-\infty,2)},
+									-0.5/-3/-5/4/hidden/dotfull/<-/{(-\infty,4]},
+									0.5/-2/-1/5/dotempty/hidden/->/{(-1,\infty)},
+									0.5/-3/0/5/dotfull/hidden/->/{[0,\infty)}}
+	{
+	\draw[<->,thick] (\x-0.4,\y*2) -- (\x+0.4,\y*2);
+	\foreach \z in {-4,...,4} 
+		\draw (\x+0.08*\z,\y*2-0.15) -- ++(0,0.3);
+	\foreach \z in {1,...,4} {
+		\draw (\x+0.08*\z,\y*2-0.6) node[anchor=base]{\footnotesize$\z$};
+		\draw (\x-0.08*\z,\y*2-0.6) node[anchor=base,xshift=-0.75ex]{\footnotesize$-\z$};
+		}
+		\draw (\x,\y*2-0.6) node[anchor=base]{\footnotesize$0$};
+	\draw[graphend,ultra thick,\arr] (\x+0.08*\lef,\y*2) -- (\x+0.08*\rig,\y*2);
+	\draw[graphend,\ls] (\x+0.08*\lef,\y*2) circle (0.1\linespace);
+	\draw[graphend,\rs] (\x+0.08*\rig,\y*2) circle (0.1\linespace);
+	\regtext{\x}{\y*2+0.2}{$\intval$};
+	}
+\end{colparts}
+\begin{itemize}
+\item The \makeblank[1in] number and bracket describe the \makeblank[1in] end of the graph.
+\item The \makeblank[1in] number and bracket describe the \makeblank[1in] end of the graph.
+\end{itemize}
+\begin{center}
+\begin{tikzpicture}
+\draw (-8,0) rectangle (8,-6.5);
+\draw (0,0) -- (0,-6.5);
+\foreach \y in {-2,-3.5,-5} \draw (-8,\y) -- (8,\y);
+\foreach \x/\side in {-4/Left,4/Right} {
+	\regtext{\x}{-1}{\textbf{{\side} End}};
+	\foreach \xx/\word in {-2/Interval,2/Number Line}
+		\regtext{\x+\xx}{-2}{\word};
+}
+\foreach \y/\lsymb/\rsymb/\dottype in {-3/{(\#}/{\#)}/dotempty,
+																			-4.5/{[\#}/{\#]}/dotfull}
+{
+	\regtext{-6}{\y}{$\lsymb$};
+	\regtext{2}{\y}{$\rsymb$};
+	\foreach \x/\xx in {-2/1.5,6/-1.5} {
+		\draw[thick,yshift=1.5ex] (\x-1.5,\y) -- (\x+1.5,\y);
+		\draw[yshift=1.5ex] (\x,\y+0.15) -- (\x,\y-0.15) node[anchor=north]{\tiny\#};
+		\draw[graphend,ultra thick,yshift=1.5ex] (\x,\y) -- (\x+\xx,\y);
+		\filldraw[graphend,\dottype,yshift=1.5ex] (\x,\y) circle (0.1);
+	}
+}
+\foreach \x/\symb/\xx in {-4/{(-\infty}/-1.5,4/{\infty)}/1.5}
+{
+	\regtext{\x-2}{-6}{$\symb$};
+	\draw[graphend,ultra thick,->,yshift=1.5ex] (\x+2-\xx,-6) -- (\x+2+\xx,-6);
+}
+\end{tikzpicture}
+\end{center}
+\begin{example}Sketch the solution set of each interval below. Then write the solution set in interval notation.
+\begin{colparts}{4}
+\foreach \x/\ineq in {-1.5/x\leq 7,-0.5/x>5,0.5/-3\leq x\leq -2,1.5/6>x\geq -5} {
+	\regtext{\x}{-1}{$\ineq$};
+	\draw[<->] (\x-0.4,-2) -- (\x+0.4,-2);
+	\regtext{\x}{-4}{\makeblank[1in]};
+}
+\end{colparts}
+\end{example}
+\begin{note}
+It is possible to confuse an interval with an ordered pair, e.g. $(-2,1)$. We must decide from \makeblank which we're seeing.
+\end{note}

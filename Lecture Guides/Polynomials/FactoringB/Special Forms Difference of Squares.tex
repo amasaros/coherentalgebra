@@ -1,0 +1,41 @@
+\subsection{Special Forms: Difference of Squares} 
+\begin{example}
+Factor $x^2-9$ using the AC Method.
+\begin{itemize*}
+\item To apply the AC Method, we need to add the term \makeblanksmall.
+\end{itemize*}
+\begin{lpic}{}{4}
+\end{lpic}
+\end{example}
+\noi We can generalize this to a form called \term{difference of squares} by multiplying:
+\begin{lpic}{}{1}
+\regtextleft{0.5}{-1}{$(A-B)(A+B)={}$};
+\end{lpic}
+\begin{fact}[Recognizing a Difference of Squares]
+A binomial is a \term{difference of squares} when:
+\begin{itemize*}
+\item Each term is a perfect square monomial (ignoring signs).
+\item One is positive, and the other negative.
+\end{itemize*}
+\end{fact}
+\begin{example}
+For each polynomial below:
+\begin{enumerate*}\setabc
+\item Determine whether it is a difference of squares.
+\item If it is, factor it as such.
+\end{enumerate*}
+\begin{lpicsplit}{}{8}
+\foreach \x/\exp in {0/9x^2-16,1/x^4y^2-36z^6} {
+	\regtextleft{0.5+\x*\value{fcols}+\x}{-1}{$\exp$};
+	\foreach \y/\letter in {-2/a,-3/b}
+		\regtextright{1+\x*\value{fcols}+\x}{\y}{\letter.};
+}
+\end{lpicsplit}
+\begin{lpicsplit}{}{3}
+\foreach \x/\exp in {1/x^3-y^2,0/z^4+81} {
+	\regtextleft{0.5+\x*\value{fcols}+\x}{-1}{$\exp$};
+	\foreach \y/\letter in {-2/a,-3/b}
+		\regtextright{1+\x*\value{fcols}+\x}{\y}{\letter.};
+}
+\end{lpicsplit}
+\end{example}

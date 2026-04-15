@@ -1,0 +1,33 @@
+\subsection{Horizontal Translation}
+To translate a point to the right by $c$, we add $c$ to its $x$-coordinate. To translate it to the left by $c$, we subtract $c$ from its $x$-coordinate.
+\begin{example}
+In the figure below, the graph of:
+\begin{itemize}
+\item $h(x)$ is obtained by translating the graph of $f(x)$ three units to the right
+\item $k(x)$ is obtained by translating the graph of $f(x)$ four units to the left
+\end{itemize}
+Give expressions for $h(x)$ and $k(x)$ in terms of $f(x)$.
+\begin{icpic}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox (-9,-5) rectangle (9,5);
+\setgraph{9}{9}{5}{5}
+\GraphSmall
+\foreach \x/\col in {0/colf,-4/colh,3/colg} {
+	\draw[thick,\col] (-4+\x,1) -- (-2+\x,2) -- (2+\x,-4) -- (5+\x,-2);
+}
+\draw[colf] (-2,2) node[anchor=south,font=\small] {$y=f(x)$};
+\draw[colh] (-7,1.5) node[anchor=south east,font=\small] {$y=k(x)$};
+\draw[colg] (1.75,1) node[anchor=south west,font=\small] {$y=h(x)$};
+\end{icpic}
+\funtable{4}{f}{h}{k}
+\end{example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{displaybox}[Horizontal Translation]
+For any number $c>0$:
+\begin{itemize}
+\item If $g(x)=f(x-c)$, the graph of $g$ is the same as the graph of $f$, translated to the \makeblank[1in] by $c$ units.
+\item If $g(x)=f(x+c)$, the graph of $g$ is the same as the graph of $f$, translated to the \makeblank[1in] by $c$ units.
+\end{itemize}
+\end{displaybox}
+\begin{note}
+The direction of translation is the \makeblank[1.5in] of the sign of the number.
+\end{note}

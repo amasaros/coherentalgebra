@@ -1,0 +1,67 @@
+\usepackage{tikz}
+%\usetikzlibrary{backgrounds}
+
+\definecolor{npblue}{rgb}{.643,.867,.929}
+\definecolor{ltred}{rgb}{.941,.388,.604}
+
+\tikzstyle{every picture}=[x=\linespace,y=\linespace]
+\tikzstyle{background grid}=[npblue,step=\linespace]
+%\tikzstyle{graph}=[style=show background grid]
+%\tikzstyle{absolute}=[remember picture,overlay,shift=(current page.north west)]
+
+\newcommand{\paper}{%
+\noindent\begin{tikzpicture}[style=absolute]%
+	\node (a) [xshift=\lmargin,yshift=.25in] at (current page.north west){};
+	\node (b) [xshift=-\rmargin,yshift=.25in] at (current page.north east){};
+	\node (c) [xshift=-.25in,yshift=-\tmargin] at (current page.north west){};
+	\node (d) [xshift=\lmargin,yshift=-\tmargin] at (current page.north west){};
+	\node (e) [xshift=-\rmargin,yshift=-\tmargin] at (current page.north east){};
+	\node (f) [xshift=.25in,yshift=-\tmargin] at (current page.north east){};
+	\node (g) [xshift=-.25in,yshift=\bmargin-.5\linespace] 
+	           at (current page.south west){};
+	\node (h) [xshift=.25in,yshift=\bmargin-.5\linespace] 
+	           at (current page.south east){};
+	\node (i) [xshift=\lmargin,yshift=-.25in] at (current page.south west){};
+	\node (j) [xshift=-\rmargin,yshift=-.25in] at (current page.south east){};
+	\node (k) [xshift=.25in,yshift=-.25in] at (current page.south east){};
+	%the light background parts
+	\draw[yshift=.25in,xshift=\lmargin,%
+	      xstep=\linespace,ystep=\paperheight+.5in,%
+				npblue!50!white,thin] (c) grid (k);
+	\draw[ltred!50!white] (b) -- (j);
+	%the darker foreground parts
+	\draw[xshift=-.25in,yshift=-\tmargin,%
+	      xstep=\paperwidth+.5in,ystep=\linespace,%
+				npblue,thin] (c) grid (h);
+	\draw[ltred] (a) -- (i);
+\end{tikzpicture}%
+}
+
+\newcommand{\pagecap}{%
+\begin{tikzpicture}[remember picture,overlay,%
+                    x=\linespace,y=\linespace]
+	\node[yshift=-\tmargin,xshift=-\rmargin] at (current page.north east)
+	     [text width=\rmargin-.25in,above right]
+			{
+			\sstitle
+			};
+\end{tikzpicture}%
+}
+
+\renewcommand{\paper}{}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\paper}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{15pt}
+
+\fancypagestyle{plain}{%
+\fancyhf{}
+\fancyhead[C]{\paper}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{15pt}
+}

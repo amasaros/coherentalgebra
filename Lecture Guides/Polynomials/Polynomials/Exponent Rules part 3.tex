@@ -1,0 +1,47 @@
+\subsection{Exponent Rules (Negative Exponents and Examples)}
+We define the remaining integer exponents to be consistent with the product and quotient rules.
+\begin{definition}[Exponent Zero]
+For any real number $x\neq 0$, we define
+
+\nic$x^0=1$
+\end{definition}
+\begin{itemize}
+\item This is consistent with the product rule:\lbr
+$x^0x^n=x^{0+n}=\makeblanksmall=\makeblanksmall\cdot x^n$
+\item This is consistent with the quotient rule (if we allow $m=n$):\lbr
+$\dfrac{x^n}{x^n}=x^{n-n}=\makeblanksmall$, but $\dfrac{x^n}{x^n}=\makeblanksmall$
+\end{itemize}
+\begin{definition}[Negative Integer Exponents]
+For any real number $x\neq 0$ and positive integer $n$,$$x^{-n}=\dfrac{1}{x^n}$$
+\end{definition}
+This lets us simplify the statement of the quotient rule:
+\begin{theorem}[Quotient of Powers Rule]
+For any real number $x$ and integers $m$ and $n$,
+$$
+\dfrac{x^m}{x^n}=x^{m-n}=\dfrac{1}{x^{n-m}}
+$$
+\end{theorem}
+We end with some examples of applying these rules.
+\begin{example}
+Simplify. Assume $x\neq 0$.
+\begin{lpicvsplit}{2}{6}
+\foreach \x/\y/\exp in {0/1/x^3x^4,
+										0/6/\left(x^3\right)^5,
+										1/1/\left(x^{-3}\right)^2,
+										1/2/\left(4x\right)^3}
+	\regtextleft{\x*\value{fcols}+\x}{-\y}{$\exp={}$};
+\foreach \x/\y/\exp in {0/2/\dfrac{x^7}{x^3},
+										0/4/\dfrac{x^5}{x^8},
+										1/3/\left(\dfrac{x}{3}\right)^4,
+										1/5/\left(\dfrac{x^{-2}}{y^3}\right)^{-5}}
+	\fractextleft{\x*\value{fcols}+\x}{-\y}{$\exp={}$};
+%\begin{lpicvsplit}{3}{1}
+%\foreach \x/\exp in {0/x^3x^4,1/\dfrac{x^7}{x^3},2/\dfrac{x^5}{x^8}}
+%	\regtextleft{\x*\value{fcols}+\x}{-1}{$\exp={}$};
+%\end{lpicvsplit}
+%\begin{lpicvsplit}{3}{2}
+%\foreach \x/\exp in {0/\dfrac{x^7}{x^3},1/\dfrac{x^5}{x^8},2/\left(\dfrac{x^3}{y^{-2}}\right)^3}
+%	\fractextleft{\x*\value{fcols}+\x}{-1}{$\exp={}$};
+%\end{lpicvsplit}
+\end{lpicvsplit}
+\end{example}

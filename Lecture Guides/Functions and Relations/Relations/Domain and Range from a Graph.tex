@@ -1,0 +1,46 @@
+\subsection{Domain and Range from a Graph} 
+Recall:
+\begin{definition}[Domain and Range]
+The \term{domain} of a relation is the set of all first entries in the pairs. The \term{range} of a relation is the set of all second entries.
+
+For a relation $R$, $\dom R$ denotes the domain of $R$, and $\rng R$ denotes its range.
+\end{definition}
+In a graph, the first entries are represented as the \makeblanksmall coordinate, and the second entries are represented as the \makeblanksmall coordinate. We can find the domain and range by \term{projecting} \makeblank[1.5in] the graph into the axes.
+\begin{example}
+The relation $S$ is shown in the graph below. Find its domain and range.
+\begin{itemize}
+\item $\dom S = \makeblank$
+\item $\rng S = \makeblank$
+\end{itemize}
+\begin{flushright}
+\begin{tikzpicture}[x=0.75\linespace,y=0.75\linespace]
+\useasboundingbox (-5.5*0.75\linespace,-5.5*0.75\linespace) rectangle (5.5*0.75\linespace,5.5*0.75\linespace-9ex);
+\setgraph{5}{5}{5}{5}
+\GraphOnes{}{}
+\draw[graphend] (-3,2) -- (4,-2);
+\draw[dotfull] (-3,2) circle (\dotsize);
+\draw[dotempty] (4,-2) circle (\dotsize);
+\end{tikzpicture}
+\end{flushright}
+\end{example}
+\begin{example}
+The relation $R$ is shown in the graph below. Find its domain and range.
+\begin{itemize}
+\item $\dom R = \makeblank$
+\item $\rng R = \makeblank$
+\end{itemize}
+\begin{flushright}
+\begin{tikzpicture}[x=0.75\linespace,y=0.75\linespace]
+\useasboundingbox (-5.5*0.75\linespace,-5.5*0.75\linespace) rectangle (5.5*0.75\linespace,5.5*0.75\linespace-9ex);
+\setgraph{5}{5}{5}{5}
+\GraphOnes{}{}
+\draw[domain=-2:1,graphend] plot (\x-2,-\x*\x);
+\draw[graphend] (-2,3) -- (3,1);
+\foreach \x/\y/\col in {-4/-4/dotempty,
+												-1/-1/dotfull,
+												-2/3/dotempty,
+												3/1/dotempty}
+	\draw[\col] (\x,\y) circle (\dotsize);
+\end{tikzpicture}
+\end{flushright}
+\end{example}

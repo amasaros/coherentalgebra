@@ -1,0 +1,18 @@
+\subsection{Writing a Polynomial Function From a Graph} 
+Given a graph of a polynomial, we can now guess the expression for the polynomial.
+\begin{example}
+The graph of a polynomial function $f(x)$ is shown. Give an expression for $f(x)$.
+\begin{icpic}[x=0.5\linespace,y=0.5\linespace]
+\setgraphlarge
+\GraphSmall
+\draw[graph,domain=-1.39128:3.05362,samples=100] plot (\x,{-2*(\x-2)^2*(\x+1)});
+\end{icpic}
+\begin{lpic}{}{15}
+\regtextleft{1}{-1}{zeros:};
+\regtextleft{1}{-2}{multiplicity:};
+\regtextright{2*\value{cols}-1}{-2}{(guess)};
+\regtextleft{1}{-6}{To find $a$, choose a point on the graph.};
+\regtextleft{1}{-12}{To check, choose another point.};
+\end{lpic}
+We find $f(x)=\makeblank$
+\end{example}

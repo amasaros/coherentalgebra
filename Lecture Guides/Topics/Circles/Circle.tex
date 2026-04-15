@@ -1,0 +1,30 @@
+\subsection{What is a Circle?} 
+As a geometric figure, how do we define a circle?
+\begin{definition}[Circle]
+Given a point $O$ in the plane and a real number $r>0$, the \term{circle of radius $r$ with center $O$} is the set of all points $C$ with $d(O,C)=r$.
+\end{definition}
+So a circle consists of all points at some given distance from the center.
+\begin{icpic}
+	\fill (0,0) circle (0.1) node[anchor=north]{$O$};
+	\draw[geom,blue] (0,0) circle (3);
+	\draw[geom] (0,0) -- node[anchor=north]{$r$} (30:3);
+	\fill (30:3) circle (0.1);
+\end{icpic}
+\begin{note}
+The number $r$ is called \emph{the} radius of the circle. A segment running from the center to the circle is called \emph{a} radius. Each radius has length $r$.
+\end{note}
+We can use this definition to come up with an equation for a circle.
+\begin{itemize}
+\item We call the \makeblank[1in] $O=(h,k)$.
+\item We're writing an equation for a shape in the plane, so we call the point on the circle $P=(x,y)$
+\item Then $d(O,P)=\makeblank$
+\item Our basic equation is $\makeblank=r$
+\item But square roots are hard to work with, so we \makeblank[1in] both sides.
+\item This gives us \makeblank
+\end{itemize}
+\begin{displaybox}[Equation of a Circle (center-radius form)]
+The circle centered at $(h,k)$ with radius $r$ is the graph of the equation
+\[
+(x-h)^2+(y-k)^2=r^2
+\]
+\end{displaybox}

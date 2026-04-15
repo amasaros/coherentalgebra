@@ -1,0 +1,43 @@
+\subsection{Completing the Square} 
+\begin{fact}[Claim: We can ``complete'' a square]
+For any expression $x^2+bx$, we can find a constant $c$ such that $x^2+bx+c$ is a perfect square trinomial.
+\end{fact}
+Thinking of multiplication as representing the area of a rectangle, we can think of the constant $c$ as the ``missing piece'' of a square.
+\begin{example}
+Find the constant $c$ such that $x^2+6x+c$ is a perfect square, and write it as such.
+\begin{lpic}{}{4}
+\regtextleft{0.25}{-1}{$x^2+6x+$};
+\regtextleft{4}{-1}{${}=(x$};
+\regtext{6}{-1}{$+$};
+\regtextleft{7}{-1}{$)^2$};
+\draw (2*\value{cols}-3,-1) rectangle (2*\value{cols},-4);
+\draw (2*\value{cols}-3,-2.75) -- ++(3,0);
+\draw (2*\value{cols}-1.25,-1) -- ++(0,-3);
+\end{lpic}
+\end{example}
+\noi Sometimes, fractions appear in the constant.
+\begin{example}
+Complete the square.
+\begin{lpic}{}{4}
+\regtextleft{0.25}{-1}{$x^2-5x+$};
+\regtextleft{4}{-1}{${}=(x$};
+\regtext{6}{-1}{$+$};
+\regtextleft{7}{-1}{$)^2$};
+\draw (2*\value{cols}-3,-1) rectangle (2*\value{cols},-4);
+\draw (2*\value{cols}-3,-2.75) -- ++(3,0);
+\draw (2*\value{cols}-1.25,-1) -- ++(0,-3);
+\end{lpic}
+\end{example}
+\noi We can do this even when the number $b$ is already a fraction.
+\begin{example}
+Complete the square.
+\begin{lpic}{}{4}
+\regtextleft{0.25}{-1}{$x^2+\frac{5}{3}x+$};
+\regtextleft{4}{-1}{${}=(x$};
+\regtext{6}{-1}{$+$};
+\regtextleft{7}{-1}{$)^2$};
+\draw (2*\value{cols}-3,-1) rectangle (2*\value{cols},-4);
+\draw (2*\value{cols}-3,-2.75) -- ++(3,0);
+\draw (2*\value{cols}-1.25,-1) -- ++(0,-3);
+\end{lpic}
+\end{example}

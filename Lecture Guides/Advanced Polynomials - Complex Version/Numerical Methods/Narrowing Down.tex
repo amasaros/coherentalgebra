@@ -1,0 +1,34 @@
+\subsection{Narrowing Down an Estimate} 
+In general, we cannot know the \makeblank[1in] value of an irrational root. But we can get as close as we like.
+\begin{itemize}
+\item How do we describe how close we want to be?
+\item How do we know when we got there?
+\end{itemize}
+\begin{example}
+The polynomial $x^5+x-42$ has a single real zero between $2$ and $3$. Find an approximation of this zero to within $0.01$.
+\begin{itemize}
+\item The fastest way to narrow the range is to cut it in \makeblank[1in] at each step.
+\item We keep narrowing until we have points that are \makeblank apart.
+\item Then our estimate is \makeblank them.
+\end{itemize}
+\begin{icpic}
+\draw[|<->|,thick] (-1,0) node[anchor=north]{$a$} -- (1,0) node[anchor=north]{$b$};
+\end{icpic}
+We'll use our calculator to help us.
+\begin{cpic}{}{8}
+\foreach \x/\lbl in {-8/{$a$ (left)},-4/{$b$ (right)},0/Distance,4/{$c$ (midpoint)},8/$f(c)$}
+	\regtext{\x}{-1}{\lbl};
+\end{cpic}
+The number \makeblanksmall is within 0.01 of the zero.
+\begin{itemize}
+\item We might write $x=\makeblank[1in]$
+\item If we want the number to look rounded, we might get \makeblanksmall or \makeblanksmall.
+\begin{itemize}
+\item If the zero is between \makeblanksmall and \makeblanksmall, we would round it to \makeblanksmall.
+\item If the zero is between \makeblanksmall and \makeblanksmall, we would round it to \makeblanksmall.
+\item We just need to check $f(\makeblanksmall)=\makeblanksmall$.
+\item We could also estimate the zero as \makeblanksmall.
+\end{itemize}
+But this extra step is unnecessary.
+\end{itemize}
+\end{example}

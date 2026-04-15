@@ -1,0 +1,22 @@
+\subsection{Graphs of Inverses} 
+To find the inverse of a relation, we reverse \makeblanksmall and \makeblanksmall. We do the same in the graph.
+\begin{example}
+The relation $R$ is graphed below. Sketch the graph of $R\inv$.\\
+\begin{tikzpicture}
+%\useasboundingbox (-5,-5) rectangle (5,5);
+\setgraph{5}{5}{5}{5}
+\GraphOnes{}{}
+\draw[graphend] (-4,-3) -- (-2,3) -- (3,4);
+\foreach \x/\y in {-4/-3,-2/3,3/4} \draw[dotfull] (\x,\y) circle (\dotsize);
+\end{tikzpicture}
+\end{example}
+\noindent We notice that this graph is \makeblank[1.5in] across the line \makeblank[1in].
+\begin{example}
+The relation $S$ is graphed below. Sketch the graph of $S\inv$.\\
+\begin{tikzpicture}
+%\useasboundingbox (-5,-5) rectangle (5,5);
+\setgraph{5}{5}{5}{5}
+\GraphOnes{}{}
+\draw[graph,domain=-4:6,smooth,rotate=-90] plot (\x-1,\x*\x/4.5-3);
+\end{tikzpicture}
+\end{example}

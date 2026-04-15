@@ -1,0 +1,26 @@
+\subsection{The Graph of a Polynomial} 
+Consider the graph below, which is the graph of
+\[
+f(x)=\tfrac{1}{160}\left(x^4-28x^3-96x^2-88\right)
+\]
+\begin{center}\begin{tikzpicture}[x=0.5\linespace,y=0.5\linespace]
+\setgraphlowright{10}{14}
+\GraphSmall
+\draw[graph,domain=-3.37166:4.64102,samples=100] plot (2*\x,{0.1*(\x)^4-1.4*(\x)^2-2.4*(\x)-1.1});
+\foreach \x/\lbl/\dir in {{(1-sqrt(12))}/A/north east,
+                          -2/B/north,
+													-1/C/north,
+													0/D/south west,
+													3/E/south,
+													{(1+sqrt(12))}/F/south east}
+	\filldraw ({2*\x},{0.1*(\x)^4-1.4*(\x)^2-2.4*(\x)-1.1}) circle (0.2) node[anchor=\dir]{$\lbl$};
+\end{tikzpicture}\end{center}
+There are several features here that are typical of a polynomial graph.
+\begin{itemize}
+\item The function is \makeblank[1.5in]---we could trace the entire graph without lifting our pencil.
+\item Points \makeblank[2.5in] are the \makeblanksmall-intercepts. Their $x$-coordinates are the \makeblank[1in] of the polynomial.
+\item Points \makeblank[1.5in] are called ``local minima''---their y-coordinate is \makeblank[1in] than that of nearby points. (Singular would be a ``minimum.'')
+\item Point \makeblank[1.5in] is called a ``local maximum''---its y-coordinate is \makeblank[1in] than that of nearby points. (Plural would be ``maxima''.)
+\item Point \makeblank[1in] is the \makeblanksmall-intercept.
+\item We also see the function's ``end behavior'': what \makeblanksmall does for very large (positive or negative) values of \makeblanksmall. For a polynomial, when \makeblanksmall is very large, \makeblanksmall is also very large.
+\end{itemize}

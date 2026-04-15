@@ -1,0 +1,26 @@
+\subsection{8 Forms of Compound Inequalities} 
+When we solve a compound inequality, one of these eight things will happen.
+\begin{icpic}
+\useasboundingbox (0,1) rectangle (0.5\textwidth,-0.9\textheight);
+\foreach \x/\y/\lbl in {0/0/{$x\leq 8$ and $x<-3$}, %and - both left
+												1/0/{$x<-2$ or $x\leq 3$}, %or - both left
+												0/1/{$x\geq 9$ and $x\geq 5$}, %and - both right
+												1/1/{$x\geq -3$ or $x> 7$}, %or - both right
+												0/2/{$x<4$ and $x\geq -1$}, %and - overlap
+												1/2/{$x\geq -5$ or $x\leq 7$}, %or - overlap
+												0/3/{$x>-2$ and $x<-4$}, %and - gap
+												1/3/{$x>9$ or $x\leq -8$}  %or - gap
+											}
+{
+	\begin{scope}[xshift=\x*0.5\textwidth, yshift=-\y*0.225\textheight]
+		\draw (0,0) node[anchor=base]{\lbl};
+		\draw[axis] (-4,-1.5) -- (4,-1.5);
+		\foreach \z in {-2,2} \draw[tick] (\z,-1.5+0.2) -- (\z,-1.5-0.2);
+		\foreach \z/\lbz in {-3.5/Single Inequality,-4.5/Set-Builder Not'n,-5.5/Interval Notation}
+		{
+			\regtextright{0}{\z}{\lbz:};
+			\draw[npblue] (0,\z) -- (1.5in,\z);
+		}
+	\end{scope}
+}
+\end{icpic}

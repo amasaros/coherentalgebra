@@ -1,0 +1,70 @@
+\subsection{Extraneous Solutions to a Non-Linear System} 
+In the previous example, we solved the system
+\[\begin{systemL}
+x^2+xy+y^2=19&\\
+y^2-x^2=5&
+\end{systemL}\]
+and got \makeblanksmall (apparent) solutions:
+\fakeit{%
+\begin{math}
+\begin{array}{r@{{}={}}lr@{{}={}}lr@{{}={}}lr@{{}={}}l}
+(x,y)&\left(2,3\right)&
+(x,y)&\left(2,-3\right)&
+(x,y)&\left(-2,3\right)&
+(x,y)&\left(-2,-3\right)\\
+(x,y)&\left(\tfrac{7}{\sqrt{3}},\tfrac{8}{\sqrt{3}}\right)&
+(x,y)&\left(\tfrac{7}{\sqrt{3}},-\tfrac{8}{\sqrt{3}}\right)&
+(x,y)&\left(-\tfrac{7}{\sqrt{3}},\tfrac{8}{\sqrt{3}}\right)&
+(x,y)&\left(-\tfrac{7}{\sqrt{3}},-\tfrac{8}{\sqrt{3}}\right)
+\end{array}
+\end{math}
+}
+But when we graph this system, we see:
+\begin{icpic}[x=.5\linespace,y=.5\linespace]
+\setgraphsquare{6}
+\GraphLarge
+\draw[graph,domain={-sqrt(31)}:{sqrt(31)},samples=100] plot (\x,{sqrt(5+\x*\x)});
+\draw[graph,domain={-sqrt(31)}:{sqrt(31)},samples=100] plot (\x,{-sqrt(5+\x*\x)});
+\draw[graphend,domain=0:360,samples=360] plot 
+          ({sqrt(19/3)*cos(\x)+sqrt(19)*sin(\x)},{sqrt(19/3)*cos(\x)-sqrt(19)*sin(\x)});
+\end{icpic}
+These curves only cross \makeblanksmall times! We must have \makeblank[1in] solutions. Steps that introduce extraneous solutions include:
+\begin{itemize}
+\item Multiplying both sides of an equation by a \makeblank[1in] expression% (might multiply by \makeblanksmall)
+\item Taking an \makeblank[1in] power of an \makeblank[1in] radical% (might lose \makeblank[1in] information)
+\item Combining \makeblank[1in] expressions% (might affect the \makeblank[1in])
+\end{itemize}
+In our example, we \makeblank. So we must check for extraneous solutions. (When in doubt, check!)
+\begin{example}[continued]
+Check for extraneous solutions to
+\[\begin{systemL}
+x^2+xy+y^2=19&\\
+y^2-x^2=5&
+\end{systemL}\]
+\begin{note}
+We used $(II)$ to find the possible solutions, using steps that did \emph{not} risk introducing extraneous solutions. We need to check which solutions also work in $(I)$.
+\end{note}
+\fakeit{%
+\begin{math}\begin{array}{ror@{}rororror@{}roror}
+( 2)^2&+&( 2)&( 3)&+&( 3)^2&=&\makeblanksmall&
+\left(\tfrac{7}{\sqrt{3}}\right)^2&
++&\left(\tfrac{7}{\sqrt{3}}\right)&\left(\tfrac{8}{\sqrt{3}}\right)&
++&\left(\tfrac{8}{\sqrt{3}}\right)^2&
+=&\makeblanksmall\\
+( 2)^2&+&( 2)&(-3)&+&(-3)^2&=&\makeblanksmall&
+\left(\tfrac{7}{\sqrt{3}}\right)^2&
++&\left(\tfrac{7}{\sqrt{3}}\right)&\left(-\tfrac{8}{\sqrt{3}}\right)&
++&\left(-\tfrac{8}{\sqrt{3}}\right)^2&
+=&\makeblanksmall\\
+(-2)^2&+&(-2)&( 3)&+&( 3)^2&=&\makeblanksmall&
+\left(-\tfrac{7}{\sqrt{3}}\right)^2&
++&\left(-\tfrac{7}{\sqrt{3}}\right)&\left(\tfrac{8}{\sqrt{3}}\right)&
++&\left(\tfrac{8}{\sqrt{3}}\right)^2&
+=&\makeblanksmall\\
+(-2)^2&+&(-2)&(-3)&+&(-3)^2&=&\makeblanksmall&
+\left(-\tfrac{7}{\sqrt{3}}\right)^2&
++&\left(-\tfrac{7}{\sqrt{3}}\right)&\left(-\tfrac{8}{\sqrt{3}}\right)&
++&\left(-\tfrac{8}{\sqrt{3}}\right)^2&
+=&\makeblanksmall
+\end{array}\end{math}}
+\end{example}

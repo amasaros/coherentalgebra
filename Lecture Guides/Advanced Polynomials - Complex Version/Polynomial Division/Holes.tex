@@ -1,0 +1,32 @@
+\subsection{Structural Issue: Holes}
+When we divide numbers, there's a digit in every place. Compare:
+\[
+2304
+\qquad\mbox{vs.}\qquad
+2x^3+3x^2+4
+\]
+In order to make the long division algorithm work, we must fill in missing terms with zeros.
+\begin{example}
+To divide
+\[
+\left(8x^3-28x+15\right)\div\left(2x-3\right)
+\]
+we must first fill in the gaps in the dividend:
+\begin{lpic}{}{10}
+\regtextright{2.25}{-3}{$2x-3$};
+\divbracket{2}{5}{-2};
+\writethink[13]{-1}{10}
+\end{lpic}
+\end{example}
+\begin{example}
+We might also need to fill in missing terms in the divisor, as in this example.
+\[
+\left(2x^4-6x^3+11x^2-9x+12\right)\div\left(2x^2+3\right)
+\]
+\begin{lpic}{}{10}
+\divbracket{4}{5}{-2};
+\foreach \x/\lbl in {0/2x^4,2/{}-6x^3,4/{}+11x^2,6/{}-9x,8/{}+12}
+  \regtextright{6+\x}{-3}{$\lbl$};
+\writethink[15]{-1}{10}
+\end{lpic}
+\end{example}

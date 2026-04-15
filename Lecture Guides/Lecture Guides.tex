@@ -1,0 +1,43 @@
+\DocumentMetadata{
+  lang        = en,
+  pdfstandard = ua-2,
+%  pdfstandard = a-4f, %or a-4
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE}
+}
+
+\documentclass[12pt]{book}
+
+\title{Intermediate and College Algebra\\%
+MTH 083-103\\%
+Lecture Guides}
+
+\usepackage{cmbright}
+
+\usepackage{fontspec}          % lualatex font engine
+
+
+\setmainfont[Numbers = Uppercase,
+             Ligatures = TeX,
+             BoldFont  = CMU Bright SemiBold,
+             ItalicFont = CMU Bright Oblique,
+            ]{CMU Bright Roman}
+
+
+\input{page_setup}
+\input{tikz_setup}
+\input{command_setup}
+
+\usepackage{lipsum}
+
+%\tikzset{every picture/.append style={artifact}}
+
+\begin{document}
+\input{U1_Functions}
+%\input{U2_Polys}
+%\input{U3_Power}
+%\input{U6_Logs}
+%\setcounter{chapter}{4}
+%\input{U5_Adv_Poly}
+%\input{U7_Topics}
+\end{document}

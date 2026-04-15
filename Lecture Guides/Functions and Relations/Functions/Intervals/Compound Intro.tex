@@ -1,0 +1,57 @@
+\subsection{Compound Inequalities} 
+Sometimes, we need a quantity to fit \emph{more than one} condition at the same time.
+\begin{example}
+A class 2a light truck weighs over 6000 points, but not more than 8500 pounds. If the variable $w$ represents the weight of a truck, we would describe these restrictions with
+\[
+w>6000
+\ \makeblanksmall\ 
+w\leq 8500
+\]
+\end{example}
+Sometimes, we need a quantity to fit \emph{at least one} of several conditions.
+\begin{example}
+An online printing company offers short-run prints of 100 or fewer units, or large runs of 2000 or more units. If the variable $n$ represents the number of copies a user can order, we would describe these restrictions with
+\[
+n\leq 100
+\ \makeblanksmall\ 
+n\geq 2000
+\]
+\end{example}
+\begin{definition}[Compound Inequality]
+A \term{compound inequality} is a collection of two or more inequalities, combined using the word ``and'' or the word ``or''.
+\begin{itemize}
+\item If they are combined with ``and,'' the solution set is the \emph{intersection} of the two inequalities' solution sets.
+\item If they are combined with ``or,'' the solution set is the \emph{union} of the two inequalities' solution sets.
+\end{itemize}
+An inequality that is not compound is a \term{simple inequality}.
+\end{definition}
+\begin{example}
+Sketch the solution set of
+\[
+x\leq 5
+\mbox{ and }
+x>-2
+\]
+on the number line below.
+\begin{icpic}
+\useasboundingbox (-6,-1) rectangle (8,1);
+\draw[axis] (-6,0) -- (8,0);
+\foreach \x in {0,...,7} \draw[tick] (\x,0.2) -- (\x,-0.2) node[anchor=north]{$\x$};
+\foreach \x in {1,...,5} \draw[tick] (-\x,0.2) -- (-\x,-0.2) node[anchor=north]{$-\x\ $};
+\end{icpic}
+\end{example}
+\begin{example}
+Sketch the solution set of
+\[
+x<-4
+\mbox{ or }
+x\geq 3
+\]
+on the number line below.
+\begin{icpic}
+\useasboundingbox (-6,-1) rectangle (8,1);
+\draw[axis] (-7,0) -- (7,0);
+\foreach \x in {0,...,6} \draw[tick] (\x,0.2) -- (\x,-0.2) node[anchor=north]{$\x$};
+\foreach \x in {1,...,6} \draw[tick] (-\x,0.2) -- (-\x,-0.2) node[anchor=north]{$-\x\ $};
+\end{icpic}
+\end{example}

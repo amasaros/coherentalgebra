@@ -1,0 +1,23 @@
+\subsection{Synthetic Division: Introduction} 
+Because of the remainder theorem (among other things), we often want to divide by polynomials in the form $(x-k)$, that is, just the variable minus a number. 
+\begin{example}Divide:
+\[
+\left(2x^4-13x^3+26x^2-27x+7\right)\div\left(x-4\right)
+\]
+\begin{lpic}{}{12}
+\regtextright{2.25}{-3}{$x-4$};
+\foreach \x/\lbl in {0/2x^4,2/{}-13x^3,4/{}+26x^2,6/{}-27x,8/{}+7}
+  \regtextright{4+\x}{-3}{$\lbl$};
+\divbracket{2}{5}{-2};
+\end{lpic}
+\end{example}
+There are several problems with this process:
+\begin{itemize}
+\item It's \emph{long}
+\item It takes up a lot of space
+\item We are writing the same number over and over
+\item It's easy to lose track of signs in subtraction
+\end{itemize}
+What we need is a \emph{shortcut}. This shortcut is called \makeblank.
+\begin{lpic}{}{5}
+\end{lpic}

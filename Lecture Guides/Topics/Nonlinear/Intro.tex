@@ -1,0 +1,42 @@
+\subsection{A Non-Linear System} 
+The graphs of linear systems are \makeblank. This gives a major an advantage in solving these systems: two lines in a plane intersect \makeblank[1in] most of the time, or \makeblank[1.5in] if they're parallel. What about nonlinear equations?
+\begin{example} Consider the system:
+\begin{syspic}[0]{4}
+\draw (-.5\textwidth,0) node{$
+\begin{systemL}
+x^2+y^2=5&\\
+y=x^2-3&
+\end{systemL}$};
+\draw[graphend] (0,0) circle ({sqrt(5)});
+\draw[graph,domain={-sqrt(7)}:{sqrt(7)},samples=100] plot (\x,\x*\x-3);
+\end{syspic}
+\begin{itemize}
+\item The graph of $(I)$ is a \makeblank[1in] and the graph of $(II)$ is a \makeblank[1in]
+\item The curves intersect at \makeblanksmall points!
+\item Each point is a solution of the system:
+\end{itemize}
+\begin{lpic}{}{3}
+\end{lpic}
+\end{example}
+\begin{example} Consider the system:
+\begin{syspic}[0]{4}
+\draw (-.5\textwidth,0) node{$
+\begin{systemL}
+(x-1)^2+(y-1)^2=2&\\
+x^2+y^2=9&
+\end{systemL}$};
+\draw[graphend] (1,1) circle ({sqrt(2)});
+\draw[graphend] (0,0) circle (3);
+\end{syspic}
+\begin{itemize}
+\item The graphs of these equations are both \makeblank[1in].
+\item These curves \makeblank.
+\item This system has \makeblank.
+\end{itemize}
+\end{example}
+Systems of nonlinear systems might have:
+\begin{itemize}
+\item No solution because the curves go around each other
+\item Several solutions because the curves cross each other more than once
+\item All the complications involved in solving nonlinear equations
+\end{itemize}

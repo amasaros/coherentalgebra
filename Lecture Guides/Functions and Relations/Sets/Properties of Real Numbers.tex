@@ -1,0 +1,47 @@
+\subsection{Properties of Real Numbers} 
+To do math to real numbers, we use two operations: \term{addition} and \term{multiplication}. These operations have certain properties.
+\begin{colparts}{2}
+\draw (-1,0) rectangle (1,-12.5);
+\foreach \y in {-4.5,-9} \draw (-1,\y) -- (1,\y);
+\draw (0,0) -- (0,-9);
+\foreach \x/\lbl/\exp in {-0.5/Addition/a+b=b+a,0.5/Multiplication/ab=ba}
+{
+	\regtext{\x}{-1}{\textbf{Commutative Property}};
+	\regtext{\x}{-2}{\textbf{of \lbl}};
+	\regtextleftblock{\x}{-3}{For any real numbers $a$ and $b$,}{0.5\textwidth-0.25in};
+	\regtext{\x}{-4}{$\exp$};
+}
+\foreach \x/\lbl/\exp in {-0.5/Addition/(a+b)+c=a+(b+c),0.5/Multiplication/(ab)c=a(bc)}
+{
+	\regtext{\x}{-5.5}{\textbf{Associative Property}};
+	\regtext{\x}{-6.5}{\textbf{of \lbl}};
+	\regtextleftblock{\x}{-7.5}{For any real numbers $a$, $b$, and $c$,}{0.5\textwidth-0.25in};
+	\regtext{\x}{-8.5}{$\exp$};
+}
+\regtext{0}{-10}{\textbf{Distributive Property}};
+\regtextleftblock{0}{-11}{For any real numbers $a$, $b$, and $c$,}{\textwidth-0.25in};
+\regtext{0}{-12}{$a(b+c)=ab+ac\qquad(b+c)a=ba+ca$};
+\end{colparts}
+You might think of \term{subtraction} and \term{division} as operations, but we meet them in these next properties.
+\begin{colparts}{2}
+\draw (-1,0) rectangle (1,-9);
+\foreach \y in {-4.5} \draw (-1,\y) -- (1,\y);
+\draw (0,0) -- (0,-9);
+\foreach \x/\lbl/\i/\lblb/\exp in {-0.5/Additive/0/an additive/a+0=0+a=a,0.5/Multiplicative/1/a multiplicative/1a=a\cdot 1=a}
+{
+	\regtext{\x}{-1}{\textbf{{\lbl} Identity Property}};
+	\regtextleftblock{\x}{-2}{There is {\lblb} identity $\i$ such that, for all real numbers $a$,}{0.5\textwidth-0.25in};
+	\regtext{\x}{-4}{$\exp$};
+}
+\foreach \x/\lbl/\i/\lblb/\exp/\v in {-0.5/Additive/-a/an additive/a+(-a)=-a+a=0/a,0.5/Multiplicative/\frac{1}{a}/a multiplicative/a\cdot\frac{1}{a}=\frac{1}{a}\cdot a=1/a\neq 0}
+{
+	\regtext{\x}{-5.5}{\textbf{{\lbl} Inverse Property}};
+	\regtextleftblock{\x}{-6.5}{Every real number {$\v$} has {\lblb} inverse {$\i$} such that}{0.5\textwidth-0.25in};
+	\regtext{\x}{-8.5}{$\exp$};
+}
+\end{colparts}
+We define subtraction and division using the inverses:
+\begin{itemize}
+\item $a-b=\makeblank$
+\item $a\div b=\makeblank$
+\end{itemize}

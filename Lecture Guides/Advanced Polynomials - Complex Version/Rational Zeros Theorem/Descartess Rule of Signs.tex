@@ -1,0 +1,37 @@
+\subsection{Descartes's Rule of Signs} 
+How can we predict how many zeros a polynomial will have? We have a theorem to help us that's a little tricky to understand, but easy to apply.
+\begin{theorem}[Descartes's Rule of Signs]
+For a polynomial $P(x)$ with real coefficients written in descending order, the number of positive real roots is either equal to the number of \emph{sign changes} of the coefficients, or less than that by an even number.
+
+To find number of negative real roots, apply the same rule to $P(-x)$.
+\end{theorem}
+The proof of this theorem requires techniques we don't have yet, unfortunately, so we won't see it here.
+
+The most important question about this theorem is, what does it mean by a ``sign change''? Consider the polynomial
+\[
+P(x)=x^3+3x^2-10x-24
+\]
+\begin{itemize}
+\item The coefficients are: $\makeblank[.5in]\quad\makeblank[.5in]\quad\makeblank[.5in]\quad\makeblank[.5in]$
+\item \makeblank[.5in] and \makeblank[.5in] are both positive. This is not a sign change.
+\item \makeblank[.5in] is positive, but then \makeblank[.5in] is negative. This is a sign change: the \makeblank[1in] goes from positive to negative.
+\item \makeblank[.5in] and \makeblank[.5in] are both negative. This is not a sign change.
+\item The polynomial has \makeblank[.5in] sign change, so according to the rule it must have \makeblank[.5in] positive real root.
+\end{itemize}
+What about the negative real roots? For that, we have to work out $P(-x)$. For that, we need to remember two things we know about exponents:
+\[
+(-x)^n=x^n\mbox{ if $n$ is even}
+\qquad
+(-x)^n=-x^n\mbox{ if $n$ is odd}
+\]
+\begin{lpic}{}{2}
+\regtextleft{1}{-1}{$P(-x)=$};
+\end{lpic}
+\begin{itemize}
+\item The coefficients are: $\makeblank[.5in]\quad\makeblank[.5in]\quad\makeblank[.5in]\quad\makeblank[.5in]$
+\item \makeblank[.5in] is negative, but then \makeblank[.5in] is positive. This is a sign change.
+\item \makeblank[.5in] and \makeblank[.5in] are both positive. This is not a sign change.
+\item \makeblank[.5in] is positive, but then \makeblank[.5in] is negative. This is a sign change.
+\item The polynomial has \makeblank[.5in] sign changes. The polynomial has \makeblank[.5in] or \makeblank[.5in] negative real roots.
+\end{itemize}
+In fact the roots of this polynomial are $-4$, $-2$, and $3$.

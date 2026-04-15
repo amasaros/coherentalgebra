@@ -1,0 +1,36 @@
+\subsection{Domain and Range of a Relation} 
+We can think of a relation as, in a sense, a connection between two sets, which we call the relation's \term{domain} and \term{range}.
+\begin{definition}[Domain]
+The \term{domain} of a relation is the set of all objects (usually numbers) that appears in the first entry in a pair. We denote the domain of a relation $R$ by writing $\dom R$. If we think of each pair as $(x,y)$, then the domain consists of all the \makeblanksmall values.
+\end{definition}
+\begin{definition}[Range]
+The \term{range} of a relation is the set of all objects (usually numbers) that appears in the second entry in a pair. We denote the domain of a relation $R$ by writing $\rng R$.If we think of each pair as $(x,y)$, then the domain consists of all the \makeblanksmall values.
+\end{definition}
+\begin{example}
+Define a relation by
+\[
+R=\left\{(-4,7),(-2,5),(3,5),(-2,-3)\right\}
+\]
+\begin{itemize}
+\item $\dom R=\makeblank$
+\item $\rng R=\makeblank$
+\end{itemize}
+We can imagine this relation as a collection of ``arrows'' from the domain to the range.
+\begin{icpic}
+\node (a) at (-3,1.5) {$-4$};
+\node (b) at (-3,0) {$-2$};
+\node (c) at (-3,-1.5) {$3$};
+\node (d) at (3,1.5) {$-3$};
+\node (e) at (3,0) {$5$};
+\node (f) at (3,-1.5) {$7$};
+\draw[thick] (b) ellipse (1 and 3);
+\draw[thick] (e) ellipse (1 and 3);
+%\draw[thick,->] (a.east) -- (f.west);
+%\draw[thick,->] (b.east) -- (e.west);
+%\draw[thick,->] (c.east) -- (e.west);
+%\draw[thick,->] (b.east) -- (d.west);
+\draw (-3,3) node[anchor=base,yshift=\aboveline] {$\dom R$};
+\draw (3,3) node[anchor=base,yshift=\aboveline] {$\rng R$};
+\draw (0,3) node[anchor=base,yshift=\aboveline] {$R$};
+\end{icpic}
+\end{example}

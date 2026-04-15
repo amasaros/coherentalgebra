@@ -1,0 +1,29 @@
+\subsection{The Discriminant} 
+The quadratic formula ``normally'' gives 2 solutions, but it may give 1 or 0, depending on the equation.
+\begin{example}
+Use the quadratic formula to solve each quadratic equation.
+\begin{lpicvsplit}{3}{7}
+\foreach \x/\c in {0/3,1/4,2/7} {
+	\regtext{0.5*\value{fcols}+\x*\value{fcols}+\x}{-1}{$x^2+4x+\c=0$};
+}
+\end{lpicvsplit}
+\end{example}
+\noi The number of solutions depends on the number inside the square root. This number has a name.
+\begin{definition}{Discriminant}
+The \term{discriminant} of a quadratic equation $ax^2+bx+c=0$ is the number
+$$D=b^2-4ac$$
+whose square root appears in the quadratic formula. The quadratic equation has:
+\begin{itemize*}
+\item Two real solutions if $D>0$
+\item One real solution if $D=0$
+\item No real solutions if $D<0$
+\end{itemize*}
+If $D$ is a perfect square, the solutions are rational. Otherwise, they are irrational.
+\end{definition}
+\begin{example}
+For each quadratic equation below, use the discriminant to determine how many real solutions the equation has.
+\begin{lpicvsplit}{3}{5}
+\foreach \x/\exp in {0/3x^2-11x-5,1/t^2+5t+25,2/x^2+6x+9}
+	\regtext{0.5*\value{fcols}+\x*\value{fcols}+\x}{-1}{$\exp=0$};
+\end{lpicvsplit}
+\end{example}

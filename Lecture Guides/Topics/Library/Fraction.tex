@@ -1,0 +1,10 @@
+\subsection{Power Functions: Fractions} 
+Write $f(x)=x^{p/q}$, where $\frac{p}{q}$ is a fraction in lowest terms. Note that $p$ and $q$ cannot both be \makeblank[1in].
+\functionfamily{Power Functions ($p$ odd, $q$ even)}{%
+	\draw[graphend,->,domain=0:{4^(1/3)}] plot (\x^2,\x^3);
+	\draw[graphend,->,domain=0:{4^(1/8)}] plot (\x^8,\x^3);
+	\fill[graphend] (0,0) circle (0.1);
+}
+%\functionfamily{Power Functions (odd roots)}{%
+%		\draw[graph,domain={-4^(1/3)}:{4^(1/3)}] plot (\x^3,\x);
+%}

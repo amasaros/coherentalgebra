@@ -1,0 +1,14 @@
+\subsection{Arithmetic Issue: Fractions}
+When we divide numbers, we might need to borrow and end up with numbers with too many digits. This cannot happen in dividing polynomials---we must use up an entire term at each round. As a result, some of our coefficients might be fractions. 
+\begin{example}Divide:
+\[
+\left(6x^3+13x^2-12x+15\right)\div\left(2x+6\right)
+\]
+\begin{lpic}{}{10}
+\regtextright{2.25}{-3}{$2x+6$};
+\foreach \x/\lbl in {0/6x^3,2/{}+13x^2,4/{}-12x,6/{}+15}
+  \regtextright{4+\x}{-3}{$\lbl$};
+\divbracket{2}{4}{-2};
+\writethink[11]{-1}{10};
+\end{lpic}
+\end{example}

@@ -1,0 +1,22 @@
+\subsection{An Alternate Method: Reverse Multiplication}
+This alternate method reverses the area method for multiplication.
+\begin{example}We begin with an example.
+\[
+(2x^5-9x^4+19x^3-20x^2+7x+3)\div (2x^2-5x+1)
+\]
+\begin{lpic}{}{5}
+\end{lpic}
+\end{example}
+\begin{enumerate}
+\item First, guess the degree of the result. In this example, The degree of the dividend is \makeblank[.5in] and the degree of the divisor is \makeblank[.5in]. The degree of the quotient will be \makeblank.
+\item The number of columns we need is two more than the degree of the quotient. In this case we need \makeblank columns.
+\item We need a row for each term of the divisor (including zeros). In this example we need \makeblank[.5in] rows.
+\item Label the columns with descending degrees. The second-last column is the constant. The last column is the remainder.
+\item Write the divisor down the left, in descending order.
+\item Write the first term of the dividend in the upper left corner.
+\item\label{pdiv_startloop} Reverse multiplication to figure out what term goes above it.
+\item Multiply to fill in the column.
+\item\label{pdiv_endloop} Each diagonal must add up to the corresponding term. Figure out what number needs to go in the next empty box in the top row to get the correct sum.
+\item Repeat steps \ref{pdiv_startloop} -- \ref{pdiv_endloop} until you have filled in the top number in the remainder column.
+\item Fill in the rest of the remainder column to get the appropriate totals.
+\end{enumerate}

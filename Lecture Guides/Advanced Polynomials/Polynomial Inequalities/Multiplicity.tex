@@ -1,0 +1,19 @@
+\subsection{Handling Multiplicity} 
+How do we handle a polynomial inequality in which some factors have multiplicity greater than one?
+\begin{itemize}
+\item If the exponent is \makeblank[.5in], that factor \makeblank[2in].
+\item If the exponent is \makeblank[.5in], that factor \makeblank[2in].
+\end{itemize}
+\begin{example}
+Solve the polynomial inequality
+\[
+x(x-3)^2(x+4)^3\geq 0
+\]
+\begin{cpic}{}{11}
+\foreach \x/\lbl in {-5/{$x\ \ $},-6/{$(x-3)^2$},-7/{$(x+4)^3$},-9/Product}
+	\regtextright{-6}{\x}{\lbl};
+\regtextleftlp{1}{-11}{Solution set:};
+\draw[style=axis] (-6,-3) -- (6,-3);
+\foreach \x in {-3,0,3} \draw[style=tick] (\x,-2.75) -- (\x,-3.25);
+\end{cpic}
+\end{example}

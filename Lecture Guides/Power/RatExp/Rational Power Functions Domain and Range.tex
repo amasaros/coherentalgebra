@@ -1,0 +1,48 @@
+\subsection{Rational Power Functions Domain and Range} 
+We made the following definitions for rational exponents.
+\begin{definition}
+For any integers $p$ and $q$ with $q>0$, and any real number $x$ for which $\sqrt[q]{x}$ is defined,
+$$x^{1/q}=\sqrt[q]{x}
+\qquad
+x^{p/q}=\sqrt[q]{x^p}=\left(\sqrt[q]{x}\right)^p$$
+\end{definition}
+The function $f(x)=x^{p/q}=\left(\sqrt[q]{x}\right)^p$ can be thought of as a composition of a radical function and a power function, and we can use this fact to figure out its domain and range.
+\begin{fact}
+Let $f(x)=x^{p/q}=\left(\sqrt[q]{x}\right)^p$, where the fraction $\frac{p}{q}$ is written in lowest terms.
+\begin{itemize}
+\item If $p$ and $q$ are positive odd integers:
+\begin{itemize}
+\item $\dom f=\makeblank$
+\item $\rng f=\makeblank$
+\end{itemize}
+\item If $p$ is a positive even integer and $q$ is a positive odd integer:
+\begin{itemize}
+\item $\dom f=\makeblank$
+\item $\rng f=\makeblank$
+\end{itemize}
+\item If $p$ is a positive odd integer and $q$ is a positive even integer:
+\begin{itemize}
+\item $\dom f=\makeblank$
+\item $\rng f=\makeblank$
+\end{itemize}
+\item If $p$ is a negative integer, then \makeblanksmall is not in $\dom f$ and $\rng f$.
+\end{itemize}
+We don't consider the case where $p$ and $q$ are both \makeblank[1in], since in this case $\frac{p}{q}$ is not in lowest terms.
+\end{fact}
+\begin{example}
+Give the domain and range of each function.
+\begin{lpicvsplit}{2}{3}
+\foreach \x/\f/\p/\q in {0/f/2/3,1/g/3/5} {
+	\regtextleft{\x*\value{fcols}+\x+2}{-1}{$\f(x)=x^{\p/\q}$};
+	\regtextleft{\x*\value{fcols}+\x+0.25}{-2}{$\dom \f={}$};
+	\regtextleft{\x*\value{fcols}+\x+0.25}{-3}{$\rng \f={}$};
+}
+\end{lpicvsplit}
+\begin{lpicvsplit}{2}{3}
+\foreach \x/\f/\p/\q in {0/h/7/2,1/k/-4/5} {
+	\regtextleft{\x*\value{fcols}+\x+2}{-1}{$\f(x)=x^{\p/\q}$};
+	\regtextleft{\x*\value{fcols}+\x+0.25}{-2}{$\dom \f={}$};
+	\regtextleft{\x*\value{fcols}+\x+0.25}{-3}{$\rng \f={}$};
+}
+\end{lpicvsplit}
+\end{example}

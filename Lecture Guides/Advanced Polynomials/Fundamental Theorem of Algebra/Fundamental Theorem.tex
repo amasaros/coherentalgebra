@@ -1,0 +1,24 @@
+\subsection{Fundamental Theorem of Algebra} 
+\begin{theorem}[Fundamental Theorem of Algebra (Real Number Version)]
+Any polynomial with real coefficients can be factored uniquely as a product of linear binomials and irreducible quadratic factors. Each linear binomial corresponds to a real root of the polynomial. In notation:
+
+For any polynomial
+\[
+\sum_{k=0}^n{a_k x^k}
+\]
+with \emph{real} coefficients, there is a unique list of real numbers $r_1,r_2,...,r_j$ and irreducible quadratics $Q_1,Q_2,...,Q_k$ such that
+\[
+\sum_{k=0}^n{a_k x^k}
+=
+a(x-r_1)(x-r_2)\cdots(x-r_j)(Q_1)(Q_2)\cdots(Q_k)
+\]
+Further, by matching the degrees, $j+2k=n$
+\end{theorem}
+We're not going to prove this theorem---it takes a \emph{lot} of tools we don't have yet!---but we do need to understand what it means.
+\begin{itemize}
+\item A polynomial with degree $n$ has at most \makeblanksmall real roots.
+\item Each irreducible quadratic factor decreases the number of real roots by \makeblank[0.4in].
+\item These two facts together mean that a polynomial with an \makeblank[1in] degree must have at least \makeblanksmall real root.
+\item A polynomial with degree $n$ and \emph{no} irreducible quadratic factors has exactly \makeblanksmall roots (``up to multiplicity'', which means that roots with multiplicity \makeblanksmall get counted \makeblanksmall times.)
+\item Like numbers, polynomials factor \emph{uniquely}. That means if we want to factor a polynomial, it doesn't matter \makeblank.
+\end{itemize}

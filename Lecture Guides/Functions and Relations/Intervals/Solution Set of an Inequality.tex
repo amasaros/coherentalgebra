@@ -1,0 +1,56 @@
+\subsection{Solution Set of an Inequality} 
+Equations typically have one or a few solutions; this gives very boring solution sets. Inequalities typically have \makeblank solutions, so their solution sets are more interesting.
+\begin{example}
+Give three solutions (three elements of the solution set) of each inequality.
+\begin{colparts}{4}
+\useasboundingbox (-1,0) rectangle (3,-4);
+\foreach \y/\ineq/\v in {-1/x>2/x,-2/y\leq 0/y,-3/-4<z\leq 7/z,-4/1>x>0/x} {
+	\regtextleft{-1}{\y}{$\ineq$};
+	\foreach \x in {0,1,2}
+		\regtext{\x+0.5}{\y}{$\v=\;\makeblanksmall$};
+}
+\end{colparts}
+\end{example}
+\noindent We can \term{graph} an inequality on the number line, as follows:
+\begin{itemize}
+\item The numbers shown in the inequality are marked with a \term{closed dot} if the number is a solution, an \term{open dot} if the number is not a solution.
+\item Other numbers in the solution set are shaded on the number line.
+\end{itemize}
+\begin{example}
+Graph each inequality below.
+\begin{colparts}{2.5}
+\useasboundingbox (-1.5,0) rectangle (1,-8);
+\foreach \y/\ineq in {-1/x>2,-3/y\leq 0,-5/-4<z\leq 7,-7/1>x>0} {
+	\regtextleft{-1.5}{\y}{$\ineq$};
+	\draw[thick,<->,yshift=1ex] (-1,\y) -- (1,\y);
+	\foreach \x in {-7,...,7} \draw[yshift=1ex] (\x/8,\y+0.15) -- (\x/8,\y-0.15);
+	\foreach \x in {1,...,7} {
+		\draw[yshift=1ex] (\x/8,\y-0.6) node[anchor=base]{\footnotesize$\x$};
+		\draw[yshift=1ex] (-\x/8,\y-0.6) node[anchor=base,xshift=-0.75ex]{\footnotesize$-\x$};
+	}
+	\draw[yshift=1ex] (0,\y-0.6) node[anchor=base]{\footnotesize$0$};
+}
+\end{colparts}
+\end{example}
+\begin{example}
+Write an inequality whose solution set is shown on each number line. Use $x$ as the variable.
+\begin{colparts}{2.5}
+\useasboundingbox (-1.5,0) rectangle (1,-8);
+\foreach \y/\min/\mino/\max/\maxo/\arrow in {-1/-4/dotfull/3/dotempty/{},
+																						-3/3/dotfull/5/dotfull/{},
+																						-5/-8/hidden/-2/dotempty/{<-},
+																						-7/-3/dotfull/8/hidden/{->}} {
+	\draw[npblue] (-1.5,\y) -- (-1.1,\y);
+	\draw[thick,<->,yshift=1ex] (-1,\y) -- (1,\y);
+	\foreach \x in {-7,...,7} \draw[yshift=1ex] (\x/8,\y+0.15) -- (\x/8,\y-0.15);
+	\foreach \x in {1,...,7} {
+		\draw[yshift=1ex] (\x/8,\y-0.6) node[anchor=base]{\footnotesize$\x$};
+		\draw[yshift=1ex] (-\x/8,\y-0.6) node[anchor=base,xshift=-0.75ex]{\footnotesize$-\x$};
+	}
+	\draw[yshift=1ex] (0,\y-0.6) node[anchor=base]{\footnotesize$0$};
+	\draw[graphend,ultra thick,\arrow,yshift=1ex] (\min/8,\y) -- (\max/8,\y);
+	\filldraw[graphend,\mino,yshift=1ex] (\min/8,\y) circle (0.1\linespace);
+	\filldraw[graphend,\maxo,yshift=1ex] (\max/8,\y) circle (0.1\linespace);
+}
+\end{colparts}
+\end{example}

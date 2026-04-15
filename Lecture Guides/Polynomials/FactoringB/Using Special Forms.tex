@@ -1,0 +1,36 @@
+\subsection{Using Special Forms} 
+We now have five special forms of polynomials, that we can use to help us factor.
+\begin{fact}[Perfect Square Trinomials]
+\centering\(
+(A+B)^2=A^2+2AB+B^2
+\qquad
+(A-B)^2=A^2-2AB+B^2
+\)
+\end{fact}
+\begin{fact}[Difference of Squares]
+\centering\(
+A^2-B^2=(A-B)(A+B)
+\)
+\end{fact}
+\begin{fact}[Sum and Difference of Cubes]
+\centering\(
+A^3-B^3=(A-B)(A^2+AB+B^2)
+\qquad
+A^3+B^3=(A+B)(A^2-AB+B^2)
+\)
+\end{fact}
+How do we use this? We should be in the habit, when factoring, of being on the lookout for these special forms.
+\begin{itemize}
+\item When factoring a trinomial, two \makeblank terms should ``jump out'' at us, and we should check for a perfect square.
+\item When factoring a \makeblank, we can \emph{only} factor if we have one of the special forms!
+\end{itemize}
+\begin{example}
+For each binomial, determine whether it is a special form, and if so, factor it.
+\begin{lpic}{}{13}
+\foreach \y/\exp in {1/x^4-1,2/8y^6+343,3/5x^4-1,4/25y^2+16,5/x^3-25,6/x^6-64}
+	\regtextleft{0}{-\y*2+1}{$\exp$};
+\end{lpic}
+\end{example}
+\begin{note}
+If a binomial is \emph{both} a difference of squares and of cubes, we'll factor it first as a difference of \makeblank[1.5in].
+\end{note}

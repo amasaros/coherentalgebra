@@ -1,0 +1,40 @@
+\subsection{Factor Any Polynomial} 
+This is a flow chart showing how to factor any polynomial.
+\begin{center}
+\begin{tikzpicture}[x=1in,y=1in]
+\useasboundingbox (-2,0.5) rectangle (2,-0.5);
+% Nodes
+\node[action] (gcf) at (0,0) {Factor Out the GCF}; 
+\node[choice] (termcount) at (0,-1) {How many terms?};
+\node[action] (specialform) at (-2,-2) {Check Special Forms};
+\node[choice] (quadratic) at (0,-3) {Is it Quadratic?};
+\node[choice] (pretend) at (1,-4) {Can we pretend?};
+\node[action] (ac) at (0,-5) {Use AC Method};
+\node[action] (grouping) at (2,-2) {Factor by Grouping};
+\node[action] (trick) at (2,-5) {Difference of Squares Trick?};
+%
+\node[action] (continue) at (-2,-6.25) {Factor the factors};
+\node[endpoint] (prime) at (0,-7) {It's prime!};
+\node[endpoint] (advanced) at (2,-7) {Need advanced techniques};
+%
+% Arrows
+\draw[fcarr] (gcf.south) -- (termcount.north);
+\draw[fcarr] (termcount.south west) -| node[anchor=north west]{2} (specialform.north);
+\draw[fcarr] (termcount.south) node[anchor=north west]{3} -- (quadratic.north);
+\draw[fcarr] (termcount.south east) -| node[anchor=north east]{4} (grouping.north);
+\draw[fcarr] (termcount.east) -| node[anchor=south]{5+} (3,-2.5) |- (advanced.east);
+\draw[fcarr] (continue.west) -| (-3,-2.5) |- (termcount.west);
+\draw[fcarr] (specialform.south)  node[arrlabeldn]{Special Form} -- (continue.north);
+\draw[fcarr] (specialform.east) -| node[arrlabeldn]{Not Special Form} (-1.25,-2.5) |- (prime.west);
+\draw[fcarr] (quadratic.south) node[arrlabel,anchor=north east]{Yes} -- (ac.north);
+\draw[fcarr] (quadratic.east) node[arrlabelrt]{No} -| (pretend.north);
+\draw[fcarr] (pretend.south) node[arrlabel,anchor=north west]{Yes} |- (ac.10);
+\draw[fcarr] (ac.south) node[arrlabeldn]{Failure (quadratic)} -- (prime.north);
+\draw[fcarr] (ac.350) -|  node[arrlabeldn]{Failure (not quadratic)} (1,-5.5) |- (advanced.west);
+\draw[fcarr] (grouping.west) node[arrlabel,anchor=south east]{Success} -| (-0.875,-2.5) |- (continue.10);
+\draw[fcarr] (ac.west) node[arrlabel,anchor=south east,fill=white]{Success} -| (continue.40);
+\draw[fcarr] (trick.225) node[arrlabel,rotate=-90,anchor=north west]{Success} |- (continue.350);
+\draw[fcarr] (grouping.south) node[arrlabeldn]{Failure} -- (trick.north);
+\draw[fcarr] (trick.south) node[arrlabeldn]{Failure} -- (advanced.north);
+\end{tikzpicture}
+\end{center}

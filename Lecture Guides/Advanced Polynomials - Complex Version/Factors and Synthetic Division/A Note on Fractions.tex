@@ -1,0 +1,18 @@
+\subsection{A Note on Fractions} 
+What if we have a factional root? Do we have to have fractions in our factors?
+
+The number $\frac{2}{3}$ is a root of the polynomial $6x^3+23x^2-12$. What factors does that give us?
+\begin{cpic}{}{7}
+\synthdiv{-5}{-1}{4};
+\regtext{-4.5}{-1.8}{$\frac{2}{3}$};
+\foreach \x/\lbl in {0/6,1/23,2/0,3/-12}
+  \regtext{-2.5+2*\x}{-2}{$\lbl$};
+\end{cpic}
+But the notice that in the other factor, we have \makeblank.
+\begin{lpic}{}{4}
+\end{lpic}
+So \makeblank is a factor. This will always happen if the coefficients are all integers.
+\begin{corollary}[Factor Theorem with Integer Coefficients]
+For a polynomial $P$ with integer coefficients, if a fraction $\frac{p}{q}$ (in lowest terms) is a root of $P$, then $(qx-p)$ is a factor of $P$, and the other factor has integer coefficients as well.
+\end{corollary}
+(A \emph{corollary} is a theorem that follows easily from another theorem. This theorem is a corollary of the Factor Theorem. We won't prove this, though, because the proof is messy.)

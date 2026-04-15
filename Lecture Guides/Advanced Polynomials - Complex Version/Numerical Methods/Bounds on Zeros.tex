@@ -1,0 +1,31 @@
+\subsection{Bounds on Zeros} 
+Once we have determined that a polynomial has at least one real root, we want to start to look for it. Our first pass will be to find an upper and lower bound on the zeros. Often, we establish bounds in the process of confirming that the polynomial has no \makeblank roots.
+\begin{example}
+Show that the polynomial $f(x)=x^4-4x-3$ has no rational roots, and establish upper and lower bounds on the roots.
+\begin{itemize}
+\item $f(x)$ has \makeblanksmall sign change, so it has \makeblanksmall positive root.
+\item $f(-x)=\makeblank$ has \makeblanksmall sign change, so $f(x)$ has \makeblanksmall negative root.
+\item The possible rational roots are \makeblank.
+\end{itemize}
+\begin{lpic}{}{10}
+\foreach \x/\y/\lbl in {0/0/1,\value{cols}/0/-1,0/-4/3,\value{cols}/-4/-3}
+{
+	\synthdivtight{\x}{\y}{5};
+	\regtext{\x+.5}{\y-1}{$\lbl$};
+	\foreach \xx/\xlbl in {0/1,1/0,2/0,3/-4,4/-3}
+		\regtext{\x+2.5+1.5*\xx}{\y-1}{$\xlbl$};
+}
+
+\regtextleft{1}{-9}{Lower bound:};
+\regtextleft{1}{-10}{Upper bound:};
+\end{lpic}
+\end{example}
+Once we have an upper and lower bound, ideally we will find two consecutive integers that the zero is between. The simplest way is by making a table (the calculator will help us here):
+\begin{lpic}{}{6}
+\draw (1,-1) -- (5,-1);
+\draw (3,0) -- (3,-6);
+\regtext{2}{-1}{$x$};
+\regtext{4}{-1}{$y$};
+\regtextleft{7}{-1}{The negative zero is between \makespace[.5in] and \makespace[.5in]};
+\regtextleft{7}{-2}{The positive zero is between \makespace[.5in] and \makespace[.5in]};
+\end{lpic}

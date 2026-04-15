@@ -1,0 +1,31 @@
+\subsection{A Sum of Squares is Prime} 
+What happens in the difference of squares form if we replace $B$ by $-C$?
+\begin{itemize*}
+\item $A^2-B^2=A^2-(\makeblanksmall)^2=\makeblank$
+\item $(A-B)(A+B)=(A-(\makeblanksmall))(A+(\makeblanksmall))=\makeblank$
+\end{itemize*}
+This is the \makeblank[1in] form!
+\begin{example}Try to factor $x^2+9$ using the AC Method. Show that it is prime.\lbr
+Note that $x^2+9=x^2+\makespace[.5in]+9$.
+\begin{lpic}{}{4}
+\foreach \y/\p/\q/\s in {1/1/9/10,
+												2/3/3/6,
+												3/-1/-9/-10,
+												4/-3/-3/-6} {
+		\regtextright{1}{-\y}{$\p$};
+		\regtext{1.5}{-\y}{$\times$};
+		\regtextright{3}{-\y}{$\q$};
+		\regtext{3.5}{-\y}{$=$};
+		\regtextright{5}{-\y}{$9$};
+		\regtextright{7}{-\y}{$\p$};
+		\regtext{7.5}{-\y}{$+$};
+		\regtextright{9}{-\y}{$\q$};
+		\regtext{9.5}{-\y}{$=$};
+%		\regtextright{11}{-\y}{$\s$};
+	}
+\end{lpic}
+Note that any two numbers whose product is $+9$ must have the same \makeblank[0.75in], so their sum can never be \makeblanksmall.
+\end{example}
+\begin{theorem}
+As long as we are limited to polynomails with real number coefficients, any polynomial of the form $A^2+B^2$ cannot be factored as a product of two binomials.
+\end{theorem}

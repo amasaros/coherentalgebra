@@ -1,0 +1,49 @@
+\subsection{Graphs of Negative Integer Powers} 
+Consider these example graphs.
+\begin{center}
+\begin{tikzpicture}[x=0.5\linespace,y=0.5\linespace]
+\setgraphsmall
+\useasboundingbox (.50\textwidth,-\value{graphsize}) rectangle (.75\textwidth,\value{graphsize});
+\foreach \sh in {1,...,4}
+	{
+	\begin{scope}[xshift=\sh*0.25*\textwidth]
+		\GraphSmall
+		\ha{0}
+		\va{0}
+		\draw[domain={1/\value{graphsize}^(1/\sh)}:\value{graphsize},samples=100,style=graph] 
+		      plot (\x,{1/(\x)^(\sh)});
+		\draw[domain={1/\value{graphsize}^(1/\sh)}:\value{graphsize},samples=100,style=graph] 
+		      plot (-\x,{1/(-\x)^(\sh)});
+		\draw (\value{graphsize}+.5,-\value{graphsize}-.5) 
+		      node[anchor=south east]{\small$y=x^{-\sh}$};
+	\end{scope}
+	}
+\end{tikzpicture}
+\end{center}
+The dashed red lines in the graphs are called \makeblank[1.5in]. They indicate that the graphs get close to those lines, but never quite touch them. In all these graphs, they are \makeblank[1in] and \makeblank[1in].
+\begin{itemize}
+\item If $n$ is \makeblank[1in], the two curves are in quadrants \makeblanksmall and \makeblanksmall, passing through \blankpair and \blankpair.
+\item If $n$ is \makeblank[1in], the two curves are in quadrants \makeblanksmall and \makeblanksmall, passing through \blankpair and \blankpair.
+\item The \makeblank[1in] the value of $n$, the \makeblank[1in] and \makeblank[1in] the graph.
+\end{itemize}
+To graph $f(x)=a(x-h)^{-n}+k=\makeblank$ we keep the general shape and:
+\begin{itemize}
+\item The asymptotes are $x=\makeblanksmall$ and $y=\makeblanksmall$
+\item We use two points each to the left and right of \makeblank[.5in]
+\item If $a$ is a \makeblank[1in] number, then the graph is \makeblank
+\end{itemize}
+\begin{example}
+Graph 
+\[
+f(x)=2\left(x+1\right)^{-1}-3=\makeblank
+\]
+\begin{lpic}{}{10}
+	\regtextleft{1}{-1}{Asymptotes: $x=\qquad$ $y=\qquad$};
+	\regtext{2}{-2}{$x$};
+	\regtext{4}{-2}{$y$};
+	\draw (3,-1) -- (3,-7);
+	\draw (1,-2) -- (5,-2);
+	\draw[dashed] (1,-4) rectangle (5,-5);
+\end{lpic}
+\end{example}
+%Note: If $f(x)=\dfrac{ax+b}{cx+d}$ we can rewrite this as:

@@ -1,0 +1,23 @@
+\subsection{Handling Irreducible Quadratics} 
+What if a polynomial has imaginary roots?
+\begin{itemize}
+\item We can't draw imaginary numbers on a \makeblank.
+\item Instead, we use the corresponding \makeblank factor.
+\item That factor is never \makeblank[.5in] for real numbers $x$---that's the point.
+\item They're either always \makeblank[1in] or always \makeblank[1in].
+\item The sign matches the \makeblank.
+\end{itemize}
+\begin{example}
+Solve the polynomial inequality
+\[
+(x-4)(x^2-4x+7)(2x+1)>0
+\]
+\begin{cpic}{}{12}
+\regtextleftlp{1}{-1}{$x^2-4x+7={}$};
+\foreach \x/\lbl in {-6/{$x-4$},-7/{$x^2-4x+7$},-8/{$2x+1$},-10/Product}
+	\regtextright{-4.5}{\x}{\lbl};
+\regtextleftlp{1}{-12}{Solution set:};
+\draw[style=axis] (-4.5,-4) -- (4.5,-4);
+\foreach \x in {-1.5,1.5} \draw[style=tick] (\x,-3.75) -- (\x,-4.25);
+\end{cpic}
+\end{example}

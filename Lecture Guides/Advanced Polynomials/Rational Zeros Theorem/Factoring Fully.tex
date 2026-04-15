@@ -1,0 +1,68 @@
+\subsection{Factoring Fully with Rational Roots} 
+We now know enough to factor a lot of polynomials that we couldn't in \unref{UnPolyBasics}. Let's see the whole process, for an example that has only rational roots.
+\begin{example}
+Factor this polynomial as a product of linear factors.
+\[
+2x^4-17x^3+68x-32
+\]
+This polynomial has \makeblank[.5in] terms, so we should try \makeblank
+\begin{lpic}{}{3}
+\end{lpic}
+Grouping failed--but now we have more advanced techniques!
+
+First, we want to know how many zeros we're looking for.
+\begin{itemize}
+\item The polynomial has \makeblank[.5in] sign changes, so it should have \makeblank[1in] positive roots.
+\item Substituting $-x$ gives \makeblank
+\item This has \makeblank[.5in] sign changes, so the polynomial should have \makeblank[1in] negative roots.
+\end{itemize}
+
+We'll try to find at least one rational root.
+\begin{itemize}
+\item The factors of \makeblank[.5in] are \makeblank
+\item The factors of \makeblank[.5in] are \makeblank
+\item The possible rational roots are \makeblank[3in]
+\end{itemize}
+\begin{cpic}{}{7}
+\foreach \y in {0,-4} {
+	\synthdiv{-6}{\y}{5};
+	\foreach \x/\lbl in {0/2,1/-17,2/0,3/68,4/-32}
+		\regtext{-3.5+2*\x}{\y-1}{$\lbl$};
+}
+\end{cpic}
+We've found one factor:
+\[
+2x^4-17x^3+68x-32=\makeblank[3in]
+\]
+Now we need to continue to factor \makeblank. This has \makeblank[.5in] terms, so we should try \makeblank again--but that still doesn't work.
+
+Let's look at what happens to the possible rational roots.
+\begin{itemize}
+\item \makeblank[.5in] is no longer a factor of the constant, so \makeblank[.5in] are no longer possible rational roots.
+\item We have also already eliminated \makeblank[.5in]: \makeblank[1in] wasn't a factor of the original polynomial, so it can't be a factor of a factor.
+\item But \makeblank[.5in] could happen again, so we have to check.
+\end{itemize}
+We are trying to factor \makeblank. Possible rational roots are \makeblank.
+\begin{cpic}{}{7}
+	\foreach \a in {-10,0} {
+		\foreach \b in {0,-4} {
+			\synthdiv{\a}{\b}{4};
+			\foreach \x/\lbl in {0/2,1/-13,2/-26,3/16}
+				\regtext{2*\x+2.5+\a}{\b-1}{$\lbl$};
+			}
+	}
+	\draw[dashed] (0,0) -- (0,-7);
+\end{cpic}
+That gives us two factors!
+\[
+2x^4-17x^3+68x-32=\makeblank[3in]
+\]
+The remaining factor has \makeblank[.5in] terms, and it's \makeblank[1in], so we can use the \makeblank[.5in] method.
+\begin{cpic}{}{3}
+\end{cpic}
+We now have linear factors, and we can't factor any further.
+\[
+2x^4-17x^3+68x-32=\makeblank[3in]
+\]
+The roots of this polynomial are $x=\makeblank$
+\end{example}

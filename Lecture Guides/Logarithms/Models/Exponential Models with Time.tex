@@ -1,0 +1,53 @@
+\subsection{Exponential Models and Change in Time} 
+Another natural way to describe an exponential model is to choose a nice multiplier, and describe the amount of time it takes. We may also be given a value other than the starting value.
+%\begin{example}
+%A scientist culturing bacteria in a petri dish observes that the population doubles every 2.3 hours. If there are initially 300 bacteria in the dish, write a function describing the population $p$ of bacteria in the dish after $t$ hours.
+	%\begin{lpic}{}{5}
+		%\regtext{3}{-1}{Time (hours)};
+		%\regtext{7}{-1}{Population};
+		%\regtext{12}{-1}{\# of times doubled};
+		%\foreach \x in {5,9} \draw (\x,0) -- (\x,-5);
+		%\draw (1,-1) -- (15,-1);
+	%\end{lpic}
+	%\[
+	%p(t)=\makeblank
+	%\]
+%\end{example}
+%We may be given some other value instead of the starting value.
+\begin{example}
+A scientist culturing bacteria in a petri dish observes that the population doubles every 2.3 hours. After 10 hours, there are 10,000 bacteria in the dish. Write a function describing the population $p$ of bacteria in the dish after $t$ hours.
+	\begin{lpic}{}{6}
+		\regtext{3}{-1}{Time (hours)};
+		\regtext{7}{-1}{Population};
+		\regtext{12}{-1}{\# of times doubled};
+		\foreach \x in {5,9} \draw (\x,0) -- (\x,-6);
+		\draw (1,-1) -- (15,-1);
+	\end{lpic}
+	\[
+	p(t)=\makeblank
+	\]
+\end{example}
+\begin{displaybox}[Exponential Models (General Form)]
+An exponential model is a function in the form
+\[
+f(x)=f_1\cdot m^{\frac{x-x_1}{\Delta x}}
+\]
+where
+\begin{itemize}
+\item $f_1$ is the value of $f$ when $x=x_1$.
+\item $\Delta x$ (``delta $x$'') is the change in $x$ which results in the value of $f$ being multiplied by $m$.
+\end{itemize}
+\end{displaybox}
+The multiplier may not be explicitly given, but this is easy to find.
+\begin{example}
+A scientist culturing bacteria in a petri dish observes that, after 5 hours, there are 3000 bacteria in the dish, and after 12 hours, there are 30,000 bacteria. Write a function describing the population $p$ of bacteria in the dish after $t$ hours.
+	\begin{lpic}{}{4}
+		\regtext{3}{-1}{Time (hours)};
+		\regtext{7}{-1}{Population};
+		\draw (5,0) -- (5,-3);
+		\draw (1,-1) -- (9,-1);
+	\end{lpic}
+	\[
+	p(t)=\makeblank
+	\]
+\end{example}

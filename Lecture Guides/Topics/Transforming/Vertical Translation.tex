@@ -1,0 +1,31 @@
+\subsection{Vertical Translation} 
+To translate a point upward by $c$, we add $c$ to its $y$-coordinate. To translate it downward by $c$, we subtract $c$ from its $y$-coordinate.
+\begin{example}
+In the figure below, the graph of:
+\begin{itemize}
+\item $h(x)$ is obtained by translating the graph of $f(x)$ three units upward
+\item $k(x)$ is obtained by translating the graph of $f(x)$ two units downward
+\end{itemize}
+Give expressions for $h(x)$ and $k(x)$ in terms of $f(x)$.
+\begin{icpic}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox (-7,-7) rectangle (7,7);
+\setgraph{7}{7}{7}{7}
+\GraphSmall
+\foreach \y/\lbl/\col in {0/f/colf,3/h/colg,-2/k/colh} {
+	\draw[thick,\col] (-4,1+\y) -- (-1,3+\y) -- (3,-3+\y) -- (6,-1+\y);
+	\draw[\col] (5,-1+\y) node[anchor=north west] {$y=\lbl(x)$};
+}
+\end{icpic}
+\funtable{4}{f}{h}{k}
+\end{example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{displaybox}[Vertical Translation]
+For any number $c>0$:
+\begin{itemize}
+\item If $g(x)=f(x)+c$, the graph of $g$ is the same as the graph of $f$, translated to the \makeblank[1in] by $c$ units.
+\item If $g(x)=f(x)-c$, the graph of $g$ is the same as the graph of $f$, translated to the \makeblank[1in] by $c$ units.
+\end{itemize}
+\end{displaybox}
+\begin{note}
+The direction of translation is the \makeblank[1.5in] as the sign of the number.
+\end{note}

@@ -1,0 +1,38 @@
+\subsection{Transforming a Graph: Order of Operations} 
+Let's summarize what we've found.
+\begin{itemize}
+\item Addition and subtraction correspond to \makeblank[1in].
+\item Multiplication comes in two parts:
+\begin{itemize}
+\item Multiplication by a \makeblank[.75in] number corresponds to \makeblank[1in].
+\item If the number is \makeblank[.75in], there is also a \makeblank[1in].
+\end{itemize}
+\item Anything \emph{inside} the function has a \makeblank[1.5in] effect.
+\item Anything \emph{outside} the function has a \makeblank[1.5in] effect.
+\item \makeblank[1.5in] effects are \makeblank[1.5in].
+\end{itemize}
+What about order?
+\begin{itemize}
+\item \emph{Outside} the function, we follow order of operation: \makeblank[1in] before \makeblank[1in].
+\item \emph{Inside} the function, we \emph{reverse} order of operations (remember: everything inside the function is \makeblank[1in]!), so \makeblank[1in] before \makeblank[1in].
+\end{itemize}
+When we work, we will usually work on the \makeblank rather than on the picture directly.
+\begin{example}
+Below is the graph of $y=f(x)$. Sketch the graph of $y=-2f(\frac{2}{3}x+5)+3$
+\begin{icpic}[x=.5\linespace,y=.5\linespace]
+\useasboundingbox (-13,-8) rectangle (13,8);
+\setgraph{13}{13}{8}{8}
+\GraphSmall
+\draw[graphend] (-3,2) -- (1,5) -- (7,-1);
+\draw[graphend] (1,5) node[anchor=west]{$y=f(x)$};
+%\draw[thick,red] (-12,-1) -- (-6,-7) -- (3,1);
+\end{icpic}
+\steps[0]
+\begin{tabular}{r<{\numstep}@{\;}l>{$}l<{$}>{\blankpair}c>{\blankpair}c>{\blankpair}c}
+&Starting Point&{}&&&\\
+&Horizontal translation&x\rightarrow\makeblanksmall&&&\\
+&Horiz. scaling/reflection&x\rightarrow\makeblanksmall&&&\\
+&Vert. scaling/reflection&y\rightarrow\makeblanksmall&&&\\
+&Vertical translation&y\rightarrow\makeblanksmall&&&
+\end{tabular}
+\end{example}

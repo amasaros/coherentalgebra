@@ -1,0 +1,32 @@
+\subsection{Interest Compounded Continuously} 
+The more often we compound interest, the more interest we get.
+\begin{example}
+Suppose we deposit \$5000 at 5\% interest for 10 years. How much is our account worth at various compounding frequencies?
+\begin{cpic}{}{7}
+	\foreach \y/\freq/\n in {-2/Annual/1,-3/Quarterly/4,-4/Monthly/12,-5/Weekly/52,-6/Daily/360,-7/Hourly/8640}
+		{
+		\regtext{-6.5}{\y}{\freq};
+		\regtext{-3.5}{\y}{$n=\n$};
+		\regtextleft{ -1.75}{\y}{$5000\left(1+\frac{0.05}{\n}\right)^{\n\cdot 10}$};
+		}
+	\regtext{-6.5}{-1}{Frequency};
+	\regtext{-3.5}{-1}{$n$};
+	\regtext{ 1.0}{-1}{Expression};
+	\regtext{ 6}{-1}{$P(10)$};
+	\draw (-8,-1) -- (8,-1);
+	\foreach \x in {-5,-2,4} \draw (\x,0) -- (\x,-7);
+\end{cpic}
+\end{example}
+As the interest is compounded more often, we reach a point that we can describe as ``compounded continuously.''
+\begin{displaybox}[Interest Compounded Continuously]
+If an amount $P_0$ is invested at an interest rate $r$, \emph{compounded continuously}, the balance after $t$ years is given by
+\[
+P(t)=P_0 e^{rt}
+\]
+where $e$ is \emph{Euler's Number}.
+\end{displaybox}
+\begin{example}
+Suppose we deposit \$5000 at 5\% interest for 10 years. How much is our account worth if the interest is compounded continuously?
+\begin{lpic}{}{2}
+\end{lpic}
+\end{example}

@@ -1,0 +1,25 @@
+\subsection{The Remainder Theorem} 
+We begin with a theorem that will help us to get to grips with polynomials.
+\begin{theorem}[Remainder Theorem]
+For any polynomial $P(x)$ and number $k$, there is a polynomial $Q(x)$ and a number $R$ such that
+\[
+P(x)=Q(x)(x-k)+R
+\]
+and $R=P(k)$.
+\end{theorem}
+\begin{proof}
+We can find $Q(x)$ and $R$ by dividing $P(x)\div\makeblank[1in]$. $Q(x)$ is the quotient, and $R$ is the remainder.
+
+Remember that the degree of the remainder must be less than the degree of the divisor. \makeblank[1in] has degree \makeblank[.5in], so when we perform the division the degree of the remainder must be \makeblank[.5in]---that is, the remainder must be a \makeblank[1in]!
+
+To see that $R=P(k)$, we just plug in $x=k$:
+\begin{align*}
+P(k)&=Q(k)(k-k)+R\\
+&=Q(k)\cdot 0+R\\
+&=0+R\\
+&=R
+\end{align*}
+So we can find $Q(x)$ and $R$, as described by the theorem, for any polynomial.
+\end{proof}
+\vfill
+\noindent... so what?

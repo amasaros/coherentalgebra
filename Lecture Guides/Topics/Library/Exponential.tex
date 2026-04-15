@@ -1,0 +1,17 @@
+\subsection{Exponential and Logarithmic Functions} 
+\functionfamily{Exponential Functions}{%
+	\draw[asymp] (-4,0) -- (4,0);
+	\draw[graph,domain=-4:2] plot (\x,{2^(\x)});
+}
+\functionfamily{Logarithmic Functions}{%
+	\draw[asymp] (0,-4) -- (0,4);
+	\draw[graph,domain=-4:2] plot ({2^(\x)},\x);
+}
+\begin{note}
+In reality, we can transform everything from base $e$:
+\begin{itemize}
+\item $f(x)=\log_b x = \makeblank[1in]$, a \makeblank[1in] scale with factor \makeblanksmall
+\item $f(x)=b^x = \makeblank[1in]$, a \makeblank[1in] scale with factor \makeblanksmall
+\end{itemize}
+This isn't really useful in graphing (the points we end up with all have \makeblanksmall in them), but it will be very useful in Calculus.
+\end{note}

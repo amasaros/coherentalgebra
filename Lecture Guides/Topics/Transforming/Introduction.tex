@@ -1,0 +1,73 @@
+\subsection{Introduction} 
+As we have studied each new function, we have added something like, ``It's still a function of [type] if it's composed with something \makeblank[1in].''
+\begin{example}
+These are all \makeblank functions:
+\[
+f(x)=2|3x-5|+4
+\qquad
+g(x)=-\tfrac{1}{3}|x+2|-7
+\qquad
+h(x)=\left|\tfrac{1}{3}x+4\right|
+\]
+\end{example}
+\begin{example}
+These are all \makeblank functions:
+\[
+f(x)=3^{2x-4}-7
+\qquad
+g(x)=2\left(\tfrac{1}{3}\right)^{x-3}+5
+\qquad
+h(x)=2^{6-3x}
+\]
+\end{example}
+\begin{example}
+These are all \makeblank functions:
+\[
+f(x)=3\sqrt{2x-4}
+\qquad
+g(x)=-\sqrt{5-x}+3
+\qquad
+h(x)=\frac{1}{2}\sqrt{x-2}-5
+\]
+\end{example}
+These ``families'' of functions have a lot in common.
+\begin{itemize}
+\item We find their \makeblank[1in] and \makeblank[1in] the same way.
+\item Their \makeblank[1in] have the same basic shape.
+\end{itemize}
+In this section, we see why: composing with a linear function has the effect of a geometric \emph{transformation}.
+\begin{definition}[Transformation]
+A \term{transformation} of a figure in the plane is any change to the figure that preserves its basic shape. We have four types of transformations:
+\begin{itemize}
+\item \term{Translation} moves the figure without changing its shape, or orientation.
+\item \term{Scaling} stretches or shrinks the figure while preserving its basic shape.
+\item \term{Reflecting} a figure across a line ``flips'' the figure without changing its size or shape.
+\item \term{Rotating} a figure around a point ``turns'' the figure without changing its size or shape.
+\end{itemize}
+\end{definition}
+In this figure, the blue shape is the result of transforming the red shape. (The original shape is 1 unit wide.)
+\begin{icpic}
+\useasboundingbox (0,-2.5) rectangle (.75\textwidth,3);
+\begin{scope}
+\filldraw[red,plane] (-.5,0) -- (.5,0) -- (.5,3) -- (-.5,2) -- cycle;
+\filldraw[blue,plane] (-2.5,0) -- (-1.5,0) -- (-1.5,3) -- (-2.5,2) -- cycle;
+\draw (0,0) node[anchor=north,text width=0.2\textwidth, align=center]{Translate to the left by 2 units};
+\end{scope}
+\begin{scope}[xshift=.25\textwidth]
+\filldraw[red,plane] (-.5,0) -- (.5,0) -- (.5,3) -- (-.5,2) -- cycle;
+\filldraw[blue,plane] (-1,0) -- (1,0) -- (1,3) -- (-1,2) -- cycle;
+\draw (0,0) node[anchor=north,text width=0.2\textwidth, align=center]{Scale horizontally by a factor of 2};
+\end{scope}
+\begin{scope}[xshift=.50\textwidth]
+\filldraw[red,plane] (-.5,0) -- (.5,0) -- (.5,3) -- (-.5,2) -- cycle;
+\draw[blue,thick,dashed] (-1,-.5) -- (-1,3.5);
+\filldraw[blue,plane] (-1.5,0) -- (-2.5,0) -- (-2.5,3) -- (-1.5,2) -- cycle;
+\draw (0,0) node[anchor=north,text width=0.2\textwidth, align=center]{Reflect across the dashed line};
+\end{scope}
+\begin{scope}[xshift=.75\textwidth]
+\filldraw[red,plane] (-.5,0) -- (.5,0) -- (.5,3) -- (-.5,2) -- cycle;
+\filldraw[blue,plane] (-1,1.5) -- (-1,.5) -- (2,.5) -- (1,1.5) -- cycle;
+\filldraw (0,1) circle (0.1);
+\draw (0,0) node[anchor=north,text width=0.2\textwidth, align=center]{Rotate 90\degree\ to the right around the point.};
+\end{scope}
+\end{icpic}

@@ -1,0 +1,19 @@
+\subsection{Tangent Lines} 
+\begin{definition}[Tangent Line]
+A line is \term{tangent} to a circle if it touches the circle at exactly one point.
+\end{definition}
+In the diagram below, line $\ell$ is tangent to the circle, and lines $\emm$ and $\enn$ are not.
+\begin{icpic}
+\useasboundingbox(-5,6.5) rectangle (5,-4.375);
+\fill (0,0) circle (0.1);
+\draw[geom,blue] (0,0) circle (2.5);
+\foreach \x/\y/\symb in {-5.5/3.5/\emm,-1.5/6.5/\enn,-3/5.375/\ell}
+	\draw[geom,<->] (\x,\y) -- (\x+10,\y-7.5) node[anchor=south]{$\symb$};
+\draw[geom] (0,0) -- (1.5,2);
+\end{icpic}
+\begin{itemize}
+\item Line $\emm$ isn't tangent to the circle because it \makeblank.
+\item Line $\enn$ isn't tangent to the circle because it \makeblank.
+\item Line $\ell$ is tangent to the circle. Notice that it is \makeblank[1in] to the radius.
+\item The \makeblank[1.5in] from the center to the tangent line is equal to the \makeblank[1.5in] of the circle.
+\end{itemize}

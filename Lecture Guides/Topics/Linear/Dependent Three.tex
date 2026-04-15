@@ -1,0 +1,67 @@
+\subsection{Dependent Systems in Three Variables} 
+There are two basic ways to have a dependent system of three equations.
+\begin{icpic}[x=\dimtd,y=\dimtd]
+\begin{scope}[xshift=-.2\textwidth]
+	\filldraw[pcb!50!pcc,plane]  (\project{-1}{0}{-1}) --
+												(\project{1}{0}{-1}) --
+												(\project{1}{0}{1}) --
+												(\project{-1}{0}{1}) --
+												cycle;
+	\filldraw[pca,plane]  (\project{ .75}{-.75}{-1}) -- 
+												(\project{ .75}{-.75}{ 1}) --
+												(\project{-.75}{.75}{ 1}) --
+												(\project{-.75}{.75}{-1}) --
+												cycle;
+	\draw[black!75,plane] (\project{0}{0}{-1}) -- (\project{0}{0}{1});
+\end{scope}
+\begin{scope}[xshift=.2\textwidth]
+	\filldraw[black!75,plane] (\project{-1}{0}{-1}) --
+												(\project{1}{0}{-1}) --
+												(\project{1}{0}{1}) --
+												(\project{-1}{0}{1}) --
+												cycle;
+\end{scope}														
+\end{icpic}
+Two or all three planes are \makeblank.
+\begin{align*}
+\begin{systemLa}
+3x&+&1y&-&2z&=&6\\
+3x&+&1y&-&2z&=&6\\
+5x&-&2y&+&z&=&-1
+\end{systemLa}
+&&
+\begin{systemLa}
+7x&-&2y&+&5z&=&8\\
+7x&-&2y&+&5z&=&8\\
+7x&-&2y&+&5z&=&8
+\end{systemLa}
+\end{align*}
+In standard form, two or all three equations are \makeblank.
+\begin{icpic}[x=\dimtd,y=\dimtd]
+\filldraw[pca,plane]  (\project{-1}{-1}{0}) --
+                      (\project{ 1}{-1}{0}) --
+										  (\project{ 1}{ 1}{0}) --
+											(\project{-1}{ 1}{0}) -- 
+											cycle;
+\filldraw[pcb,plane] 	(\project{-.5}{-1}{ sqrt(.75)}) --
+                      (\project{-.5}{ 1}{ sqrt(.75)}) --
+                      (\project{ .5}{ 1}{-sqrt(.75)}) --
+                      (\project{ .5}{-1}{-sqrt(.75)}) --
+                      cycle;
+\filldraw[pcc,plane] 	(\project{ .5}{-1}{ sqrt(.75)}) --
+                      (\project{ .5}{ 1}{ sqrt(.75)}) --
+                      (\project{-.5}{ 1}{-sqrt(.75)}) --
+                      (\project{-.5}{-1}{-sqrt(.75)}) --
+                      cycle;
+\draw[black!75,plane] (\project{0}{1}{0}) -- (\project{0}{-1}{0});
+\end{icpic}
+Here, \makeblank[1.5in] planes meet at \makeblank. 
+\[\begin{systemLa}
+4x&-&y&-&3z&=&-3&\\
+2x&+&y&-&z&=&1&\\
+5x&+&4y&-&2z&=&5&
+\end{systemLa}\]
+Written in standard form, this system looks fine. If we try to solve it, we will end up describing the \makeblank[1in]. %What happens when we try to solve?
+%\begin{lpic}{}{12}
+%\end{lpic}
+%When we get a system of \makeblanksmall equations in \makeblanksmall variables, the new system is \makeblank[1.5in].

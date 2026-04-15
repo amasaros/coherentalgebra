@@ -1,0 +1,44 @@
+\subsection{Roots Canceling Powers} 
+So far we have simplified roots of numbers.
+\begin{example}
+Simplify $\sqrt{80}$.
+\begin{lpic}{}{1}
+\regtextleft{0.25}{-1}{$\sqrt{80}={}$};
+\end{lpic}
+\end{example}
+\noi We can do this because we can actually take the square root of \makeblanksmall. When we work with variables, there is a complication.
+\begin{example}
+Evaluate $\sqrt{x^2}$ for each of the values of $x$ shown.
+\begin{lpic}{}{4}
+\foreach \y/\val/\spa/\valp/\spab in {1/3/\phm/3/\php,2/-3/{}/(-3)/{},3/5/\phm/5/\php,4/-5/{}/(-5)/{}} {
+	\regtextleft{0.25}{-\y}{$x=\spa\val$};
+	\regtextleft{4.25}{-\y}{$\spa\sqrt{\spab\valp^2\spab}={}$};
+}
+\end{lpic}
+\end{example}
+\noi We see that when we take $\sqrt{x^2}$ we get \makeblanksmall.
+\begin{example}
+Evaluate $\sqrt[3]{x^3}$ for each of the values of $x$ shown.
+\begin{lpic}{}{4}
+\foreach \y/\val/\spa/\valp/\spab in {1/3/\phm/3/\php,2/-3/{}/(-3)/{},3/5/\phm/5/\php,4/-5/{}/(-5)/{}} {
+	\regtextleft{0.25}{-\y}{$x=\spa\val$};
+	\regtextleft{4.25}{-\y}{$\spa\sqrt[3]{\spab\valp^3\spab}={}$};
+}
+\end{lpic}
+\end{example}
+\noi We see that when we take $\sqrt[3]{x^3}$, we just get \makeblanksmall.
+\begin{fact}[Root of a Power Property]
+If $p$ an even positive integer, then for any real number $x$,
+$$\sqrt[p]{x^p}=\Abs{x}$$
+If $p$ is an odd positive integer, then for any real number $x$,
+$$\sqrt[p]{x^p}=x$$
+\end{fact}
+\begin{example}
+Simplify each of the following.\\
+\begin{tabularx}{\linewidth}{XXXX}
+$\sqrt{x^2}=\makeblanksmall$&
+$\sqrt[3]{x^3}=\makeblanksmall$&
+$\sqrt[4]{x^4}=\makeblanksmall$&
+$\sqrt[5]{x^5}=\makeblanksmall$
+\end{tabularx}
+\end{example}

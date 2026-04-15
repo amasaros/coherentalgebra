@@ -1,0 +1,35 @@
+\subsection{Reflection and Rotation}
+To reflect a point across the $x$-axis, we negate its $y$-coordinate. To reflect across the $y$-axis, we negate the $x$-coordinate. To rotate by 180\degree, we negate both coordinates.
+\begin{example}
+In the figure below, the graph of:
+\begin{itemize}
+\item $h(x)$ is obtained by reflecting the graph of $f(x)$ across the $x$-axis
+\item $k(x)$ is obtained by reflecting the graph of $f(x)$ across the $y$-axis
+\item $l(x)$ is obtained by rotating the graph of $f(x)$ 180\degree\ around the origin
+\end{itemize}
+Give expressions for $h(x)$, $k(x)$, and $l(x)$ in terms of $f(x)$.
+\begin{icpic}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox (-10,-7) rectangle (10,7);
+\setgraph{10}{10}{7}{7}
+\GraphSmall
+\foreach \x/\y/\lbl/\col/\dir in {1/ 1/f/colf/west,
+                                  1/-1/h/colg/west,
+																 -1/ 1/k/colh/east,
+																 -1/-1/l/colk/east} {
+	\draw[thick,\col] (2*\x,4*\y) -- (5*\x,6*\y) -- (6*\x,1*\y) -- (8*\x,3*\y);
+	\draw[\col] (5*\x,6*\y) node[anchor=\dir] {$y=\lbl(x)$};
+}
+\end{icpic}
+\funtablebig{4}{f}{h}{k}{l}
+\end{example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{displaybox}[Reflection and Rotation]
+\begin{itemize}
+\item If $g(x)=f(-x)$, the graph of $g$ is the same as the graph of $f$, reflected across the \makeblank[1in].
+\item If $g(x)=-f(x)$, the graph of $g$ is the same as the graph of $f$, reflected across the \makeblank[1in].
+\item If $g(x)=-f(-x)$, the graph of $g$ is the same as the graph of $f$, \emph{rotated} around \makeblank[1in].
+\end{itemize}
+\end{displaybox}
+\begin{note}
+The rotation is the \makeblank reflections.
+\end{note}

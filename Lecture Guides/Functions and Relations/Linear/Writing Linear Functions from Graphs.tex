@@ -1,0 +1,23 @@
+\subsection{Writing Linear Functions from Graphs} 
+\begin{definition}[Slope of a Graph]
+The \term{slope} of a line is the number $m$ such that, for any two points $(x_1,y_1)$ and $(x_2,y_2)$ on the line, $$m=\frac{y_2-y_1}{x_2-x_1}$$ If the graph is a straight line, this ratio is the same for any pair of points.
+\end{definition}
+\begin{definition}[Point-Slope Form of a Line]
+If $m$ is the slope of a line, and $(x_1,y_1)$ is a point on that line, all points $(x,y)$ on the line satisfy the equation $$y-y_1=m(x-x_1)$$
+To write a linear function, we can rewrite this equation as
+$$y=m(x-x_1)+y_1
+\qquad
+f(x)=m(x-x_1)+y_1$$
+\end{definition}
+\begin{example}
+The function $f$ is graphed below, with two easy-to-read points on the line marked. Write two possible equations of $f$ in point-slope form. Then, simplify each expression to show that these are the same function.
+\begin{lpic}{}{13}
+\begin{scope}[xshift=5\linespace,yshift=-5\linespace]
+\setgraphsquare{8}
+\setspace{2}[2]
+\AxesLarge
+\linepoints(4,2)(-6,-4)
+\foreach \x/\y in {4/2,-6/-4} {\plotpoint (\x,\y)}
+\end{scope}
+\end{lpic}
+\end{example}

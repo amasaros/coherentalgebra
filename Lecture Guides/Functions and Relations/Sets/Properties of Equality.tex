@@ -1,0 +1,34 @@
+\subsection{Properties of Equality} 
+\begin{definition}[Equation]
+An \term{equation} is a statement that two expressions are equal. It is of the form $$\mbox{expression}=\mbox{expression}$$
+The equation is \emph{true} if the two expressions represent the same number.
+\begin{itemize}
+\item A \term{solution} to an equation is a value(s) of the variable(s) in the equation that makes the equation true.
+\item The \term{solution set} of an equation is the set of all solutions of the equation.
+\item Two equations are \term{equivalent} if they have the same solution set.
+\item To \term{solve} an equation means to find its solution set.
+\end{itemize}
+\end{definition}
+We use equations in several ways.
+\begin{itemize}
+\item To show equivalent expressions.\makeblankex
+\item To define a variable symbol.\makeblankex
+\item To describe an unknown quantity.\makeblankex
+\end{itemize}
+The following properties of equality allow us to get equivalent equations.
+\begin{colparts}{2}
+\draw (-1,0) rectangle (1,-10);
+\draw (-1,-5.5) -- (1,-5.5);
+\draw (0,0) -- (0,-5.5);
+\foreach \x/\lbl/\lblb/\eqn in {-0.5/Additive/c/X+c=Y+c,0.5/Multiplicative/c\neq 0/c(X)=c(Y)} {
+	\regtext{\x}{-1}{\textbf{{\lbl} Property of Equality}};
+	\regtextleftblock{\x}{-2}{For any expressions $X$ and $Y$ and any real number $\lblb$, the equations}{0.5\textwidth-0.25in};
+	\regtext{\x}{-4}{$X=Y$\quad and\quad$\eqn$};
+	\regtextleftblock{\x}{-5}{are equivalent.}{0.5\textwidth-0.25in};
+}
+\regtext{0}{-6.5}{\textbf{Symmetric Property of Equality}};
+\regtextleftblock{0}{-7.5}{For any expressions $X$ and $Y$, the equations}{\textwidth-0.25in};
+\regtext{0}{-8.5}{$X=Y$ \quad and\quad$Y=X$};
+\regtextleftblock{0}{-9.5}{are equivalent.}{\textwidth-0.25in};
+
+\end{colparts}

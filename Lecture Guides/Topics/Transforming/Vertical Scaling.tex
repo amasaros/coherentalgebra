@@ -1,0 +1,31 @@
+\subsection{Vertical Scaling} 
+To scale a point vertically by a factor of $c$, we multiply its $y$-coordinate by $c$.
+\begin{example}
+In the figure below, the graph of:
+\begin{itemize}
+\item $h(x)$ is obtained by scaling the graph of $f(x)$ vertically by a factor of 3
+\item $k(x)$ is obtained by scaling the graph of $f(x)$ vertically by a factor of $\frac{1}{2}$
+\end{itemize}
+Give expressions for $h(x)$ and $k(x)$ in terms of $f(x)$.
+\begin{icpic}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox (-6,-7) rectangle (6,13);
+\setgraph{6}{6}{7}{13}
+\GraphSmall
+\foreach \x/\lbl/\col in {1/f/colf,3/h/colg,.5/k/colh} {
+	\draw[thick,\col] (-4,2*\x) -- (2,4*\x) -- (5,-2*\x);
+	\draw[\col] (2,4*\x) node[anchor=west]{$y=\lbl(x)$};
+}
+\end{icpic}
+\funtable{3}{f}{h}{k}
+\end{example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{displaybox}[Vertical Scaling]
+For any number $c>0$:
+\begin{itemize}
+\item If $g(x)=\frac{1}{c}f(x)$, the graph of $g$ is the same as the graph of $f$, scaled vertically by a factor of \makeblanksmall.
+\item If $g(x)=cf(x)$, the graph of $g$ is the same as the graph of $f$, scaled vertically by a factor of \makeblanksmall.
+\end{itemize}
+\end{displaybox}
+\begin{note}
+The scale factor is the \makeblank[1.5in] as the coefficient of $f(x)$.
+\end{note}

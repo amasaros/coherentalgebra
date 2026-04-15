@@ -3,3 +3,6 @@ In-Class Assignments/*.*
 !In-Class Assignments/In-Class*.pdf
 !In-Class Assignments/In-Class*.tex
 !In-Class Assignments/Preamble.tex
+*.ptc
+*.html
+Lecture Guides/Split

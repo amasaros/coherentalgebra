@@ -1,0 +1,34 @@
+\subsection{The Even Root Property} 
+With even powers, using roots to solve equations is more complicated, because even power functions are not one-to-one.
+\begin{definition}[Even Root Property]
+For any expression $X$, and real number $c\geq 0$, and even integer $p$, the equation 
+$$X^p=c$$
+has the same solutions as the two equations
+$$X=\sqrt[p]{c}\quad\mbox{or}\quad X=-\sqrt[p]{c}$$
+If $c<0$, $X^p=c$ has no solution.
+\end{definition}
+\begin{note}To simplify our notation, we will sometimes write $X=\pm\sqrt[p]{c}$ as a shortcut of $X=\sqrt[p]{c}\mbox{ or }X=-\sqrt[p]{c}$.\end{note}
+\begin{procedure}{Solving Equations with the Even Root Property}
+\begin{enumerate*}
+\item Isolate the power expression.
+\item Apply the even root property to rewrite, if possible.
+\item Continue solving.
+\end{enumerate*}
+\end{procedure}
+\begin{example}
+Solve each equation below using the Even Root Property.
+\begin{lpicvsplit}{2}{7}
+\foreach \x/\y/\yy/\eqn in {0/1/5/x^4=16,1/1/7/2(2x+1)^2=50} {
+	\regtext{\x*\value{fcols}+\x+\value{fcols}/2}{-\y}{$\eqn$};
+	\regtextleft{\x*\value{fcols}+\x}{-\yy}{Check:};
+}
+\regtext{\value{fcols}/2}{-6}{$(x+3)^6=-1$};
+
+\end{lpicvsplit}
+\end{example}
+We can solve some equations of this type as polynomial equations.
+\begin{example}
+Solve $x^4=16$ as a polynomial equation by factoring.
+\begin{lpic}{}{5}
+\end{lpic}
+\end{example}

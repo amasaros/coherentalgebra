@@ -1,0 +1,70 @@
+\subsection{Interval Notation: Basics} 
+\begin{definition}[Interval]
+An \term{interval} is a set whose graph in the number line is a line segment or a ray.
+%Some examples:
+%\begin{icpic}
+%\foreach \y in {0,-2,-4} {
+	%\draw[axis] (-5,\y) -- (5,\y);
+	%\draw[tick] (0,\y+0.2) -- (0,\y-0.2) node[anchor=north]{$0$};
+	%\foreach \x in {1,2,...,4} {
+		%\draw[tick] (\x,\y+0.2) -- (\x,\y-0.2) node[anchor=north]{$\x$};
+		%\draw[tick] (-\x,\y+0.2) -- (-\x,\y-0.2) node[anchor=north]{$-\x\ $};
+	%}
+%}
+%\draw[graphend] (-4,0.3) -- (1,0.3);
+%\filldraw[dotempty] (-4,0.3) circle (0.1);
+%\filldraw[dotfull] (1,0.3) circle (0.1);
+%\draw[graphend,->] (-3,-1.7) -- (5,-1.7);
+%\filldraw[dotfull] (-3,-1.7) circle (0.1);
+%\draw[graphend,<-] (-5,-3.7) -- (2,-3.7);
+%\filldraw[dotempty] (2,-3.7) circle (0.1);
+%\end{icpic}
+We can describe an interval in \term{interval notation}.
+\end{definition}
+\begin{displaybox}[Writing Interval Notation]
+To describe an interval, we describe the left end, and seperately, describe the right end.
+\begin{center}
+\begin{tabular}{cc|c|cc}
+\multicolumn{2}{c|}{Left End}&Comma&\multicolumn{2}{c}{Right End}\\\hline
+Filled dot at \#&$\bigl[\#\bigr.$&
+\multirow{3}{*}{\Large{,}}&
+Filled dot at \#&$\bigl.\#\bigr]$\\
+Empty dot at \#&$\bigl(\#\bigr.$&&
+Empty dot at \#&$\bigl.\#)\bigr.$\\
+Arrow (no end)&$\bigl(-\infty\bigr.$&&
+Arrow (no end)&$\bigl.\infty\bigr)$
+\end{tabular}
+\end{center}
+\end{displaybox}
+\begin{example} Write each set shown below in interval notation.
+\begin{icpic}
+\foreach \y in {0,-2,-4} {
+	\numlinec[\y]{4}
+	\draw (10,\y-0.2) node[anchor=base]{Interval Notation: \makeblank[1in]};
+}
+\graphoc[0]{-4}{1}
+%\draw[graphend] (-4,0.3) -- (1,0.3);
+%\filldraw[dotempty] (-4,0.3) circle (0.1);
+%\filldraw[dotfull] (1,0.3) circle (0.1);
+\graphca[-2]{-3}{5}
+%\draw[graphend,->] (-3,-1.7) -- (5,-1.7);
+%\filldraw[dotfull] (-3,-1.7) circle (0.1);
+\graphao[-4]{-5}{2}
+%\draw[graphend,<-] (-5,-3.7) -- (2,-3.7);
+%\filldraw[dotempty] (2,-3.7) circle (0.1);
+\end{icpic}
+\end{example}
+\begin{note}When writing interval notation, recall:
+\begin{itemize}
+\item We use the filled dot, and the square bracket, corresponding to the inequality $\leq$ or $\geq$; the number shown is \makeblank[1in] in the set.
+\item We use the empty dot, and the round bracket, corresponding to the inequality $>$ or $<$; the number shown is \makeblank[1.5in] in the set.
+\item The symbols $-\infty$ and $\infty$ are not \makeblank[1in], so the are \makeblank[1in] included in the set. They always have a \makeblank[1in] bracket.
+\end{itemize}
+\end{note}
+\begin{example}
+Sketch the graph of $-3<x\leq 5$, then describe the solution set in set-builder notation and in interval notation.
+\begin{lpic}{}{4}
+\regtextleft{1}{-3}{Set-Builder Notation:};
+\regtextleft{1}{-4}{Interval Notation:};
+\end{lpic}
+\end{example}

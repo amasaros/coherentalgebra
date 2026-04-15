@@ -1,0 +1,18 @@
+\subsection{Using Synthetic Division to Evaluate} 
+We can use synthetic division and the remainder theorem to evaluate a polynomial function.
+\begin{itemize}
+\item The remainder theorem says that if we divide $P(x)$ by \makeblank[1in], the \makeblank is $P(k)$.
+\item Synthetic division makes it easy to divide by \makeblank[1in]
+\end{itemize}
+\begin{example}Use synthetic division to evaluate $P(-4)$ where
+\[
+P(x)=2x^4+8x^3-7x^2-23x+20
+\]
+We will divide $\Bigl(\makeblank[3in]\Bigr)\div\Bigl(\makeblank[1in]\Bigr)$
+\begin{cpic}{}{5}
+\synthdiv{-6}{-1}{5};
+\foreach \x/\lbl in {0/2,1/8,2/-7,3/-23,4/20}
+  \regtext{-3.5+2*\x}{-2}{$\lbl$};
+\end{cpic}
+The remainder is \makeblank[.5in], so $P(-4)=\makeblank[.5in]$
+\end{example}

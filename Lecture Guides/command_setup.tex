@@ -1,0 +1,1112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% General utilities
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[none]{hyphenat}
+\pretolerance=10000
+\usepackage{multirow}
+
+\makeatletter
+\newcommand{\manuallabel}[2]{\def\@currentlabel{#2}\label{#1}}
+\makeatother
+
+\newcommand{\unref}[1]{Unit~\ref{#1}}
+
+\newcounter{halfcols}
+\setcounter{halfcols}{\value{cols}/2}
+
+\usepackage{textcomp}
+\newcommand{\degree}{\textdegree}
+
+\usepackage{ifthen}
+\usepackage{forloop}% http://ctan.org/pkg/forloop
+\newcounter{loopcntr}
+\newcommand{\rpt}[2]{%
+  \forloop{loopcntr}{0}{\value{loopcntr}<#1}{#2}%
+}
+
+\usepackage{multirow}
+
+\usepackage{enumerate}
+\usepackage{mdwlist}
+\let\note\undefined
+\usepackage{calc}
+\usepackage{multicol}
+\setlength{\columnseprule}{0pt}
+
+\newcommand{\setabc}{%
+\renewcommand{\theenumi}{\alph{enumi}}%
+\renewcommand{\labelenumi}{\theenumi.}%
+}
+
+\usepackage{xparse}
+
+\newcommand{\nic}{\noindent\centering}
+
+\newcommand{\noi}{\noindent}
+
+\newcommand{\newstuff}[1]{{\color{red}#1}}
+\newcommand{\oldstuff}[1]{{\color{blue!50!green}#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorems and nifty math
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage[framemethod=tikz]{mdframed}
+\renewcommand{\emptyset}{\varnothing}
+
+\mdfsetup{%
+%	roundcorner=0.5\linespace%
+%	innerleftmargin=.25in,
+%	innerrightmargin=.25in,
+%	innertopmargin=.25in,
+%	innerbottommargin=.25in,
+	linewidth=0.4pt,
+	frametitlerule=true,
+	ignorelastdescenders=true
+	}
+
+\newenvironment{displaybox}[1][]{\begin{mdframed}[frametitle={#1}]}{\end{mdframed}}
+
+\mdtheorem{thm}{Theorem}
+\mdtheorem{cor}[thm]{Corollary}
+\mdtheorem{defn}{Definition}
+\mdtheorem{proc}{Procedure}
+%\mdtheorem{fct}{Fact}
+
+\newenvironment{theorem}[1][]{\begin{thm*}[#1]}{\end{thm*}}
+\newenvironment{corollary}[1][]{\begin{cor*}[#1]}{\end{cor*}}
+\newenvironment{definition}[1][]{\begin{defn*}[#1]}{\end{defn*}}
+\newenvironment{procedure}[1]{\begin{proc*}[#1]}{\end{proc*}}
+
+\newenvironment{fact}[1][]{\begin{mdframed}[frametitle={#1}]}{\end{mdframed}}
+
+\newcommand{\term}[1]{%
+\boldmath%
+\textbf{#1}%
+\unboldmath%
+}
+
+\theoremstyle{definition}
+\newtheorem*{example}{Example}
+\newtheorem*{note}{Note}
+
+
+\newcommand{\rrt}[2]{$\pm\frac{#1}{#2}$}
+
+\DeclareMathOperator{\rng}{Rng}
+\DeclareMathOperator{\dom}{Dom}
+
+\newenvironment{system}{%
+	\displaystyle\left\{
+	\begin{array}{l}
+}{
+	\end{array}
+	\right.
+}
+
+\usepackage{array}
+\newcolumntype{o}{@{}>{{}}c<{{}}@{}}
+
+\newcounter{eqnLbl}
+\newcommand{\lbleqn}{%
+	\addtocounter{eqnLbl}{1}
+	(\Roman{eqnLbl})
+}
+\newenvironment{systemL}{%
+	\setcounter{eqnLbl}{0}
+	\displaystyle\left\{
+	\begin{array}{l@{\qquad}c<{\lbleqn}}
+}{
+	\end{array}
+	\right.
+}
+\newenvironment{systemLa}{%
+	\setcounter{eqnLbl}{0}
+	\displaystyle\left\{
+	\begin{array}{rororor@{\qquad}c<{\lbleqn}}
+}{
+	\end{array}
+	\right.
+}
+
+\newenvironment{variables}{%
+	\begin{center}\begin{tabular}{>{$}r<{{}={}$}@{}l}%
+}{%
+	\end{tabular}\end{center}%
+}
+
+\DeclareFontFamily{OT1}{pzc}{}
+\DeclareFontShape{OT1}{pzc}{m}{it}%
+{<-> s * [1.15] pzcmi7t}{}
+\DeclareMathAlphabet{\mathscr}{OT1}{pzc}{m}{it}
+\newcommand{\emm}{\mathscr{m}}
+\newcommand{\enn}{\mathscr{n}}
+
+\newcommand{\pw}[1]{%
+\left\{
+\begin{array}{r@{\qquad\mbox{if}\quad}roror}
+#1
+\end{array}
+\right.
+}
+
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbQ}{\mathbb{Q}}
+
+\newcommand{\relR}{\mathrel{R}}
+\newcommand{\relS}{\mathrel{S}}
+\newcommand{\relT}{\mathrel{T}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set notation etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Set}[1]{\left\{#1\right\}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+
+\newcommand{\rel}[1]{\mathbin{#1}}
+
+\newcommand{\Abs}[1]{\left|#1\right|}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Picture environments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\psize}
+
+\newenvironment{colparts}[2][]{%
+\begin{center}
+\begin{tikzpicture}[#1,x=\textwidth/#2-1pt/#2]
+}{%
+\end{tikzpicture}
+\end{center}
+}
+
+\newenvironment{cpic}[3][]{%
+\begin{center}
+\begin{tikzpicture}[#1]
+\draw[step=\linespace,npblue,use as bounding box]
+    (-\value{cols}\linespace,0) grid (\value{cols}\linespace,-#3);
+}{%
+\end{tikzpicture}
+\end{center}
+}
+
+\newenvironment{lpic}[3][]{%
+\begin{center}
+\begin{tikzpicture}[#1]
+\draw[step=\linespace,npblue,use as bounding box]
+    (0,0) grid (2*\value{cols}\linespace,-#3);
+}{%
+\end{tikzpicture}
+\end{center}
+}
+
+\newenvironment{lpicsplit}[3][]{%
+\begin{center}
+\begin{tikzpicture}[#1]
+\useasboundingbox (0,0) rectangle (2*\value{cols}\linespace+\linespace,-#3);
+\draw[step=\linespace,npblue]
+    (0,0) grid ++(\value{cols}\linespace,-#3);
+\draw[step=\linespace,npblue]
+    (\value{cols}\linespace+\linespace,0) grid ++(\value{cols}\linespace,-#3);
+}{%
+\end{tikzpicture}
+\end{center}
+}
+
+\newcounter{fcols}
+\newenvironment{lpicvsplit}[3][]{%
+\setcounter{fcols}{1 * \ratio{\paperwidth - \lrmargin - \rmargin - #2\linespace + \linespace}{#2\linespace}}%
+\begin{center}
+\begin{tikzpicture}[#1]
+\useasboundingbox (0,0) rectangle (#2*\value{fcols}*\linespace+#2*\linespace-\linespace,-#3);
+\foreach \x in {1,...,#2} {
+	\draw[step=\linespace,npblue]
+			(\x*\value{fcols}+\x-\value{fcols}-1,0) grid ++(\value{fcols}\linespace,-#3);
+}
+}{%
+\end{tikzpicture}
+\end{center}
+}
+
+\newcommand{\regtextcolc}[3]{\regtext{#1*\value{fcols}+#1+0.5*\value{fcols}}{#2}{#3}}
+\newcommand{\regtextcoll}[3]{\regtextleft{#1*\value{fcols}+#1}{#2}{#3}}
+\newcommand{\regtextcolr}[3]{\regtextright{#1*\value{fcols}+#1+\value{fcols}}{#2}{#3}}
+
+\newcommand{\why}[2][\value{cols}]{%
+	\begin{lpic}{}{#2}
+	\draw (0,-1) -- (2*\value{cols},-1);
+	\draw (#1,0) -- (#1,-#2);
+	\foreach \x/\lbl in {0/Step,#1/Why?}
+		\regtextleft{\x+0.5}{-1}{\lbl};
+	\end{lpic}
+}
+
+\newlength{\aboveline}
+\newlength{\fracline}
+\setlength{\aboveline}{3pt}
+\setlength{\fracline}{-3pt}
+
+\edef\measurepage{\the\dimexpr\pagegoal-\pagetotal-\baselineskip\relax}
+
+\newcounter{rowsleft}
+\newlength{\spaceleft}
+
+\newcommand{\fpcount}{%
+	\setlength{\spaceleft}{\textheight-\pagetotal-\baselineskip}
+	\setcounter{rowsleft}{1*\ratio{\spaceleft}{\linespace}}
+}
+\newcommand{\fillpaper}{%
+	\fpcount
+	\begin{lpic}{}{\value{rowsleft}}\end{lpic}
+}
+\newenvironment{filler}{%
+	\fpcount%
+	\begin{lpic}{}{\value{rowsleft}}%
+}{%
+	\end{lpic}%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Guided notes commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\makeblank}[1][2in]{\rule{#1}{0.4pt}}
+\newcommand{\makeblank}[1][2in]{%
+\begin{tikzpicture}[baseline={([yshift=\aboveline]current bounding box.south)}]
+\draw[npblue] (0,0) -- (#1,0);
+\end{tikzpicture}
+}
+
+\newcommand{\htstrut}[1][2ex]{\rule{0px}{#1}}
+
+\newcommand{\lbr}[1][1]{\\[#1ex]}
+
+\newcommand{\makeblanksmall}{\makeblank[.5in]}
+\newcommand{\makeblanknew}{\lbr\makeblank[5in]}
+\newcommand{\makeblanknewf}{\lbr\makeblank[\linewidth-1pt]}
+\newcommand{\makeblankex}{\lbr\textbf{Example:\ }\makeblank[4in]}
+\newcommand{\notebreak}{\lbr\textbf{Note:\ }}
+
+\newlength{\blanktemp}
+\newcommand{\makeblankfill}[2][\linewidth] {
+\setlength{\blanktemp}{#1-\widthof{#2 }-1pt}
+#2 \makeblank[\blanktemp]
+}
+
+
+\newcommand{\blankpair}{\ensuremath{\bigl(\makeblank[.25in],\makeblank[.25in]\bigr)}}
+\newcommand{\blanktrip}{\ensuremath{\bigl(\makeblank[.25in],\makeblank[.25in],\makeblank[.25in]\bigr)}}
+\newcommand{\blankparens}[1][0.5in]{\ensuremath{\bigl(\makeblank[#1]\bigr)}}
+
+\newcommand{\makespace}[1][1in]{\rule{#1}{0px}}
+\newcommand{\figdash}{\makespace[\widthof{$-$}]}
+
+\newcommand{\makehspace}[1][1in]{\rule{0px}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for creating picture environments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{ilpic}[1][]{%
+	\begin{tikzpicture}[baseline={([yshift=\aboveline]current bounding box.north)},
+	                    #1]
+	}{\end{tikzpicture}}
+
+\newenvironment{ilgraph}{\begin{ilpic}[x=0.5\linespace,y=0.5\linespace]}{\end{ilpic}}
+
+\newenvironment{icpic}[1][]{\begin{center}\begin{tikzpicture}[#1]}{\end{tikzpicture}\end{center}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for making pictures of math
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\argwidth}
+
+\newcommand{\regtext}[3]{%
+\draw [yshift=\aboveline]%
+			(#1,#2) node[anchor=base]{#3}%
+}
+
+\newcommand{\regtextml}[5][\textwidth]{%
+\draw [yshift=\aboveline+#4\baselineskip]%
+			(#2,#3) node[anchor=base,align=center,text width=#1]{#5}%
+}
+
+\newcommand{\bigtext}[3]{\regtext{#1}{#2}{\Large\bfseries #3}}
+
+\newcommand{\regtextleft}[3]{%
+\setlength{\argwidth}{\widthof{#3}}
+\draw [yshift=\aboveline,xshift=.5\argwidth+\aboveline]%
+			(#1,#2) node[anchor=base]{#3}%
+}
+
+\newcommand{\regtextleftblock}[4]{%
+\draw[yshift=\aboveline,xshift=\aboveline] (#1,#2) node[anchor=base,text width=#4,align=left]{#3}%
+}
+
+\newcommand{\regtextright}[3]{%
+\setlength{\argwidth}{\widthof{#3}}
+\draw [yshift=\aboveline,xshift=-.5\argwidth-\aboveline]%
+			(#1,#2) node[anchor=base]{#3}%
+}
+
+\newcommand{\fractext}[3]{%
+\draw [yshift=\fracline]
+      (#1,#2) node[anchor=base]{#3}%
+}%
+
+\newcommand{\fractextleft}[3]{%
+\setlength{\argwidth}{\widthof{#3}}
+\draw [yshift=\fracline,xshift=.5\argwidth+\aboveline]%
+			(#1,#2) node[anchor=base]{#3}%
+}
+
+\newcommand{\fractextright}[3]{%
+\setlength{\argwidth}{\widthof{#3}}
+\draw [yshift=\fracline,xshift=-.5\argwidth-\aboveline]%
+			(#1,#2) node[anchor=base]{#3}%
+}
+
+\newcommand{\regtextlp}[3]{\regtext{#1-\value{cols}}{#2}{#3}}
+\newcommand{\regtextleftlp}[3]{\regtextleft{#1-\value{cols}}{#2}{#3}}
+\newcommand{\regtextrightlp}[3]{\regtextright{#1-\value{cols}}{#2}{#3}}
+
+\newcommand{\writethink}[3][\value{cols}]{%
+	\twocol[#1]{#2}{#3}{Write:}{Think:}
+}
+
+\newcommand{\twocol}[5][\value{cols}]{%
+	\twocollbl[#1]{#2}{#4}{#5}
+	\draw[dashed](#1,#2+1) -- (#1,#2-#3+1);
+}
+\newcommand{\twocolleft}[5][\value{cols}]{%
+	\twocollblleft[#1]{#2}{#4}{#5}
+	\draw[dashed](#1,#2+1) -- (#1,#2-#3+1);
+}
+
+\newcommand{\twocollbl}[4][\value{cols}]{%
+  \regtext{.5*#1}{#2}{#3};
+	\regtext{.5*#1+\value{cols}}{#2}{#4};
+}
+\newcommand{\twocollblleft}[4][\value{cols}]{%
+  \regtextleft{1}{#2}{#3};
+	\regtextleft{#1+1}{#2}{#4};
+}
+
+\newcommand{\checkbox}[1]{%
+\setlength{\argwidth}{\widthof{ #1}}
+\begin{tikzpicture}[baseline={([yshift=\aboveline]current bounding box.south)}]
+\useasboundingbox(-1,0) rectangle (\argwidth,0.75);
+\draw[npblue] (-0.5,.1) rectangle (0,.6);
+\draw (0.5\argwidth,\aboveline) node[anchor=base]{ #1};
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphing gear
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\mxshift}
+\newlength{\graphwidth}
+\newlength{\graphht}
+\newcounter{graphsize}
+\newcounter{grleft}
+\newcounter{grright}
+\newcounter{grtop}
+\newcounter{grbot}
+\newcounter{zback}
+\newcounter{zfront}
+\newcounter{countbyx}
+\newcounter{nextstepx}
+\newcounter{countspacex}
+\newcounter{countbyy}
+\newcounter{nextstepy}
+\newcounter{countspacey}
+\newcounter{countbyz}
+\newcounter{nextstepz}
+\newcounter{countspacez}
+\newcounter{divspacex}
+\newcounter{divspacey}
+\newcounter{divspacez}
+\newcommand{\graphsquare}{%
+	\setgraph{\value{graphsize}}
+	         {\value{graphsize}}
+					 {\value{graphsize}}
+					 {\value{graphsize}}
+	\setz{\value{graphsize}}{\value{graphsize}}
+}
+\newcommand{\setgraphsmall}{%
+	\setcounter{graphsize}{\value{halfcols}-1}
+	\graphsquare
+}
+\newcommand{\setgraphlarge}{%
+	\setcounter{graphsize}{\value{cols}-1}
+	\graphsquare
+}
+\newcommand{\setgraphsquare}[1]{%
+	\setcounter{graphsize}{#1}
+	\graphsquare
+}
+\newcommand{\setgraph}[4]{%
+	\setcounter{grleft}{#1}
+	\setcounter{grright}{#2}
+	\setcounter{grbot}{#3}
+	\setcounter{grtop}{#4}
+	\setspace{2}
+	\setlength{\graphwidth}{\value{grleft}\linespace+\value{grright}\linespace+\linespace}
+	\setlength{\graphht}{\value{grtop}\linespace+\value{grbot}\linespace+\linespace}
+}
+\NewDocumentCommand{\setspace}{O{1} m O{1}}{%
+	\setcounter{countbyx}{#2}
+	\setcounter{countspacex}{#1}
+	\setcounter{divspacex}{#3}
+	\setcounter{countbyy}{#2}
+	\setcounter{countspacey}{#1}
+	\setcounter{divspacey}{#3}
+	\setcounter{countbyz}{#2}
+	\setcounter{countspacez}{#1}
+	\setcounter{divspacez}{#3}
+}
+\newcommand{\setgraphlow}[1]{%
+	\setcounter{grleft}{\value{cols}-1}
+	\setcounter{grright}{\value{cols}-1}
+	\setcounter{grbot}{#1}
+	\setcounter{grtop}{2*\value{cols}-#1-2}
+}
+\newcommand{\setgraphlowright}[2]{%
+	\setcounter{grleft}{2*\value{cols}-#1-2}
+	\setcounter{grright}{#1}
+	\setcounter{grbot}{#2}
+	\setcounter{grtop}{2*\value{cols}-#2-2}
+}
+\newcommand{\setz}[2]{%
+	\setcounter{zback}{#1}
+	\setcounter{zfront}{#1}
+}
+\newcommand{\setcountspace}[1]{%
+	\setcounter{countspacex}{#1}%
+	\setcounter{countspacey}{#1}%
+	\setcounter{countspacez}{#1}%
+}
+
+\newcommand{\graphscaley}[1]{%
+	\setcounter{divspacey}{#1*\value{divspacey}}
+}
+
+\NewDocumentCommand{\setcountby}{m m O{1}}{%
+	\setcounter{countbyx}{#1}%
+	\setcounter{countbyy}{#2}%
+	\setcounter{countbyz}{#3}%
+}
+
+\newcommand{\AxesGen}[2]{%
+	\setcounter{nextstepx}{\value{countbyx}*2}
+	\setcounter{nextstepy}{\value{countbyy}*2}
+	%%%%%%%%%%%%%%%%%
+	\draw[axis] ({(-\value{grleft}-.5*\value{divspacex})*\value{countspacex}/\value{divspacex}
+								-\value{countspacex}/\value{divspacex}+1/\value{divspacex}},0) -- 
+	            ({(\value{grright}+.5*\value{divspacex})*\value{countspacex}/\value{divspacex}
+								+\value{countspacex}/\value{divspacex}-1/\value{divspacex}},0) 
+							node[anchor=south,font=#1]{$x$};
+	\draw[axis] (0,{(-\value{grbot}-.5*\value{divspacey})*\value{countspacey}/\value{divspacey}
+								-\value{countspacey}/\value{divspacey}+1/\value{divspacey}}) -- 
+	            (0, {(\value{grtop}+.5*\value{divspacey})*\value{countspacey}/\value{divspacey}
+								+\value{countspacey}/\value{divspacey}-1/\value{divspacey}}) 
+							node[anchor=west,font=#1]{$y$};
+	%%%%%%%%%%%%%%%%%
+	\setlength{\mxshift}{\widthof{#2$-$}}
+	%%%%%%%%%%%%%%%%%
+	\ifthenelse{\value{grright}<\value{nextstepx}}{
+		\ifthenelse{\value{grright}<\value{countbyx}}{}{%If it's too small, do nothing
+			\draw[tick] (\value{countbyx}*\value{countspacex}/\value{divspacex},.1) 
+							-- (\value{countbyx}*\value{countspacex}/\value{divspacex},-.1) 
+			            node[anchor=north,font=#2]{$\arabic{countbyx}$};			
+		}
+	}{
+		\foreach \x in {\arabic{countbyx},\arabic{nextstepx},...,\value{grright}}
+			\draw[tick] (\x*\value{countspacex}/\value{divspacex},.1) 
+							-- (\x*\value{countspacex}/\value{divspacex},-.1)
+			            node[anchor=north,font=#2]{$\x$};
+	}
+	%%%%%%%%%%%%%%%%%
+	\ifthenelse{\value{grleft}<\value{nextstepx}}{
+		\ifthenelse{\value{grleft}<\value{countbyx}}{}{%If it's too small, do nothing
+			\draw[tick] (-\value{countbyx}*\value{countspacex}/\value{divspacex},.1) 
+							-- (-\value{countbyx}*\value{countspacex}/\value{divspacex},-.1) 
+			            node[anchor=north,font=#2]{$-\arabic{countbyx}\phm$};			
+		}
+	}{
+		\foreach \x in {\arabic{countbyx},\arabic{nextstepx},...,\value{grleft}}
+			\draw[tick] (-\x*\value{countspacex}/\value{divspacex},.1) 
+							-- (-\x*\value{countspacex}/\value{divspacex},-.1)
+			            node[anchor=north,font=#2]{$-\x\phm$};
+	}
+	%%%%%%%%%%%%%%%%%
+	\ifthenelse{\value{grtop}<\value{nextstepy}}{
+		\ifthenelse{\value{grtop}<\value{countbyy}}{}{%If it's too small, do nothing
+			\draw[tick] (.1,\value{countbyy}*\value{countspacey}/\value{divspacey}) 
+							-- (-.1,\value{countbyy}*\value{countspacey}/\value{divspacey}) 
+			            node[anchor=east,font=#2]{$\arabic{countbyy}$};			
+		}
+	}{
+		\foreach \x in {\arabic{countbyy},\arabic{nextstepy},...,\value{grtop}}
+			\draw[tick] (.1,\x*\value{countspacey}/\value{divspacey}) 
+							-- (-.1,\x*\value{countspacey}/\value{divspacey}) 
+			            node[anchor=east,font=#2]{$\x$};
+	}
+	%%%%%%%%%%%%%%%%%
+	\ifthenelse{\value{grbot}<\value{nextstepy}}{
+		\ifthenelse{\value{grbot}<\value{countbyy}}{}{%If it's too small, do nothing
+			\draw[tick] (.1,-\value{countbyy}*\value{countspacey}/\value{divspacey}) 
+						-- (-.1,-\value{countbyy}*\value{countspacey}/\value{divspacey}) 
+			            node[anchor=east,font=#2]{$-\arabic{countbyy}$};			
+		}
+	}{
+		\foreach \x in {\arabic{countbyy},\arabic{nextstepy},...,\value{grbot}}
+			\draw[tick] (.1,-\x*\value{countspacey}/\value{divspacey}) 
+						-- (-.1,-\x*\value{countspacey}/\value{divspacey})
+			            node[anchor=east,font=#2]{$-\x$};
+	}
+}
+
+\newcommand{\zAxis}[2]{%
+	\setcounter{nextstepz}{\value{countbyz}*2}
+	\draw[axis] (-135:{(-\value{zback}-.5*\value{divspacez})*\value{countspacez}/\value{divspacez}
+									-\value{countspacez}/\value{divspacez}+1/\value{divspacez}}) 
+						-- (-135:{(\value{zfront}+.5*\value{divspacez})*\value{countspacez}/\value{divspacez}
+									+\value{countspacez}/\value{divspacez}-1/\value{divspacez}}) 
+							node[anchor=south east,font=#1]{$z$};
+	%%%%%%%%%%%%%%%%%
+	\ifthenelse{\value{zfront}<\value{nextstepz}}{
+		\ifthenelse{\value{zfront}<\value{countbyz}}{}{%If it's too small, do nothing
+			\draw[tick] (-135:\value{countbyz}*\value{countspacez}/\value{divspacez}) ++ (135:.1) 
+						-- ++(135:-.2) 
+			            node[anchor=north west,font=#2]{$\arabic{countbyz}$};			
+		}
+	}{
+		\foreach \x in {\arabic{countbyz},\arabic{nextstepz},...,\value{zfront}}
+			\draw[tick] (-135:\x*\value{countspacez}/\value{divspacez}) ++ (135:.1) -- ++(135:-.2) 
+			            node[anchor=north west,font=#2]{$\x$};
+	}
+	%%%%%%%%%%%%%%%%%
+	\ifthenelse{\value{zback}<\value{nextstepz}}{
+		\ifthenelse{\value{zback}<\value{countbyz}}{}{%If it's too small, do nothing
+			\draw[tick] (-135:-\value{countbyz}*\value{countspacez}/\value{divspacez}) ++ (135:.1) 
+						-- ++(135:-.2) 
+			            node[anchor=north west,font=#2]{$-\arabic{countbyz}$};			
+		}
+	}{
+		\foreach \x in {\arabic{countbyz},\arabic{nextstepz},...,\value{zback}}
+			\draw[tick] (-135:-\x*\value{countspacez}/\value{divspacez}) ++ (135:.1) -- ++(135:-.2) 
+			            node[anchor=north west,font=#2]{$-\x$};
+	}
+}
+
+\newcommand{\Axes}[2]{%
+	\setspace{2}
+	\AxesGen{#1}{#2}
+	%\draw[axis] (-\value{grleft}-.5,0) -- 
+	                      %( \value{grright}+.5,0) node[anchor=south,font=#1]{$x$};
+	%\draw[axis] (0,-\value{grbot}-.5) -- 
+	                      %(0, \value{grtop}+.5) node[anchor=west,font=#1]{$y$};
+	%\foreach \x in {2,4,...,\value{grright}}
+		%\draw[tick] (\x,.1) -- (\x,-.1) node[anchor=north,font=#2]{$\x$};
+	%\foreach \x in {2,4,...,\value{grleft}}
+		%\draw[tick] (-\x,.1) -- (-\x,-.1) node[anchor=north,font=#2]{$-\x\ \ $};
+	%\foreach \x in {2,4,...,\value{grtop}}
+		%\draw[tick] (.1,\x) -- (-.1,\x) node[anchor=east,font=#2]{$\x$};
+	%\foreach \x in {2,4,...,\value{grbot}}
+		%\draw[tick] (.1,-\x) -- (-.1,-\x) node[anchor=east,font=#2]{$-\x$};
+}
+
+\newcommand{\AxesBlank}[1][\small]{
+	\draw[axis] (-\value{grleft}-0.5,0) -- (\value{grright}+0.5,0) node[anchor=south,font=#1]{$x$};
+	\draw[axis] (0,-\value{grbot}-0.5) -- (0,\value{grtop}+0.5) node[anchor=west,font=#1]{$y$};
+}
+
+\newcommand{\Graph}[3][2]{%
+	\draw[step=1,npblue] (-\value{grleft},-\value{grbot}) grid 
+											   (\value{grright},\value{grtop});
+  \setspace{#1}
+	\AxesGen{#2}{#3}
+}
+
+\newcommand{\GraphClean}[2]{%
+	\draw[step=1,npblue] (-\value{grleft}/\value{divspacex},-\value{grbot}/\value{divspacey}) grid 
+											   (\value{grright}/\value{divspacex},\value{grtop}/\value{divspacey});
+	\AxesGen{#1}{#2}
+}
+
+\newcommand{\AxesOnes}[2]{%
+	\setspace{1}
+	\AxesGen{#1}{#2}
+	%\draw[axis] (-\value{grleft}-1,0) -- 
+	                      %( \value{grright}+1,0) node[anchor=south,font=#1]{$x$};
+	%\draw[axis] (0,-\value{grbot}-1) -- 
+	                      %(0, \value{grtop}+1) node[anchor=west,font=#1]{$y$};
+	%\foreach \x in {1,...,\value{grright}}
+		%\draw[tick] (\x,.1) -- (\x,-.1) node[anchor=north,font=#2]{$\x$};
+	%\foreach \x in {1,...,\value{grleft}}
+		%\draw[tick] (-\x,.1) -- (-\x,-.1) node[anchor=north,font=#2]{$-\x\ \ $};
+	%\foreach \x in {1,...,\value{grtop}}
+		%\draw[tick] (.1,\x) -- (-.1,\x) node[anchor=east,font=#2]{$\x$};
+	%\foreach \x in {1,...,\value{grbot}}
+		%\draw[tick] (.1,-\x) -- (-.1,-\x) node[anchor=east,font=#2]{$-\x$};
+}
+
+\newcommand{\GraphOnes}{%
+	\setspace{1}
+	\draw[step=1,npblue] (-\value{grleft},-\value{grbot}) grid 
+											 (\value{grright},\value{grtop});
+  \AxesGen{\small}{\tiny}
+}
+
+\newcommand{\GraphHalf}{%
+	\draw[step=1,npblue] (-\value{grleft}*2-1,-\value{grbot}*2-1) grid 
+											   (\value{grright}*2+1,\value{grtop}*2+1);
+	\setspace[2]{1}
+  \AxesGen{\small}{\tiny}
+}
+
+\newcommand{\GraphSmall}[1][2]{\Graph[#1]{\scriptsize}{\tiny}}
+\newcommand{\GraphLarge}[1][2]{\Graph[#1]{\small}{\scriptsize}}
+\newcommand{\AxesSmall}{\AxesGen{\scriptsize}{\tiny}}
+\newcommand{\AxesLarge}{\AxesGen{\small}{\scriptsize}}
+
+\newcommand{\GraphSmallClean}{\GraphClean{\scriptsize}{\tiny}}
+\newcommand{\GraphLargeClean}{\GraphClean{\small}{\scriptsize}}
+
+\newcommand{\ha}[1]{%
+  \draw[asymp] (-\value{grleft},#1) -- (\value{grright},#1);
+}
+\newcommand{\va}[1]{%
+  \draw[asymp] (#1,-\value{grtop}) -- (#1,\value{grbot});
+}
+
+\newcommand{\GraphIn}[2]{%
+	\setgraphsquare{#1}
+	\begin{scope}[xshift={(2*\value{cols}-#1-1)*\linespace},yshift={(-#1-1)*\linespace}]
+	\AxesGen{\small}{\scriptsize}
+	#2
+	\end{scope}
+}
+
+\newcommand{\GraphInLeft}[2]{%
+	\setgraphsquare{#1}
+	\begin{scope}[xshift={(#1+1)*\linespace},yshift={(-#1-1)*\linespace}]
+	\AxesGen{\small}{\scriptsize}
+	#2
+	\end{scope}
+}
+\newcommand{\GraphInOnes}[2]{%
+	\setgraphsquare{#1}
+	\setspace{1}
+	\begin{scope}[xshift={(2*\value{cols}-#1-1)*\linespace},yshift={(-#1-1)*\linespace}]
+	\AxesGen{\small}{\scriptsize}
+	#2
+	\end{scope}
+}
+
+\newcommand{\GraphInSet}[1][]{%
+	\begin{scope}[xshift={(2*\value{cols}-\value{grright}-1)*\linespace},yshift={(-\value{grtop}-1)*\linespace}]
+	\AxesGen{\small}{\scriptsize}
+	#1
+	\end{scope}
+}
+
+\newenvironment{syspic}[2][1.5]{
+\begin{icpic}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox (-.5\textwidth,-5.5) rectangle (0,#2-#1);
+\setgraphsquare{#2}
+\GraphSmall
+}{
+\end{icpic}
+}
+
+\NewDocumentCommand{\linepoints}{>{\SplitArgument{1}{,}}r() >{\SplitArgument{1}{,}}r()} {
+	\linepointsSUB #1 #2
+}
+
+\NewDocumentCommand{\linepointslope}{>{\SplitArgument{1}{,}}r() m}{
+	\lineslopeSUB #1{#2}
+}
+
+\NewDocumentCommand{\lineslopeintercept}{m m}{
+	\lineslopeSUB{0}{#2}{#1}
+}
+
+\NewDocumentCommand{\linepointsSUB}{m m m m} {%
+	\lineslopeSUB{#1}{#2}{(#4-#2)/(#3-#1)}
+	%\path[name path=grbound]
+		%(-\value{grleft}*\value{countspace}/\value{divspace},
+			%-\value{grbot}*\value{countspace}/\value{divspace})
+			%rectangle
+			%(\value{grright}*\value{countspace}/\value{divspace},
+			%\value{grtop}*\value{countspace}/\value{divspace});
+	%\path[name path=myline]
+		%(-\value{grleft}*\value{countspace}/\value{divspace}-\value{countspace}/\value{divspace},
+			%{(#4-#2)/(#3-#1)*(-\value{grleft}-1-#1)*\value{countspace}/\value{divspace}
+			%+#2*\value{countspace}/\value{divspace}}) 
+			%-- (\value{grright}*\value{countspace}/\value{divspace}+\value{countspace}/\value{divspace},
+			%{(#4-#2)/(#3-#1)*(\value{grright}+1-#1)*\value{countspace}/\value{divspace}
+			%+#2*\value{countspace}/\value{divspace}});
+	%\draw[name intersections = {of = grbound and myline, name = pt},
+				%graph] (pt-1) -- (pt-2);
+}
+
+\NewDocumentCommand{\lineslopeSUB}{m m m} {%
+	\path[name path=grbound]
+		(-\value{grleft}*\value{countspacex}/\value{divspacex},
+			-\value{grbot}*\value{countspacey}/\value{divspacey})
+			rectangle
+			(\value{grright}*\value{countspacex}/\value{divspacex},
+			\value{grtop}*\value{countspacey}/\value{divspacey});
+	\path[name path=myline]
+		(-\value{grleft}*\value{countspacex}/\value{divspacex}-\value{countspacex}/\value{divspacex},
+			{(#3)*(-\value{grleft}-1-#1)*\value{countspacey}/\value{divspacey}
+			+#2*\value{countspacey}/\value{divspacey}}) 
+			-- (\value{grright}*\value{countspacex}/\value{divspacex}+\value{countspacex}/\value{divspacex},
+			{(#3)*(\value{grright}+1-#1)*\value{countspacey}/\value{divspacey}
+			+#2*\value{countspacey}/\value{divspacey}});
+	\draw[name intersections = {of = grbound and myline, name = pt},
+				graph] (pt-1) -- (pt-2);
+}
+
+\NewDocumentCommand{\plotpoint}{>{\SplitArgument{1}{,}}r()}{%
+	\plotpointSUB #1
+}
+\NewDocumentCommand{\plotpointSUB}{m m}{%
+	\draw[dotfull] ({(#1)*\value{countspacex}/\value{divspacex}},
+		{(#2)*\value{countspacey}/\value{divspacey}})
+		circle (\dotsize);
+}
+
+\newlength{\dotsize}
+\setlength{\dotsize}{0.1\linespace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Interval Graphing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numline}[3][0]{%
+\draw[axis] (#2-1,#1) -- (#3+1,#1);
+\foreach \x in {0,1,...,#3}
+	\draw[tick] (\x,#1+0.2) -- (\x,#1-0.2) node[anchor=north]{$\x$};
+\foreach \x in {#2,...,-1}
+	\draw[tick] (\x,#1+0.2) -- (\x,#1-0.2) node[anchor=north]{$\x\phm$};
+}
+
+\newcommand{\numlinec}[2][0]{\numline[#1]{-#2}{#2}}
+
+% <---->
+\newcommand{\graphaa}[3][0]{%
+	\draw[graph] (#2,#1+0.3) -- (#3,#1+0.3);
+}
+
+% <----o
+\newcommand{\graphao}[3][0]{%
+	\draw[graphend,<-] (#2,#1+0.3) -- (#3,#1+0.3);
+	\draw[dotempty] (#3,#1+0.3) circle (0.1);
+}
+
+% <----*
+\newcommand{\graphac}[3][0]{%
+	\draw[graphend,<-] (#2,#1+0.3) -- (#3,#1+0.3);
+	\draw[dotfull] (#3,#1+0.3) circle (0.1);
+}
+
+% o---->
+\newcommand{\graphoa}[3][0]{%
+	\draw[graphend,->] (#2,#1+0.3) -- (#3,#1+0.3);
+	\draw[dotempty] (#2,#1+0.3) circle (0.1);
+}
+
+% o----o
+\newcommand{\graphoo}[3][0]{%
+	\draw[graphend] (#2,#1+0.3) -- (#3,#1+0.3);
+	\draw[dotempty] (#2,#1+0.3) circle (0.1);
+	\draw[dotempty] (#3,#1+0.3) circle (0.1);
+}
+
+% o----*
+\newcommand{\graphoc}[3][0]{%
+	\draw[graphend,<-] (#2,#1+0.3) -- (#3,#1+0.3);
+	\draw[dotempty] (#2,#1+0.3) circle (0.1);
+	\draw[dotfull] (#3,#1+0.3) circle (0.1);
+}
+
+% *---->
+\newcommand{\graphca}[3][0]{%
+	\draw[graphend,->] (#2,#1+0.3) -- (#3,#1+0.3);
+	\draw[dotfull] (#2,#1+0.3) circle (0.1);
+}
+
+% *---->
+\newcommand{\graphco}[3][0]{%
+	\draw[graphend] (#2,#1+0.3) -- (#3,#1+0.3);
+	\draw[dotfull] (#2,#1+0.3) circle (0.1);
+	\draw[dotempty] (#3,#1+0.3) circle (0.1);
+}
+
+% *----*
+\newcommand{\graphcc}[3][0]{%
+	\draw[graphend,<-] (#2,#1+0.3) -- (#3,#1+0.3);
+	\draw[dotfull] (#2,#1+0.3) circle (0.1);
+	\draw[dotfull] (#3,#1+0.3) circle (0.1);
+}
+
+
+\newcommand{\divbracket}[3]{\draw (#1+2*#2+.5,#3) -- (#1+.5,#3) 
+                                              arc (20:-20:{.5/sin(20)})}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Division gear
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%first argument is x-coord of upper left
+%second argument is y-coord of upper left
+%third argument is number of terms
+\newcommand{\synthdiv}[3]{%
+  \draw (#1,#2-1) -- ++(1,0) -- ++(0,1); %bracket
+	\draw (#1+1.5,#2-2) -- ++(2*#3,0);
+	\draw (#1+2*#3-.5,#2-2) -- ++(0,-1)
+}
+\newcommand{\synthdivtight}[3]{%
+  \draw (#1,#2-1) -- ++(1,0) -- ++(0,1); %bracket
+	\draw (#1+1.5,#2-2) -- ++(1.5*#3+.5,0);
+	\draw (#1+1.5*#3+.25,#2-2) -- ++(0,-1)
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for 3d drawing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\project}[3]{%
+	{(#1)*(2+sqrt(2))/4-(#3)*sqrt(5)/2.5},{#2-(#1)*(2-sqrt(2))/4-(#3)*sqrt(5)/5}%
+}
+\newlength{\dimtd}
+\setlength{\dimtd}{2\linespace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% misc math stuff
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\suchthat}{\;\middle|\;}
+\newcommand{\subnew}{_{\mathrm{new}}}
+\newcommand{\inv}{^{-1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% misc other stuff
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+%\newcolumntype{R}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\hfill\arraybackslash}X}
+\usepackage{multirow}
+
+\newcommand{\fitrow}[4][\linespace]{%
+	\begin{tikzpicture}[x=#1,y=#1]
+		\useasboundingbox ({-.5*(#2)},{-.5*(#3)}) rectangle ({.5*(#2)},{.5*(#3)});
+		\draw (0,-1ex) node[anchor=base]{#4};
+	\end{tikzpicture}
+}
+
+\newlength{\fakeht}
+\newcommand{\fakeit}[1]{%
+	\setlength{\fakeht}{\totalheightof{#1}}
+	\begin{icpic}
+	\useasboundingbox (-1in,0) rectangle (1in,\fakeht);
+	\draw (0,.5\fakeht) node{#1};
+	\end{icpic}
+}
+
+\newcommand{\funtable}[4]{%
+\[
+\renewcommand*{\arraystretch}{1.5}
+\begin{array}{>{\color{colf}}l@{\qquad}>{\color{colg}}l@{\qquad}>{\color{colh}}l}
+\rpt{#1}{%
+#2(\makeblanksmall)=\makeblanksmall&
+#3(\makeblanksmall)=\makeblanksmall&
+#4(\makeblanksmall)=\makeblanksmall\\}
+&
+#3(x)=\makeblank[1in]&
+#4(x)=\makeblank[1in]
+\end{array}
+\]
+}
+
+\newcommand{\funtablebig}[5]{%
+\[
+\renewcommand*{\arraystretch}{1.5}
+\begin{array}{>{\color{colf}}l@{\quad}>{\color{colg}}l@{\quad}>{\color{colh}}l@{\quad}>{\color{colk}}l}
+\rpt{#1}{%
+#2(\makeblank[.375in])=\makeblank[.375in]&
+#3(\makeblank[.375in])=\makeblank[.375in]&
+#4(\makeblank[.375in])=\makeblank[.375in]&
+#5(\makeblank[.375in])=\makeblank[.375in]\\}
+&
+#3(x)=\makeblank[.75in]&
+#4(x)=\makeblank[.75in]&
+#5(x)=\makeblank[.75in]
+\end{array}
+\]
+}
+
+\newcounter{step}
+\newcommand{\steps}[1][1]{\setcounter{step}{#1}}
+\newcommand{\numstep}[1][.]{\arabic{step}.\addtocounter{step}{1}}
+
+\newcommand{\functionfamily}[3][]{%
+\begin{displaybox}[#2]
+\begin{lpic}{}{10}
+\GraphIn{4}{#3}
+\foreach \y/\lbl in {-1/Form:,
+                    -2/Example:,
+										-3/Domain:,
+										-4/Range:,
+										-5/Inverse:,
+										-6/Symmetry:,
+										-7/Asymptotes:,
+										-8/Key Points:,
+										-9/Notes:}
+	\regtextleft{1}{\y}{\lbl};
+\end{lpic}%
+\end{displaybox}%
+}
+
+\newcommand{\phm}{\phantom{-}}
+\newcommand{\ph}{\phantom{1}}
+\newcommand{\php}{\phantom{(}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fake small caps
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xstring} % needed for IfEqCase
+\usepackage{forloop}
+
+\newcounter{sccounter}
+\newcounter{tempStringLength}
+
+\newcommand{\fakesc}[1]{%
+    % this \betterfakesc command requires these two packages:
+    %   xstring
+    %   forloop
+    %
+    % First, we obtain the length of the input string.
+    \StrLen{#1}[\stringLength]%
+    %
+    % Our main forloop will be using a condition of “while less than \stringLength”,
+    % so we’ll need to increase \stringLength by 1 so the forloop will be able to iterate 
+    % over the entire string. we’ll use a temporary counter tempStringLength to make
+    % this increase. That’s what the next three lines are about.
+    \setcounter{tempStringLength}{\stringLength}%
+    \addtocounter{tempStringLength}{1}%
+    \def\stringLength{\arabic{tempStringLength}}%
+    %
+    % Here is our main loop. We iterate over the characters in the input string,
+    % and the currentLetter is compared to the case rules we have defined. Basically
+    % if the currentLetter is any of the lowercase a-z letters, then we apply a 
+    % “fake small caps” effect to it and output it.
+    \forloop[1]{sccounter}{1}{\value{sccounter}<\stringLength}{%
+        \StrChar{#1}{\value{sccounter}}[\currentLetter]%
+        %
+        \IfEqCase*{\currentLetter}{%
+        % The lines below are the rules. Obviously more could be added.
+        {a}{{\uppercase{\footnotesize a}}}%
+        {b}{{\uppercase{\footnotesize b}}}%
+        {c}{{\uppercase{\footnotesize c}}}%
+        {d}{{\uppercase{\footnotesize d}}}%
+        {e}{{\uppercase{\footnotesize e}}}%
+        {f}{{\uppercase{\footnotesize f}}}%
+        {g}{{\uppercase{\footnotesize g}}}%
+        {h}{{\uppercase{\footnotesize h}}}%
+        {i}{{\uppercase{\footnotesize i}}}%
+        {j}{{\uppercase{\footnotesize j}}}%
+        {k}{{\uppercase{\footnotesize k}}}%
+        {l}{{\uppercase{\footnotesize l}}}%
+        {m}{{\uppercase{\footnotesize m}}}%
+        {n}{{\uppercase{\footnotesize n}}}%
+        {o}{{\uppercase{\footnotesize o}}}%
+        {p}{{\uppercase{\footnotesize p}}}%
+        {q}{{\uppercase{\footnotesize q}}}%
+        {r}{{\uppercase{\footnotesize r}}}%
+        {s}{{\uppercase{\footnotesize s}}}%
+        {t}{{\uppercase{\footnotesize t}}}%
+        {u}{{\uppercase{\footnotesize u}}}%
+        {v}{{\uppercase{\footnotesize v}}}%
+        {w}{{\uppercase{\footnotesize w}}}%
+        {x}{{\uppercase{\footnotesize x}}}%
+        {y}{{\uppercase{\footnotesize y}}}%
+        {z}{{\uppercase{\footnotesize z}}}%
+        }%
+        % if our \currentLetter isn’t any of the letters we have rules for,
+        % then just output it now
+        [{\currentLetter}]%
+    }%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Calculator entry commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\inputwidth}
+\newlength{\inputheight}
+
+\newcommand{\TIbut}[1]{%
+\setlength{\inputwidth}{\widthof{\fakesc{#1}}}%
+\setlength{\inputheight}{\heightof{ABC123}}%
+\begin{tikzpicture}[baseline=0]%
+\useasboundingbox(-3pt,0) rectangle (\inputwidth+3pt,\inputheight);
+\draw(0.5\inputwidth,0) node[anchor=base]{\fakesc{#1}};
+\draw[rounded corners=3pt] (-3pt,-3pt) rectangle (\inputwidth+3pt,\inputheight+3pt);
+\end{tikzpicture}%
+}
+
+\newcommand{\TIbutpro}[1]{%
+\setlength{\inputwidth}{\widthof{#1}}%
+\setlength{\inputheight}{\heightof{ABC123}}%
+\begin{tikzpicture}[baseline=0]%
+\useasboundingbox(-3pt,0) rectangle (\inputwidth+3pt,\inputheight);
+\draw(0.5\inputwidth,0) node[anchor=base]{#1};
+\draw[rounded corners=3pt] (-3pt,-3pt) rectangle (\inputwidth+3pt,\inputheight+3pt);
+\end{tikzpicture}%
+}
+
+\newcommand{\TIright}{%
+\setlength{\inputheight}{\heightof{ABC123}}%
+\begin{tikzpicture}[baseline=0]%
+\useasboundingbox(-0.5\inputheight-3pt,0) rectangle (0.5\inputheight+3pt,\inputheight);
+\filldraw (-0.25\inputheight,0) -- (0.25\inputheight,0.5\inputheight) -- (-0.25\inputheight,\inputheight) -- cycle;
+\draw[rounded corners=3pt] (-0.5\inputheight-3pt,-3pt) rectangle (0.5\inputheight+3pt,\inputheight+3pt);
+\end{tikzpicture}%
+}
+
+\newcommand{\TIleft}{%
+\setlength{\inputheight}{\heightof{ABC123}}%
+\begin{tikzpicture}[baseline=0]%
+\useasboundingbox(-0.5\inputheight-3pt,0) rectangle (0.5\inputheight+3pt,\inputheight);
+\filldraw (0.25\inputheight,0) -- (-0.25\inputheight,0.5\inputheight) -- (0.25\inputheight,\inputheight) -- cycle;
+\draw[rounded corners=3pt] (-0.5\inputheight-3pt,-3pt) rectangle (0.5\inputheight+3pt,\inputheight+3pt);
+\end{tikzpicture}%
+}
+
+\newcommand{\TIup}{%
+\setlength{\inputheight}{\heightof{ABC123}}%
+\begin{tikzpicture}[baseline=0]%
+\useasboundingbox(-0.5\inputheight-3pt,0) rectangle (0.5\inputheight+3pt,\inputheight);
+\filldraw (-0.5\inputheight,0.25\inputheight) -- (0,0.75\inputheight) -- (0.5\inputheight,0.25\inputheight) -- cycle;
+\draw[rounded corners=3pt] (-0.5\inputheight-3pt,-3pt) rectangle (0.5\inputheight+3pt,\inputheight+3pt);
+\end{tikzpicture}%
+}
+
+\newcommand{\TIdown}{%
+\setlength{\inputheight}{\heightof{ABC123}}%
+\begin{tikzpicture}[baseline=0]%
+\useasboundingbox(-0.5\inputheight-3pt,0) rectangle (0.5\inputheight+3pt,\inputheight);
+\filldraw (-0.5\inputheight,0.75\inputheight) -- (0,0.25\inputheight) -- (0.5\inputheight,0.75\inputheight) -- cycle;
+\draw[rounded corners=3pt] (-0.5\inputheight-3pt,-3pt) rectangle (0.5\inputheight+3pt,\inputheight+3pt);
+\end{tikzpicture}%
+}
+
+\newcommand{\TI}[1]{\texttt{#1}}
+
+\newcommand{\TIsub}[1]{{\scriptsize #1}}
+\newcommand{\TIsup}[1]{{\textsuperscript{#1}}}

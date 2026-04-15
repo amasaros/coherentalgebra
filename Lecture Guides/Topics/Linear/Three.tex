@@ -1,0 +1,43 @@
+\subsection{Linear Equations in Three Variables} 
+What does an equation in three variables ``look like''?
+\begin{example}
+Sketch the graph of $x+y+z=2$
+\begin{itemize}
+\item Remember, the graph of an equation is a picture of all the \makeblank[1in] to the equation.
+\item Since there are \makeblanksmall variables in this equation, its solution is an ordered \emph{triple}, that is, \makeblanksmall values $(x,y,z)$.
+\item To graph this, we need \makeblanksmall axes. We draw the $z$-axis on a \makeblank[1in], but imagine that it ``comes out of the screen'' toward you.
+\item It is easy to see that \blanktrip, \blanktrip, and \blanktrip\ are solutions to this equation.
+\end{itemize}
+\begin{icpic}
+\useasboundingbox (-5.5,-5.5) rectangle (5.5,5.5);
+\draw (-5,5) node[anchor=north east] {$x+y+z=2$};
+\setgraphsquare{5}
+\AxesGen{\small}{\scriptsize}
+\zAxis{\small}{\scriptsize}
+\end{icpic}
+\end{example}
+The graph of a linear equation in three variables is a \makeblank[1in] in space. When a system of three equations has a unique solution, we have three \makeblank[1in] intersecting at a \makeblank[1in]:
+\begin{icpic}[x=2\linespace,y=2\linespace]
+\draw[pca!50!pcb,plane,dashed] (\project{-1}{0}{0}) -- (0,0);
+\draw[pca!50!pcc,plane,dashed] (\project{0}{-1}{0}) -- (0,0);
+\draw[pcb!50!pcc,plane,dashed] (\project{0}{0}{-1}) -- (0,0);
+\filldraw[pca,plane]  (\project{-1}{-1}{0}) -- 
+                      (\project{-1}{1}{0}) --
+										  (\project{1}{1}{0}) --
+											(\project{1}{-1}{0}) --
+											cycle;
+\filldraw[pcb,plane]  (\project{-1}{0}{-1}) --
+                      (\project{-1}{0}{1}) --
+											(\project{1}{0}{1}) --
+											(\project{1}{0}{-1}) -- 
+											cycle;
+\filldraw[pcc,plane]  (\project{0}{-1}{-1}) -- 
+                      (\project{0}{-1}{1}) -- 
+											(\project{0}{1}{1}) -- 
+											(\project{0}{1}{-1}) -- 
+											cycle;
+\draw[pca!50!pcb,plane] (\project{1}{0}{0}) -- (0,0);
+\draw[pca!50!pcc,plane] (\project{0}{1}{0}) -- (0,0);
+\draw[pcb!50!pcc,plane] (\project{0}{0}{1}) -- (0,0);
+\end{icpic}
+What could go wrong?

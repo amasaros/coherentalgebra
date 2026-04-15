@@ -1,0 +1,34 @@
+\subsection{Slope Intercept Form} 
+\begin{definition}[Intercepts]
+The \term{$x$-intercept(s)} of a graph is the point(s) at which the graph intersects the $x$-axis. The \term{$y$-intercept(s)} of a graph is the point(s) at which the graph intersects the $y-$axis.
+\end{definition}
+\begin{note}The graph of a \emph{function} can have at most one \makeblanksmall intercept, but may have many \makeblanksmall intercepts.\end{note}
+\begin{example}
+Give the $x$- and $y$-intercepts of the graph below.
+\begin{lpic}{}{4}
+\begin{scope}[xshift=4\linespace,yshift=-2\linespace]
+\setgraph{6}{8}{2}{2}
+\setspace{2}[2]
+\AxesLarge
+\draw[graph] (-3,1) parabola bend (0.5,-25/24) (4,1);
+\end{scope}
+\foreach \y/\lbl in {-1/x,-2/y} \regtextleft{10}{\y}{$\lbl$-intercept(s):};
+\end{lpic}
+\end{example}
+\begin{note}The graph of a \emph{linear} function always has exactly one $x$-intercept and exactly one $y$-intercept.\end{note}
+\begin{definition}[Slope-Intercept Form]
+A line with slope $m$ and $y$-intercept $(0,b)$ is the graph of the function $$f(x)=mx+b$$
+\end{definition}
+\begin{example}
+The function $f$ is graphed below. Give an equation of the function in slope-intercept form.
+\begin{lpic}{}{8}
+\begin{scope}[xshift=4\linespace,yshift=-5\linespace]
+\setgraph{3}{3}{2}{4}
+\setspace{1}
+\AxesLarge
+\lineslopeintercept{-1.5}{2}
+\end{scope}
+\foreach \y/\lbl in {-1/Slope:,-2/$y$-intercept:,-4/$f(x)={}$} \regtextleft{9}{\y}{\lbl};
+\end{lpic}
+\end{example}
+\begin{note}The slope-intercept form is the same as the point-slope form using the point \makeblank[0.75in].\end{note}

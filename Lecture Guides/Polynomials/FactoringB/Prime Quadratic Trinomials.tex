@@ -1,0 +1,29 @@
+\subsection{Prime Quadratic Polynomials} 
+Recall the definition of a prime number.
+\begin{definition}[Prime Number]
+An integer $p$ is \term{prime} if its only factors are $\pm 1$ and $\pm p$.
+\end{definition}
+The concept is that a prime number ``cannot be factored.'' We have a parallel definition for polynomials.
+\begin{definition}[Prime Polynomial]
+A polynomial with integer coefficients is said to be \term{prime} if it cannot be written as a product of polynomials with integer coefficients of lower degree or with smaller coefficients.
+\end{definition}
+We can always factor out $\pm 1$ from any polynomial; it is prime if we can't factor out anything else. How can we recognize a prime polynomial?
+\begin{fact}
+Assuming no greatest common factor (except $\pm 1$), the following polynomials are prime.
+\begin{itemize*}
+\item Any linear polynomial.
+\item Any quadratic polynomial with four terms for which grouping fails.
+\item Any quadratic trinomial for which the AC Method fails.
+\end{itemize*}
+\end{fact}
+\begin{example}
+Identify each polynomial as prime or not prime. If it is not prime, factor.
+\begin{lpicsplit}{}{5}
+\foreach \x/\exp in {0/{x^2-4xy+3x-12y},1/{x^2-4xy+5y^2}}
+	\regtextleft{0.5+\x*\value{fcols}+\x}{-1}{$\exp$};
+\end{lpicsplit}
+\begin{lpicsplit}{}{5}
+\foreach \x/\exp in {0/{2x^2-7x+6},1/{xy-5x-3y+7}}
+	\regtextleft{0.5+\x*\value{fcols}+\x}{-1}{$\exp$};
+\end{lpicsplit}
+\end{example}

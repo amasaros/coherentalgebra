@@ -1,0 +1,32 @@
+\subsection{Graph of a Function} 
+We can recognize the graph of a function.
+\begin{itemize}
+\item To be a function, we must have each \makeblanksmall-coordinate occur only once.
+\item On a graph, the points with the same \makeblanksmall-coordinate form a \makeblank[1in] line.
+\item So in the graph of a function, each \makeblank crosses the graph \makeblank.
+\item This is called the \makeblank.
+\end{itemize}
+\begin{example}
+Which of the relations graphed below is a function?
+\begin{lpic}{}{12}
+\setgraphsquare{5}
+\begin{scope}[xshift=3\linespace,yshift=-3\linespace,scale=0.5]
+\AxesGen{\small}{\tiny}
+\draw[graphend] (1,1) circle ({sqrt(10)});
+\draw[graphend] (5,5) node[anchor=north east]{$R$};
+\end{scope}
+\begin{scope}[xshift=3\linespace,yshift=-9\linespace,scale=0.5]
+\AxesGen{\small}{\tiny}
+\draw[graph,domain=-3:3] plot (\x,\x*\x*\x/3-4*\x/3);
+\draw[graphend] (5,5) node[anchor=north east]{$S$};
+\end{scope}
+%\begin{scope}[xshift=3\linespace,yshift=-15\linespace,scale=0.5]
+%\AxesGen{\small}{\tiny}
+%\end{scope}
+\end{lpic}
+\end{example}
+%We have two ways to describe the graph of a function:
+%\begin{itemize}
+%\item The graph of the relation $f$
+%\item The graph of the equation $y=f(x)$. This means that, for each point $(x,y)$ on the graph, \makeblank.
+%\end{itemize}

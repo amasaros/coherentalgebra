@@ -1,0 +1,45 @@
+\subsection{Odd Radicals} 
+Since odd power functions are \makeblank[1.5in], they have an \makeblank[1in] function. We need new notation to describe this function.
+\begin{definition}[Radical Function (odd index)]
+For a positive odd integer $p\geq 3$, the \term{$p$th root function}
+\begin{center}$f(x)=\sqrt[p]{x}$\end{center}
+is defined to be the function such that $f\inv(x)=x^p$.
+
+In other words, $\sqrt[p]{x}$ is the unique real number such that $\left(\sqrt[p]{x}\right)^p=x$.
+
+In this notation, the symbol $\sqrt{\ }$ is called a \term{radical}. The number $p$ is called the \term{index}, and the number $x$ is called the \term{argument}.
+\end{definition}
+\begin{example}
+Find each root by rewriting in terms of a power and using trial and error.
+\begin{lpic}{}{3}
+\foreach \y/\l/\p/\x in {1/a/3/27,2/b/5/32,3/c/5/-3125}{
+	\regtextright{1}{-\y}{\l. };
+	\regtextleft{1}{-\y}{$\sqrt[\p]{\x}$};
+}
+\end{lpic}
+\end{example}
+Often, the root is not an integer. (In fact, roots are frequently \makeblank[1.25in].) In this case, we have several options.
+\begin{itemize*}
+\item Leave the root as-is.
+\item Simplify the root (we will discuss this later).
+\item Get a decimal approximation using a calculator.
+\item Get a rough approximation using trial and error.
+\end{itemize*}
+\begin{example}
+Use trial and error to determine what two consecutive integers each root is between.
+\begin{lpic}{}{2}
+\foreach \y/\l/\p/\x in {1/a/3/45,2/b/5/-18}{
+	\regtextright{1}{-\y}{\l. };
+	\regtextleft{1}{-\y}{$\sqrt[\p]{\x}$};
+	\regtext{2*\value{cols}-3.5}{-\y}{${}<\sqrt[\p]{\x}<{}$};
+}
+\end{lpic}
+\end{example}
+\begin{fact}[Domain and Range of a Radical Function (odd index)]
+If $f(x)=\sqrt[p]{x}$ and $f\inv(x)=x^p$, we know that:
+
+\begin{itemize}
+\item $\dom f\inv=\makeblanksmall$, so $\rng f=\makeblanksmall$
+\item $\rng f\inv=\makeblanksmall$, so $\dom f=\makeblanksmall$
+\end{itemize}
+\end{fact}

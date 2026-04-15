@@ -1,0 +1,24 @@
+\subsection{Rational Powers with Even Denominator} 
+Recall that if $q$ is even, $x^{p/q}$, has domain and range \makeblank. That means that:
+\begin{itemize}
+\item $X^{p/q}=c$ has \makeblank when $c<0$.
+\item If an apparent solution to $X^{p/q}=c$ makes $X$ negative, this solution is \makeblank.
+\end{itemize}
+\begin{example}
+Solve each equation, or conclude that it has no solution.
+\begin{lpicvsplit}{2}{8}
+\foreach \x/\eqn in {0/{3x^{3/2}-9=-3},1/{(2x-1)^{3/4}=-8}}
+	\regtextcolc{\x}{-1}{$\eqn$};
+\regtextcoll{0}{-7}{Check:};
+\end{lpicvsplit}
+\end{example}
+\begin{fact}[Summary of Rules for Equations with Rational Powers]
+Let $\frac{p}{q}$ be a fraction written in lowest terms (so $p$ and $q$ have no common factors).
+\begin{itemize}
+\item If $p,q$ are both odd, $X^{p/q}=c$ is equivalent to $X=c^{q/p}$.
+\item If $p$ or $q$ are even, $X^{p/q}=c$ has no solutions if $c<0$.
+\item If $p$ is even, $q$ is odd, and $c\geq 0$, $X^{p/q}=c$ is equivalent to $X=c^{q/p}$ or $X=-c^{q/p}$. There is no risk of extraneous solutions.
+\item If $p$ is odd, $q$ is even, and $c\geq 0$, solutions to $X^{p/q}=c$ are also solutions to $X=c^{q/p}$, but we must check for extraneous solutions.
+\end{itemize}
+There isn't a case where $p$ and $q$ are both even, since then they would have common factor \makeblanksmall.
+\end{fact}

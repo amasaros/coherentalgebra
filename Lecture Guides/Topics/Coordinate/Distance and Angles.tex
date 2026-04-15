@@ -1,0 +1,32 @@
+\subsection{Distance and Angles} 
+We classify triangles based on their largest angle.
+\begin{definition}[Classification of Triangles]
+\begin{itemize} 
+\item An \term{obtuse triangle} is one in which the largest angle is \makeblank[1in], that is, larger than a right angle (measures \makeblank[1in] 90\degree).
+\item A \term{right triangle} is one in which the largest angle is a \makeblank[1in] angle (measures \makeblank[1in] 90\degree).
+\item An \term{acute triangle} is one in which the largest angle is \makeblank[1in], that is, smaller than a right angle (measures \makeblank[1in] 90\degree).
+\end{itemize}
+\end{definition}
+The largest side of a triangle is always opposite the largest angle. Further, for two triangles $\triangle ABC$ and $\triangle A'B'C'$, if all sides are the same length except $\overline{AC}$ is \makeblank[.75in] than $\overline{A'C'}$, then $\angle B$ is \makeblank[.75in] than $\angle B'$ (as shown in this figure):
+\begin{icpic}
+\draw[geom] (-6,0) -- (-2,0) -- (-6,2) -- cycle;
+\draw[geom] (0,0) -- (4,0) -- (60:2) -- cycle;
+\foreach \x/\lbl in {-6/B,-2/A,0/B',4/A'} \fill (\x,0) circle (0.1) node[anchor=north]{$\lbl$};
+\fill (-6,2) circle (0.1) node[anchor=south]{$C$};
+\fill (60:2) circle (0.1) node[anchor=south]{$C'$};
+\end{icpic}
+Using this fact, we can determine the type of triangle by looking at the side lengths and comparing with the pythagorean theorem.
+\begin{displaybox}
+Let $a$, $b$, and $c$ be the side lengths of a triangle, labeled so that $a\leq b\leq c$ ($c$ is the largest side length). Then:
+\begin{itemize}
+\item If $c^2<a^2+b^2$ the triangle is \makeblank[1in]
+\item If $c^2=a^2+b^2$ the triangle is \makeblank[1in]
+\item If $c^2>a^2+b^2$ the triangle is \makeblank[1in]
+\end{itemize}
+\end{displaybox}
+\begin{example}
+Let $A=(-2,-3)$, $B=(1,1)$, and $C=(13,-4)$. Is this triangle right, acute, or obtuse?
+\begin{lpic}{}{5}
+\foreach \y/\lbl in {-1/AB,-2/BC,-3/AC} \regtextleft{1}{\y}{$\lbl={}$};
+\end{lpic}
+\end{example}

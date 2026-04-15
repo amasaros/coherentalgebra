@@ -1,0 +1,40 @@
+\subsection{Horizontal Line Test} 
+On a graph, the points with the same $y$-coordinate lie on the same \makeblank[1.25in] line. This gives us a way to determine whether a graph represents a one-to-one relation or not.
+\begin{procedure}{Horizontal Line Test}
+We can determine whether the graph represents a one-to-one relation using the \term{horizontal line test}.
+\begin{itemize}
+\item If a single horizontal line crosses the graph more than once, the graph does \emph{not} represent aone-to-one relation.
+\item If there is no such horizontal line, then the graph \emph{does} represent a\linebreak one-to-one relation.
+\end{itemize}
+\end{procedure}
+\begin{example}
+For each graph below, determine whether the relation shown is one-to-one. If the relation is not one-to-one, show a horizontal line that passes through the graph twice.
+\begin{center}
+\begin{tikzpicture}
+\useasboundingbox (-0.25\linewidth,3\linespace) rectangle (0.25\linewidth,-10\linespace);
+\foreach \x/\y in {-1/0,1/0,-1/1,1/1} {
+	\begin{scope}[xshift=\x*0.25\linewidth,yshift=-\y*7\linespace]
+	\draw[axis] (-3,0) -- (3,0) node[anchor=south]{$x$};
+	\draw[axis] (0,-3) -- (0,3) node[anchor=east]{$y$};
+	\regtext{3}{-3}{\makeblank[1in]};
+	\end{scope}
+}
+\begin{scope}[xshift=-0.25\linewidth,yshift=0]
+% one-to-one function
+\draw[graph,domain=-2:2.5] plot (\x,\x*\x*\x/6+\x/6-5/6);
+\end{scope}
+\begin{scope}[xshift=0.25\linewidth,yshift=0]
+% one-to-one, not function
+\draw[graph,domain=-2:1.25] plot (3.5/4*\x*\x-1,\x+1.25);
+\end{scope}
+\begin{scope}[xshift=-0.25\linewidth,yshift=-7\linespace]
+% neither
+\draw[domain=0:360,smooth,graphend] plot (1.5*sin \x*cos \x+1,1.5*cos \x+0.5);
+\end{scope}
+\begin{scope}[xshift=0.25\linewidth,yshift=-7\linespace]
+% function, not one-to-one
+\draw[graph] (-2.5,-2) -- (-1,2) -- (2,-1) -- (2.5,1);
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\end{example}

@@ -1,0 +1,19 @@
+\subsection{Transforming a Graph: Alternate Method} 
+An alternate method of transforming a graph involves looking at the \makeblank[1in] and \makeblank[1in] of the original function. You might find this method helpful if you sometimes lose track.
+\begin{example}
+Below is the graph of $y=f(x)$. Sketch the graph of $y=\frac{1}{2} f\left(-\frac{1}{3}x+2\right)-3$
+\begin{icpic}[x=.5\linespace,y=.5\linespace]
+\useasboundingbox (-7,-5) rectangle (19,7);
+\setgraph{7}{19}{5}{7}
+\GraphSmall
+\draw[graphend] (-4,2) -- (-1,6) -- (3,4) -- (4,-2);
+\draw[graphend] (3,4) node[anchor=west]{$y=f(x)$};
+\end{icpic}
+\begin{cpic}{}{6}
+	\draw (-5,-2) -- (5,-2);
+	\foreach \x in {-3,0,3}
+		\draw (\x,-1) -- (\x,-6);
+	\foreach \x/\lbl in {-4/$x$,-1.5/input,1.5/output,4/$y$}
+		\regtext{\x}{-2}{\lbl};
+\end{cpic}
+\end{example}

@@ -1,0 +1,25 @@
+\subsection{The Problem} 
+Consider the polynomial
+\[
+x^5-3x^2-1
+\]
+It has two possible rational roots, \makeblank, and we can easily see that neither is a root:
+\begin{lpic}{}{2}
+\end{lpic}
+But we can also use Descartes's Rule of Signs to analyze the roots:
+\begin{itemize}
+\item The polynomial has \makeblanksmall sign change, so it has \makeblanksmall positive root.
+\item If we substitute $-x$ we get \makeblank which has \makeblanksmall sign changes, so the polynomial has \makeblanksmall negative roots.
+\end{itemize}
+So this polynomial has \makeblanksmall real root (and it must have \makeblank[1.5in] imaginary roots). If we have a computer generate a graph of the polynomial for us, we can see a zero:
+\begin{icpic}
+\setgraphsmall
+\GraphLarge
+\draw[graph,domain=-.8976:1.6828,samples=100] plot (\x,{(\x)^5-3*(\x)^2-1});
+\end{icpic}
+It looks like it's somewhere between \makeblanksmall and \makeblanksmall.
+\begin{itemize}
+\item The computer draws the graph by plotting lots of points and connecting them.
+\item How do we know that there's \emph{really} a zero there?
+\item How can we know what it is?
+\end{itemize}

@@ -1,0 +1,26 @@
+\subsection{Solving Polynomial Inequalities in Factored Form}
+The method of solving a polynomial inequality is based on analyzing the signs.
+\begin{example}
+Solve the polynomial inequality
+\[
+\left(x-4\right)\left(2x+3\right)\left(x+5\right)\left(3-x\right)<0
+\]
+First, we set each factor equal to zero to find the cut-off points.
+\begin{lpic}{}{2}
+\end{lpic}
+Mark these points (in order, but spacing doesn't matter) on a number line, and analyze each factor's sign. This is commonly done with a diagram like this one.
+\begin{cpic}{}{8}
+\foreach \x/\lbl in {-3/{$x-4$},-4/{$2x+3$},-5/{$x+5$},-6/{$3-x$},-8/{Product}}
+	\regtextright{-7.5}{\x}{\lbl};
+\draw[style=axis] (-7.5,-1) -- (7.5,-1);
+\foreach \x in {-4.5,-1.5,1.5,4.5} \draw[style=tick] (\x,-.75) -- (\x,-1.25);
+\end{cpic}
+We are looking for the set where the polynomial is \makeblank 0, so where the product is \makeblank. So the solution set is
+\[
+\left\{x\suchthat\htstrut\makeblank[1in]\mbox{ or }\makeblank[1in]\mbox{ or }\makeblank[1in]\right\}
+\]
+or in interval notation
+\[
+\makeblank[1in]\cup\makeblank[1in]\cup\makeblank[1in]
+\]
+\end{example}

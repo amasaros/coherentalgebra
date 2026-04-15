@@ -1,0 +1,38 @@
+\subsection{Introduction to Sets} 
+\begin{definition}[Set]
+A \term{set} is a collection of objects. If an object is contained in the collection, we say it is an \term{element} of the set.
+\end{definition}
+Notation:
+\begin{itemize}
+\item We use capital letters ($A$, $B$, $C$, etc.) to represent sets.
+\item We typically use lower-case letters ($x$, $y$, $z$, etc.) to represent objects.
+\item To say that an object $x$ is an element of a set $A$, we write $x\in A$.
+\item To say that an object $x$ is not an element of a set $A$, we write $x\notin A$.
+\end{itemize}
+\begin{definition}[Roster Notation]
+The simplest way to represent a set is \term{Roster Notation}, in which we list the elements of the set inside curly braces, separated by commas.
+\end{definition}
+\begin{example}
+$A=\Set{1,2,3}$ means that $A$ is the set containing the numbers 1, 2, and 3.
+\end{example}
+If there are a lot of elements in a set, we can write ``...'' to indicate a pattern continues.
+\begin{example}
+$B=\Set{1,2,...,20}$ means that $B$ is the set containing the \makeblank[1in] numbers \makeblank[0.5in] through \makeblank[0.5in].
+\end{example}
+\begin{example}
+$C=\Set{0,2,4,...,100}$ means that $C$ is the set containing the \makeblank[1in] numbers \makeblank[0.5in] through \makeblank[0.5in].
+\end{example}
+\noindent We can also indicate that a pattern continues forever.
+\begin{example}
+$D=\Set{1,3,5,...}$ means the set of all \makeblank[2.25in].
+\end{example}
+\begin{example}
+Let $A=\Set{1,2,3,4,5}$, $B=\Set{-3,-1,1,3}$, and $C=\Set{3,5,7,9,11,...}$. Fill in the blanks below with $\in$ or $\notin$ as appropriate.
+\begin{colparts}{3}
+\foreach \x/\y/\xlbl/\ylbl in {-1/0/-1/A,0/0/2/A,1/0/3/A,
+                               -1/1/-1/B,0/1/2/B,1/1/3/B,
+															 -1/2/-1/C,0/2/2/C,1/2/3/C} {
+	\draw (\x,-\y) node[anchor=base]{$\xlbl\;\makeblanksmall\;\ylbl$};
+	}
+\end{colparts}
+\end{example}

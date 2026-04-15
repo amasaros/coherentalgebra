@@ -1,0 +1,36 @@
+\subsection{Special Forms: Perfect Squares} 
+To help us to factor, there are certain special products that it is worthwhile to memorize. The first form we memorize is the perfect square of a binomial.\lbr
+To see these forms, find each product using the FOIL shortcut.
+\begin{lpic}{}{2}
+\regtextleft{0.5}{-1}{$(A+B)^2={}$};
+\regtextleft{0.5}{-2}{$(A-B)^2={}$};
+\end{lpic}
+\begin{fact}[Recognizing a Perfect Square]
+A trinomial is a \term{perfect square trinomial} when:
+\begin{itemize*}
+\item Two terms are positive perfect square monomials (\makeblank[1in] a square number, and \makeblank[1in] powers of variables) $+A^2$ and $+B^2$.
+\item The third term is $+2AB$ or $-2AB$.
+\end{itemize*}
+\end{fact}
+\begin{example}
+For each polynomial below:
+\begin{enumerate*}\setabc
+\item Determine whether two terms are perfect squares.
+\item Determine whether the trinomial is a perfect square.
+\item If it is, factor it as such.
+\end{enumerate*}
+\begin{lpicsplit}{}{8}
+\foreach \x/\exp in {0/4x^4-12x^2+9,1/x^2+8xy+16y^2} {
+	\regtextleft{0.5+\x*\value{fcols}+\x}{-1}{$\exp$};
+	\foreach \y/\letter in {-2/a,-3/b,-4/c}
+		\regtextright{1+\x*\value{fcols}+\x}{\y}{\letter.};
+}
+\end{lpicsplit}
+\begin{lpicsplit}{}{4}
+\foreach \x/\exp in {1/x^2-6x-9,0/x^2-5xy+4y^2} {
+	\regtextleft{0.5+\x*\value{fcols}+\x}{-1}{$\exp$};
+	\foreach \y/\letter in {-2/a,-3/b,-4/c}
+		\regtextright{1+\x*\value{fcols}+\x}{\y}{\letter.};
+}
+\end{lpicsplit}
+\end{example}

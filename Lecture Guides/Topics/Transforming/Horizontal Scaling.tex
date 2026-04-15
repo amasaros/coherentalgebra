@@ -1,0 +1,33 @@
+\subsection{Horizontal Scaling}
+To scale a point horizontally by a factor of $c$, we multiply its $x$-coordinate by $c$.
+\begin{example}
+In the figure below, the graph of:
+\begin{itemize}
+\item $h(x)$ is obtained by scaling the graph of $f(x)$ horizontally by a factor of 3
+\item $k(x)$ is obtained scaling the graph of $f(x)$ horizontally by a factor of $\frac{1}{2}$
+\end{itemize}
+Give expressions for $h(x)$ and $k(x)$ in terms of $f(x)$.
+\begin{icpic}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox (-12,-5) rectangle (12,5);
+\setgraph{12}{12}{5}{5}
+\GraphSmall
+\foreach \x/\lbl/\col in {1/f/colf,3/h/colg,.5/k/colh} {
+	\draw[thick,\col] (-2*\x,-2) -- (2*\x,4) -- (4*\x,1);
+}
+\draw[colf] (3.3,2) node[anchor=west,font=\small] {$y=f(x)$};
+\draw[colh] (.6,3) node[anchor=east,font=\small] {$y=k(x)$};
+\draw[colg] (9,2.5) node[anchor=west,font=\small] {$y=h(x)$};
+\end{icpic}
+\funtable{3}{f}{h}{k}
+\end{example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{displaybox}[Horizontal Scaling]
+For any number $c>0$:
+\begin{itemize}
+\item If $g(x)=f(\frac{1}{c}x)$, the graph of $g$ is the same as the graph of $f$, scaled horizontally by a factor of \makeblanksmall.
+\item If $g(x)=f(cx)$, the graph of $g$ is the same as the graph of $f$, scaled horizontally by a factor of \makeblanksmall.
+\end{itemize}
+\end{displaybox}
+\begin{note}
+The scale factor is the \makeblank[1.5in] of the coefficient of $x$.
+\end{note}

@@ -1,0 +1,41 @@
+\subsection{Larger Linear Systems} 
+We have already studied systems of \makeblanksmall linear equations with \makeblanksmall variables. We can add more equations and more variables.
+\begin{itemize}
+\item If a system has more equations than variables, the system is \term{overdetermined}, and will typically have \makeblank[1in] solutions. An overdetermined system has \makeblank[1.5in] information.
+\end{itemize}
+\begin{example}
+Consider the system
+\begin{syspic}{5}
+\draw (-.5\textwidth,0) node{%
+$\begin{systemL}
+y=x-2&\\
+y=-\frac{1}{2}x+1&\\
+y=2x-1&
+\end{systemL}$};
+\draw[graph] (-3,-5) -- (5,3);
+\draw[graph] (-2,5) -- (5,3/2);
+\draw[graph] (-2,-5) -- (3,5);
+\end{syspic}
+Every \makeblank[1in] of equations has a shared solution, but there is no solution shared by \makeblank[1.5in].
+\end{example}
+\begin{itemize}
+\item If a system has fewer equations than variables, the system is \term{underdetermined}, and will typically have \makeblank[1in] solutions. An underdetermined system has \makeblank[1.5in] information.
+\end{itemize}
+\begin{example}
+Consider the system
+\begin{syspic}{5}
+\draw (-.5\textwidth,0) node{%
+$\begin{systemL}
+5x+2y=8&
+\end{systemL}$};
+\draw[graph] (-0.4,5) -- (3.6,-5);
+\end{syspic}
+Every point on the \makeblank[1in] is a solution to this ``system.''
+\end{example}
+\begin{itemize}
+\item To have a unique solution, we must typically have a \term{balanced} system, in which the number of equations is \makeblank[1in] the number of variables.
+\end{itemize}
+In the rest of this section, we will concern ourselves with systems of \makeblanksmall linear equations in \makeblanksmall variables.
+\begin{note}
+The ``typically'' refers to the fact that well chosen systems of each type may behave differently. If we write down a system at random, it will almost certainly have the typical behavior.
+\end{note}

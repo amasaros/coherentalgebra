@@ -1,0 +1,32 @@
+\subsection{Factoring with Rational Roots}
+\begin{example}
+Use the rational roots theorem to find at least one factor of the polynomial
+\[
+4x^4-8x^3-7x^2+11x+6
+\]
+First, we find all possible roots.
+\begin{itemize}
+\item $a_n=\makeblank[.5in]$, so the possible values of $q$ are \makeblank
+\item $a_0=\makeblank[.5in]$, so the possible values of $p$ are \makeblank
+\end{itemize}
+\begin{lpic}{}{4}
+\foreach \y/\val in {0/1,1/2,2/4}
+  \regtextleft{1}{-2-\y}{$q=\pm\val$};
+\foreach \x/\val in {0/1,1/2,2/3,3/6}
+  \regtext{3+\value{cols}/4-3/8+\x*\value{cols}/2-3*\x/4}{-1}{$p=\pm\val$};
+\end{lpic}
+The possible rational roots are \makeblank[3in]. We will try numbers from this list until we find one that is a factor. The easiest way is to use synthetic division.
+\begin{cpic}{}{7}
+\foreach \y in {0,-4} {
+	\synthdiv{-6}{\y}{5};
+	\foreach \x/\lbl in {0/4,1/-8,2/-7,3/11,4/6}
+		\regtext{-3.5+2*\x}{\y-1}{$\lbl$};
+}
+\end{cpic}
+We got lucky and found a factor in only two tries.
+\[
+4x^4-8x^3-7x^2+11x+6=\Bigl(\makeblank[1in]\Bigr)\Bigl(\makeblank\Bigr)
+\]
+Notice that the degree of each factor is \makeblank[1in] than the degree of the original. The new polynomials are ``\makeblank[1in].''
+\end{example}
+Note: We could have ended up with different factors. See what happens if you try $r=-1$ instead of $r=2$.

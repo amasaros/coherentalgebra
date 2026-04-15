@@ -1,0 +1,31 @@
+\subsection{Using a Calculator to Simplify} 
+Sometimes, when we simplify a root, we need to search many possible factors.
+\begin{example}Simplify $\sqrt{108}$.
+\begin{lpic}{}{8}
+\foreach \y/\ys/\q/\e in {1/1/108/=,
+													2/4/27/=,
+													3/9/12/=,
+													4/16/6.75/=,
+													5/25/4.32/=,
+													6/36/3/=,
+													7/49/2.204/\approx,
+													8/64/1.6875/=} {
+	\regtextleft{0.25}{-\y}{$\y^2=\ys$};
+	\regtextleft{4.25}{-\y}{$108\div\ys\e\q$};
+}
+\regtextleft{11.25}{-1}{$\sqrt{108}={}$};
+\end{lpic}
+\end{example}
+We can use a computer to do the repetitive arithmetic. The procedure here uses the TI-84 calculator, but it can be done with many other calculators or with a computer.
+\begin{procedure}{Simplifying Roots with the TI-84}
+\begin{enumerate*}
+\item Press \TIbut{y=} to access the function entry screen.
+\item Enter \TI{X\TIsup{p}} as \TI{Y\TIsub{1}} and \TI{\#\#/X\TIsup{p}} as \TI{Y\TIsub{2}}, where \TI{\#\#} is the number whose root you want to simplify, and \TI{p} is the index.
+\item Press \TIbut{2nd}\ \TIbut{graph} to access the ``Table'' feature.
+\item The \TI{Y\TIsub{1}} column shows the perfect $p$th powers, the \TI{X} column shows the $p$th root, and the \TI{Y\TIsub{2}} column shows the remaining factor. You are looking for the largest possible \TI{X} which gives an integer in the \TI{Y\TIsub{2}} column. You know you're done searching when the number in the \TI{Y\TIsub{2}} is 2 or less.
+\end{enumerate*}
+\end{procedure}
+\begin{example} Simplify $\sqrt[3]{112}$.
+\begin{lpic}{}{3}
+\end{lpic}
+\end{example}

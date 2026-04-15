@@ -1,0 +1,53 @@
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.geometric}
+
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+%To put graphics in layers:
+%\begin{pgfonlayer}{[layer name]}
+%\end{pgfonlayer}
+%Cannot be used with "main" which is the default
+
+\definecolor{npblue}{rgb}{.643,.867,.929}
+\definecolor{ltred}{rgb}{.941,.388,.604}
+\definecolor{faded}{gray}{.333}
+\definecolor{pca}{rgb}{1,0,0}
+\definecolor{pcb}{rgb}{0,1,0}
+\definecolor{pcc}{rgb}{0,0,1}
+\definecolor{colf}{rgb}{0,0,1}
+\definecolor{colg}{rgb}{.9,0,0}
+\definecolor{colh}{rgb}{0,.5,0}
+\definecolor{colk}{rgb}{.5,.25,0}
+
+
+\tikzstyle{every picture}=[x=\linespace,y=\linespace]
+\tikzstyle{background grid}=[npblue,step=\linespace]
+
+\tikzstyle{graph}=[blue,thick,<->]
+\tikzstyle{graphshade}=[blue,opacity=0.2]
+\tikzstyle{asymp}=[red,dashed,thick]
+\tikzstyle{axis}=[faded,semithick,<->]
+\tikzstyle{tick}=[faded,thin]
+\tikzstyle{geom}=[thick]
+\tikzstyle{graphend}=[blue,thick]
+\tikzstyle{dotfull}=[blue,thick,fill=blue]
+\tikzstyle{dotempty}=[blue,thick,fill=white]
+\tikzstyle{plane}=[thick,fill opacity=0.2]
+\tikzstyle{hidden}=[opacity=0,fill opacity=0]
+
+% Flow chart nodes
+\tikzstyle{chartnode}=[draw,thick,align=center,minimum width=1in,minimum height=0.5in,font=\footnotesize]
+\tikzstyle{action}=[chartnode,minimum width=1in,minimum height=0.5in,rectangle,text width=1in]
+\tikzstyle{choice}=[chartnode,minimum width=1.5in,diamond,text width=0.75in,inner sep=0pt]
+\tikzstyle{endpoint}=[chartnode,circle,text width=0.75in]
+
+%flow chart arrow
+\tikzstyle{fcarr}=[very thick,->]
+\tikzstyle{arrlabel}=[font=\scriptsize]
+\tikzstyle{arrlabeldn}=[rotate=-90,anchor=south west,arrlabel]
+\tikzstyle{arrlabelrt}=[anchor=south west,arrlabel]

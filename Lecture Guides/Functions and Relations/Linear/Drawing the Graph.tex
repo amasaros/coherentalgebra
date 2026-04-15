@@ -1,0 +1,28 @@
+\subsection{Graphing a Linear Function}
+To draw the graph of a linear function, we must plot 2 points on the line. In general, to draw the graph, we prefer points with \makeblank[1.5in] coordinates.
+\begin{procedure}{Graphing a Linear Function}
+To graph a linear function given in point-slope or slope-intercept form, use the following steps.
+\begin{enumerate}[1.]
+\item Find one point on the line with integer coordinates.
+\item By looking at the denominator of the slope, find another point with integer coordinates.
+\end{enumerate}
+\end{procedure}
+When using this procedure, we will use the following facts.
+\begin{fact}
+If we multiply a fraction $\frac{n}{d}$ by an integer multiple of $d$, the result will be an 
+integer. For any integer $d$, the number $0$ is always a multiple of $d$.
+\end{fact}
+\begin{note}There are many other methods for graphing linear functions, usually making use of our understanding of the slope. We use this procedure to help prepare us for techniques we'll use to graph more complicated functions later.\end{note}
+\begin{example}
+Let $f(x)=\frac{5}{3}(x+1)+2$. Fill in the table to show three integer points on the graph of $f$. Use two of those points to sketch the graph of $f$, then confirm that the third point is also on the graph.
+\begin{lpic}{}{10}
+\begin{scope}[xshift=\value{cols}*2\linespace-5\linespace,yshift=-7\linespace]
+\setgraph{8}{4}{2}{6}
+\setspace{1}
+\AxesLarge
+\end{scope}
+\draw (0,-2) -- (8,-2);
+\draw (3,-1) -- (3,-5);
+\foreach \x/\lbl in {1.5/x,5.5/y=f(x)} \regtext{\x}{-2}{$\lbl$};
+\end{lpic}
+\end{example}

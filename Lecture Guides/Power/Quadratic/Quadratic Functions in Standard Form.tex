@@ -1,0 +1,30 @@
+\subsection{Graphing Quadratic Functions in Standard Form} 
+\begin{definition}
+A quadratic function written as $$f(x)=ax^2+bx+c$$ where $a\neq 0$, $b$, and $c$ are real numbers is said to be written in \term{standard form}.
+\end{definition}
+To graph a quadratic function given in standard form, we will use the following procedure.
+\begin{procedure}{Graphing a Quadratic Function in Standard Form}
+\begin{enumerate*}
+\item Create a table of values showing (integer) pairs $x$ and $y=f(x)$. Include enough $x$ values that $y$ values both increase and decrease.
+\item If possible, find two pairs with the same $y$-coordinate. The axis of symmetry lies halfway between their $x$-coordinates.
+\item Find the coordinates of the vertex, if it doesn't have integer coordinates.
+\item Plot the vertex, along with at least two points on each side of the axis of symmetry.
+\item Draw a parabola passing through the two plotted points.
+\end{enumerate*}
+\end{procedure}
+This process will require a certain amount of trial and error to find ``appropriate'' points! (We will have a more efficient method once we know more about quadratic functions.)\
+\begin{example}
+Fill in the table below. Then, sketch the graph of $f(x)=x^2-4x+3$.
+\begin{lpic}{}{10}
+\GraphIn{4}{}
+\regtext{1}{-1}{$x$};
+\regtextleft{3}{-1}{$y=f(x)$};
+\draw (0,-1) -- (6,-1);
+\draw (2,0) -- (2,-10);
+\foreach \x in {-4,...,4} {
+	\regtext{1}{-6-\x}{$\x$};
+}
+\regtextleft{7}{-2}{Vertex:};
+\regtextleft{7}{-1}{AoS:};
+\end{lpic}
+\end{example}

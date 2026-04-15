@@ -1,0 +1,20 @@
+\subsection{Piecewise Functions} 
+Sometimes, a function can't be easily modeled by a single formula.
+\begin{example}
+A store sells flour in bulk for \$3 per pound. If a customer buys at least 5 pounds, the bulk discount kicks in, and the price drops to \$2.50 per pound. Write a function $P(x)$ describing the price of $x$ pounds of flour.
+\begin{lpic}{}{8}
+\end{lpic}
+\end{example}
+To evaluate a piecewise-defined function:
+\begin{itemize}
+\item Figure out which range the input variable is in.
+\item Use the formula designated for that range.
+\item If none of the ranges contain the input value, the input value is not in the domain, so the function is undefined.
+\end{itemize}
+\begin{example}
+Let $f(x)=\pw{3x&-5&<&x&<&-3\\-\tfrac{1}{2}x^2&-3&<&x&<&3\\3&3&\leq&x&<&4\\x&x&\geq&4}$. Find:
+\begin{lpic}{}{5}
+\foreach \y/\x in {-1/-4,-2/2,-3/3.5,-4/5,-5/-3}
+	\regtextright{2}{\y}{$f(\x)$};
+\end{lpic}
+\end{example}

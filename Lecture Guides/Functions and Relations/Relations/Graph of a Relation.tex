@@ -1,0 +1,64 @@
+\subsection{Graph of a Relation} 
+It is useful to visualize a relation in terms of its \term{graph}.
+\begin{definition}[Graph of a Relation]
+The \term{graph} of a relation is a plot of all ordered pairs in the relation, represented in a coordinate plane. In the standard representation, the domain represented by the horizontal (``$x$'') axis, and the range is represented by the vertical (``$y$'') axis.
+\end{definition}
+%\begin{note}For this class, we will consider relations in which the domain and range both contain only real numbers, so it will always make sense to represent relations on a two-dimensional $xy$ coordinate plane.
+%\end{note}
+\begin{example}
+Let $R=\Set{(2,4), (-3,5), (-4,0), (1,-1), (0,-2)}$.\\Sketch the graph of $R$ on the axes provided.\\
+\begin{tikzpicture}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox(-\linewidth+2.75\linespace,-2.75\linespace) rectangle (2.75\linespace,2.75\linespace-6ex);
+\setgraph{5}{5}{5}{5}
+\GraphOnes{}{}
+\end{tikzpicture}
+\end{example}
+\begin{example}
+The graph of the relation $S$ is shown.\\
+Give $S$ in roster notation.\\
+$S=\Set{\makeblank[3in]}$\\
+\begin{tikzpicture}[x=0.5\linespace,y=0.5\linespace]
+\useasboundingbox(-\linewidth+2.75\linespace,-2.75\linespace) rectangle (2.75\linespace,2.75\linespace-9ex);
+\setgraph{5}{5}{5}{5}
+\GraphOnes{}{}
+\foreach \x/\y in {0/0, -2/-3, 0/1, -2/0, 1/-1} \draw[dotfull] (\x,\y) circle (\dotsize);
+\end{tikzpicture}
+\end{example}
+Graphs can show relations which contain \makeblank[1.5in] many points.
+\begin{example}The graph of the relation $T$ is shown below.
+
+\noindent
+\begin{tikzpicture}
+\setgraph{5}{5}{5}{5}
+\GraphOnes{}{}
+\draw[graphend] (-4,-1) -- (-1,2);
+\draw[domain=-1:1,graphend] plot (\x,\x*\x);
+\draw[graphend] (-1,-3) -- (5,0);
+\foreach \x/\y/\col in {-4/-1/dotfull,
+												-1/2/dotfull,
+												-1/1/dotfull,
+												1/1/dotfull,
+												-1/-3/dotempty,
+												5/0/dotempty}
+												\draw[\col] (\x,\y) circle (\dotsize);
+%%%%%
+\draw (-\linewidth+0.5\graphwidth+0.75em,0.5\graphht-0.5\linespace) 
+	node[anchor=north west,
+		%draw=black,
+		text width=\linewidth-\graphwidth-1em,
+		yshift=\itemsep+\topsep,
+		inner sep=0pt]{%
+		\begin{enumerate}[a.] 
+			\item Fill in each blank to make a true statement.\lbr%
+			$\makeblanksmall\rel{T}\makeblanksmall$\lbr
+			$\makeblanksmall\rel{T}\makeblanksmall$\lbr
+			$\makeblanksmall\rel{T}\makeblanksmall$
+			\item For each statement below, determine whether it is true or false.\lbr
+			$-1\rel{T}2$ \makeblanksmall\hfill
+			$-1\rel{T}-1$ \makeblanksmall\lbr
+			$-1\rel{T}1$ \makeblanksmall\hfill
+			$-1\rel{T}-3$ \makeblanksmall
+		\end{enumerate}%
+		};
+\end{tikzpicture}
+\end{example}

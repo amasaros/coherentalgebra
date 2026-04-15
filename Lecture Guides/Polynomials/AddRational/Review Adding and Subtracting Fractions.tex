@@ -1,0 +1,42 @@
+\subsection{Review: Adding and Subtracting Fractions} 
+We can add fractions with the same \makeblank[1.5in].
+\begin{procedure}{Adding or Subtracting Fractions with Like Denominator}
+If fractions have the same denominator, we can add or subtract them by adding or subtracting the numerators.
+\end{procedure}
+\begin{example}
+Add or subtract. Simplify your answer as much as possible.
+\begin{lpic}{}{4}
+\foreach \y/\l/\na/\nb/\d/\s in {1/a/5/7/9/+,3/b/9/3/8/-} {
+	\fractextright{1}{-\y}{\l. };
+	\fractextleft{1}{-\y}{$\dfrac{\na}{\d}\s\dfrac{\nb}{\d}={}$};
+}
+\end{lpic}
+\end{example}
+Otherwise, we have to \makeblank[1.25in] them to have the same denominator.
+\begin{procedure}{Adding or Subtracting Fractions}
+\begin{enumerate*}
+\item Find the least common multiple of the denominators (LCD).
+\item Write equivalent fractions with that denominator.
+\item Add the new fractions (that have the same denominator).
+\item Simplify, if necessary.
+\end{enumerate*}
+\end{procedure}
+There are many methods we can use to find a common denominator with numbers. In this example, we'll use the method we'll use for rational expressions.
+\begin{example}
+Add $\dfrac{5}{6}+\dfrac{7}{10}$.
+\begin{lpic}{}{12}
+\foreach \y/\n/\text in {1/1/Find the LCD by looking at factors.,
+												4/2/Rewrite the fractions with the LCD.,
+												7/3/Add.,
+												10/4/Simplify if necessary.} {
+	\regtextright{1}{-\y}{\n. };
+	\regtextleft{1}{-\y}{\text};
+}
+\foreach \x/\n/\d in {1/5/6,\value{cols}/7/10} {
+	\regtextleft{\x}{-2}{$\d={}$};
+	\fractextleft{\x}{-5}{$\dfrac{\n}{\d}={}$};
+}
+\regtextleft{1}{-3}{$\mathrm{LCD}={}$};
+\fractextleft{1}{-8}{$\dfrac{5}{6}+\dfrac{7}{10}={}$};
+\end{lpic}
+\end{example}

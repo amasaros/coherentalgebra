@@ -1,0 +1,33 @@
+\subsection{Graph of a Linear Function} 
+\begin{theorem}
+Both of the following are true.
+\begin{itemize}
+\item If a function is linear, then its graph is a straight line.
+\item If a graph is a straight line (not horizontal or vertical), it is the graph of a linear function.
+\end{itemize}
+\end{theorem}
+\begin{example}
+Fill in the table below for $f(x)=\frac{2}{3}x-4$. Plot each pair in the table, then sketch the graph of $f$.
+\begin{lpic}{}{10}
+\regtext{1}{-2}{$x$};
+\regtext{4}{-2}{$y=f(x)$};
+\regtext{1}{-3}{$-3$};
+\foreach \y in {0,3,6}
+	\regtext{1}{-4-\y/3}{\figdash$\y$};
+\draw (0,-2) -- (6,-2);
+\draw (2,-1) -- (2,-6);
+\begin{scope}[xshift=\value{cols}*2\linespace-8\linespace,yshift=-2\linespace]
+\setgraph{4}{7}{7}{1}
+\setspace{1}
+\AxesSmall
+\end{scope}
+\end{lpic}
+\end{example}
+\begin{note}
+There are two types of lines that are not graphs of linear functions.
+\begin{itemize}
+\item \term{Horizontal} lines have equations in the form $\makeblanksmall=\mbox{a number}$. We say this is a \makeblank[1.5in] function.
+\item \term{Vertical} lines have equations in the form $\makeblanksmall=\mbox{a number}$. This graph fails the \makeblank, it is \makeblank[1in] the graph of a function.
+\end{itemize}
+The lines that graph linear functions are \term{oblique} lines.
+\end{note}

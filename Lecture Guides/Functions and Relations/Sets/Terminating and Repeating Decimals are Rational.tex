@@ -1,0 +1,30 @@
+\subsection{Terminating and Repeating Decimals are Rational} 
+\begin{theorem}
+Every fraction can be represented as a terminating or repeating decimal.
+\end{theorem}
+We prove this by long division. Here, we will show two examples, but this works in general.
+\begin{lpicsplit}{}{9}
+\regtextleft{.5}{-1}{$\frac{5}{8}$ as a terminating decimal.};
+\foreach \x/\xlbl in {0/8,2/5,2.5/.,3/0,4/0,5/0}
+	\regtext{\x+0.5}{-3}{$\xlbl$};
+\divbracket{1}{2.5}{-2};
+\regtextleft{\value{cols}+1.5}{-1}{$\frac{19}{22}$ as a repeating decimal.};
+\foreach \x/\xlbl in {0/2,1/2,3/1,4/9,4.5/.,5/0,6/0,7/0}
+	\regtext{\value{cols}+\x+1.5}{-3}{$\xlbl$};
+\divbracket{\value{cols}+3}{3}{-2};
+\end{lpicsplit}
+\begin{theorem}
+Every terminating decimal can be written as a fraction.
+\end{theorem}
+We see an example, but this works in general. $0.385$ can be written as a fraction.
+\begin{cpic}{}{2}
+\regtextleft{-\value{cols}}{-1}{Denominator is};
+\regtextleft{0}{-1}{Numerator is};
+\regtext{0}{-2}{$0.385=\makespace[1in]$};
+\end{cpic}
+\begin{theorem}
+Every repeating decimal can be written as a fraction.
+\end{theorem}
+We see an example again. $0.\overline{87}$ can be written as a fraction.
+\begin{lpicsplit}{}{7}
+\end{lpicsplit}

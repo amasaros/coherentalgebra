@@ -1,0 +1,23 @@
+\subsection{Solving Absolute Value Equations} 
+\begin{procedure}{Solving an Absolute Value Equation}
+To solve an equation containing one absolute value, we use the following steps.
+\begin{enumerate}[1.]
+\item Use basic solving steps to isolate the absolute value.
+\item Eliminate the absolute value by considering its properties.
+\item Use basic solving steps to solve the resulting equation(s).
+\end{enumerate}
+\end{procedure}
+\begin{example}Solve each equation below.
+\begin{lpicvsplit}{3}{9}
+\foreach \x/\eqn in {0/2\Abs{x}+5=9,1/-\frac{2}{3}\Abs{5x-1}+7=3,2/2\Abs{\frac{3}{5}x-7}+3=1}
+	\regtext{\x*\value{fcols}+\x+0.5*\value{fcols}}{-1}{$\eqn$};
+\end{lpicvsplit}
+\end{example}
+\begin{fact}
+To eliminate the absolute value, once the equation is in the form $\Abs{X}=a$ for some real number $a$:
+\begin{itemize}
+\item If $a>0$, the equation has two solutions: $X=a$ or $X=-a$
+\item If $a=0$, the equation has one solution: $X=0$
+\item If $a<0$, the equation has no solution, since an absolute value cannot be negative.
+\end{itemize}
+\end{fact}

@@ -1,0 +1,43 @@
+\subsection{Function Notation} 
+When we have a function, we have an alternate notation for it.
+\begin{displaybox}[Function Notation]
+If we have a relation $f$ that is a function, we can write
+\[
+f(x)
+\]
+read ``$f$ of $x$,'' to mean
+\[
+\mbox{the value of $y$ such that $(x,y)$ is an element of $f$}
+\]
+\end{displaybox}
+\begin{note} We usually use capital letters from the last third of the alphabet (\makeblanksmall, \makeblanksmall, \makeblanksmall, etc) for relations, but lower-case letters from the first third of the alphabet (\makeblanksmall, \makeblanksmall, \makeblanksmall, \makeblanksmall) for functions. These are conventions, not rules.
+\end{note}
+\begin{example}
+Let $f$ be the relation
+\[
+f=\left\{(0,1),(1,-2),(2,3),(3,-4)\right\}
+\]
+Evaluate each of the following:
+\begin{itemize}
+\item $f(1)=\makeblanksmall$, since \blankpair is an element of $f$.
+\item $f(3)=\makeblanksmall$, since \blankpair is an element of $f$.
+\item $f(-2)$ is \makeblank[1in], since there $-2$ is not in the \makeblank[1in] of $f$.
+\end{itemize}
+\end{example}
+We can do the same thing when the function is given as a graph.
+\begin{example}The function $g$ is graphed below.
+\begin{icpic}[x=0.5\linespace,y=0.5\linespace]
+\setgraphsquare{5}
+\GraphSmall
+\draw[graphend,<-] (-5,-2) -- (-1,2);
+\draw[graphend,->] (2,-4) -- (5,2);
+\filldraw[dotfull] (-1,2) circle (0.2);
+\filldraw[dotempty] (2,-4) circle (0.2);
+\draw[graphend] (5,5) node[anchor=north east]{$g$};
+\end{icpic}
+\begin{itemize}
+\item $f(-2)=\makeblanksmall$ because \blankpair is on the graph.
+\item $f(3)=\makeblanksmall$ because \blankpair is on the graph.
+\item $f(1)$ is \makeblank[1in], since $1$ is not in the \makeblank[1in] of $g$.
+\end{itemize}
+\end{example}

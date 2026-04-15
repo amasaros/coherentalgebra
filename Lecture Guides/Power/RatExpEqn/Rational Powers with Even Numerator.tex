@@ -1,0 +1,20 @@
+\subsection{Rational Powers with Even Numerator} 
+When $p$ is even, $x^{p/q}=\left(\sqrt[q]{x}\right)^p$ contains an even power; in eliminating it, we use the \makeblank.
+\begin{fact}
+When $p$ is an even integer, $q$ is an odd integer, and $X$ is any expression, the equation
+$$X^{p/q}=c$$
+is equivalent to the two equations
+$$X=c^{q/p}
+\quad\mbox{and}\quad
+X=-c^{q/p}$$
+when $c\geq 0$, and has no solution when $c<0$.
+\end{fact}
+\begin{example}
+Solve each equation.
+\begin{lpicvsplit}{2}{8}
+\foreach \x/\eqn in {0/{2x^{2/3}+3=21},1/{(3x+1)^{4/5}=16}} {
+	\regtextcolc{\x}{-1}{$\eqn$};
+	\regtextcoll{\x}{-7}{Check:};
+}
+\end{lpicvsplit}
+\end{example}

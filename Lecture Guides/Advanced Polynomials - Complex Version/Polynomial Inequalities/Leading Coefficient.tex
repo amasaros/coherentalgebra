@@ -1,0 +1,15 @@
+\subsection{Handling Leading Coefficients} 
+Leading coefficients are easy to deal with, since the \makeblank[.5in] of a number doesn't vary.
+\begin{example}
+Solve the polynomial inequality
+\[
+-3(x+4)^2(x-7)(x-2) < 0
+\]
+\begin{cpic}{}{10}
+\foreach \x/\lbl in {-3/{$-3\ \ $},-4/{$(x+4)^2$},-5/{$x-7\ \ $},-6/{$x-2\ \ $},-8/Product}
+	\regtextright{-6}{\x}{\lbl};
+\regtextleftlp{1}{-10}{Solution set:};
+\draw[style=axis] (-6,-1) -- (6,-1);
+\foreach \x in {-3,0,3} \draw[style=tick] (\x,-.75) -- (\x,-1.25);
+\end{cpic}
+\end{example}

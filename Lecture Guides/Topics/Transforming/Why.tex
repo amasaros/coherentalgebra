@@ -1,0 +1,17 @@
+\subsection{Why Transform Functions?} 
+Understanding transformations of functions allows us to do two things.
+\begin{itemize}
+\item Easily understand the graphs of new functions as we encounter them.
+\item Transform the graphs of functions to be more easily studied.
+\end{itemize}
+\begin{example}
+Below is the graph of $y=\sqrt{x}$. Sketch the graph of $y=\frac{3}{2}\sqrt{2x-6}-2$.
+\begin{icpic}[x=.5\linespace,y=.5\linespace]
+\setgraph{1}{17}{3}{5}
+\GraphSmall
+\fill[graphend] (0,0) circle (0.2);
+\draw[graphend,->,domain=0:17,samples=100] plot (\x,{sqrt(\x)});
+\end{icpic}
+\begin{lpic}{}{6}
+\end{lpic}
+\end{example}

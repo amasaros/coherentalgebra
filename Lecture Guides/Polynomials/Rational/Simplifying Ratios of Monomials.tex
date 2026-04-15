@@ -1,0 +1,32 @@
+\subsection{Simplifying Ratios of Monomials} 
+To simplify a rational expression in which the numerator and denominator are both monomials, we use the properties of exponents, specifically:
+\begin{theorem}[Quotient of Powers Rule]
+For any real number $x$ and positive integers $m\neq n$,
+$$\mbox{If $m>n$, }\dfrac{x^m}{x^n}=x^{m-n}
+\qquad
+\mbox{If $m<n$, }\dfrac{x^m}{x^n}=\dfrac{1}{x^{n-m}}$$
+\end{theorem}
+We can apply this to each variable.
+\begin{example}
+Simplify.
+\begin{lpic}{}{4}
+\foreach \y/\l/\n/\d in {1/a/x^2y^3z/x^3yz^5,3/b/3a^2b^5c/9a^2c^4d^2} {
+	\fractextright{1}{-\y}{\l. };
+	\fractextleft{1}{-\y}{$\dfrac{\n}{\d}={}$};
+}
+\end{lpic}
+\end{example}
+While they aren't actually monomials, we can also do this with expressions that include negative exponents.
+\begin{example}
+Simplify. Give your answer without using negative exponents.
+\begin{lpic}{}{2}
+\fractextleft{1}{-1}{$\dfrac{x^{-3}y^2z^5}{x^2y^{-4}z^3}={}$};
+\end{lpic}
+\end{example}
+Note that if a variable appears only once with a negative exponent, we can write it with a positive exponent by ``moving'' it between the numerator and denominator.
+\begin{example}
+Simplify. Give your answer without using negative exponents.
+\begin{lpic}{}{2}
+\fractextleft{1}{-1}{$\dfrac{4a^{-3}b}{5b^{-2}c^{-1}}={}$};
+\end{lpic}
+\end{example}

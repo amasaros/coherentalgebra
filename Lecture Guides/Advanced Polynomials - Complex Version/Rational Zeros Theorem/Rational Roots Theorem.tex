@@ -1,0 +1,36 @@
+\subsection{Rational Roots Theorem} 
+\begin{theorem}[Rational Roots Theorem]
+If a fraction $\frac{p}{q}$ (in lowest terms) is a root of a polynomial with \emph{integer} coefficients
+$$P=\sum_{k=0}^n a_n x^n$$
+then $p$ is a factor of $a_0$ (the constant term), and $q$ is a factor of $a_n$ (the leading coefficient).
+\end{theorem}
+\begin{proof}
+If $\frac{p}{q}$ is a root of $P$, then the factor theorem tells us that \makeblank[1in] is a factor of $P$.
+\begin{itemize}
+\item So $P=\makeblank[1in] Q$ for some polynomial $Q$.
+\item The \makeblank[1.5in] of $P$ is \makeblank[.5in] times the leading coefficinet of $Q$
+\item So \makeblank[.5in] is a factor of \makeblank[.5in]
+\item Also, the \makeblank[1.5in] of $P$ is \makeblank[.5in] times the constant term of $Q$
+\item So \makeblank[.5in] is a factor of \makeblank[.5in]
+\end{itemize}
+Looking at the coefficients give us the result we want.
+\end{proof}
+\begin{example}
+List all possible rational roots of the polynomial
+\[
+6x^5-11x^4+8x^3-9x^2+15x-15
+\]
+In this polynomial:
+\begin{itemize}
+\item $a_n=\makeblank[.5in]$, so the possible values of $q$ are \makeblank.
+\item $a_0=\makeblank[.5in]$, so the possible values of $p$ are \makeblank.
+\end{itemize}
+To find all possible rational roots:
+\begin{lpic}{}{5}
+\foreach \y in {0,...,3}
+  \regtextleft{1}{-2-\y}{$q={}$};
+\foreach \x in {0,...,3}
+  \regtextleft{4+0.5*\x*\value{cols}-\x}{-1}{$p={}$};
+\end{lpic}
+The possible rational roots are \makeblank[3in]. There are \makeblank possibilities.
+\end{example}

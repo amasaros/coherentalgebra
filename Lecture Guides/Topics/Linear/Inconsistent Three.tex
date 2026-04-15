@@ -1,0 +1,87 @@
+\subsection{Inconsistent Systems in Three Variables} 
+There are three basic ways that a system in three variables can be inconsistent.
+\begin{icpic}[x=\dimtd,y=\dimtd]
+\begin{scope}[xshift=-.2\textwidth]
+	\foreach \y/\col in {0/pca,0.5/pcb,1/pcc}
+		\filldraw[\col,plane] (\project{-1}{\y}{-1}) --
+													(\project{1}{\y}{-1}) --
+													(\project{1}{\y}{1}) --
+													(\project{-1}{\y}{1}) --
+													cycle;
+\end{scope}
+\begin{scope}[xshift=.2\textwidth]
+	\foreach \y/\col in {0/pca,0.75/pcb!50!pcc}
+		\filldraw[\col,plane] (\project{-1}{\y}{-1}) --
+													(\project{1}{\y}{-1}) --
+													(\project{1}{\y}{1}) --
+													(\project{-1}{\y}{1}) --
+													cycle;
+\end{scope}														
+\end{icpic}
+In this figure, all of the planes are \makeblank[1in]. If all of the equations are in \makeblank[1in] form:
+\begin{align*}
+\begin{systemLa}
+2x&+&3y&-&4z&=&5\\
+2x&+&3y&-&4z&=&2\\
+2x&+&3y&-&4z&=&-1
+\end{systemLa}
+&&
+\begin{systemLa}
+2x&+&3y&-&4z&=&2\\
+2x&+&3y&-&4z&=&2\\
+2x&+&3y&-&4z&=&-1
+\end{systemLa}
+\end{align*}
+If we combine any \makeblanksmall of these equations, we will \makeblank and the resulting equations will be \makeblank[1in].
+\begin{icpic}[x=\dimtd,y=\dimtd]
+\foreach \y/\col in {0.25/pcb,0.75/pcc}
+	\filldraw[\col,plane] (\project{-1.5}{\y}{-1}) --
+												(\project{ 1.5}{\y}{-1}) --
+												(\project{ 1.5}{\y}{ 1}) --
+												(\project{-1.5}{\y}{ 1}) --
+												cycle;
+\filldraw[pca,plane]  (\project{ 1}{-.5}{-1}) -- 
+                      (\project{ 1}{-.5}{ 1}) --
+											(\project{-1}{1.5}{ 1}) --
+											(\project{-1}{1.5}{-1}) --
+											cycle;
+\foreach \x/\y/\col in {.25/.25/pca!50!pcc,-.25/.75/pcb!50!pcc} 
+	\draw[\col,plane] (\project{\x}{\y}{-1}) -- (\project{\x}{\y}{1});
+\end{icpic}
+Here \emph{two} of the planes are \makeblank[1in], so they intersect the third plane at \makeblank[1in] lines. An example of planes like this, written in \makeblank[1in] form:
+\[\begin{systemLa}
+3x&-&5y&+&2z&=&7\\
+3x&-&5y&+&2z&=&9\\
+2x&+&8y&-&3z&=&4
+\end{systemLa}\]
+We see \makeblanksmall equations that, if we combine them, we will \makeblank[1.5in] and the resulting equations will be \makeblank[1in].
+\clearpage
+\begin{icpic}[x=\dimtd,y=\dimtd]
+\filldraw[pca,plane]  (\project{-1}{-1}{-sqrt(.75)}) --
+											(\project{-1}{1}{-sqrt(.75)}) --
+											(\project{.5}{1}{sqrt(3)}) --
+											(\project{.5}{-1}{sqrt(3)}) --
+											cycle;
+\filldraw[pcb,plane]  (\project{1}{-1}{-sqrt(.75)}) --
+											(\project{1}{1}{-sqrt(.75)}) --
+											(\project{-.5}{1}{sqrt(3)}) --
+											(\project{-.5}{-1}{sqrt(3)}) --
+											cycle;
+\filldraw[pcc,plane]  (\project{-1.5}{-1}{0}) --
+                      (\project{1.5}{-1}{0}) --
+											(\project{1.5}{1}{0}) --
+											(\project{-1.5}{1}{0}) --
+											cycle;
+\foreach \x/\z/\col in {-.5/0/pca!50!pcc,.5/0/pcb!50!pcc,0/sqrt(.75)/pca!50!pcb}
+	\draw[\col,plane] (\project{\x}{-1}{\z}) -- (\project{\x}{1}{\z});
+\end{icpic}
+Here, each \makeblank[1in] of planes intersect at a \makeblank[1in], but the lines are \makeblank[1in].
+\[\begin{systemLa}
+8x&+&y&-&3z&=&-3&\\
+10x&+&4y&-&z&=&10&\\
+2x&+&3y&+&2z&=&2&
+\end{systemLa}\]
+Written in \makeblank[1in] form, this looks fine. What happens when we try to solve?
+\begin{lpic}{}{12}
+\end{lpic}
+When we get a system of \makeblanksmall equations in \makeblanksmall variables, the new system is \makeblank[1.5in].

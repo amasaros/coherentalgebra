@@ -1,0 +1,56 @@
+\subsection{Domain and Range of Power Functions} 
+We can understand the domain and range of a power function by looking at its graph, or by considering the operations.
+\begin{fact}[Domain and Range of a Power Function - Positive Odd Integers]
+If $p\geq 3$ is a positive odd integer, the graph of $f(x)=a(bx-h)^p+k$ looks like one of the following.
+\begin{center}\begin{tikzpicture}
+\useasboundingbox (-1,-1) rectangle (1,1);
+\begin{scope}[xshift=-0.25\linewidth]
+	\draw[graph,domain=-1.5:1.5] plot (\x,{1.5/pow(1.5,3)*pow(\x,3)});
+	%\draw (0,-1.5) node[anchor=base]{$a>0$};
+\end{scope}
+\begin{scope}[xshift=0.25\linewidth]
+	\draw[graph,domain=-1.5:1.5] plot (\x,{-1.5/pow(1.5,3)*pow(\x,3)});
+	%\draw (0,-1.5) node[anchor=base]{$a<0$};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+We see that:
+\begin{itemize}
+\item The domain and range are \makeblank
+\item This function is \makeblank
+\end{itemize}
+We can also see this numerically: the function is defined for any \makeblank[0.75in], and it can have any \makeblank[1in] or \makeblank[1in] number as output.
+\end{fact}
+\begin{fact}[Domain and Range of a Power Function - Positive Even Integers]
+If $p\geq 2$ is a positive even integer, the graph of $f(x)=a(bx-h)^p+k$ looks like one of the following.
+\begin{center}\begin{tikzpicture}
+\useasboundingbox (-1,-1) rectangle (1,1);
+\begin{scope}[xshift=-0.25\linewidth,yshift={-\linespace+1ex}]
+\draw[graph,domain=-1.5:1.5] plot (\x,{2/pow(1.5,4)*pow(\x,4)});
+\draw[dotfull] (0,0) circle (\dotsize);
+%\draw (0,0) node[anchor=north]{$(x,k)$};
+\draw[yshift=-2ex] (0,2) node[anchor=base]{$a>0$};
+\end{scope}
+\begin{scope}[xshift=0.25\linewidth,yshift={\linespace-1ex}]
+\draw[graph,domain=-1.5:1.5] plot (\x,{-2/pow(1.5,4)*pow(\x,4)});
+\draw(0,-2) node[anchor=base]{$a<0$};
+\draw[dotfull] (0,0) circle (\dotsize);
+%\draw (0,0) node[anchor=south]{$(x,k)$};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+It's useful to think about this numerically: the function is defined for any \makeblank[0.75in], but \makeblank[1in] can't be \makeblank[1in].
+\begin{itemize}
+\item The domain is \makeblank
+\item The range is \makeblank[1.5in] if $a>0$, \makeblank[1.5in] if $a<0$
+\item This function is \makeblank
+\end{itemize}
+\end{fact}
+\begin{example}
+Give the domain and range of each function.
+\begin{enumerate}\setabc
+\item $f(x)=2(x-3)^4+1$\hfill$\dom f=\makeblank[1in]\quad\rng f=\makeblank[1in]$
+\item $g(x)=-3(x+1)^2+5$\hfill$\dom g=\makeblank[1in]\quad\rng g=\makeblank[1in]$
+\item $h(x)=2(x-4)^7-5$\hfill$\dom h=\makeblank[1in]\quad\rng h=\makeblank[1in]$
+\end{enumerate}
+\end{example}

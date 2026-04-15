@@ -1,0 +1,34 @@
+\subsection{Minding the Absolute Value} 
+Often, we can ignore the absolute value when simplifying even roots of even powers.
+\begin{itemize}
+\item We may take an even power of the resulting variable, which is positive anyway.
+\item The remaining root may only be defined when the variable is positive.
+\end{itemize}
+However, it is important to \emph{include} the absolute value \emph{first}, then decide whether it can be ignored.
+\begin{example}
+Simplify each expression. As a last step, decide whether the absolute value must be included.
+\begin{lpic}{}{8}
+\foreach \y/\exp in {0/\sqrt{x^8},1/\sqrt[4]{x^7},2/\sqrt[4]{x^6},3/\sqrt{x^{10}}} {
+	\regtextleft{0.25}{-\y*2-1}{$\exp={}$};
+}
+\end{lpic}
+\end{example}
+\begin{note}
+When taking an odd root, we \emph{cannot} include an absolute value, since if $p$ is odd, $\sqrt[p]{x^p}\neq \Abs{x}$.
+\end{note}
+\begin{example}
+Simplify $\sqrt[3]{27x^4}$. Confirm that when $x=-8$, $\sqrt[3]{27x^4}=3x\sqrt[3]{x}$, and $\sqrt[3]{27x^4}\neq 3\Abs{x}\sqrt[3]{x}$.
+\begin{lpic}{}{3}
+\foreach \y/\exp in {1/\sqrt[3]{27(-8)^4},2/3(-8)\sqrt[3]{-8},3/3\Abs{-8}\sqrt[3]{-8}}
+	\regtextright{4.5}{-\y}{$\exp={}$};
+\end{lpic}
+\end{example}
+\begin{note}
+Often, when working with radical expressions, we are in a setting where only positive real numbers are interesting. In this case, we can ignore the absolute values.
+\end{note}
+\begin{example}
+Simplify $\sqrt{3x^4y^7}$. \emph{Assume all variables represent positive real numbers.}
+\begin{lpic}{}{2}
+\regtextleft{0.25}{-1}{$\sqrt{3x^4y^7}={}$};
+\end{lpic}
+\end{example}
