@@ -26,12 +26,15 @@
 
 \usepackage{multirow}
 
-\usepackage{enumerate}
+%\usepackage{enumerate}
 \usepackage{mdwlist}
 \let\note\undefined
 \usepackage{calc}
 \usepackage{multicol}
 \setlength{\columnseprule}{0pt}
+
+\renewenvironment{itemize*}{\begin{itemize}[nosep]}{\end{itemize}}
+\renewenvironment{enumerate*}{\begin{enumerate}[nosep]}{\end{enumerate}}
 
 \newcommand{\setabc}{%
 \renewcommand{\theenumi}{\alph{enumi}}%
@@ -50,34 +53,90 @@
 % Theorems and nifty math
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
-\usepackage[framemethod=tikz]{mdframed}
+%\usepackage[framemethod=tikz]{mdframed}
 \renewcommand{\emptyset}{\varnothing}
 
-\mdfsetup{%
-%	roundcorner=0.5\linespace%
-%	innerleftmargin=.25in,
-%	innerrightmargin=.25in,
-%	innertopmargin=.25in,
-%	innerbottommargin=.25in,
-	linewidth=0.4pt,
-	frametitlerule=true,
-	ignorelastdescenders=true
-	}
+%\mdfsetup{%
+%%	roundcorner=0.5\linespace%
+%%	innerleftmargin=.25in,
+%%	innerrightmargin=.25in,
+%%	innertopmargin=.25in,
+%%	innerbottommargin=.25in,
+	%linewidth=0.4pt,
+	%frametitlerule=true,
+	%ignorelastdescenders=true
+	%}
 
-\newenvironment{displaybox}[1][]{\begin{mdframed}[frametitle={#1}]}{\end{mdframed}}
+%%%%%%
+% Build these to mimic old mdframed
+%\newenvironment{mdframed}[1][]{\begin{flushleft}\textbf{#1}\\[1ex]}{\end{flushleft}}
+%\newenvironment{mdtitle}[2][]{\begin{mdframed}[#2: #1]}{\end{mdframed}}
+\usetikzlibrary{shapes.multipart}
+\newlength{\textht}
+\setlength{\textht}{\heightof{ABC}}
+\newcommand{\mytext}{}
+\NewDocumentEnvironment{mdframed}{o +b}{%
+\IfValueTF{#1}{%
+\renewcommand{\mytext}{#1\\#2}%
+}{%
+\renewcommand{\mytext}{#2}%
+}%
+\begin{flushleft}%
+\begin{tikzpicture}[MyRect/.style={rectangle split, rectangle split parts=2, draw, inner xsep=10pt, inner ysep=5pt, outer sep=0pt, anchor=base west}]%
+\IfValueTF{#1}{
+\draw (0,0) node[MyRect=2] {
+	\begin{minipage}{\textwidth-20.8pt}\rule{0pt}{\textht}\end{minipage}
+%	\begin{minipage}{\textwidth-20.8pt}\textbf{#1}\end{minipage}
+	\nodepart{two}
+	\begin{minipage}{\textwidth-20.8pt}#2\end{minipage}
+};
+\draw (10pt,0pt) node[anchor=base west,inner xsep=0pt, inner ysep=0pt, outer sep=0pt]{
+	\begin{minipage}{\textwidth-20.8pt}\textbf{#1}\end{minipage}
+};
+}{
+\draw (0,0) node[MyRect=1] {
+	\begin{minipage}{\textwidth-20.8pt}#2\end{minipage}
+};
+}
+\end{tikzpicture}
+%\IfValueTF{#1}{\textbf{#1}\\[1ex]}{}%
+%#2%
+\end{flushleft}%
+}{}
 
-\mdtheorem{thm}{Theorem}
-\mdtheorem{cor}[thm]{Corollary}
-\mdtheorem{defn}{Definition}
-\mdtheorem{proc}{Procedure}
+\NewDocumentEnvironment{mdtitle}{o m +b}{%
+\begin{mdframed}[\IfValueTF{#1}{#2: #1}{#2}]%
+#3%
+\end{mdframed}%
+}{}
+
+\newenvironment{displaybox}[1][]{\begin{mdframed}[#1]}{\end{mdframed}}
+
+%\mdtheorem{thm}{Theorem}
+%\mdtheorem{cor}[thm]{Corollary}
+%\mdtheorem{defn}{Definition}
+%\mdtheorem{proc}{Procedure}
 %\mdtheorem{fct}{Fact}
+%\newtheorem{thm}{Theorem}
+%\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{defn}{Definition}
+%\newtheorem{proc}{Procedure}
 
-\newenvironment{theorem}[1][]{\begin{thm*}[#1]}{\end{thm*}}
-\newenvironment{corollary}[1][]{\begin{cor*}[#1]}{\end{cor*}}
-\newenvironment{definition}[1][]{\begin{defn*}[#1]}{\end{defn*}}
-\newenvironment{procedure}[1]{\begin{proc*}[#1]}{\end{proc*}}
+\NewDocumentEnvironment{theorem}{o +b}{\begin{mdtitle}[#1]{Theorem}#2}{\end{mdtitle}}
+\NewDocumentEnvironment{corollary}{o +b}{\begin{mdtitle}[#1]{Corollary}#2}{\end{mdtitle}}
+\NewDocumentEnvironment{definition}{o +b}{\begin{mdtitle}[#1]{Definition}#2}{\end{mdtitle}}
+\NewDocumentEnvironment{procedure}{m +b}{\begin{mdtitle}[#1]{Procedure}#2}{\end{mdtitle}}
+%\newenvironment{theorem}[1][]{\begin{thm*}[#1]}{\end{thm*}}
+%\newenvironment{corollary}[1][]{\begin{cor*}[#1]}{\end{cor*}}
+%\newenvironment{definition}[1][]{\begin{defn*}[#1]}{\end{defn*}}
+%\newenvironment{procedure}[1]{\begin{proc*}[#1]}{\end{proc*}}
 
-\newenvironment{fact}[1][]{\begin{mdframed}[frametitle={#1}]}{\end{mdframed}}
+%\newtheorem*{theorem}{Theorem}
+%\newtheorem*{corollary}{Corollary}
+%\newtheorem*{definition}{Definition}
+%\newtheorem*{procedure}{Procedure}
+
+\newenvironment{fact}[1][]{\begin{mdframed}[#1]}{\end{mdframed}}
 
 \newcommand{\term}[1]{%
 \boldmath%
