@@ -4,12 +4,16 @@
   tagging=on,
   tagging-setup={math/setup=mathml-SE}
 }
+\tagpdfsetup{table/header-rows={1}}
+\tagpdfsetup{activate/tagunmarked=true}
 
 \documentclass[12pt]{book}
 
 \title{Intermediate and College Algebra\\%
 MTH 083-103\\%
 Lecture Guides}
+\author{America Masaros}
+\date{}
 
 \usepackage[T1]{fontenc}
 
@@ -20,17 +24,17 @@ Lecture Guides}
 \setmainfont[Numbers = Uppercase,
              NFSSFamily = cmbr,
              %Ligatures = TeX,
-             BoldFont  = CMU Bright SemiBold,
+             BoldFont  = CMU Bright Bold,
              ItalicFont = CMU Bright Oblique,
-						 BoldItalicFont = CMU Bright SemiBold Oblique,
+						 BoldItalicFont = CMU Bright Bold Oblique,
             ]{CMU Bright Roman}
 
 \setsansfont[Numbers = Uppercase,
              NFSSFamily = cmbr,
              %Ligatures = TeX,
-             BoldFont  = CMU Bright SemiBold,
+             BoldFont  = CMU Bright Bold,
              ItalicFont = CMU Bright Oblique,
-						 BoldItalicFont = CMU Bright SemiBold Oblique,
+						 BoldItalicFont = CMU Bright Bold Oblique,
             ]{CMU Bright Roman}
 
 \setmonofont{CMU Typewriter Text}
@@ -39,15 +43,23 @@ Lecture Guides}
 \input{tikz_setup}
 \input{command_setup}
 
-\usepackage{lipsum}
+%\usepackage{lua-unicode-math}
+%\setmathfont[Numbers = Uppercase,
+             %NFSSFamily = cmbr,
+             %%Ligatures = TeX,
+             %BoldFont  = CMU Bright Bold,
+             %ItalicFont = CMU Bright Oblique,
+						 %BoldItalicFont = CMU Bright Bold Oblique,
+            %]{CMU Bright Roman}
 
-\tikzset{every picture/.append style={artifact}}
+%\tikzset{every picture/.append style={artifact}}
 
 \begin{document}
+%\maketitle
 \input{U1_Functions}
-\input{U2_Polys}
-\input{U3_Power}
-\input{U6_Logs}
-\input{U5_Adv_Poly}
-\input{U7_Topics}
+%\input{U2_Polys}
+%\input{U3_Power}
+%\input{U6_Logs}
+%\input{U5_Adv_Poly}
+%\input{U7_Topics}
 \end{document}

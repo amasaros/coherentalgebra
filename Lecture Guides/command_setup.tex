@@ -56,53 +56,32 @@
 %\usepackage[framemethod=tikz]{mdframed}
 \renewcommand{\emptyset}{\varnothing}
 
-%\mdfsetup{%
-%%	roundcorner=0.5\linespace%
-%%	innerleftmargin=.25in,
-%%	innerrightmargin=.25in,
-%%	innertopmargin=.25in,
-%%	innerbottommargin=.25in,
-	%linewidth=0.4pt,
-	%frametitlerule=true,
-	%ignorelastdescenders=true
-	%}
+%Let's do that again - build to mimic old mdframed
+%now using tcolorbox
+\usepackage{tcolorbox}
+\tcbset{colback=white,
+				colframe=black,
+				colbacktitle=white,
+				coltitle=black,
+				fonttitle=\bfseries,
+				boxrule=0.4pt,
+				sharp corners=all,
+				left*=10pt,right*=10pt,
+				top=2.5pt,bottom=2.5pt,
+				toptitle=2.5pt,bottomtitle=2.5pt,
+				adjust text=ABC}
 
-%%%%%%
-% Build these to mimic old mdframed
-%\newenvironment{mdframed}[1][]{\begin{flushleft}\textbf{#1}\\[1ex]}{\end{flushleft}}
-%\newenvironment{mdtitle}[2][]{\begin{mdframed}[#2: #1]}{\end{mdframed}}
-\usetikzlibrary{shapes.multipart}
-\newlength{\textht}
-\setlength{\textht}{\heightof{ABC}}
-\newcommand{\mytext}{}
 \NewDocumentEnvironment{mdframed}{o +b}{%
-\IfValueTF{#1}{%
-\renewcommand{\mytext}{#1\\#2}%
+	\IfValueTF{#1}{%
+		\begin{tcolorbox}[adjusted title={#1}]%
+	}{%
+		\begin{tcolorbox}%
+	}%
+	#2
 }{%
-\renewcommand{\mytext}{#2}%
-}%
-\begin{flushleft}%
-\begin{tikzpicture}[MyRect/.style={rectangle split, rectangle split parts=2, draw, inner xsep=10pt, inner ysep=5pt, outer sep=0pt, anchor=base west}]%
-\IfValueTF{#1}{
-\draw (0,0) node[MyRect=2] {
-	\begin{minipage}{\textwidth-20.8pt}\rule{0pt}{\textht}\end{minipage}
-%	\begin{minipage}{\textwidth-20.8pt}\textbf{#1}\end{minipage}
-	\nodepart{two}
-	\begin{minipage}{\textwidth-20.8pt}#2\end{minipage}
-};
-\draw (10pt,0pt) node[anchor=base west,inner xsep=0pt, inner ysep=0pt, outer sep=0pt]{
-	\begin{minipage}{\textwidth-20.8pt}\textbf{#1}\end{minipage}
-};
-}{
-\draw (0,0) node[MyRect=1] {
-	\begin{minipage}{\textwidth-20.8pt}#2\end{minipage}
-};
+	\end{tcolorbox}%
+	\noindent%
 }
-\end{tikzpicture}
-%\IfValueTF{#1}{\textbf{#1}\\[1ex]}{}%
-%#2%
-\end{flushleft}%
-}{}
 
 \NewDocumentEnvironment{mdtitle}{o m +b}{%
 \begin{mdframed}[\IfValueTF{#1}{#2: #1}{#2}]%
@@ -112,31 +91,12 @@
 
 \newenvironment{displaybox}[1][]{\begin{mdframed}[#1]}{\end{mdframed}}
 
-%\mdtheorem{thm}{Theorem}
-%\mdtheorem{cor}[thm]{Corollary}
-%\mdtheorem{defn}{Definition}
-%\mdtheorem{proc}{Procedure}
-%\mdtheorem{fct}{Fact}
-%\newtheorem{thm}{Theorem}
-%\newtheorem{cor}[thm]{Corollary}
-%\newtheorem{defn}{Definition}
-%\newtheorem{proc}{Procedure}
-
 \NewDocumentEnvironment{theorem}{o +b}{\begin{mdtitle}[#1]{Theorem}#2}{\end{mdtitle}}
 \NewDocumentEnvironment{corollary}{o +b}{\begin{mdtitle}[#1]{Corollary}#2}{\end{mdtitle}}
 \NewDocumentEnvironment{definition}{o +b}{\begin{mdtitle}[#1]{Definition}#2}{\end{mdtitle}}
 \NewDocumentEnvironment{procedure}{m +b}{\begin{mdtitle}[#1]{Procedure}#2}{\end{mdtitle}}
-%\newenvironment{theorem}[1][]{\begin{thm*}[#1]}{\end{thm*}}
-%\newenvironment{corollary}[1][]{\begin{cor*}[#1]}{\end{cor*}}
-%\newenvironment{definition}[1][]{\begin{defn*}[#1]}{\end{defn*}}
-%\newenvironment{procedure}[1]{\begin{proc*}[#1]}{\end{proc*}}
 
-%\newtheorem*{theorem}{Theorem}
-%\newtheorem*{corollary}{Corollary}
-%\newtheorem*{definition}{Definition}
-%\newtheorem*{procedure}{Procedure}
-
-\newenvironment{fact}[1][]{\begin{mdframed}[#1]}{\end{mdframed}}
+\NewDocumentEnvironment{fact}{o +b}{\begin{mdframed}[#1] #2}{\end{mdframed}}
 
 \newcommand{\term}[1]{%
 \boldmath%
@@ -147,7 +107,6 @@
 \theoremstyle{definition}
 \newtheorem*{example}{Example}
 \newtheorem*{note}{Note}
-
 
 \newcommand{\rrt}[2]{$\pm\frac{#1}{#2}$}
 
@@ -1169,3 +1128,7 @@
 
 \newcommand{\TIsub}[1]{{\scriptsize #1}}
 \newcommand{\TIsup}[1]{{\textsuperscript{#1}}}
+
+\newcommand{\wordor}{\mbox{ or }}
+\newcommand{\wordand}{\mbox{ and }}
+

@@ -49,81 +49,117 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%Setup formatting with titlesec
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{titlesec}
-\usepackage{titletoc}
-\renewcommand{\chaptertitlename}{Unit}
-\newcommand{\sectionbreak}{\cleardoublepage}
-\newcommand{\subsectionbreak}{\clearpage}
+%lol tagging hates you time to set up headers WITHOUT titlesec!
+\setcounter{secnumdepth}{1}
+%Setup for chapters
+%"Chapter" is called "Unit"
+%Header appears 2/3 of the way up the page
+%Title always appears on an odd page
+%\titlespacing*{\chapter} {0pt}{50pt}{40pt}
+%\titleformat{\chapter}[display]
+    %{\normalfont\huge\bfseries}
+		%{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+		%[\parttoc{chap}{c}{1}{2}]
+\makeatletter
+\renewcommand{\@chapapp}{Unit}
+\makeatother
+%\makeatletter
+%\renewcommand\chapter{%
+  %\@startchapter{chapter}% name
+    %{0}% level
+    %{0pt}% indent
+    %{50pt}% beforeskip
+    %{1ex plus .1ex}% afterskip
+    %{\normalfont\huge\bfseries}% style
+  %}%
+%\makeatother
 
-\newlength{\ctab}
-\newlength{\stab}
-\newlength{\sstab}
-\mdseries\normalsize
-\setlength{\ctab}{1.5em}
-\setlength{\stab}{2.3em}
-\setlength{\sstab}{3.2em}
+%Setup for sections
+%Section begins on an odd page
+%\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\AddToHook{cmd/section/before}{\cleardoublepage}
 
-\newlength{\saveskip}
-\setlength{\saveskip}{\parskip}
+%Setup for subsections
+%No numbering
+%\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\AddToHook{cmd/subsection/before}{\clearpage}
 
-\titlecontents{csection}
-    [\stab] % ie, 1.5em (chapter) + 2.3em
-    {\mdseries\normalsize}
-    {\contentslabel{\stab}}
-    {\hspace*{-\stab}}
-    {\titlerule*[1pc]{.}\contentspage}
-\titlecontents{csubsection}
-    [\stab+\sstab] % ie, 1.5em (chapter) + 2.3em
-    {\mdseries\normalsize}
-    {\contentslabel{\sstab}}
-    {\hspace*{-\sstab}}
-    {\titlerule*[1pc]{.}\contentspage}
-\titlecontents{ssubsection}
-    [\sstab] % ie, 1.5em (chapter) + 2.3em
-    {\mdseries\normalsize}
-    {\contentslabel{\sstab}}
-    {\hspace*{-\sstab}}
-    {\titlerule*[1pc]{.}\contentspage}
-		
-\newcommand{\stopcon}[1]{\stopcontents[#1]}
-\newcommand{\startcon}[1]{\startcontents[#1]}
-\newcommand{\printcon}[4]{\printcontents[#1]{#2}{#3}{#4}}
-\newcommand{\parttoc}[4]{%
-	\vspace*{0.5\linespace}%
-	\startcontents[#1]%
-	\printcontents[#1]{#2}{#3}{\setcounter{tocdepth}{#4}}%
-}
 
-\renewcommand{\parttoc}[4]{}
+%\usepackage{titlesec}
+%\usepackage{titletoc}
+%\renewcommand{\chaptertitlename}{Unit}
+%\newcommand{\sectionbreak}{\cleardoublepage}
+%\newcommand{\subsectionbreak}{\clearpage}
 
-\newcommand{\subsectionformat}{\normalfont\large\bfseries}
-	
-\titleformat{\chapter}[display]
-    {\normalfont\huge\bfseries}
-		{\chaptertitlename\ \thechapter}{20pt}{\Huge}
-		[\parttoc{chap}{c}{1}{2}]
-\titleformat{\section}
-    {\startcon{sec}\cleardoublepage\normalfont\Large\bfseries}
-		{\thesection}{1em}{}
-		[\parttoc{sec}{s}{2}{2}]
-\titleformat{\subsection}
-    {\clearpage\subsectionformat}{}{0pt}{}
-\titleformat{\subsubsection}
-    {\normalfont\normalsize\bfseries}
-		{\thesubsubsection}{1em}{}
-\titleformat{\paragraph}[runin]
-    {\normalfont\normalsize\bfseries}
-		{\theparagraph}{1em}{}
-\titleformat{\subparagraph}[runin]
-    {\normalfont\normalsize\bfseries}
-		{\thesubparagraph}{1em}{}
+%\newlength{\ctab}
+%\newlength{\stab}
+%\newlength{\sstab}
+%\mdseries\normalsize
+%\setlength{\ctab}{1.5em}
+%\setlength{\stab}{2.3em}
+%\setlength{\sstab}{3.2em}
 
-\titlespacing*{\chapter} {0pt}{50pt}{40pt}
-\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
-\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
-\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+%\newlength{\saveskip}
+%\setlength{\saveskip}{\parskip}
+
+%\titlecontents{csection}
+    %[\stab] % ie, 1.5em (chapter) + 2.3em
+    %{\mdseries\normalsize}
+    %{\contentslabel{\stab}}
+    %{\hspace*{-\stab}}
+    %{\titlerule*[1pc]{.}\contentspage}
+%\titlecontents{csubsection}
+    %[\stab+\sstab] % ie, 1.5em (chapter) + 2.3em
+    %{\mdseries\normalsize}
+    %{\contentslabel{\sstab}}
+    %{\hspace*{-\sstab}}
+    %{\titlerule*[1pc]{.}\contentspage}
+%\titlecontents{ssubsection}
+    %[\sstab] % ie, 1.5em (chapter) + 2.3em
+    %{\mdseries\normalsize}
+    %{\contentslabel{\sstab}}
+    %{\hspace*{-\sstab}}
+    %{\titlerule*[1pc]{.}\contentspage}
+		%
+%\newcommand{\stopcon}[1]{\stopcontents[#1]}
+%\newcommand{\startcon}[1]{\startcontents[#1]}
+%\newcommand{\printcon}[4]{\printcontents[#1]{#2}{#3}{#4}}
+%\newcommand{\parttoc}[4]{%
+	%\vspace*{0.5\linespace}%
+	%\startcontents[#1]%
+	%\printcontents[#1]{#2}{#3}{\setcounter{tocdepth}{#4}}%
+%}
+%
+%\renewcommand{\parttoc}[4]{}
+%
+%\newcommand{\subsectionformat}{\normalfont\large\bfseries}
+	%
+%\titleformat{\chapter}[display]
+    %{\normalfont\huge\bfseries}
+		%{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+		%[\parttoc{chap}{c}{1}{2}]
+%\titleformat{\section}
+    %{\startcon{sec}\cleardoublepage\normalfont\Large\bfseries}
+		%{\thesection}{1em}{}
+		%[\parttoc{sec}{s}{2}{2}]
+%\titleformat{\subsection}
+    %{\clearpage\subsectionformat}{}{0pt}{}
+%\titleformat{\subsubsection}
+    %{\normalfont\normalsize\bfseries}
+		%{\thesubsubsection}{1em}{}
+%\titleformat{\paragraph}[runin]
+    %{\normalfont\normalsize\bfseries}
+		%{\theparagraph}{1em}{}
+%\titleformat{\subparagraph}[runin]
+    %{\normalfont\normalsize\bfseries}
+		%{\thesubparagraph}{1em}{}
+
+%\titlespacing*{\chapter} {0pt}{50pt}{40pt}
+%\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
 
 % Special formatting for the first subsection.
 %\titleformat{\firstsubsection}
