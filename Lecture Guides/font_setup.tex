@@ -1,0 +1,36 @@
+%\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{amsfonts}
+
+\usepackage[OT1]{fontenc}
+
+\usepackage[no-math]{fontspec}          % lualatex font engine
+%\usepackage{lua-unicode-math}
+
+%\directlua{luaotfload.add_fallback
+   %("mathfallback",
+    %{
+      %"newcmsansmath-regular:mode=base;script=math;"
+		%}
+   %)}
+
+\setmainfont[Numbers = Uppercase,
+             BoldFont  = CMU Bright Bold,
+             ItalicFont = CMU Bright Oblique,
+						 BoldItalicFont = CMU Bright Bold Oblique,
+           ]{CMU Bright Roman}
+
+\setsansfont[Numbers = Uppercase,
+             NFSSFamily = cmbr,
+             BoldFont  = CMU Bright Bold,
+             ItalicFont = CMU Bright Oblique,
+						 BoldItalicFont = CMU Bright Bold Oblique,
+            ]{CMU Bright Roman}
+
+\setmonofont{CMU Typewriter Text}
+
+%\usepackage{lua-unicode-math}
+%\usepackage{lum-newcomputermodernsans}
+
+\usepackage{mathfont}
+\mathfont{CMU Bright Roman}
+\mathfont[upper,lower,greekupper,greeklower]{CMU Bright Oblique}

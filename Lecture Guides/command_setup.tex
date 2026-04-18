@@ -15,7 +15,7 @@
 \setcounter{halfcols}{\value{cols}/2}
 
 \usepackage{textcomp}
-\newcommand{\degree}{\textdegree}
+\renewcommand{\degree}{\textdegree}
 
 \usepackage{ifthen}
 \usepackage{forloop}% http://ctan.org/pkg/forloop
@@ -52,8 +52,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Theorems and nifty math
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{amsmath,amsthm,amsfonts,amssymb}
+%\usepackage{amsthm,amsfonts,amssymb}
 %\usepackage[framemethod=tikz]{mdframed}
+\usepackage{amssymb}
 \renewcommand{\emptyset}{\varnothing}
 
 %Let's do that again - build to mimic old mdframed
@@ -104,12 +105,15 @@
 \unboldmath%
 }
 
+\usepackage{amsthm}
+
 \theoremstyle{definition}
 \newtheorem*{example}{Example}
 \newtheorem*{note}{Note}
 
 \newcommand{\rrt}[2]{$\pm\frac{#1}{#2}$}
 
+\usepackage{amsmath}
 \DeclareMathOperator{\rng}{Rng}
 \DeclareMathOperator{\dom}{Dom}
 
@@ -296,7 +300,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newcommand{\makeblank}[1][2in]{\rule{#1}{0.4pt}}
 \newcommand{\makeblank}[1][2in]{%
-\begin{tikzpicture}[baseline={([yshift=\aboveline]current bounding box.south)}]
+\begin{tikzpicture}[baseline={([yshift=\aboveline]current bounding box.south)},alt={[Blank]}]
 \draw[npblue] (0,0) -- (#1,0);
 \end{tikzpicture}
 }
