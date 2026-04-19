@@ -7,7 +7,7 @@ is defined to be the function such that
 \begin{center}$f\inv(x)=x^p,\ x\geq 0$\end{center}
 In other words, $\sqrt[p]{x}$ is the unique \emph{nonnegative} real number such that $\left(\sqrt[p]{x}\right)^p=x$.
 \end{definition}
-\begin{note} If we want the \emph{negative} number that, raised to the $p$th power, gives us $x$, we can simply write $-\sqrt[p]{x}$.\end{note}
+\begin{Note} If we want the \emph{negative} number that, raised to the $p$th power, gives us $x$, we can simply write $-\sqrt[p]{x}$.\end{Note}
 \noi The domain and range of even roots is more interesting.
 \begin{fact}[Domain and Range of a Radical Function (even index)]
 If $f(x)=\sqrt[p]{x}$ and $f\inv(x)=x^p,\ x\geq 0$, we know that:
@@ -16,15 +16,15 @@ If $f(x)=\sqrt[p]{x}$ and $f\inv(x)=x^p,\ x\geq 0$, we know that:
 \item $\rng f\inv=\makeblank[1in]$, so $\dom f=\makeblank[1in]$
 \end{itemize}
 \end{fact}
-\begin{example}
+\begin{Example}
 Find the domain and range of the radical function.
 \begin{lpic}{}{5}
 \regtextleft{0.25}{-1}{$f(x)=3\sqrt[6]{6-x}+1$};
 \foreach \x/\dr in {0/\dom,1/\rng}
 	\regtextleft{\x*\value{cols}}{-5}{$\dr f={}$};
 \end{lpic}
-\end{example}
-\begin{example}
+\end{Example}
+\begin{Example}
 Find each root by rewriting in terms of a power and using trial and error.
 \begin{lpic}{}{3}
 \foreach \y/\l/\p/\x in {1/a/4/16,2/b/2/25,3/c/4/-81}{
@@ -32,9 +32,9 @@ Find each root by rewriting in terms of a power and using trial and error.
 	\regtextleft{1}{-\y}{$\sqrt[\p]{\x}$};
 }
 \end{lpic}
-\end{example}
+\end{Example}
 Like odd roots, even roots are frequently \makeblank[1.25in].
-%\begin{example}
+%\begin{Example}
 %Use trial and error to determine what two consecutive integers each root is between.
 %\begin{lpic}{}{3}
 %\foreach \y/\l/\p/\x in {1/a/4/45,2/b/5/18,3/c/6/1875}{
@@ -43,5 +43,5 @@ Like odd roots, even roots are frequently \makeblank[1.25in].
 	%\regtext{2*\value{cols}-3.5}{-\y}{${}<\sqrt[\p]{\x}<{}$};
 %}
 %\end{lpic}
-%\end{example}
+%\end{Example}
 

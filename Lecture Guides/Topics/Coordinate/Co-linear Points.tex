@@ -1,16 +1,16 @@
 \subsection{Collinear Points} 
 Three (or more) points are \emph{collinear} if they lie on the same line.
-\begin{example}
+\begin{Example}
 In this figure, \makeblanksmall, \makeblanksmall, and \makeblanksmall are collinear points (they lie on line \makeblanksmall), but \makeblanksmall is not collinear with any pair of them.
 \begin{icpic}
 \foreach \x/\lbl in {0/A,2/B,5/C} \filldraw (\x,-\x*.25) circle (0.1) node[anchor=north]{$\lbl$};
 \draw[<->,geom] (-2,0.5) -- (6,-1.5) node[anchor=south]{$\ell$};
 \filldraw (1,-1.5) circle (0.1) node[anchor=north]{$D$};
 \end{icpic}
-\end{example}
-\begin{note}
+\end{Example}
+\begin{Note}
 We only talk about sets of \makeblanksmall or more points being collinear or not, since we can draw a line through any \makeblanksmall points.
-\end{note}
+\end{Note}
 If we have three collinear points, the following property of the Euclidean plane holds.
 \begin{displaybox}[Segment Addition Postulate]
 Given three collinear points, we can label them $A$, $B$, and $C$ so that $B$ is on $\overline{AC}$. In that case
@@ -19,10 +19,10 @@ AB+BC=AC
 \]
 \end{displaybox}
 We can use this, along with the distance formula, to determine whether three points in the plane are collinear.
-\begin{example}
+\begin{Example}
 Let $A=(-2,5)$, $B=(4,1)$, and $C=(2,\tfrac{7}{3})$. Plot these points. Are they collinear?
 \begin{lpic}{}{7}
 \foreach \y/\lbl in {-1/AB,-3/BC,-5/AC} \regtextleft{1}{\y}{$\lbl={}$};
 \end{lpic}
 \makeblanksmall, the points \makeblank[1in] collinear, because $\makeblanksmall+\makeblanksmall=\makeblanksmall$.
-\end{example}
+\end{Example}

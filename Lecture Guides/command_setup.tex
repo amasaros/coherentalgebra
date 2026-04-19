@@ -105,11 +105,19 @@
 \unboldmath%
 }
 
-\usepackage{amsthm}
+%\usepackage{amsthm}
 
-\theoremstyle{definition}
-\newtheorem*{example}{Example}
-\newtheorem*{note}{Note}
+\newenvironment{mdpara}[1]{\begin{tcolorbox}[colframe=white,boxrule=0pt,left*=0pt,right*=0pt,top=0pt,bottom=0pt]\textbf{#1.}}{\end{tcolorbox}\noindent}
+
+%\theoremstyle{definition}
+%\newtheorem*{example}{Example}
+%\newtheorem*{note}{Note}
+
+\newenvironment{Example}{\begin{mdpara}{Example}}{\end{mdpara}}
+\newenvironment{Note}{\begin{mdpara}{Note}}{\end{mdpara}}
+\newenvironment{proof}{\begin{tcolorbox}[colframe=white,boxrule=0pt,left*=0pt,right*=0pt,top=0pt,bottom=0pt]\textit{Proof.}}{\end{tcolorbox}\noindent}
+
+\newcommand{\qedhere}{\hfill\square}
 
 \newcommand{\rrt}[2]{$\pm\frac{#1}{#2}$}
 
