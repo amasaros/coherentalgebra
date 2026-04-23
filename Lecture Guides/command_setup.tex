@@ -33,8 +33,16 @@
 \usepackage{multicol}
 \setlength{\columnseprule}{0pt}
 
-\renewenvironment{itemize*}{\begin{itemize}[nosep]}{\end{itemize}}
-\renewenvironment{enumerate*}{\begin{enumerate}[nosep]}{\end{enumerate}}
+\renewenvironment{itemize*}{%
+\begin{itemize}[nosep]%
+}{%
+\end{itemize}%
+}
+\renewenvironment{enumerate*}{%
+\begin{enumerate}[nosep]%
+}{%
+\end{enumerate}%
+}
 
 \newcommand{\setabc}{%
 \renewcommand{\theenumi}{\alph{enumi}}%
@@ -933,6 +941,24 @@
 %\newcolumntype{R}{>{\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\hfill\arraybackslash}X}
 \usepackage{multirow}
+
+\newenvironment{disptabular}[1]{%
+\begingroup%
+\tagpdfsetup{table/tagging=presentation}%
+\begin{tabular}{#1}%
+}{%
+\end{tabular}%
+\endgroup%
+}
+
+\newenvironment{disptabularx}[2]{%
+\begingroup%
+\tagpdfsetup{table/tagging=presentation}%
+\begin{tabularx}{#1}{#2}%
+}{%
+\end{tabularx}%
+\endgroup%
+}
 
 \newcommand{\fitrow}[4][\linespace]{%
 	\begin{tikzpicture}[x=#1,y=#1]

@@ -8,7 +8,7 @@
 \newcommand{\Lcirc}[1]{%
 \setlength{\lwid}{\widthof{$\mathbb{#1}$}}
 \setlength{\lht}{\heightof{$\mathbb{#1}$}}
-\begin{tikzpicture}[baseline=0]
+\begin{tikzpicture}[baseline=0,actualtext=#1]
 \useasboundingbox (-0.5\lwid,0) rectangle (0.5\lwid,\lht);
 \draw (0,0) node[anchor=base]{$\mathbb{#1}$};
 \draw (0,0.5\lht) circle (1.75ex);
@@ -17,16 +17,16 @@
 
 \newcommand{\sets}{\ensuremath{\mathbb{N}\quad\mathbb{Z}\quad\mathbb{Q}\quad\mathbb{R}}}
 \newcommand{\setsN}{\ensuremath{\Lcirc{N}\quad\Lcirc{Z}\quad\Lcirc{Q}\quad\Lcirc{R}}}
-\newcommand{\setsZ}{\ensuremath{\N\quad\Lcirc{Z}\quad\Lcirc{Q}\quad\Lcirc{R}}}
+\newcommand{\setsZ}{\N\tquad\Lcirc{Z}\tquad\Lcirc{Q}\tquad\Lcirc{R}}
 \newcommand{\setsQ}{\ensuremath{\N\quad\Z\quad\Lcirc{Q}\quad\Lcirc{R}}}
-\newcommand{\setsR}{\ensuremath{\N\quad\Z\quad\Q\quad\Lcirc{R}}}
+\newcommand{\setsR}{\N\tquad\Z\tquad\Q\tquad\Lcirc{R}}
 
 \newcommand{\picksets}[2][\sets]{$#2\hfill#1\qquad$}
 
 \begin{document}
 \maketitle
 
-\section{Standard Number Sets}
+\section*{Standard Number Sets}
 For each number below, circle the symbol for each set the number belongs to.
 \begin{smenum}
 \mitemxxx
@@ -68,7 +68,7 @@ For each number below, circle the symbol for each set the number belongs to.
 \item $\sqrt{2}$
 \end{senum}
 
-\section{Set Builder Notation}
+\section*{Set Builder Notation}
 For each set $A$ given below, list three elements of the set. Then, write the given number $x$ in a form that shows that $x\in A$.
 \emph{Note: Answers here will vary. Those given are just some possible examples.}
 \begin{senum}
@@ -78,7 +78,7 @@ For each set $A$ given below, list three elements of the set. Then, write the gi
 \item Elements: $\frac{1}{2}$, $\frac{1}{7}$, $\frac{2}{3}=\frac{1}{\frac{3}{2}}$. $x=\frac{1}{\frac{1}{3}}\in A$
 \end{senum}
 
-\section{Properties of Real Numbers/Simplifying Expressions}
+\section*{Properties of Real Numbers/Simplifying Expressions}
 Simplify each expression below. Clearly show your work on a separate sheet of paper.
 \begin{smenum}
 \mitemxxx
@@ -100,7 +100,7 @@ Simplify each expression below. Clearly show your work on a separate sheet of pa
 {$25.5x-73.8$}
 \end{smenum}
 
-\section{Properties of Equality/Solving Equations}
+\section*{Properties of Equality/Solving Equations}
 Solve each equation below. Clearly show your work on a separate sheet of paper.
 \begin{smenum}
 \mitemxx

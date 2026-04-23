@@ -2,14 +2,20 @@
 Equations typically have one or a few solutions; this gives very boring solution sets. Inequalities typically have \makeblank solutions, so their solution sets are more interesting.
 \begin{Example}
 Give three solutions (three elements of the solution set) of each inequality.
-\begin{colparts}{4}
-\useasboundingbox (-1,0) rectangle (3,-4);
-\foreach \y/\ineq/\v in {-1/x>2/x,-2/y\leq 0/y,-3/-4<z\leq 7/z,-4/1>x>0/x} {
-	\regtextleft{-1}{\y}{$\ineq$};
-	\foreach \x in {0,1,2}
-		\regtext{\x+0.5}{\y}{$\v=\;\makeblanksmall$};
-}
-\end{colparts}
+\begin{disptabularx}{\textwidth}{XXXX}
+$x>2$&$x=\makeblanksmall$&$x=\makeblanksmall$&$x=\makeblanksmall$\\
+$y\leq 0$&$y=\makeblanksmall$&$y=\makeblanksmall$&$y=\makeblanksmall$\\
+$-4<z\leq 7$&$z=\makeblanksmall$&$z=\makeblanksmall$&$z=\makeblanksmall$\\
+$1>x>0$&$x=\makeblanksmall$&$x=\makeblanksmall$&$x=\makeblanksmall$
+\end{disptabularx}
+%\begin{colparts}{4}
+%\useasboundingbox (-1,0) rectangle (3,-4);
+%\foreach \y/\ineq/\v in {-1/x>2/x,-2/y\leq 0/y,-3/-4<z\leq 7/z,-4/1>x>0/x} {
+	%\regtextleft{-1}{\y}{$\ineq$};
+	%\foreach \x in {0,1,2}
+		%\regtext{\x+0.5}{\y}{$\v=\;\makeblanksmall$};
+%}
+%\end{colparts}
 \end{Example}
 \noindent We can \term{graph} an inequality on the number line, as follows:
 \begin{itemize}

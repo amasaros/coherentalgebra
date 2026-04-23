@@ -1,11 +1,11 @@
 \DocumentMetadata{
   lang        = en,
-	pdfversion  = 1.7,
-  pdfstandard = ua-1,
+%	pdfversion  = 1.7,
+  pdfstandard = ua-2,
 %  pdfstandard = a-4f, %or a-4
   tagging=on,
-	tagging-setup={math/mathml/luamml/load=false}
-%  tagging-setup={math/setup=mathml-SE}
+%	tagging-setup={math/mathml/luamml/load=false}
+  tagging-setup={math/setup=mathml-SE}
 }
 %\tagpdfsetup{role/map-tags=pdf}
 %\tagpdfsetup{math/mathml/luamml/load=false}
@@ -14,6 +14,7 @@
 \documentclass[10pt]{article}
 
 \usepackage[margin=1in]{geometry}
+
 
 \author{Math 103: College Algebra}
 \date{}
@@ -33,6 +34,9 @@
 %\usepackage{unicode-math}
 \usepackage{amsmath,amssymb,amsthm}
 %\usepackage{amsmath}
+
+\usepackage{lua-unicode-math}
+\usepackage{lum-newcomputermodern}
 
 \usepackage{textcomp}
 \newcommand{\cent}{{\textcent}}
@@ -95,7 +99,7 @@
 
 \tikzset{>=angle 90}
 \tikzset{x=.5in,y=.5in}
-\tikzset{every picture/.append style={artifact}}
+%\tikzset{every picture/.append style={artifact}}
 
 \newcommand{\MakeBlank}[1][10em]{\rule{#1}{.4pt}}
 \newcommand{\FullLine}{\\[3ex]\MakeBlank[\linewidth-1pt]}
@@ -137,6 +141,9 @@
 
 \usepackage{setspace}
 
+\newcommand{\tquad}{\rule{1em}{0pt}}
+\newcommand{\tqquad}{\rule{2em}{0pt}}
+
 \newcounter{enumSave}
 \newcommand{\saveenum}{\setcounter{enumSave}{\value{enumi}}}
 \newcommand{\loadenum}{\setcounter{enumi}{\value{enumSave}}}
@@ -152,8 +159,8 @@
 \newenvironment{nmenum}{\setlength\hsize{\linewidth}\begin{multienumerate}\renewcommand{\labelenumi}{\addtocounter{multienumi}{1}\alph{multienumi}.}}{\end{multienumerate}}
 \newenvironment{Nmenum}{\setlength\hsize{\linewidth}\begin{multienumerate}\renewcommand{\labelenumi}{\addtocounter{multienumi}{1}\Alph{multienumi}.}}{\end{multienumerate}}
 
-\newcommand{\pentagon}{%
-\begin{tikzpicture}[x=1ex,y=1ex]%
+\renewcommand{\pentagon}{%
+\begin{tikzpicture}[x=1ex,y=1ex,alt={A pentagon}]%
 \draw (90:1) -- (90+72:1) -- (90+72+72:1) -- (90-72-72:1) -- (90-72:1) -- cycle;%
 \end{tikzpicture}%
 }
@@ -606,7 +613,7 @@
 
 
 
-\newcommand{\Set}[1]{\bigl\{#1\bigr\}}
+\newcommand{\Set}[1]{\left\{#1\right\}}
 \newcommand{\Relat}[1]{\Set{(x,y)\mid#1}}
 \newcommand{\SetBuild}[2][x]{\Set{#1\mid #2}}
 \newcommand{\Abs}[1]{\left|#1\right|}
@@ -723,10 +730,10 @@ $x^2 #1x+{\IfValueTF{#2}{#2}{\qquad}}%
 	\end{array}\right.%
 }
 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
 
 \newcommand{\remainder}{\;\textsc{r}}
 
