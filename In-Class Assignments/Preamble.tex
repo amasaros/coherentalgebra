@@ -89,6 +89,24 @@
 \newcommand{\phc}{\phantom{1,}}
 \newcommand{\phm}{\phantom{-}}
 
+\newenvironment{disptabular}[2][]{%
+\begingroup%
+\tagpdfsetup{table/tagging=presentation}%
+\begin{tabular}[#1]{#2}%
+}{%
+\end{tabular}%
+\endgroup%
+}
+
+\newenvironment{disptabularx}[2]{%
+\begingroup%
+\tagpdfsetup{table/tagging=presentation}%
+\begin{tabularx}{#1}{#2}%
+}{%
+\end{tabularx}%
+\endgroup%
+}
+
 \usepackage{xparse}
 
 \usepackage{tikz}
@@ -619,9 +637,7 @@
 \newcommand{\Abs}[1]{\left|#1\right|}
 
 \newenvironment{clist}{
-\begin{enumerate}
-\setlength{\topsep}{0pt}
-\setlength{\itemsep}{1pt}
+\begin{enumerate}[nosep]
 \renewcommand{\theenumi}{\alph{enumi}}
 \renewcommand{\labelenumi}{\theenumi.}
 }{
@@ -629,7 +645,7 @@
 }
 
 \newenvironment{Clist}{
-\begin{enumerate}
+\begin{enumerate}[nosep]
 \setlength{\topsep}{0pt}%
 \setlength{\itemsep}{1pt}%
 \renewcommand{\theenumi}{\Alph{enumi}}
@@ -681,7 +697,7 @@
 \NewDocumentCommand{\CS}{m o o}{%
 $x^2 #1x+{\IfValueTF{#2}{#2}{\qquad}}%
 =%
-\IfValueTF{#3}{\Bigl(x+#3\Bigr)^2}{\Bigl(x+\qquad\Bigr)^2}$%
+\IfValueTF{#3}{\left(x+#3\right)^2}{\left(\rule{0pt}{3ex}x+\qquad\right)^2}$%
 }
 
 \NewDocumentCommand{\CSsquare}{o o}{%
@@ -735,7 +751,7 @@ $x^2 #1x+{\IfValueTF{#2}{#2}{\qquad}}%
 \newcommand{\Q}{\ensuremath{\mathbb{Q}}}
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
 
-\newcommand{\remainder}{\;\textsc{r}}
+\newcommand{\remainder}{\;\:\textsc{r}\,}
 
 \newcommand{\nlgraph}[2][6]{%
 \begin{tikzpicture}[x=0.2in,y=0.2in,baseline=-0.2*0.2in]
